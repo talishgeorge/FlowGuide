@@ -19,7 +19,9 @@ class LoadingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showInitialView()
+        delay(durationInSeconds: 2.0, completion: {
+            self.showInitialView()
+        })
     }
     
     private func setupViews() {
@@ -28,14 +30,9 @@ class LoadingViewController: UIViewController {
     
     private func showInitialView() {
         if isUserLoggedIn {
-            let mainTabBarController = UIStoryboard(name: "Main",
-                                                    bundle: nil).instantiateViewController(withIdentifier: "mainTabBarController")
-            if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
-                let window = sceneDelegate.window
-                window?.rootViewController = mainTabBarController
-            }
+            PresenterManager.shared.show(vc: .mainTabBarConttoller)
         }else {
-            performSegue(withIdentifier: "showOnBoarding", sender: nil)
+            performSegue(withIdentifier: K.Segue.showOnBoardingScreen, sender: nil)
         }
     }
 }

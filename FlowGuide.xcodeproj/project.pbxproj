@@ -15,6 +15,10 @@
 		83006BA5246EE22D00B08094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83006BA3246EE22D00B08094 /* LaunchScreen.storyboard */; };
 		83006BB0246EE22D00B08094 /* FlowGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006BAF246EE22D00B08094 /* FlowGuideTests.swift */; };
 		83006BBE246EE29200B08094 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006BBD246EE29200B08094 /* LoadingViewController.swift */; };
+		831523ED246F796900F48DDA /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
+		831523F0246F7AAB00F48DDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EF246F7AAB00F48DDA /* Constants.swift */; };
+		831523F2246F7B0700F48DDA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F1246F7B0700F48DDA /* Helper.swift */; };
+		831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F4246F802300F48DDA /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		83006BAF246EE22D00B08094 /* FlowGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowGuideTests.swift; sourceTree = "<group>"; };
 		83006BB1246EE22D00B08094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83006BBD246EE29200B08094 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		831523EC246F796900F48DDA /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		831523EF246F7AAB00F48DDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		831523F1246F7B0700F48DDA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		831523F4246F802300F48DDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,9 @@
 		83006BBA246EE25200B08094 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				831523F3246F800C00F48DDA /* Setttings */,
+				831523EE246F7A8600F48DDA /* Utilities */,
+				831523EB246F794400F48DDA /* Manager */,
 				83006BBC246EE26F00B08094 /* Loading */,
 				83006BBB246EE26500B08094 /* Login */,
 			);
@@ -124,6 +135,31 @@
 				83006BBD246EE29200B08094 /* LoadingViewController.swift */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		831523EB246F794400F48DDA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				831523EC246F796900F48DDA /* PresenterManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		831523EE246F7A8600F48DDA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				831523EF246F7AAB00F48DDA /* Constants.swift */,
+				831523F1246F7B0700F48DDA /* Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		831523F3246F800C00F48DDA /* Setttings */ = {
+			isa = PBXGroup;
+			children = (
+				831523F4246F802300F48DDA /* SettingsViewController.swift */,
+			);
+			path = Setttings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +264,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
+				831523F2246F7B0700F48DDA /* Helper.swift in Sources */,
+				831523ED246F796900F48DDA /* PresenterManager.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				83006BBE246EE29200B08094 /* LoadingViewController.swift in Sources */,
+				831523F0246F7AAB00F48DDA /* Constants.swift in Sources */,
+				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
