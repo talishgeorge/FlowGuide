@@ -12,6 +12,9 @@ import UIKit
 class OnBoardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,12 @@ class OnBoardingViewController: UIViewController {
     
     @IBAction func userTappedOnBoarding(_ sender: UIButton) {
         performSegue(withIdentifier: K.Segue.showLoginSignup, sender: nil)
+    }
+    
+    private func showCaption(atIndex index: Int) {
+        let slide = Slide.colllection[index]
+        titleLabel.text = slide.title
+        descriptionLabel.text = slide.description
     }
 }
 
@@ -53,6 +62,12 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        showCaption(atIndex: index)
+        pageControl.currentPage = index
     }
 }
 

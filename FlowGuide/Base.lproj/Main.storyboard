@@ -48,10 +48,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-bG-Wxe">
-                                <rect key="frame" x="24" y="774" width="366" height="40"/>
+                                <rect key="frame" x="24" y="770" width="366" height="44"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="23"/>
+                                <state key="normal" title="Get Started">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -59,10 +59,10 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a8d-zm-4li">
-                                <rect key="frame" x="0.0" y="44" width="414" height="315"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="359"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="315" id="Djn-at-h4c"/>
+                                    <constraint firstAttribute="height" constant="359" id="Djn-at-h4c"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="ii3-qp-O4S"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kVz-cy-ldr">
@@ -80,14 +80,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide1" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-YM-Zvd">
-                                                    <rect key="frame" x="8" y="0.0" width="389" height="298"/>
+                                                    <rect key="frame" x="8" y="59" width="389" height="239"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="239" id="2pe-2v-YLu"/>
+                                                        <constraint firstAttribute="width" constant="389" id="H1j-vB-1I5"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="6rP-YM-Zvd" secondAttribute="trailing" constant="8" id="0qf-0t-e7a"/>
-                                                <constraint firstItem="6rP-YM-Zvd" firstAttribute="top" secondItem="JdF-lR-6bh" secondAttribute="top" id="4rL-AT-g82"/>
-                                                <constraint firstItem="6rP-YM-Zvd" firstAttribute="leading" secondItem="JdF-lR-6bh" secondAttribute="leading" constant="8" id="BbD-pY-chY"/>
-                                                <constraint firstItem="6rP-YM-Zvd" firstAttribute="bottom" secondItem="JdF-lR-6bh" secondAttribute="bottomMargin" id="PHx-1M-NQ1"/>
+                                                <constraint firstAttribute="trailing" secondItem="6rP-YM-Zvd" secondAttribute="trailing" constant="8" id="3hm-Qj-nFe"/>
+                                                <constraint firstItem="6rP-YM-Zvd" firstAttribute="leading" secondItem="JdF-lR-6bh" secondAttribute="leading" constant="8" id="Pli-er-wrB"/>
+                                                <constraint firstAttribute="bottom" secondItem="6rP-YM-Zvd" secondAttribute="bottom" constant="8" id="woX-IH-oZJ"/>
+                                                <constraint firstItem="6rP-YM-Zvd" firstAttribute="top" secondItem="JdF-lR-6bh" secondAttribute="top" constant="59" id="zDM-0B-VFT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,7 +107,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-ls-N0T">
-                                <rect key="frame" x="24" y="484" width="376" height="74"/>
+                                <rect key="frame" x="24" y="454" width="376" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why Use MVVM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC4-z3-tOB">
                                         <rect key="frame" x="116" y="0.0" width="144" height="33"/>
@@ -111,16 +115,17 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVVM Allows to decoiple the business  logic from the UI " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-FE-j62">
-                                        <rect key="frame" x="0.0" y="48" width="376" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVVM Allows to decouple the business  logic from the UI " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-FE-j62">
+                                        <rect key="frame" x="19.5" y="48" width="337" height="52"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="19"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-2a-0Ie">
-                                <rect key="frame" x="187.5" y="675" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="187.5" y="671" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -129,7 +134,7 @@
                             <constraint firstItem="DxW-bG-Wxe" firstAttribute="centerX" secondItem="gnI-2a-0Ie" secondAttribute="centerX" id="2BX-RU-G2S"/>
                             <constraint firstItem="gnI-2a-0Ie" firstAttribute="leading" secondItem="GuP-vz-9Gi" secondAttribute="leading" constant="187.5" id="44y-Y7-Fck"/>
                             <constraint firstItem="MiZ-ls-N0T" firstAttribute="leading" secondItem="GuP-vz-9Gi" secondAttribute="leading" constant="24" id="69d-Q7-cb7"/>
-                            <constraint firstItem="a8d-zm-4li" firstAttribute="top" secondItem="GuP-vz-9Gi" secondAttribute="top" id="PAz-UO-PCj"/>
+                            <constraint firstItem="a8d-zm-4li" firstAttribute="top" secondItem="GuP-vz-9Gi" secondAttribute="top" constant="-44" id="PAz-UO-PCj"/>
                             <constraint firstItem="GuP-vz-9Gi" firstAttribute="trailing" secondItem="gnI-2a-0Ie" secondAttribute="trailing" constant="187.5" id="Skh-av-DGu"/>
                             <constraint firstItem="GuP-vz-9Gi" firstAttribute="trailing" secondItem="MiZ-ls-N0T" secondAttribute="trailing" constant="14" id="XPV-zf-ip5"/>
                             <constraint firstItem="DxW-bG-Wxe" firstAttribute="top" secondItem="gnI-2a-0Ie" secondAttribute="bottom" constant="62" id="bTN-wv-OKC"/>
@@ -143,6 +148,9 @@
                     <navigationItem key="navigationItem" id="F7f-Jo-bhx"/>
                     <connections>
                         <outlet property="collectionView" destination="a8d-zm-4li" id="deK-6F-HyU"/>
+                        <outlet property="descriptionLabel" destination="wTh-FE-j62" id="ebu-gO-VQ8"/>
+                        <outlet property="pageControl" destination="gnI-2a-0Ie" id="eWH-EL-iMu"/>
+                        <outlet property="titleLabel" destination="BC4-z3-tOB" id="Lfn-Fn-XF7"/>
                         <segue destination="TtS-Nv-y5J" kind="showDetail" identifier="showLoginSignup" id="MIT-5K-Efi"/>
                     </connections>
                 </viewController>
@@ -197,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELU-6A-qlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4022" y="239"/>
+            <point key="canvasLocation" x="4022" y="380"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="2nz-LE-T0x">
@@ -213,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69e-FI-ogK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023" y="-438"/>
+            <point key="canvasLocation" x="4022" y="-413"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ui0-ZC-Mg4">
