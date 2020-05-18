@@ -19,6 +19,10 @@
 		831523F0246F7AAB00F48DDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EF246F7AAB00F48DDA /* Constants.swift */; };
 		831523F2246F7B0700F48DDA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F1246F7B0700F48DDA /* Helper.swift */; };
 		831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F4246F802300F48DDA /* SettingsViewController.swift */; };
+		831523F82471020500F48DDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
+		831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FA2472151D00F48DDA /* OnBoardingViewController.swift */; };
+		831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */; };
+		8315240124722F8100F48DDA /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8315240024722F8100F48DDA /* Slide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		831523EF246F7AAB00F48DDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		831523F1246F7B0700F48DDA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		831523F4246F802300F48DDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		831523F72471020500F48DDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8315240024722F8100F48DDA /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +97,11 @@
 		83006B94246EE22B00B08094 /* FlowGuide */ = {
 			isa = PBXGroup;
 			children = (
+				831523F6247101E000F48DDA /* Resources */,
 				83006BBA246EE25200B08094 /* Source */,
 				83006B95246EE22B00B08094 /* AppDelegate.swift */,
 				83006B97246EE22B00B08094 /* SceneDelegate.swift */,
 				83006B9B246EE22B00B08094 /* Main.storyboard */,
-				83006BA1246EE22D00B08094 /* Assets.xcassets */,
 				83006BA3246EE22D00B08094 /* LaunchScreen.storyboard */,
 				83006BA6246EE22D00B08094 /* Info.plist */,
 				83006B9E246EE22B00B08094 /* FlowGuide.xcdatamodeld */,
@@ -113,6 +121,7 @@
 		83006BBA246EE25200B08094 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				831523F9247214FB00F48DDA /* OnBoarding */,
 				831523F3246F800C00F48DDA /* Setttings */,
 				831523EE246F7A8600F48DDA /* Utilities */,
 				831523EB246F794400F48DDA /* Manager */,
@@ -160,6 +169,41 @@
 				831523F4246F802300F48DDA /* SettingsViewController.swift */,
 			);
 			path = Setttings;
+			sourceTree = "<group>";
+		};
+		831523F6247101E000F48DDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83006BA1246EE22D00B08094 /* Assets.xcassets */,
+				831523F72471020500F48DDA /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		831523F9247214FB00F48DDA /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				831523FF24722F6E00F48DDA /* Model */,
+				831523FC24722BB500F48DDA /* Views */,
+				831523FA2472151D00F48DDA /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		831523FC24722BB500F48DDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		831523FF24722F6E00F48DDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8315240024722F8100F48DDA /* Slide.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83006BA5246EE22D00B08094 /* LaunchScreen.storyboard in Resources */,
+				831523F82471020500F48DDA /* Colors.xcassets in Resources */,
 				83006BA2246EE22D00B08094 /* Assets.xcassets in Resources */,
 				83006B9D246EE22B00B08094 /* Main.storyboard in Resources */,
 			);
@@ -266,9 +311,12 @@
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
 				831523F2246F7B0700F48DDA /* Helper.swift in Sources */,
 				831523ED246F796900F48DDA /* PresenterManager.swift in Sources */,
+				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				83006BBE246EE29200B08094 /* LoadingViewController.swift in Sources */,
+				8315240124722F8100F48DDA /* Slide.swift in Sources */,
+				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
 				831523F0246F7AAB00F48DDA /* Constants.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
 			);

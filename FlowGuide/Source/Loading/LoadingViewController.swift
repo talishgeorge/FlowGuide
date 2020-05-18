@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     
-    private let isUserLoggedIn = true
+    private let isUserLoggedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

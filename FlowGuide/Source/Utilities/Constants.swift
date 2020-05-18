@@ -12,6 +12,7 @@ struct K {
     
     struct Segue {
         static let showOnBoardingScreen = "showOnBoarding"
+        static let showLoginSignup = "showLoginSignup"
     }
     
     struct StoryBoardID {
