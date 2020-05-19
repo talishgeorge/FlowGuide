@@ -19,6 +19,7 @@ class OnBoardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupPageControl()
     }
     
     private func setupCollectionView() {
@@ -28,6 +29,10 @@ class OnBoardingViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         collectionView.isPagingEnabled = true
         collectionView.showsVerticalScrollIndicator = true
+    }
+    
+    private func setupPageControl() {
+        pageControl.numberOfPages = Slide.colllection.count
     }
     
     @IBAction func userTappedOnBoarding(_ sender: UIButton) {
