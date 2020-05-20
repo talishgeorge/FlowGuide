@@ -25,7 +25,7 @@ class LoadingViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        // TODO
     }
     
     private func showInitialView() {
