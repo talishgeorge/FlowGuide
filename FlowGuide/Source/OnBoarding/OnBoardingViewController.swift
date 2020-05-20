@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+protocol OnBoardingDelegate: class {
+    func showMainTabBarController()
+}
 class OnBoardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,6 +47,14 @@ class OnBoardingViewController: UIViewController {
         titleLabel.text = slide.title
         descriptionLabel.text = slide.description
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segue.showLoginSignup {
+            if let destination = segue.destination as? LoginViewController {
+                destination.delegate = self
+            }
+        }
+    }
 }
 
 extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -76,3 +87,12 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
+extension OnBoardingViewController: OnBoardingDelegate {
+    func showMainTabBarController() {
+        if let presentedViewController = self.presentedViewController as? LoginViewController {
+            presentedViewController.dismiss(animated: true) {
+                PresenterManager.shared.show(vc: .mainTabBarConttoller)
+            }
+        }
+    }
+}
