@@ -19,7 +19,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordConfirmationTextFields: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
-    private let isSuccessfulLogin = true
+    private let isSuccessfulLogin = false
     weak var delegate: OnBoardingDelegate?
     
     private enum PageType {
@@ -33,17 +33,28 @@ final class LoginViewController: UIViewController {
         }
     }
     
+    private  var errorMessage: String? {
+        didSet {
+            showErrorMessage(text: errorMessage)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewsFor(pageType: currentPageType)
     }
     
     private func setupViewsFor(pageType: PageType) {
-        errorLabel.text = ""
+        errorMessage = nil
         passwordConfirmationTextFields.isHidden = pageType == .login
         sigunpButton.isHidden = pageType == .login
         forgotPasswordButton.isHidden = pageType == .signUp
         loginButton.isHidden = pageType == .signUp
+    }
+    
+    private func showErrorMessage(text: String?) {
+        errorLabel.isHidden = text == nil
+        errorLabel.text = text
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
@@ -58,7 +69,7 @@ final class LoginViewController: UIViewController {
         if isSuccessfulLogin {
             delegate?.showMainTabBarController()
         }else {
-            
+            showErrorMessage(text: "Your password is invalid. Please try again.")
         }
     }
     
