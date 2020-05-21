@@ -1,0 +1,6 @@
+framework module Pods_FlowGuide {
+  umbrella header "Pods-FlowGuide-umbrella.h"
+
+  export *
+  module * { export * }
+}
