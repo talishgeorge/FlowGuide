@@ -61,7 +61,9 @@ extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! OnBoardingCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         let imageName = Slide.colllection[indexPath.item].imageName
         let image = UIImage(named: imageName) ?? UIImage()
         cell.configure(image: image)

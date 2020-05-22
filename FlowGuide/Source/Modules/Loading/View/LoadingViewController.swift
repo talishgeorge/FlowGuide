@@ -32,7 +32,7 @@ class LoadingViewController: UIViewController {
         if isUserLoggedIn {
             PresenterManager.shared.show(vc: .mainTabBarConttoller)
         }else {
-            performSegue(withIdentifier: K.Segue.showOnBoardingScreen, sender: nil)
+            performSegue(withIdentifier: K.Segue.showOnBoarding, sender: nil)
         }
     }
 }

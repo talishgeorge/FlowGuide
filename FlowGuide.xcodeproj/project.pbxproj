@@ -204,10 +204,10 @@
 		83006BBB246EE26500B08094 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8394EA2E2477F215002FA8EF /* View */,
+				8394EA2F2477F219002FA8EF /* ViewModel */,
 				8394EA312477F226002FA8EF /* Models */,
 				8394EA302477F21F002FA8EF /* Utilities */,
-				8394EA2F2477F219002FA8EF /* ViewModel */,
-				8394EA2E2477F215002FA8EF /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -244,10 +244,10 @@
 		831523F3246F800C00F48DDA /* Setttings */ = {
 			isa = PBXGroup;
 			children = (
+				8394EA262477F1BE002FA8EF /* View */,
+				8394EA272477F1C5002FA8EF /* ViewModel */,
 				8394EA292477F1D2002FA8EF /* Utilities */,
 				8394EA282477F1CC002FA8EF /* Models */,
-				8394EA272477F1C5002FA8EF /* ViewModel */,
-				8394EA262477F1BE002FA8EF /* View */,
 			);
 			path = Setttings;
 			sourceTree = "<group>";
@@ -267,10 +267,10 @@
 		831523F9247214FB00F48DDA /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				8394EA252477F1B5002FA8EF /* Utilities */,
-				8394EA242477F1A6002FA8EF /* ViewModel */,
-				831523FF24722F6E00F48DDA /* Models */,
 				831523FC24722BB500F48DDA /* Views */,
+				8394EA242477F1A6002FA8EF /* ViewModel */,
+				8394EA252477F1B5002FA8EF /* Utilities */,
+				831523FF24722F6E00F48DDA /* Models */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -329,8 +329,8 @@
 		8394EA202477F0E7002FA8EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8394EA232477F14D002FA8EF /* Details */,
 				8394EA222477F147002FA8EF /* List */,
+				8394EA232477F14D002FA8EF /* Details */,
 				8394EA212477F0F9002FA8EF /* CustomCell */,
 			);
 			path = View;

@@ -45,6 +45,11 @@ final class LoginViewController: UIViewController {
         setupViewsFor(pageType: currentPageType)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        emailTextField.becomeFirstResponder()
+    }
+    
     private func setupViewsFor(pageType: PageType) {
         errorMessage = nil
         passwordConfirmationTextFields.isHidden = pageType == .login
@@ -59,14 +64,15 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        
+        // TODO
     }
     
     @IBAction func sigunpButtonTapped(_ sender: UIButton) {
-        
+        // TODO
     }
     
     @IBAction func loginButtonTaooed(_ sender: UIButton) {
+        view.endEditing(true)
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 2.0) {
             MBProgressHUD.hide(for: self.view, animated: true)

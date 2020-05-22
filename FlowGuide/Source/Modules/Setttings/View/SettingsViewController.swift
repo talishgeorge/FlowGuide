@@ -17,7 +17,7 @@ class SettingsViewController:UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor  = .gray
+        self.title = K.NavigationTitle.settings
     }
     
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {

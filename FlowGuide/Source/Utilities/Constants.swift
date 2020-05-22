@@ -10,8 +10,13 @@ import Foundation
 
 struct K {
     
+    struct NavigationTitle {
+        static let settings = "Settings"
+        static let home = "Home"
+    }
+    
     struct Segue {
-        static let showOnBoardingScreen = "showOnBoarding"
+        static let showOnBoarding = "showOnBoarding"
         static let showLoginSignup = "showLoginSignup"
         static let showNewsDetail = "showNewsDetail"
     }
@@ -23,7 +28,11 @@ struct K {
     }
     
     struct CellIdentifiers {
-           static let newsHeaderCell  = "NewsHeaderView"
-           static let newsCell  = "NewsTableViewCell"
-       }
+        static let newsHeaderCell  = "NewsHeaderView"
+        static let newsCell  = "NewsTableViewCell"
+    }
+    
+    struct ReUseIdentifier {
+        static let onBoardingColletionViewCell = "cellId"
+    }
 }
