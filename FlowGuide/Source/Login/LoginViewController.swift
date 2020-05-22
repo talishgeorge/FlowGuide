@@ -20,7 +20,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordConfirmationTextFields: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
-    private let isSuccessfulLogin = false
+    private let isSuccessfulLogin = true
     weak var delegate: OnBoardingDelegate?
     
     private enum PageType {

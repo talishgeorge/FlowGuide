@@ -13,6 +13,7 @@ struct K {
     struct Segue {
         static let showOnBoardingScreen = "showOnBoarding"
         static let showLoginSignup = "showLoginSignup"
+        static let showNewsDetail = "showNewsDetail"
     }
     
     struct StoryBoardID {
@@ -20,4 +21,9 @@ struct K {
         static let mainTabBarController  = "MainTabBarController"
         static let onBoardingViewController  = "OnBoardingViewController"
     }
+    
+    struct CellIdentifiers {
+           static let newsHeaderCell  = "NewsHeaderView"
+           static let newsCell  = "NewsTableViewCell"
+       }
 }
