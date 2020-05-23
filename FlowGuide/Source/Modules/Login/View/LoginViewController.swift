@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import  MBProgressHUD
+import MBProgressHUD
+import Firebase
 
 final class LoginViewController: UIViewController {
     
@@ -20,9 +21,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordConfirmationTextFields: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
-    private let isSuccessfulLogin = true
     weak var delegate: OnBoardingDelegate?
-    
+    private let authManager = AuthManager()
     private enum PageType {
         case login
         case signUp
@@ -68,18 +68,51 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func sigunpButtonTapped(_ sender: UIButton) {
-        // TODO
+        guard let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text , !password.isEmpty,
+            let confirmationPassword = confirmPasswordTextField.text , !confirmationPassword.isEmpty else {
+                showErrorMessage(text: "Invalid Form")
+                return
+        }
+        guard password == confirmationPassword else {
+            showErrorMessage(text: "Password are incorrect")
+            return
+        }
+        MBProgressHUD.showAdded(to: view, animated: true)
+        authManager.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
+            guard let this = self else {
+                return
+            }
+            MBProgressHUD.hide(for: this.view, animated: true)
+            switch result {
+            case .success(let user):
+                print("Success: \(String(describing: user.uid))")
+                this.delegate?.showMainTabBarController()
+            case .failure(let error):
+                this.showErrorMessage(text: error.localizedDescription)
+            }
+        }
     }
     
     @IBAction func loginButtonTaooed(_ sender: UIButton) {
         view.endEditing(true)
+        guard let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text , !password.isEmpty else {
+                showErrorMessage(text: "Invalid Form")
+                return
+        }
         MBProgressHUD.showAdded(to: view, animated: true)
-        delay(durationInSeconds: 2.0) {
-            MBProgressHUD.hide(for: self.view, animated: true)
-            if self.isSuccessfulLogin {
-                self.delegate?.showMainTabBarController()
-            }else {
-                self.showErrorMessage(text: "Your password is invalid. Please try again.")
+        authManager.loginUser(withEmail: email, password: password) { [weak self] (result) in
+            guard let this = self else {
+                return
+            }
+            MBProgressHUD.hide(for: this.view, animated: true)
+            switch result {
+            case .success(let user):
+                print("Success: \(String(describing: user.uid))")
+                this.delegate?.showMainTabBarController()
+            case .failure(let error):
+                this.showErrorMessage(text: error.localizedDescription)
             }
         }
     }

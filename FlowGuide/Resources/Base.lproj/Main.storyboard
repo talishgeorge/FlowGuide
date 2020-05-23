@@ -215,7 +215,7 @@
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credentials are incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0l-0X-2Sz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credentials are incorrect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0l-0X-2Sz">
                                         <rect key="frame" x="0.0" y="213" width="338" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -334,32 +334,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="80" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-MU-R3b">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Tgg-po-6fx" id="VHj-OF-Hxi"/>
                                     <outlet property="delegate" destination="Tgg-po-6fx" id="doR-jW-ugD"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged In User : Talish Geroge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaE-MD-kj2">
+                                <rect key="frame" x="90" y="103" width="234.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GjB-MU-R3b" firstAttribute="top" secondItem="TxS-tl-dnO" secondAttribute="top" id="7oX-Rc-xlB"/>
-                            <constraint firstItem="TxS-tl-dnO" firstAttribute="trailing" secondItem="GjB-MU-R3b" secondAttribute="trailing" id="XUa-6F-NHc"/>
-                            <constraint firstItem="TxS-tl-dnO" firstAttribute="bottom" secondItem="GjB-MU-R3b" secondAttribute="bottom" id="bGT-RW-ta7"/>
-                            <constraint firstItem="GjB-MU-R3b" firstAttribute="leading" secondItem="TxS-tl-dnO" secondAttribute="leading" id="mAW-3Z-SFz"/>
+                            <constraint firstItem="GjB-MU-R3b" firstAttribute="leading" secondItem="TxS-tl-dnO" secondAttribute="leading" id="67v-sS-STe"/>
+                            <constraint firstItem="vaE-MD-kj2" firstAttribute="top" secondItem="TxS-tl-dnO" secondAttribute="top" constant="15" id="I0u-cX-qDv"/>
+                            <constraint firstItem="vaE-MD-kj2" firstAttribute="centerX" secondItem="JgY-lN-GnB" secondAttribute="centerX" id="Pcb-rC-6zP"/>
+                            <constraint firstItem="GjB-MU-R3b" firstAttribute="bottom" secondItem="TxS-tl-dnO" secondAttribute="bottom" id="WhP-7U-hsk"/>
+                            <constraint firstItem="GjB-MU-R3b" firstAttribute="trailing" secondItem="TxS-tl-dnO" secondAttribute="trailing" id="mgD-ro-15Z"/>
+                            <constraint firstItem="GjB-MU-R3b" firstAttribute="top" secondItem="vaE-MD-kj2" secondAttribute="bottom" constant="8.5" id="yXQ-ZE-mJ0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TxS-tl-dnO"/>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="Qfi-vW-kXc"/>
                     <connections>
                         <outlet property="newsTableViewOutlet" destination="GjB-MU-R3b" id="Bc7-ns-3S8"/>
+                        <outlet property="userNameLabel" destination="vaE-MD-kj2" id="KzE-sU-YcM"/>
                         <segue destination="H9h-xK-vFj" kind="show" identifier="showNewsDetail" id="yvg-d2-Bg1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69e-FI-ogK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293" y="-196"/>
+            <point key="canvasLocation" x="3292.753623188406" y="-196.20535714285714"/>
         </scene>
         <!--Details-->
         <scene sceneID="zHy-3Q-mLN">

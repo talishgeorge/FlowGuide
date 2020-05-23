@@ -7,31 +7,36 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NewsViewController: UIViewController {
     
-    @IBOutlet weak var newsTableViewOutlet: UITableView!
-    //    @IBOutlet private weak var newsTableViewOutlet: UITableView!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var newsTableViewOutlet: UITableView!
     
     var tableViewDataSource:[TableViewProtocol] = []
     var selectedCell = IndexPath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // Do any additional setup after loading the view.
         
         let headerNib = UINib.init(nibName: K.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
-                newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
+        newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
         newsTableViewOutlet.register(UINib(nibName: K.CellIdentifiers.newsCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.newsCell)
         tableViewDataSource = NewsFeedData.newsFeeds
         
         self.title = K.NavigationTitle.home
+        
+        if let email = Auth.auth().currentUser?.email {
+            userNameLabel.text = "Logged in - \(email)"
+        }
     }
     
-
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -47,7 +52,7 @@ class NewsViewController: UIViewController {
         }
     }
     
-
+    
 }
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     

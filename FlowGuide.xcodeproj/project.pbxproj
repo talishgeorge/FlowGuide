@@ -47,6 +47,7 @@
 		8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */; };
 		8394EA662477F8A0002FA8EF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */; };
 		8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8394EA672478C88C002FA8EF /* GoogleService-Info.plist */; };
+		8394EA6A24797E7E002FA8EF /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA6924797E7E002FA8EF /* AuthManager.swift */; };
 		F5D8A3154D18FC7379488972 /* Pods_FlowGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		8394EA672478C88C002FA8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8394EA6924797E7E002FA8EF /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B15D3A0F8827ED010F4F9A6C /* Pods-FlowGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.release.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,10 +220,10 @@
 		83006BBC246EE26F00B08094 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
+				8394EA2A2477F1E0002FA8EF /* View */,
 				8394EA2D2477F20A002FA8EF /* Utilities */,
 				8394EA2C2477F203002FA8EF /* Models */,
 				8394EA2B2477F1FA002FA8EF /* ViewModel */,
-				8394EA2A2477F1E0002FA8EF /* View */,
 			);
 			path = Loading;
 			sourceTree = "<group>";
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				831523EC246F796900F48DDA /* PresenterManager.swift */,
+				8394EA6924797E7E002FA8EF /* AuthManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				8394EA612477F8A0002FA8EF /* UIDevice+Extension.swift in Sources */,
 				8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */,
 				8394EA5F2477F8A0002FA8EF /* String+Extension.swift in Sources */,
+				8394EA6A24797E7E002FA8EF /* AuthManager.swift in Sources */,
 				8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */,
 				8394EA662477F8A0002FA8EF /* CoreDataHelper.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
