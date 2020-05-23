@@ -8,7 +8,7 @@
 
 import UIKit
 import MBProgressHUD
-import Firebase
+import Loaf
 
 final class LoginViewController: UIViewController {
     
@@ -63,8 +63,44 @@ final class LoginViewController: UIViewController {
         errorLabel.text = text
     }
     
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        // TODO
+        let alertController = UIAlertController(title: "Forget Password?", message: "Please Enter your Email Address", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { [weak self] (_) in
+            guard let this = self else {
+                return
+            }
+            if let textField = alertController.textFields?.first,
+                let email = textField.text, !email.isEmpty {
+                this.authManager.resetPassword(withEmail: email) { [weak self] (result) in
+                    guard let this = self else {
+                        return
+                    }
+                    switch result {
+                    case .success: 
+                    this.showAlert(title: "Password Reset is Successful", message: "Please check your email to find the reset link.")
+                    case .failure(let error):
+                        Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
+                            switch dismissalType {
+                            case .tapped: print("Tapped!")
+                            case .timedOut: print("Timmed out!")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func sigunpButtonTapped(_ sender: UIButton) {

@@ -23,6 +23,7 @@ class OnBoardingViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupPageControl()
+        showCaption(atIndex: 0)
     }
     
     private func setupCollectionView() {

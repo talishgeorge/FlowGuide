@@ -11,7 +11,7 @@ import FirebaseAuth
 
 struct AuthManager {
     
-    let auth = Auth.auth()
+    private let auth = Auth.auth()
     enum AuthError: Error {
         case unknownError
     }
@@ -31,8 +31,8 @@ struct AuthManager {
     }
     
     func loginUser(withEmail email: String,
-                       password: String,
-                       completion: @escaping (Result<User, Error>) -> Void) {
+                   password: String,
+                   completion: @escaping (Result<User, Error>) -> Void) {
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 completion(.failure(error))
@@ -44,6 +44,16 @@ struct AuthManager {
         }
     }
     
+    func resetPassword(withEmail email: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        auth.sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
+            }
+        }
+    }
+    
     func logoutUser() -> Result<Void, Error> {
         do {
             try auth.signOut()
@@ -51,5 +61,9 @@ struct AuthManager {
         } catch let error {
             return .failure(error)
         }
+    }
+    
+    func isUserLoggedIn() -> Bool {
+        return Auth.auth().currentUser != nil
     }
 }
