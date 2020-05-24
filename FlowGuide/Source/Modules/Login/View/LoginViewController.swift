@@ -10,7 +10,7 @@ import UIKit
 import MBProgressHUD
 import Loaf
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: BaseViewController {
     
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
@@ -61,13 +61,6 @@ final class LoginViewController: UIViewController {
     private func showErrorMessage(text: String?) {
         errorLabel.isHidden = text == nil
         errorLabel.text = text
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {

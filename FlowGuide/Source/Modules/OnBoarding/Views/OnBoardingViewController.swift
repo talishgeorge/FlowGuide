@@ -12,12 +12,18 @@ import UIKit
 protocol OnBoardingDelegate: class {
     func showMainTabBarController()
 }
-class OnBoardingViewController: UIViewController {
+
+class OnBoardingViewController: BaseViewController {
+    
+    // MARK: - Properties
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
+    let viewModel = OnBoardingViewModel()
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,25 @@ class OnBoardingViewController: UIViewController {
         setupPageControl()
         showCaption(atIndex: 0)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segue.showLoginSignup {
+            if let destination = segue.destination as? LoginViewController {
+                destination.delegate = self
+            }
+        }
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func userTappedOnBoarding(_ sender: UIButton) {
+        performSegue(withIdentifier: K.Segue.showLoginSignup, sender: nil)
+    }
+}
+
+// MARK: - Private Functions
+
+private extension OnBoardingViewController {
     
     private func setupCollectionView() {
         let layout =  UICollectionViewFlowLayout()
@@ -36,61 +61,25 @@ class OnBoardingViewController: UIViewController {
     }
     
     private func setupPageControl() {
-        pageControl.numberOfPages = Slide.colllection.count
-    }
-    
-    @IBAction func userTappedOnBoarding(_ sender: UIButton) {
-        performSegue(withIdentifier: K.Segue.showLoginSignup, sender: nil)
-    }
-    
-    private func showCaption(atIndex index: Int) {
-        let slide = Slide.colllection[index]
-        titleLabel.text = slide.title
-        descriptionLabel.text = slide.description
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.Segue.showLoginSignup {
-            if let destination = segue.destination as? LoginViewController {
-                destination.delegate = self
-            }
-        }
+        pageControl.numberOfPages = viewModel.getOnboardingItemCount()
     }
 }
 
-extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+// MARK: - Internal Methods
+
+extension OnBoardingViewController {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        let imageName = Slide.colllection[indexPath.item].imageName
-        let image = UIImage(named: imageName) ?? UIImage()
-        cell.configure(image: image)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Slide.colllection.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-        showCaption(atIndex: index)
-        pageControl.currentPage = index
+    func showCaption(atIndex index: Int) {
+        let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
+        titleLabel.text = onboardingItemInfo.title
+        descriptionLabel.text = onboardingItemInfo.description
     }
 }
+
+// MARK: - OnBoarding Delegate Methods
 
 extension OnBoardingViewController: OnBoardingDelegate {
+    
     func showMainTabBarController() {
         if let presentedViewController = self.presentedViewController as? LoginViewController {
             presentedViewController.dismiss(animated: true) {
