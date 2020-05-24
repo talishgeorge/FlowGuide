@@ -13,7 +13,9 @@ struct OnboardingItemInfo {
     var description: String?
 }
 
-class OnBoardingViewModel: BaseViewModel {
+final class OnBoardingViewModel: BaseViewModel {
+    
+    // MARK: - Properties
     
     var currentSlide: Slide? = Slide()
     
@@ -34,12 +36,17 @@ class OnBoardingViewModel: BaseViewModel {
     }
     
     var onboardingItemImageName: String? {
-          if let imageName = currentSlide?.imageName {
-              return imageName
-          } else {
-              return ""
-          }
-      }
+        if let imageName = currentSlide?.imageName {
+            return imageName
+        } else {
+            return ""
+        }
+    }
+}
+
+// MARK: - Internal Methods
+
+extension OnBoardingViewModel {
     
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
         currentSlide = Slide.colllection[index]

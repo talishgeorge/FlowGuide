@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = .appBackground
+        configureUI()
     }
 }
 
@@ -34,10 +35,18 @@ extension BaseViewController {
     }
     
     func setBackGroungColor(_ rgb: Int) -> UIColor {
-        return UIColor(rgb: rgb)
+        return UIColor(hex: rgb)
     }
     
     func hideKeyboard() {
         view.endEditing(true)
+    }
+    
+    func configureUI() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
+        gradient.locations = [0,1]
+        view.layer.insertSublayer(gradient, at: 0)
+        gradient.frame = view.frame
     }
 }

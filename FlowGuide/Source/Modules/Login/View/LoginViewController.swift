@@ -12,6 +12,8 @@ import Loaf
 
 final class LoginViewController: BaseViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -22,7 +24,8 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     weak var delegate: OnBoardingDelegate?
-    private let authManager = AuthManager()
+    private let viewModel = LoginViewModel()
+    
     private enum PageType {
         case login
         case signUp
@@ -40,6 +43,8 @@ final class LoginViewController: BaseViewController {
         }
     }
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewsFor(pageType: currentPageType)
@@ -50,18 +55,7 @@ final class LoginViewController: BaseViewController {
         emailTextField.becomeFirstResponder()
     }
     
-    private func setupViewsFor(pageType: PageType) {
-        errorMessage = nil
-        passwordConfirmationTextFields.isHidden = pageType == .login
-        sigunpButton.isHidden = pageType == .login
-        forgotPasswordButton.isHidden = pageType == .signUp
-        loginButton.isHidden = pageType == .signUp
-    }
-    
-    private func showErrorMessage(text: String?) {
-        errorLabel.isHidden = text == nil
-        errorLabel.text = text
-    }
+    // MARK: - IBActions
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Forget Password?", message: "Please Enter your Email Address", preferredStyle: .alert)
@@ -73,7 +67,7 @@ final class LoginViewController: BaseViewController {
             }
             if let textField = alertController.textFields?.first,
                 let email = textField.text, !email.isEmpty {
-                this.authManager.resetPassword(withEmail: email) { [weak self] (result) in
+                this.viewModel.resetPassword(withEmail: email) { [weak self] (result) in
                     guard let this = self else {
                         return
                     }
@@ -108,7 +102,7 @@ final class LoginViewController: BaseViewController {
             return
         }
         MBProgressHUD.showAdded(to: view, animated: true)
-        authManager.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
+        viewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
@@ -131,7 +125,7 @@ final class LoginViewController: BaseViewController {
                 return
         }
         MBProgressHUD.showAdded(to: view, animated: true)
-        authManager.loginUser(withEmail: email, password: password) { [weak self] (result) in
+        viewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
@@ -151,4 +145,20 @@ final class LoginViewController: BaseViewController {
     }
 }
 
+// MARK: - Privte Methods
 
+private extension LoginViewController {
+    
+    private func setupViewsFor(pageType: PageType) {
+        errorMessage = nil
+        passwordConfirmationTextFields.isHidden = pageType == .login
+        sigunpButton.isHidden = pageType == .login
+        forgotPasswordButton.isHidden = pageType == .signUp
+        loginButton.isHidden = pageType == .signUp
+    }
+    
+    private func showErrorMessage(text: String?) {
+        errorLabel.isHidden = text == nil
+        errorLabel.text = text
+    }
+}

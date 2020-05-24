@@ -10,37 +10,31 @@ import Foundation
 import UIKit
 
 extension UIColor {
-   // Setup custom colours we can use throughout the app using hex values
+    // Setup custom colours we can use throughout the app using hex values
     static let seemuBlue = UIColor(hex: 0x00adf7)
     static let transparentBlack = UIColor(hex: 0x000000, a: 0.5)
-    static let rgbRed = UIColor(red: 255, green: 0, blue: 0)
-    static let appBackground = UIColor.white
+    static let appBackground = UIColor(hexString: "1e90ff")//UIColor(hexString: "0fbcf9")
     
-    // Create a UIColor from RGB
-    convenience init(red: Int, green: Int, blue: Int, a: CGFloat = 1.0) {
-        self.init(
-            red: CGFloat(red) / 255.0,
-            green: CGFloat(green) / 255.0,
-            blue: CGFloat(blue) / 255.0,
-            alpha: a
-        )
+    convenience init(hex: Int) {
+        self.init(hex: hex, a: 1.0)
     }
     
-    // Create a UIColor from a hex value (E.g 0x000000)
-    convenience init(hex: Int, a: CGFloat = 1.0) {
-        self.init(
-            red: (hex >> 16) & 0xFF,
-            green: (hex >> 8) & 0xFF,
-            blue: hex & 0xFF,
-            a: a
-        )
+    convenience init(hex: Int, a: CGFloat) {
+        self.init(r: (hex >> 16) & 0xff, g: (hex >> 8) & 0xff, b: hex & 0xff, a: a)
     }
     
-    convenience init(rgb: Int) {
-        self.init(
-            red: (rgb >> 16) & 0xFF,
-            green: (rgb >> 8) & 0xFF,
-            blue: rgb & 0xFF
-        )
+    convenience init(r: Int, g: Int, b: Int) {
+        self.init(r: r, g: g, b: b, a: 1.0)
+    }
+    
+    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {
+        self.init(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: a)
+    }
+    
+    convenience init?(hexString: String) {
+        guard let hex = hexString.hex else {
+            return nil
+        }
+        self.init(hex: hex)
     }
 }

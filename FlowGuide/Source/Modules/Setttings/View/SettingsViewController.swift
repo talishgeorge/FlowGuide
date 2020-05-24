@@ -12,7 +12,7 @@ import Loaf
 
 class SettingsViewController:UIViewController {
     
-    private let authManager = AuthManager()
+    private let loginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class SettingsViewController:UIViewController {
             guard let this = self else {
                 return
             }
-            let result = this.authManager.logoutUser()
+            let result = this.loginViewModel.logoutUser()
             
             switch result {
             case .success:

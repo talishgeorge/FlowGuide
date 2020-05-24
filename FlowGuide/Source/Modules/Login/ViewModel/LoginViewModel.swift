@@ -1,20 +1,27 @@
 //
-//  AuthManager.swift
+//  LoginViewModel.swift
 //  FlowGuide
 //
-//  Created by Talish George on 23/05/20.
+//  Created by Talish George on 24/05/20.
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
 import Foundation
 import FirebaseAuth
 
-struct AuthManager {
+final class LoginViewModel: BaseViewModel {
+    
+    // MARK: - Properties
     
     private let auth = Auth.auth()
     enum AuthError: Error {
         case unknownError
     }
+}
+
+// MARK: - Internal Methds
+
+extension LoginViewModel {
     
     func signUpNewUser(withEmail email: String,
                        password: String,

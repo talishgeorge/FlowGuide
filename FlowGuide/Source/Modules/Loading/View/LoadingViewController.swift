@@ -8,9 +8,13 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController {
+class LoadingViewController: BaseViewController {
     
-    private let authManager = AuthManager()
+    // MARK: - Properties
+    
+    private let loginViewModel = LoginViewModel()
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +26,11 @@ class LoadingViewController: UIViewController {
             self.showInitialView()
         })
     }
-
+    
+    // MARK: - Private Methods
+    
     private func showInitialView() {
-        if authManager.isUserLoggedIn() {
+        if loginViewModel.isUserLoggedIn() {
             PresenterManager.shared.show(vc: .mainTabBarConttoller)
         }else {
             performSegue(withIdentifier: K.Segue.showOnBoarding, sender: nil)

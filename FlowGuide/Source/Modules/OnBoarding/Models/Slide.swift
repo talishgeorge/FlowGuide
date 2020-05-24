@@ -10,9 +10,13 @@ import Foundation
 
 struct Slide {
     
+    // MARK: - Properties
+    
     var imageName: String?
     var title: String?
     var description: String?
+    
+    // MARK: - Initilization
     
     init(){}
     
@@ -21,6 +25,8 @@ struct Slide {
         self.title = title
         self.description = description
     }
+    
+    // MARK: - Static Methods
     
     static var colllection: [Slide] = [
         Slide(imageName: "slide1",

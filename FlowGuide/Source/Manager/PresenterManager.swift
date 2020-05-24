@@ -10,14 +10,16 @@ import UIKit
 
 class PresenterManager {
     
+    // MARK: - Properties
     static let shared = PresenterManager()
-    
     private init() {}
     
     enum VC {
         case mainTabBarConttoller
         case onBoarding
     }
+    
+    // MARK: - Internal Methods
     
     func show(vc: VC) {
         var viewController: UIViewController
