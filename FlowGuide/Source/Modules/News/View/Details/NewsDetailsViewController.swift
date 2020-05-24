@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsDetailsViewController: UIViewController {
+class NewsDetailsViewController: BaseViewController {
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!

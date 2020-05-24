@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class NewsViewController: UIViewController {
+class NewsViewController: BaseViewController {
     
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var newsTableViewOutlet: UITableView!

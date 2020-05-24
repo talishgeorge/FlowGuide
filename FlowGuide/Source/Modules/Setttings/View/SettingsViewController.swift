@@ -10,7 +10,7 @@ import UIKit
 import MBProgressHUD
 import Loaf
 
-class SettingsViewController:UIViewController {
+class SettingsViewController: BaseViewController {
     
     private let loginViewModel = LoginViewModel()
     
