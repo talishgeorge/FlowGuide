@@ -54,7 +54,7 @@ private extension OnBoardingViewController {
     private func setupCollectionView() {
         let layout =  UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        collectionView.backgroundColor = .systemGroupedBackground
+        collectionView.backgroundColor = .clear//.systemGroupedBackground
         collectionView.collectionViewLayout = layout
         collectionView.isPagingEnabled = true
         collectionView.showsVerticalScrollIndicator = true

@@ -44,7 +44,8 @@ extension BaseViewController {
     
     func configureUI() {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
+        //gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
+        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemTeal.cgColor]
         gradient.locations = [0,1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
