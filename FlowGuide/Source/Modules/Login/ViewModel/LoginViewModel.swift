@@ -69,8 +69,13 @@ extension LoginViewModel {
             return .failure(error)
         }
     }
+}
+
+// MARK: - Static Methds
+
+extension LoginViewModel {
     
-    func isUserLoggedIn() -> Bool {
+    static func isUserLoggedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }
 }

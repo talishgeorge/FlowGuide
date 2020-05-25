@@ -46,6 +46,10 @@
 		833570FC247ADB67002E26A0 /* LoginLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570FA247ADB67002E26A0 /* LoginLocalization.swift */; };
 		833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570FD247ADEFD002E26A0 /* LoadingViewModel.swift */; };
 		833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570FD247ADEFD002E26A0 /* LoadingViewModel.swift */; };
+		83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357101247B741D002E26A0 /* NewsViewController+TableView.swift */; };
+		83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357101247B741D002E26A0 /* NewsViewController+TableView.swift */; };
+		83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357104247B7473002E26A0 /* NewsLocalizaion.swift */; };
+		83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357104247B7473002E26A0 /* NewsLocalizaion.swift */; };
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
 		8394E9ED24779AA9002FA8EF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EA24779AA8002FA8EF /* Helper.swift */; };
 		8394E9EE24779AA9002FA8EF /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */; };
@@ -120,6 +124,8 @@
 		833570F7247ADA01002E26A0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		833570FA247ADB67002E26A0 /* LoginLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalization.swift; sourceTree = "<group>"; };
 		833570FD247ADEFD002E26A0 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		83357101247B741D002E26A0 /* NewsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+TableView.swift"; sourceTree = "<group>"; };
+		83357104247B7473002E26A0 /* NewsLocalizaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLocalizaion.swift; sourceTree = "<group>"; };
 		834FEB9B2474D9E800D66A37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8394E9EA24779AA8002FA8EF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProtocol.swift; sourceTree = "<group>"; };
@@ -353,13 +359,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		83357100247B73FE002E26A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83357101247B741D002E26A0 /* NewsViewController+TableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8394E9F52477BF0C002FA8EF /* News */ = {
 			isa = PBXGroup;
 			children = (
 				8394EA202477F0E7002FA8EF /* View */,
 				8394EA1F2477F0DC002FA8EF /* ViewModel */,
-				8394EA1E2477F0D3002FA8EF /* Utilities */,
 				8394EA022477BF84002FA8EF /* Models */,
+				8394EA1E2477F0D3002FA8EF /* Utilities */,
+				83357100247B73FE002E26A0 /* Extensions */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -376,6 +391,7 @@
 		8394EA1E2477F0D3002FA8EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				83357104247B7473002E26A0 /* NewsLocalizaion.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -759,6 +775,7 @@
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				8394EA062477BFB6002FA8EF /* News.swift in Sources */,
 				8394EA642477F8A0002FA8EF /* UIView+Extension.swift in Sources */,
+				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				833570EB247AA2C1002E26A0 /* Styles.swift in Sources */,
 				8394EA5C2477F8A0002FA8EF /* UIApplication+AppVersion.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
@@ -778,6 +795,7 @@
 				833570F5247AD9A2002E26A0 /* Localizable.swift in Sources */,
 				8394EA612477F8A0002FA8EF /* UIDevice+Extension.swift in Sources */,
 				8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */,
+				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				8394EA5F2477F8A0002FA8EF /* String+Extension.swift in Sources */,
 				833570E2247A8579002E26A0 /* Connectivity.swift in Sources */,
 				8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */,
@@ -794,12 +812,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */,
+				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				833570EC247AA2C1002E26A0 /* Styles.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				833570F6247AD9A2002E26A0 /* Localizable.swift in Sources */,
 				833570E9247AA0C1002E26A0 /* UIColor+Extension.swift in Sources */,
 				833570E3247A8579002E26A0 /* Connectivity.swift in Sources */,
+				83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				833570FC247ADB67002E26A0 /* LoginLocalization.swift in Sources */,

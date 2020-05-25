@@ -51,9 +51,8 @@ class NewsViewController: BaseViewController {
             vc?.news = value
         }
     }
-    
-    
 }
+
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
