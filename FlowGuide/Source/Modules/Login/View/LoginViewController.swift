@@ -55,8 +55,40 @@ final class LoginViewController: BaseViewController {
         super.viewDidAppear(animated)
         emailTextField.becomeFirstResponder()
     }
+}
+
+// MARK: - Privte Methods
+
+private extension LoginViewController {
     
-    // MARK: - IBActions
+    private func setupViewsFor(pageType: PageType) {
+        errorMessage = nil
+        passwordConfirmationTextFields.isHidden = pageType == .login
+        sigunpButton.isHidden = pageType == .login
+        forgotPasswordButton.isHidden = pageType == .signUp
+        loginButton.isHidden = pageType == .signUp
+    }
+    
+    private func showErrorMessage(text: String?) {
+        errorLabel.isHidden = text == nil
+        errorLabel.text = text
+    }
+    
+    private func setupUIForLocalization() {
+        forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
+        sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)
+        loginButton.setTitle(LoginLocalization.login.localized, for: .normal)
+        emailTextField.placeholder = LoginLocalization.email.localized
+        passwordTextField.placeholder = LoginLocalization.password.localized
+        confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
+        segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
+        segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
+    }
+}
+
+// MARK: - IBActions
+
+extension LoginViewController {
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
@@ -73,7 +105,7 @@ final class LoginViewController: BaseViewController {
                         return
                     }
                     switch result {
-                    case .success: 
+                    case .success:
                         this.showAlert(title: LoginLocalization.password_reset.localized, message: LoginLocalization.check_email.localized)
                     case .failure(let error):
                         Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
@@ -141,34 +173,5 @@ final class LoginViewController: BaseViewController {
     
     @IBAction func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
-    }
-}
-
-// MARK: - Privte Methods
-
-private extension LoginViewController {
-    
-    private func setupViewsFor(pageType: PageType) {
-        errorMessage = nil
-        passwordConfirmationTextFields.isHidden = pageType == .login
-        sigunpButton.isHidden = pageType == .login
-        forgotPasswordButton.isHidden = pageType == .signUp
-        loginButton.isHidden = pageType == .signUp
-    }
-    
-    private func showErrorMessage(text: String?) {
-        errorLabel.isHidden = text == nil
-        errorLabel.text = text
-    }
-    
-    private func setupUIForLocalization() {
-        forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
-        sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)
-        loginButton.setTitle(LoginLocalization.login.localized, for: .normal)
-        emailTextField.placeholder = LoginLocalization.email.localized
-        passwordTextField.placeholder = LoginLocalization.password.localized
-        confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
-        segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
-        segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
     }
 }

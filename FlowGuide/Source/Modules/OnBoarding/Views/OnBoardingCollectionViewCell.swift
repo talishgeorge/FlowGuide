@@ -10,7 +10,7 @@ import UIKit
 
 class OnBoardingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var slideImageView: UIImageView!
+    @IBOutlet private weak var slideImageView: UIImageView!
     
     func configure(image: UIImage) {
         slideImageView.image = image

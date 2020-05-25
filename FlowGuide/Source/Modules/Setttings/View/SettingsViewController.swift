@@ -12,16 +12,30 @@ import Loaf
 
 class SettingsViewController: BaseViewController {
     
+    // MARK: - Properties
+    
     private let loginViewModel = LoginViewModel()
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
+}
+
+// MARK: - Private Methods
+
+extension SettingsViewController {
     
     private func setupViews() {
         self.title = K.NavigationTitle.settings
     }
+}
+
+// MARK: - IBActions
+
+extension SettingsViewController {
     
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: view, animated: true)
