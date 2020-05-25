@@ -14,17 +14,17 @@ class PresenterManager {
     static let shared = PresenterManager()
     private init() {}
     
-    enum VC {
+    enum ViewMode {
         case mainTabBarConttoller
         case onBoarding
     }
     
     // MARK: - Internal Methods
     
-    func show(vc: VC) {
+    func show(viewMode: ViewMode) {
         var viewController: UIViewController
         
-        switch vc {
+        switch viewMode {
         case .mainTabBarConttoller:
             viewController = UIStoryboard(name: K.StoryBoardID.main,
                                           bundle: nil).instantiateViewController(withIdentifier: K.StoryBoardID.mainTabBarController)

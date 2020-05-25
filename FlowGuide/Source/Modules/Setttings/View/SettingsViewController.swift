@@ -47,7 +47,7 @@ extension SettingsViewController {
             
             switch result {
             case .success:
-                PresenterManager.shared.show(vc: .onBoarding)
+                PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure(let error):
                 print ("Error signing out: %@", error.localizedDescription)
                 Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in

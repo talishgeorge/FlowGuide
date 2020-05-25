@@ -34,7 +34,7 @@ final class LoadingViewController: BaseViewController {
     
     private func showInitialView() {
         if LoadingViewModel.isUserLoggedIn() {
-            PresenterManager.shared.show(vc: .mainTabBarConttoller)
+            PresenterManager.shared.show(viewMode: .mainTabBarConttoller)
         }else {
             performSegue(withIdentifier: K.Segue.showOnBoarding, sender: nil)
         }
