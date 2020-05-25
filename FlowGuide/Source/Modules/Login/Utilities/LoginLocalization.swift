@@ -9,5 +9,17 @@
 import Foundation
 
 enum LoginLocalization: String, Localizable {
-    case title = "title_label"
+    case forget_password = "forget_password"
+    case enter_email = "enter_email"
+    case cancel = "cancel"
+    case ok = "ok"
+    case password_reset = "password_reset"
+    case check_email = "tcheck_email"
+    case invalid_form = "invalid_form"
+    case password_incorrect = "password_incorrect"
+    case login = "login"
+    case signup = "signup"
+    case email = "email"
+    case password = "password"
+    case confirm_password = "confirm_password"
 }

@@ -48,6 +48,7 @@ final class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewsFor(pageType: currentPageType)
+        setupUIForLocalization()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,10 +59,10 @@ final class LoginViewController: BaseViewController {
     // MARK: - IBActions
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Forget Password?", message: "Please Enter your Email Address", preferredStyle: .alert)
+        let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { [weak self] (_) in
+        let cancelAction = UIAlertAction(title: LoginLocalization.cancel.localized, style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: LoginLocalization.ok.localized, style: .default) { [weak self] (_) in
             guard let this = self else {
                 return
             }
@@ -73,12 +74,12 @@ final class LoginViewController: BaseViewController {
                     }
                     switch result {
                     case .success: 
-                    this.showAlert(title: "Password Reset is Successful", message: "Please check your email to find the reset link.")
+                        this.showAlert(title: LoginLocalization.password_reset.localized, message: LoginLocalization.check_email.localized)
                     case .failure(let error):
                         Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
                             switch dismissalType {
-                            case .tapped: print("Tapped!")
-                            case .timedOut: print("Timmed out!")
+                            case .tapped: break
+                            case .timedOut: break
                             }
                         }
                     }
@@ -94,11 +95,11 @@ final class LoginViewController: BaseViewController {
         guard let email = emailTextField.text, !email.isEmpty,
             let password = passwordTextField.text , !password.isEmpty,
             let confirmationPassword = confirmPasswordTextField.text , !confirmationPassword.isEmpty else {
-                showErrorMessage(text: "Invalid Form")
+                showErrorMessage(text: LoginLocalization.invalid_form.localized)
                 return
         }
         guard password == confirmationPassword else {
-            showErrorMessage(text: "Password are incorrect")
+            showErrorMessage(text: LoginLocalization.password_incorrect.localized)
             return
         }
         MBProgressHUD.showAdded(to: view, animated: true)
@@ -109,7 +110,6 @@ final class LoginViewController: BaseViewController {
             MBProgressHUD.hide(for: this.view, animated: true)
             switch result {
             case .success(let user):
-                print("Success: \(String(describing: user.uid))")
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
@@ -121,7 +121,7 @@ final class LoginViewController: BaseViewController {
         view.endEditing(true)
         guard let email = emailTextField.text, !email.isEmpty,
             let password = passwordTextField.text , !password.isEmpty else {
-                showErrorMessage(text: "Invalid Form")
+                showErrorMessage(text: LoginLocalization.invalid_form.localized)
                 return
         }
         MBProgressHUD.showAdded(to: view, animated: true)
@@ -132,7 +132,6 @@ final class LoginViewController: BaseViewController {
             MBProgressHUD.hide(for: this.view, animated: true)
             switch result {
             case .success(let user):
-                print("Success: \(String(describing: user.uid))")
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
@@ -160,5 +159,16 @@ private extension LoginViewController {
     private func showErrorMessage(text: String?) {
         errorLabel.isHidden = text == nil
         errorLabel.text = text
+    }
+    
+    private func setupUIForLocalization() {
+        forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
+        sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)
+        loginButton.setTitle(LoginLocalization.login.localized, for: .normal)
+        emailTextField.placeholder = LoginLocalization.email.localized
+        passwordTextField.placeholder = LoginLocalization.password.localized
+        confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
+        segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
+        segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
     }
 }

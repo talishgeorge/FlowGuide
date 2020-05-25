@@ -38,6 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingLabel" destination="qTr-Ll-e6a" id="Xya-Mu-g0r"/>
                         <segue destination="Pjo-jI-avP" kind="show" identifier="showOnBoarding" id="SYY-je-Xdd"/>
                     </connections>
                 </viewController>
@@ -156,6 +157,7 @@
                     <connections>
                         <outlet property="collectionView" destination="a8d-zm-4li" id="deK-6F-HyU"/>
                         <outlet property="descriptionLabel" destination="wTh-FE-j62" id="ebu-gO-VQ8"/>
+                        <outlet property="getStartedButton" destination="DxW-bG-Wxe" id="0jZ-up-UgZ"/>
                         <outlet property="pageControl" destination="gnI-2a-0Ie" id="eWH-EL-iMu"/>
                         <outlet property="titleLabel" destination="BC4-z3-tOB" id="Lfn-Fn-XF7"/>
                         <segue destination="TtS-Nv-y5J" kind="showDetail" identifier="showLoginSignup" id="MIT-5K-Efi"/>
@@ -180,7 +182,7 @@
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XHM-Dq-laj">
-                                <rect key="frame" x="145" y="47" width="124" height="32"/>
+                                <rect key="frame" x="144.5" y="47" width="125" height="32"/>
                                 <segments>
                                     <segment title="Login"/>
                                     <segment title="Signup"/>
@@ -262,14 +264,13 @@
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="OYU-jb-Vjc" firstAttribute="trailing" secondItem="U2e-VE-e6Z" secondAttribute="trailing" constant="38" id="7Y7-wx-pb7"/>
-                            <constraint firstItem="XHM-Dq-laj" firstAttribute="top" secondItem="f77-fX-kbC" secondAttribute="bottom" constant="25.5" id="948-95-RgQ"/>
+                            <constraint firstItem="XHM-Dq-laj" firstAttribute="top" secondItem="f77-fX-kbC" secondAttribute="bottom" constant="25.5" id="Atu-VM-hda"/>
                             <constraint firstItem="U2e-VE-e6Z" firstAttribute="leading" secondItem="OYU-jb-Vjc" secondAttribute="leading" constant="38" id="Cli-2w-zp4"/>
                             <constraint firstItem="f77-fX-kbC" firstAttribute="top" secondItem="OYU-jb-Vjc" secondAttribute="top" constant="1.5" id="LrA-uc-gds"/>
-                            <constraint firstItem="U2e-VE-e6Z" firstAttribute="top" secondItem="XHM-Dq-laj" secondAttribute="bottom" constant="34" id="Mh2-NL-7WM"/>
-                            <constraint firstItem="XHM-Dq-laj" firstAttribute="centerX" secondItem="f77-fX-kbC" secondAttribute="centerX" id="XaP-YO-o2a"/>
                             <constraint firstItem="f77-fX-kbC" firstAttribute="centerX" secondItem="yif-aX-LaN" secondAttribute="centerX" id="e6c-CV-aiV"/>
                             <constraint firstItem="f77-fX-kbC" firstAttribute="centerX" secondItem="yif-aX-LaN" secondAttribute="centerX" id="eDq-Kr-gJG"/>
-                            <constraint firstItem="XHM-Dq-laj" firstAttribute="leading" secondItem="OYU-jb-Vjc" secondAttribute="leading" constant="145" id="uLI-lo-Vfg"/>
+                            <constraint firstItem="XHM-Dq-laj" firstAttribute="centerX" secondItem="yif-aX-LaN" secondAttribute="centerX" id="orM-Qa-GLq"/>
+                            <constraint firstItem="U2e-VE-e6Z" firstAttribute="top" secondItem="XHM-Dq-laj" secondAttribute="bottom" constant="34" id="pMm-BW-pti"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OYU-jb-Vjc"/>
                     </view>
@@ -281,6 +282,7 @@
                         <outlet property="loginButton" destination="aJ8-Y4-q45" id="um5-Pf-xgp"/>
                         <outlet property="passwordConfirmationTextFields" destination="gay-6h-tJW" id="vbF-Th-ChP"/>
                         <outlet property="passwordTextField" destination="Uvb-tX-gJa" id="mPv-mI-HcU"/>
+                        <outlet property="segmentedControll" destination="XHM-Dq-laj" id="FBL-ba-z1H"/>
                         <outlet property="sigunpButton" destination="XXz-2u-vlY" id="n7o-4F-fhK"/>
                     </connections>
                 </viewController>

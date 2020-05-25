@@ -1,0 +1,72 @@
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "0a6-J9-jjP"; */
+"0a6-J9-jjP.title" = "Logout";
+
+/* Class = "UINavigationItem"; title = "Details"; ObjectID = "3s1-G5-18K"; */
+"3s1-G5-18K.title" = "Details";
+
+/* Class = "UILabel"; text = "Why use  this App"; ObjectID = "BC4-z3-tOB"; */
+"BC4-z3-tOB.text" = "Why use  this App";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ckz-Sz-okX"; */
+"Ckz-Sz-okX.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Get Started"; ObjectID = "DxW-bG-Wxe"; */
+"DxW-bG-Wxe.normalTitle" = "Get Started";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JdE-hS-Epq"; */
+"JdE-hS-Epq.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "News"; ObjectID = "Qfi-vW-kXc"; */
+"Qfi-vW-kXc.title" = "News";
+
+/* Class = "UILabel"; text = "Your credentials are incorrect"; ObjectID = "S0l-0X-2Sz"; */
+"S0l-0X-2Sz.text" = "Your credentials are incorrect";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "UDr-xb-NeQ"; */
+"UDr-xb-NeQ.title" = "Home";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Uvb-tX-gJa"; */
+"Uvb-tX-gJa.placeholder" = "Password";
+
+/* Class = "UISegmentedControl"; XHM-Dq-laj.segmentTitles[0] = "Login"; ObjectID = "XHM-Dq-laj"; */
+"XHM-Dq-laj.segmentTitles[0]" = "Login";
+
+/* Class = "UISegmentedControl"; XHM-Dq-laj.segmentTitles[1] = "Signup"; ObjectID = "XHM-Dq-laj"; */
+"XHM-Dq-laj.segmentTitles[1]" = "Signup";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "XXz-2u-vlY"; */
+"XXz-2u-vlY.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "App Version 1.0"; ObjectID = "ZSM-hv-ICN"; */
+"ZSM-hv-ICN.text" = "App Version 1.0";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "aEl-SY-eHS"; */
+"aEl-SY-eHS.normalTitle" = "Forgot Password?";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "aJ8-Y4-q45"; */
+"aJ8-Y4-q45.normalTitle" = "Login";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "aQc-xR-Xcz"; */
+"aQc-xR-Xcz.title" = "Settings";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "f5o-gt-08X"; */
+"f5o-gt-08X.title" = "Settings";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "gay-6h-tJW"; */
+"gay-6h-tJW.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "Enbale Push Notification"; ObjectID = "hLT-XL-v8k"; */
+"hLT-XL-v8k.text" = "Enbale Push Notification";
+
+/* Class = "UILabel"; text = "Loading...."; ObjectID = "qTr-Ll-e6a"; */
+"qTr-Ll-e6a.text" = "Loading....";
+
+/* Class = "UILabel"; text = "Logged In User : Talish Geroge"; ObjectID = "vaE-MD-kj2"; */
+"vaE-MD-kj2.text" = "Logged In User : Talish Geroge";
+
+/* Class = "UILabel"; text = "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI"; ObjectID = "wTh-FE-j62"; */
+"wTh-FE-j62.text" = "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "x1m-X1-p1t"; */
+"x1m-X1-p1t.placeholder" = "Email";

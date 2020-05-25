@@ -9,5 +9,8 @@
 import Foundation
 
 enum OnBoardingLocalization: String, Localizable {
-    case title = "title_label"
+    case get_started = "get_started"
+    case onboarding_title = "onboarding_title1"
+    case onboarding_title2 = "onboarding_title2"
+    case onboarding_title3 = "onboarding_title3"
 }

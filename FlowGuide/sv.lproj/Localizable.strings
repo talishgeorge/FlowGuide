@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  FlowGuide
+
+  Created by Talish George on 25/05/20.
+  Copyright © 2020 Talish George. All rights reserved.
+*/
+//Loading
+"loading" = "Läser in";
+//Login
+"forget_password" = "Glöm lösenord?";
+"enter_email" = "Var god skriv in din e-postadress";
+"cancel" = "Avbryt";
+"ok" = "Ok";
+"password_reset" = "Återställning av lösenord är framgångsrikt";
+"check_email" = "Kontrollera din e-post för att hitta återställningslänken.";
+"invalid_form" = "Ogiltig form";
+"password_incorrect" = "Lösenord är felaktiga";
+"login" = "Logga in";
+"signup" = "Bli Medlem";
+"email" = "E-post";
+"password" = "Lösenord";
+"confirm_password" = "Bekräfta lösenord";
+//OnBoarding
+"get_started" = "Komma igång";
+"onboarding_title1" = "Varför använda MVVM";
+"onboarding_title2" = "Fördelarna med MVVM";
+"onboarding_title3" = "När ska man använda MVVM";

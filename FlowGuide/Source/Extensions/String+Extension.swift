@@ -109,6 +109,10 @@ extension String {
         return NSLocalizedString(self, bundle: bundle, comment: "")
     }
 
+//    func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
+//        return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
+//    }
+    
     ///These subscripts help in accessing a substring easily, like xString[0...2] or xString[1..<3]
     
     subscript (bounds: CountableClosedRange<Int>) -> String {

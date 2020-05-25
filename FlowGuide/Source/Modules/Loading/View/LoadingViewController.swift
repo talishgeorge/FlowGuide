@@ -12,12 +12,14 @@ class LoadingViewController: BaseViewController {
     
     // MARK: - Properties
     
+    @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingLabel.text = LoadingLocalization.loading.localized
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -17,10 +17,11 @@ class OnBoardingViewController: BaseViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet private weak var getStartedButton: UIButton!
     let viewModel = OnBoardingViewModel()
     
     // MARK: - View Life Cycle
@@ -30,6 +31,7 @@ class OnBoardingViewController: BaseViewController {
         setupCollectionView()
         setupPageControl()
         showCaption(atIndex: 0)
+        setupUIForLocalization()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,6 +64,10 @@ private extension OnBoardingViewController {
     
     private func setupPageControl() {
         pageControl.numberOfPages = viewModel.getOnboardingItemCount()
+    }
+    
+    private func setupUIForLocalization() {
+        getStartedButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
     }
 }
 

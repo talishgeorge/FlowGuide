@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  FlowGuide
+
+  Created by Talish George on 25/05/20.
+  Copyright © 2020 Talish George. All rights reserved.
+*/
+//Loading
+"loading" = "Loading";
+//Login
+"forget_password" = "Forget Password?";
+"enter_email" = "Please Enter your Email Address";
+"cancel" = "Cancel";
+"ok" = "Ok";
+"password_reset" = "Password Reset is Successful";
+"check_email" = "Please check your email to find the reset link.";
+"invalid_form" = "Invalid Form";
+"password_incorrect" = "Passwords are incorrect";
+"login" = "Login";
+"signup" = "Sign up";
+"email" = "Email";
+"password" = "Password";
+"confirm_password" = "Confirm Password";
+//OnBoarding
+"get_started" = "Get Started";
+"onboarding_title1" = "Why Use MVVM";
+"onboarding_title2" = "Benefits of MVVM";
+"onboarding_title3" = "When to Use MVVM";
+
