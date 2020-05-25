@@ -13,7 +13,7 @@ protocol OnBoardingDelegate: class {
     func showMainTabBarController()
 }
 
-class OnBoardingViewController: BaseViewController {
+final class OnBoardingViewController: BaseViewController {
     
     // MARK: - Properties
     
@@ -67,7 +67,7 @@ private extension OnBoardingViewController {
     }
     
     private func setupUIForLocalization() {
-        getStartedButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
+        getStartedButton.setTitle(OnBoardingLocalization.get_started.localized, for: .normal)
     }
 }
 
@@ -77,7 +77,8 @@ extension OnBoardingViewController {
     
     func showCaption(atIndex index: Int) {
         let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
-        titleLabel.text = onboardingItemInfo.title
+        titleLabel.text = (index == 1) ? OnBoardingLocalization.onboarding_title1.localized:
+                          (index == 2) ? OnBoardingLocalization.onboarding_title2.localized:                    OnBoardingLocalization.onboarding_title3.localized
         descriptionLabel.text = onboardingItemInfo.description
     }
 }

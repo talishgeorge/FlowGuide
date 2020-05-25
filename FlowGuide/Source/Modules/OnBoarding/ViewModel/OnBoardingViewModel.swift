@@ -17,7 +17,7 @@ final class OnBoardingViewModel: BaseViewModel {
     
     // MARK: - Properties
     
-    var currentSlide: Slide? = Slide()
+    var currentSlide: OnBoardingItem? = OnBoardingItem()
     
     var onboardingItemTitle: String? {
         if let title = currentSlide?.title {
@@ -49,7 +49,7 @@ final class OnBoardingViewModel: BaseViewModel {
 extension OnBoardingViewModel {
     
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
-        currentSlide = Slide.colllection[index]
+        currentSlide = OnBoardingItem.colllection[index]
         var onboardingItemInfo = OnboardingItemInfo()
         onboardingItemInfo.title = currentSlide?.title
         onboardingItemInfo.description = currentSlide?.description
@@ -57,11 +57,11 @@ extension OnBoardingViewModel {
     }
     
     func getOnboardingItemCount() -> Int {
-        return Slide.colllection.count
+        return OnBoardingItem.colllection.count
     }
     
     func getOnboardingItemImageName(index: Int) -> String? {
-        currentSlide = Slide.colllection[index]
+        currentSlide = OnBoardingItem.colllection[index]
         return onboardingItemImageName
     }
 }

@@ -9,7 +9,7 @@ target 'FlowGuide' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'Firebase/Auth'
   pod 'Loaf'
-  pod 'Alamofire', '~> 5.2'
+  pod 'Alamofire', '~> 4.9.1'
   
   target 'FlowGuideTests' do
     inherit! :search_paths

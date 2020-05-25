@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Slide {
+struct OnBoardingItem {
     
     // MARK: - Properties
     
@@ -28,14 +28,14 @@ struct Slide {
     
     // MARK: - Static Methods
     
-    static var colllection: [Slide] = [
-        Slide(imageName: "slide1",
+    static var colllection: [OnBoardingItem] = [
+        OnBoardingItem(imageName: "slide1",
               title: "Why Use MVVM",
               description: "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI"),
-        Slide(imageName: "slide2",
+        OnBoardingItem(imageName: "slide2",
               title: "Why Use MVVM - Tip 1",
               description: "MVVM Allows Code reuse"),
-        Slide(imageName: "slide3",
+        OnBoardingItem(imageName: "slide3",
               title: "Why Use MVVM - Tip 2",
               description: "By having a separation between the different parts of an app's code it brings a level of structure and uniformity to the code")
     ]
