@@ -6,7 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-import UIKit
 import MBProgressHUD
 import Loaf
 

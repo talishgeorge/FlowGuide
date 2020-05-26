@@ -6,7 +6,6 @@
 //  Copyright © 2019 1276121. All rights reserved.
 //
 import Alamofire
-import Foundation
 
 struct APIRequestModel {
     var url: URL?

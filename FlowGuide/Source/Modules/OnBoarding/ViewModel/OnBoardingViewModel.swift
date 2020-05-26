@@ -6,8 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-import Foundation
-
 struct OnboardingItemInfo {
     var title: String?
     var description: String?

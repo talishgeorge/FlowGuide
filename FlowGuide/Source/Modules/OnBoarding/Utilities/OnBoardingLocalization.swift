@@ -6,8 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-import Foundation
-
 enum OnBoardingLocalization: String, Localizable {
     case get_started = "get_started"
     case onboarding_title1 = "onboarding_title1"

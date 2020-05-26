@@ -6,7 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import UIKit
 
 protocol OnBoardingDelegate: class {

@@ -6,8 +6,6 @@
 //  Copyright © 2019 1276121. All rights reserved.
 //
 
-import Foundation
-
 final class ErrorProvider: Error {
     
     var errorDescription: String?

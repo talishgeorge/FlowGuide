@@ -6,7 +6,6 @@
 //  Copyright © 2019 1276121. All rights reserved.
 //
 
-import Foundation
 struct APIHeaderKeys {
     static let accept = "Accept"
     static let contentType = "Content-Type"

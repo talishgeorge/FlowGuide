@@ -6,8 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-import Foundation
-
 protocol Localizable {
     var localized: String { get }
 }

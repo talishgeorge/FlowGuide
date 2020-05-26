@@ -6,7 +6,6 @@
 //  Copyright © 2019 1276121. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 typealias SuccessCompletionBlock = (_ resoponse: ForecastWeatherResponse?)->()
 typealias FailureBlock = (_ error: Error?) -> Void
