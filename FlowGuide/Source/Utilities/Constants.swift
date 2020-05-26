@@ -10,6 +10,10 @@ import Foundation
 
 struct K {
     
+    enum AuthError: Error {
+        case unknownError
+    }
+    
     struct NavigationTitle {
         static let settings = "Settings"
         static let home = "Home"

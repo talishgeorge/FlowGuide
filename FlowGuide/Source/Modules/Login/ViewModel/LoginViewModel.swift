@@ -13,29 +13,22 @@ final class LoginViewModel: BaseViewModel {
     
     // MARK: - Properties
     
-    private let auth = Auth.auth()
-    enum AuthError: Error {
-        case unknownError
+    //private let auth = Auth.auth()
+    var password: String?
+    var email: String?
+    
+    var formIsValid: Bool {
+        guard let email = email, !email.isEmpty,
+            let password = password , !password.isEmpty else {
+                return false
+        }
+        return true
     }
 }
 
 // MARK: - Internal Methds
 
 extension LoginViewModel {
-    
-    func signUpNewUser(withEmail email: String,
-                       password: String,
-                       completion: @escaping (Result<User, Error>) -> Void) {
-        auth.createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error {
-                completion(.failure(error))
-            } else if let user = result?.user {
-                completion(.success(user))
-            } else {
-                completion(.failure(AuthError.unknownError))
-            }
-        }
-    }
     
     func loginUser(withEmail email: String,
                    password: String,
@@ -46,7 +39,7 @@ extension LoginViewModel {
             } else if let user = result?.user {
                 completion(.success(user))
             } else {
-                completion(.failure(AuthError.unknownError))
+                completion(.failure(K.AuthError.unknownError))
             }
         }
     }

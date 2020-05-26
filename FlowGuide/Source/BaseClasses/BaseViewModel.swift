@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class BaseViewModel: NSObject {
+    
+    let auth = Auth.auth()
     
     var isReachable: Bool {
         return Connectivity.isReachable

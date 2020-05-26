@@ -24,7 +24,8 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     weak var delegate: OnBoardingDelegate?
-    private let viewModel = LoginViewModel()
+    private let loginViewModel = LoginViewModel()
+    private let signUpViewModel = SignUpViewModel()
     
     private enum PageType {
         case login
@@ -90,6 +91,28 @@ private extension LoginViewController {
 
 extension LoginViewController {
     
+    @IBAction func loginButtonTaooed(_ sender: UIButton) {
+        view.endEditing(true)
+        guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
+            showErrorMessage(text: LoginLocalization.invalid_form.localized)
+            return
+        }
+        
+        MBProgressHUD.showAdded(to: view, animated: true)
+        loginViewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
+            guard let this = self else {
+                return
+            }
+            MBProgressHUD.hide(for: this.view, animated: true)
+            switch result {
+            case .success(let user):
+                this.delegate?.showMainTabBarController()
+            case .failure(let error):
+                this.showErrorMessage(text: error.localizedDescription)
+            }
+        }
+    }
+    
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
@@ -100,7 +123,7 @@ extension LoginViewController {
             }
             if let textField = alertController.textFields?.first,
                 let email = textField.text, !email.isEmpty {
-                this.viewModel.resetPassword(withEmail: email) { [weak self] (result) in
+                this.loginViewModel.resetPassword(withEmail: email) { [weak self] (result) in
                     guard let this = self else {
                         return
                     }
@@ -124,9 +147,9 @@ extension LoginViewController {
     }
     
     @IBAction func sigunpButtonTapped(_ sender: UIButton) {
-        guard let email = emailTextField.text, !email.isEmpty,
-            let password = passwordTextField.text , !password.isEmpty,
-            let confirmationPassword = confirmPasswordTextField.text , !confirmationPassword.isEmpty else {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
                 showErrorMessage(text: LoginLocalization.invalid_form.localized)
                 return
         }
@@ -135,43 +158,37 @@ extension LoginViewController {
             return
         }
         MBProgressHUD.showAdded(to: view, animated: true)
-        viewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
+        signUpViewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
             MBProgressHUD.hide(for: this.view, animated: true)
             switch result {
-            case .success(let user):
+            case .success:
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
             }
         }
     }
-    
-    @IBAction func loginButtonTaooed(_ sender: UIButton) {
-        view.endEditing(true)
-        guard let email = emailTextField.text, !email.isEmpty,
-            let password = passwordTextField.text , !password.isEmpty else {
-                showErrorMessage(text: LoginLocalization.invalid_form.localized)
-                return
-        }
-        MBProgressHUD.showAdded(to: view, animated: true)
-        viewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
-            guard let this = self else {
-                return
-            }
-            MBProgressHUD.hide(for: this.view, animated: true)
-            switch result {
-            case .success(let user):
-                this.delegate?.showMainTabBarController()
-            case .failure(let error):
-                this.showErrorMessage(text: error.localizedDescription)
-            }
-        }
-    }
-    
+
     @IBAction func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        loginViewModel.email = emailTextField.text
+        loginViewModel.password = passwordTextField.text
+        signUpViewModel.confirmPassword = confirmPasswordTextField.text
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("TextField did end editing method called\(textField.text!)")
+        loginViewModel.email = emailTextField.text
+        loginViewModel.password = passwordTextField.text
+        signUpViewModel.confirmPassword = confirmPasswordTextField.text
     }
 }
