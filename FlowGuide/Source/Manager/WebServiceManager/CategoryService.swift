@@ -9,12 +9,13 @@
 import Foundation
 
 class CategoryService {
-    func getAllHeadlinesForAllCategrories(comletion: @escaping ([Category]) -> ()) {
+    func getAllHeadlinesForAllCategories(completion: @escaping ([Category]) -> ()) {
         var categories = [Category]()
-        let requestCount = 0
+        var requestCount = 0
         let categoriesCount = Category.all().count
         Category.all().forEach { (category) in
             WebService().load(Article.by(category)) { (articles) in
+                requestCount += 1
                 guard let articles = articles else {
                     return
                 }
@@ -22,7 +23,7 @@ class CategoryService {
                 categories.append(category)
                 if requestCount == categoriesCount {
                     DispatchQueue.main.async {
-                        comletion(categories)
+                        completion(categories)
                     }
                 }
             }

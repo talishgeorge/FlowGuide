@@ -14,7 +14,7 @@ struct Category {
     let articles: [Article]
     
     static func all() -> [String] {
-        ["Business", "Entertaiment", "General", "Sports"]
+        ["Business", "General", "Sports"]
     }
 }
 

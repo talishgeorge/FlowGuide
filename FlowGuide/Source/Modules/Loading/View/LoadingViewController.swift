@@ -14,8 +14,7 @@ final class LoadingViewController: BaseViewController {
     
     @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
-    var weatherService: WebService = WebService()
-    
+
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -38,21 +37,5 @@ final class LoadingViewController: BaseViewController {
         }else {
             performSegue(withIdentifier: K.Segue.showOnBoarding, sender: nil)
         }
-        //fetchWeatherForecast(by: "Delhi")
-    }
-    
-    func fetchWeatherForecast(by city: String) {
-        self.weatherService.getWeatherData(city: city, success: { forecast in
-            if let forecast = forecast {
-                DispatchQueue.main.async {
-                    // self.weatherForCast = forecast
-                    print(forecast)
-                }
-            }
-        }, failure: { error in
-            guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-                return
-            }
-        })
     }
 }

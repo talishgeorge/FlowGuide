@@ -7,7 +7,9 @@
 //
 
 import Alamofire
-typealias SuccessCompletionBlock = (_ resoponse: ForecastWeatherResponse?)->()
+//typealias SuccessCompletionBlock = (_ resoponse: ForecastWeatherResponse?)->()
+typealias SuccessCompletionBlock = (_ resoponse: NewsSourcesResponse?)->()
+
 typealias FailureBlock = (_ error: Error?) -> Void
 
 struct Resource<T> {
@@ -22,7 +24,10 @@ class WebService {
     let baseURL = "https://samples.openweathermap.org/data/2.5/forecast/daily?q=M%C3%BCnchen,DE&appid=b6907d289e10d714a6e88b30761fae22"
     let baseOpenWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&Appid=315a5a4dae4ad2b0554677c7fdfdada1"
     
+    let newsOpenURL = "https://newsapi.org/v2/top-headlines?category=General&country=us&apiKey=6a3ce0a5c952460fb0ea2fd9163d9ddf"
+    
     func load<T>(_ resource: Resource<T>, completion: @escaping (T?) -> ()) {
+        print("Resourece URL is \(resource.url)")
         URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
             if let data = data {
                 DispatchQueue.main.async {
@@ -36,6 +41,21 @@ class WebService {
     
     func getWeatherData(city: String?, success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
         guard let url = URL(string: baseOpenWeatherURL) else {
+            failure(nil)
+            return
+        }
+        let requestModel = APIRequestModel(url: url,
+                                           httpMethod: .get,
+                                           parameters: nil,
+                                           encoding: URLEncoding.default,
+                                           headers: nil)
+        NetworkManager.shared().request(requestModel: requestModel) { [weak self] response in
+            self?.handleResponseJSON(response, success: success, failure: failure)
+        }
+    }
+    
+    func getNewsData(category: String?, success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
+        guard let url = URL(string: newsOpenURL) else {
             failure(nil)
             return
         }
@@ -72,18 +92,31 @@ class WebService {
         }
     }
     
+//    func handleWeatherCodableData(from json: [String: Any], success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
+//        if let jsonData = json.jsonString.data(using: .utf8) {
+//            do {
+//                let data = try JSONDecoder().decode(ForecastWeatherResponse.self, from: jsonData)
+//                print("Data ->", data)
+//                success(data)
+//            } catch {
+//                print("Error...while decoding JSON!")
+//                failure(nil)
+//            }
+//        }
+//    }
+    
     func handleCodableData(from json: [String: Any], success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
-        if let jsonData = json.jsonString.data(using: .utf8) {
-            do {
-                let data = try JSONDecoder().decode(ForecastWeatherResponse.self, from: jsonData)
-                print("Data ->", data)
-                success(data)
-            } catch {
-                print("Error...while decoding JSON!")
-                failure(nil)
-            }
-        }
-    }
+           if let jsonData = json.jsonString.data(using: .utf8) {
+               do {
+                   let data = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData)
+                   print("Data ->", data)
+                   success(data)
+               } catch {
+                   print("Error...while decoding JSON!")
+                   failure(nil)
+               }
+           }
+       }
     
     func extractErrorValues(response: DataResponse<Any>) {
         guard case let .failure(error) = response.result else { return }
