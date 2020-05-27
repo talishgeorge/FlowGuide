@@ -14,14 +14,12 @@ class NewsViewModel: BaseViewModel, TableViewProtocol {
     // MARK: - Properties
     
     var newsType:String = ""
-    
     var news: [newsInfo] = []
     
     init(type: String, list: [newsInfo]) {
         self.newsType = type
         self.news = list
     }
-    
     
     var cellIdentifier: String{
         get {K.CellIdentifiers.newsCell}
@@ -64,6 +62,7 @@ extension NewsViewModel {
         headerCell.updateUI(value: headerName)
         return headerCell
     }
+    
     func getSelectedCell(indexPath: IndexPath) -> Any {
         return newsListDataSource[indexPath.row]
     }

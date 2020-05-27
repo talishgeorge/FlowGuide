@@ -16,14 +16,12 @@ class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     func updateUI<T>(value: T) {
         guard let news = value as? newsInfo else { return }
         titleLabel.text = news.title

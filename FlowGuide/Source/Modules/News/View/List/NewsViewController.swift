@@ -28,9 +28,6 @@ class NewsViewController: BaseViewController {
         
         let headerNib = UINib.init(nibName: K.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
-        
-        //        newsTableViewOutlet.register(UINib(nibName: K.CellIdentifiers.newsCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.newsCell)
-        
         tableViewDataSource = NewsFeedData.newsFeeds
         
         self.title = K.NavigationTitle.home
