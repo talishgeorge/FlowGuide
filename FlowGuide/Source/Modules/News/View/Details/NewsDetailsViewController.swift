@@ -10,17 +10,22 @@ import UIKit
 
 class NewsDetailsViewController: BaseViewController {
 
+       // MARK: - Properties
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     var news:newsInfo = (title:"", description: "")
     
+    // MARK: - View Life Cycle
+       
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         updateUI()
     }
+    
     func updateUI() {
         titleLabel.text = news.title
         descriptionLabel.text = news.description

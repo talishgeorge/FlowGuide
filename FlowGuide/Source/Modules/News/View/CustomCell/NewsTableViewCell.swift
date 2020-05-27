@@ -12,6 +12,7 @@ class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet weak var headlineImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

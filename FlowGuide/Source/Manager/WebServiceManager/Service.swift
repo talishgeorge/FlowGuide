@@ -10,12 +10,30 @@ import Alamofire
 typealias SuccessCompletionBlock = (_ resoponse: ForecastWeatherResponse?)->()
 typealias FailureBlock = (_ error: Error?) -> Void
 
-class Services {
+struct Resource<T> {
+    let url: URL
+    let parse: (Data) -> T?
+}
+
+class WebService {
     
     let appID = "315a5a4dae4ad2b0554677c7fdfdada1"
     //let baseURL = "https://api.openweathermap.org/data/2.5/forecast/daily?q=London&appid=315a5a4dae4ad2b0554677c7fdfdada1"
     let baseURL = "https://samples.openweathermap.org/data/2.5/forecast/daily?q=M%C3%BCnchen,DE&appid=b6907d289e10d714a6e88b30761fae22"
     let baseOpenWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&Appid=315a5a4dae4ad2b0554677c7fdfdada1"
+    
+    func load<T>(_ resource: Resource<T>, completion: @escaping (T?) -> ()) {
+        URLSession.shared.dataTask(with: resource.url) { (data, response, error) in
+            if let data = data {
+                DispatchQueue.main.async {
+                    completion(resource.parse(data))
+                }
+            } else {
+                completion(nil)
+            }
+        }.resume()
+    }
+    
     func getWeatherData(city: String?, success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
         guard let url = URL(string: baseOpenWeatherURL) else {
             failure(nil)

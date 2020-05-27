@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+enum NewsLocalization: String, Localizable {
+    case title = "title_label"
+}
+
+enum NewsType: String {
+    case sports = "Sports"
+    case international = "International"
+    case domestic = "Domestic"
+    case politics = "Politics"
+}
+
+typealias newsInfo = (title:String, description:String)

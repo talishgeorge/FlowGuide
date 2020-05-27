@@ -11,11 +11,15 @@ import FirebaseAuth
 
 class NewsViewController: BaseViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var newsTableViewOutlet: UITableView!
     
     var tableViewDataSource:[TableViewProtocol] = []
     var selectedCell = IndexPath()
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,9 @@ class NewsViewController: BaseViewController {
         
         let headerNib = UINib.init(nibName: K.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
-        newsTableViewOutlet.register(UINib(nibName: K.CellIdentifiers.newsCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.newsCell)
+        
+        //        newsTableViewOutlet.register(UINib(nibName: K.CellIdentifiers.newsCell, bundle: nil), forCellReuseIdentifier: K.CellIdentifiers.newsCell)
+        
         tableViewDataSource = NewsFeedData.newsFeeds
         
         self.title = K.NavigationTitle.home
@@ -33,7 +39,6 @@ class NewsViewController: BaseViewController {
             userNameLabel.text = "Logged in - \(email)"
         }
     }
-    
     
     // MARK: - Navigation
     
@@ -50,29 +55,5 @@ class NewsViewController: BaseViewController {
             }
             vc?.news = value
         }
-    }
-}
-
-extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewDataSource.count
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = tableViewDataSource[section]
-        return section.numberOfRowsInSection()
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let list = tableViewDataSource[indexPath.section]
-        return list.getCellForRow(tableView: tableView, delegate: self, indexPath: indexPath)
-        
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableViewDataSource[section]
-        return header.getHeader(tableView: tableView, delegate: self, section: section)
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCell = indexPath
-        performSegue(withIdentifier: K.Segue.showNewsDetail, sender: self)
     }
 }

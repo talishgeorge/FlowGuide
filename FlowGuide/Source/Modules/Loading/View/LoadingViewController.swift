@@ -14,7 +14,7 @@ final class LoadingViewController: BaseViewController {
     
     @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
-    var weatherService: Services = Services()
+    var weatherService: WebService = WebService()
     
     // MARK: - View Life Cycle
     
@@ -45,7 +45,7 @@ final class LoadingViewController: BaseViewController {
         self.weatherService.getWeatherData(city: city, success: { forecast in
             if let forecast = forecast {
                 DispatchQueue.main.async {
-                    //                    self.weatherForCast = forecast
+                    // self.weatherForCast = forecast
                     print(forecast)
                 }
             }

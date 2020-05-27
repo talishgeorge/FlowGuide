@@ -19,31 +19,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ad-fl-QWn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-IE-nfA">
-                                <rect key="frame" x="20" y="15" width="280" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuY-IE-nfA">
+                                <rect key="frame" x="20" y="15" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Desc" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-B6-1Np">
-                                <rect key="frame" x="20" y="41" width="280" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="m43-FS-Fz7"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Desc" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-B6-1Np">
+                                <rect key="frame" x="20" y="41" width="78" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93388366700000003" green="0.91392558810000002" blue="0.89803069830000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0Ds-B6-1Np" secondAttribute="trailing" constant="20" id="9Of-za-NIL"/>
-                            <constraint firstItem="0Ds-B6-1Np" firstAttribute="top" secondItem="VuY-IE-nfA" secondAttribute="bottom" constant="5" id="KTb-q7-9kd"/>
-                            <constraint firstAttribute="trailing" secondItem="VuY-IE-nfA" secondAttribute="trailing" constant="20" id="ihW-da-p3p"/>
-                            <constraint firstItem="VuY-IE-nfA" firstAttribute="leading" secondItem="8ad-fl-QWn" secondAttribute="leading" constant="20" id="l4J-TK-WYV"/>
-                            <constraint firstItem="VuY-IE-nfA" firstAttribute="top" secondItem="8ad-fl-QWn" secondAttribute="top" constant="15" id="msW-l7-5ly"/>
-                            <constraint firstItem="0Ds-B6-1Np" firstAttribute="leading" secondItem="VuY-IE-nfA" secondAttribute="leading" id="rb1-yA-R5Q"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
