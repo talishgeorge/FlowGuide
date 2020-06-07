@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4264E1BD-3D0A-49B2-9AB9-6786EA95CF3C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlowGuide/Source/Manager/WebServiceManager/CategoryService.swift"
@@ -49,22 +49,6 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "getAllHeadlinesForAllCategories(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "54DA965C-28DD-433A-9A90-7E4986AAF4DE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlowGuide/Source/Modules/News/View/List/NewsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "populateNews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -103,17 +87,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54EBF4BF-6F4E-4C77-8410-86672AA8B086"
+            uuid = "94AF4C07-C690-4377-BC43-878888700294"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlowGuide/Source/Modules/News/View/List/NewsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "fetchNews(by:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "populateNews()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4802D278-D910-47A2-99CE-4C81FDA31A0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Source/Manager/WebServiceManager/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "load(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4802D278-D910-47A2-99CE-4C81FDA31A0F - 403f4f50e4739554"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlowGuide.WebService.load&lt;A&gt;(_: FlowGuide.Resource&lt;A&gt;, completion: (Swift.Optional&lt;A&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Source/Manager/WebServiceManager/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "741">
+               </Location>
+               <Location
+                  uuid = "4802D278-D910-47A2-99CE-4C81FDA31A0F - 3190457fa55abcfc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FlowGuide.WebService.load&lt;A&gt;(_: FlowGuide.Resource&lt;A&gt;, completion: (Swift.Optional&lt;A&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Source/Manager/WebServiceManager/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "399">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC427903-8268-4C6D-9CF4-CBC6297A6D1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Source/Utilities/EndPoints.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "url"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

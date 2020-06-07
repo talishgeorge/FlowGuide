@@ -9,7 +9,13 @@
 import Foundation
 
 extension URL {
-    static func urlForTopHeadlines(for category: String) -> URL {
-        return URL(string: "https://newsapi.org/v2/top-headlines?category=\(category)&country=us&apiKey=6a3ce0a5c952460fb0ea2fd9163d9ddf")!
+
+    static func news(for category: String) -> URL {
+        makeForEndpoint("\(category)")
+    }
+    
+    static func makeForEndpoint(_ category: String) -> URL {
+        URL(string: "https://newsapi.org/v2/top-headlines?category=\(category)&country=us&apiKey=6a3ce0a5c952460fb0ea2fd9163d9ddf")!
     }
 }
+

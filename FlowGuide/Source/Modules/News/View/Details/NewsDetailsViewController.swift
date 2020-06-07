@@ -14,7 +14,7 @@ class NewsDetailsViewController: BaseViewController {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    var news:newsInfo = (title:"", description: "")
+    var news = Article()
     
     // MARK: - View Life Cycle
     
@@ -28,3 +28,4 @@ class NewsDetailsViewController: BaseViewController {
         descriptionLabel.text = news.description
     }
 }
+

@@ -9,33 +9,45 @@
 import Foundation
 import UIKit
 
-extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
+extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - UITableView Data Source Protocol
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewDataSource.count
+        return self.categoryListVM == nil ? 0 : categoryListVM?.numberOfSections ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let section = tableViewDataSource[section]
-        return section.numberOfRowsInSection()
+        return self.categoryListVM == nil ? 0 : categoryListVM?.numberOfRowsInSection(section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let list = tableViewDataSource[indexPath.section]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as? NewsTableViewCell else {
-            fatalError("NewsTableViewCell not found")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.newsCell, for: indexPath) as? NewsTableViewCell else {
+            return UITableViewCell()
         }
-        return list.getCellForRow(tableView: tableView, delegate: self, indexPath: indexPath)
-        
+        let newsData = self.categoryListVM?.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
+        cell.updateUI(value: newsData)
+        return cell
     }
     
+    // MARK: - UITableView Delege Protocol
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableViewDataSource[section]
-        return header.getHeader(tableView: tableView, delegate: self, section: section)
+        guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: K.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
+            else{
+                return UITableViewHeaderFooterView()
+        }
+        let headerName = categoryListVM?.categoryAtIndex(index: section).name
+        headerCell.updateUI(value: headerName)
+        return headerCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCell = indexPath
+        //article = viewModel.selectedCell(section: indexPath.section, indexPath: indexPath.row)
         performSegue(withIdentifier: K.Segue.showNewsDetail, sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
-
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet weak var headlineImageView: UIImageView!
@@ -22,9 +22,12 @@ class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
         super.setSelected(selected, animated: animated)
     }
     
-    func updateUI<T>(value: T) {
-        guard let news = value as? newsInfo else { return }
+    func updateUI<T>(value vm: T) {
+        guard let news = vm as? ArticleViewModel else { return }
         titleLabel.text = news.title
         descriptionLabel.text = news.description
+        news.image { (img) in
+            self.headlineImageView.image = img
+        }
     }
 }

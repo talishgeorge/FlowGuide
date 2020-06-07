@@ -185,7 +185,6 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("TextField did end editing method called\(textField.text!)")
         loginViewModel.email = emailTextField.text
         loginViewModel.password = passwordTextField.text
         signUpViewModel.confirmPassword = confirmPasswordTextField.text

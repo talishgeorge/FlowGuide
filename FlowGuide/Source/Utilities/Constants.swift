@@ -5,6 +5,12 @@
 //  Created by Talish George on 16/05/20.
 //  Copyright © 2020 Talish George. All rights reserved.
 //
+import  UIKit
+
+struct ApiConstants {
+    static let apiKey = "6a3ce0a5c952460fb0ea2fd9163d9ddf"
+    static let baseUrl = "https://newsapi.org"
+}
 
 struct K {
     
@@ -38,3 +44,4 @@ struct K {
         static let onBoardingColletionViewCell = "cellId"
     }
 }
+

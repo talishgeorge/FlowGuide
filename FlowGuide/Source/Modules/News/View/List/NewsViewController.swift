@@ -16,9 +16,9 @@ class NewsViewController: BaseViewController {
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var newsTableViewOutlet: UITableView!
     
-    var tableViewDataSource:[TableViewProtocol] = []
-    var selectedCell = IndexPath()
+    var categoryListVM: CategoryListViewModel?
     var newsService: WebService = WebService()
+    var article = Article()
     
     // MARK: - View Life Cycle
     
@@ -26,7 +26,6 @@ class NewsViewController: BaseViewController {
         super.viewDidLoad()
         let headerNib = UINib.init(nibName: K.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
-        tableViewDataSource = NewsFeedData.newsFeeds
         self.title = K.NavigationTitle.home
         if let email = Auth.auth().currentUser?.email {
             userNameLabel.text = "Logged in - \(email)"
@@ -43,22 +42,19 @@ class NewsViewController: BaseViewController {
         if segue.destination is NewsDetailsViewController
         {
             let vc = segue.destination as? NewsDetailsViewController
-            let section = tableViewDataSource[selectedCell.section]
-            guard let value =  section.getSelectedCell(indexPath: selectedCell) as? newsInfo else {
-                return
-            }
-            vc?.news = value
+            vc?.news = article
         }
     }
 }
 
 private extension NewsViewController {
     func populateNews() {
-//        CategoryService().getAllHeadlinesForAllCategories(completion: { (categories) in
-//            print(categories)
-//        })
+        CategoryService().getAllHeadlinesForAllCategories(completion: { (categories) in
+            self.categoryListVM = CategoryListViewModel(categories: categories)
+            self.newsTableViewOutlet.reloadData()
+        })
         
-        fetchNews(by: "General")
+        //fetchNews(by: "General")
     }
     
     func fetchWeatherForecast(by city: String) {
@@ -66,7 +62,6 @@ private extension NewsViewController {
             if let forecast = forecast {
                 DispatchQueue.main.async {
                     // self.weatherForCast = forecast
-                    print(forecast)
                 }
             }
         }, failure: { error in
@@ -81,7 +76,6 @@ private extension NewsViewController {
               if let news = news {
                   DispatchQueue.main.async {
                       // self.weatherForCast = forecast
-                      print(news)
                   }
               }
           }, failure: { error in
