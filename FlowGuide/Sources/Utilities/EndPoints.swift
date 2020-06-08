@@ -8,19 +8,6 @@
 
 import Foundation
 
-//enum Endpoint {
-//    case news(category: String)
-//}
-//
-//extension Endpoint {
-//    var url: URL {
-//        switch self {
-//        case .news(let category):
-//            return .makeForEndpoint(category)
-//        }
-//    }
-//}
-
 struct Endpoint {
     var path: String
     var queryItems: [URLQueryItem] = []

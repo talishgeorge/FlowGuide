@@ -6,6 +6,8 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+import Foundation
+
 extension Dictionary {
     subscript(keyPath keyPath: String) -> Any? {
         get {
@@ -43,6 +45,23 @@ extension Dictionary {
         } else if var subDict = self[keyPath.last!] as? [Key: Value] {
             subDict.setValue(value, forKeyPath: Array(keyPath.dropLast()))
             (subDict as? Value).map { self[keyPath.last!] = $0 }
+        }
+    }
+}
+
+extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
+    
+    var errors: [[String: Any]]? {
+        return self["_errors"] as? [[String: Any]]
+    }
+    
+    var jsonString: String {
+        do {
+            guard let stringData = try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted) else { return "" }
+            if let string = String(data: stringData, encoding: .utf8) {
+                return string
+            }
+            return ""
         }
     }
 }

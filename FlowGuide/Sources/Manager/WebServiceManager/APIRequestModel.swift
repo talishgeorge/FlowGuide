@@ -2,9 +2,10 @@
 //  CoreAPIRequestModel.swift
 //  WeatherForecast
 //
-//  Created by 1276121 on 16/12/2019.
-//  Copyright © 2019 1276121. All rights reserved.
+//  Created by Talish George on 07/06/20.
+//  Copyright © 2020 Talish George. All rights reserved.
 //
+
 import Alamofire
 
 struct APIRequestModel {

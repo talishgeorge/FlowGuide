@@ -35,10 +35,7 @@ class NewsViewController: BaseViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if segue.destination is NewsDetailsViewController
         {
             let vc = segue.destination as? NewsDetailsViewController
@@ -48,21 +45,16 @@ class NewsViewController: BaseViewController {
 }
 
 private extension NewsViewController {
+    
     func populateNews() {
-        CategoryService().getAllHeadlinesForAllCategories(completion: { (categories) in
-            self.categoryListVM = CategoryListViewModel(categories: categories)
-            self.newsTableViewOutlet.reloadData()
-        })
-        
-        //fetchNews(by: "General")
+        fetchNews(by: "General")
     }
     
-    func fetchWeatherForecast(by city: String) {
-        self.newsService.getWeatherData(city: city, success: { forecast in
-            if let forecast = forecast {
-                DispatchQueue.main.async {
-                    // self.weatherForCast = forecast
-                }
+    func fetchNews(by category: String) {
+        self.newsService.getNewsData(category: category, success: { news in
+            DispatchQueue.main.async {
+                self.categoryListVM = CategoryListViewModel(categories: news )
+                self.newsTableViewOutlet.reloadData()
             }
         }, failure: { error in
             guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
@@ -70,18 +62,4 @@ private extension NewsViewController {
             }
         })
     }
-    
-    func fetchNews(by category: String) {
-        self.newsService.getNewsData(category: category, success: { news in
-              if let news = news {
-                  DispatchQueue.main.async {
-                      // self.weatherForCast = forecast
-                  }
-              }
-          }, failure: { error in
-              guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-                  return
-              }
-          })
-      }
 }
