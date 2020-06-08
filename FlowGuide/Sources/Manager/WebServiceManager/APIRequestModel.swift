@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import UIKit
 
 struct APIRequestModel {
     var url: URL?

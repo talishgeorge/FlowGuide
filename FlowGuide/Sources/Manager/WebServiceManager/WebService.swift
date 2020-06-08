@@ -8,6 +8,8 @@
 
 
 import Alamofire
+import Foundation
+import UIKit
 
 typealias SuccessCompletionBlock = (_ resoponse: ([Category]))->()
 typealias FailureBlock = (_ error: Error?) -> Void
