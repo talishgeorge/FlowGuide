@@ -34,12 +34,5 @@ struct Article: Decodable {
     }
 }
 
-//extension Article {
-//    static func by(_ category: String) -> Resource<[Article]> {
-//        return Resource<[Article]>(url: Endpoint.news(for: category).url) { (data) -> [Article]? in
-//            return try? JSONDecoder().decode(NewsSourcesResponse.self, from: data).articles
-//        }
-//    }
-//}
 
 

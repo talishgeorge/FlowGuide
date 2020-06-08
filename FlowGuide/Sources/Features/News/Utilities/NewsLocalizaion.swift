@@ -19,4 +19,3 @@ enum NewsType: String {
     case politics = "Politics"
 }
 
-typealias newsInfo = (title:String, description:String)
