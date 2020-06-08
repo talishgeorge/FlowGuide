@@ -32,7 +32,7 @@ extension ArticleViewModel {
     func image(completion: @escaping (UIImage?) -> ()) {
         
         guard let imageURL = article.imageUrl else {
-            completion(nil)
+            completion(UIImage.imageForPlaceHolder())
             return
         }
         

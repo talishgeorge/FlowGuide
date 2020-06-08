@@ -1,5 +1,5 @@
 //
-//  PresenterManager.swift
+//  UIDevice+Extension.swift
 //  FlowGuide
 //
 //  Created by Talish George on 22/05/20.

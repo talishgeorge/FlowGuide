@@ -14,10 +14,10 @@ struct  NewsSourcesResponse: Decodable {
 
 struct Article: Decodable {
     
-    let title: String
-    let description: String?
-    let url: String?
-    let imageUrl: String?
+    var title: String
+    var description: String?
+    var url: String?
+    var imageUrl: String?
     
     init() {
         self.title = ""

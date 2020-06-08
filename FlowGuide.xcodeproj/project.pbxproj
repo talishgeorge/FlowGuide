@@ -331,6 +331,7 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */,
 				8394E9EC24779AA8002FA8EF /* Constants.swift */,
 				8394E9EA24779AA8002FA8EF /* Helper.swift */,
 				8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */,
@@ -660,7 +661,6 @@
 		8394EA332477F247002FA8EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */,
 				8394EA3A2477F89E002FA8EF /* DateFormatter+Extension.swift */,
 				8394EA372477F89E002FA8EF /* Dictionary+Extension.swift */,
 				8394EA3C2477F89E002FA8EF /* NSManagedObjectContext+Extension.swift */,

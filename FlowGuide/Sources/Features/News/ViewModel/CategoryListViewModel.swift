@@ -46,5 +46,4 @@ extension CategoryViewModel {
         let article = self.articles[index]
         return ArticleViewModel(article)
     }
-    
 }

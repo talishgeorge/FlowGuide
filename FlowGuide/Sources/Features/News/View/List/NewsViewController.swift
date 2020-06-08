@@ -54,6 +54,7 @@ private extension NewsViewController {
         self.newsService.getNewsData(category: category, success: { news in
             DispatchQueue.main.async {
                 self.categoryListVM = CategoryListViewModel(categories: news )
+                // self.categoryListVM = CategoryListViewModel(categories: Category.loadLocalData())
                 self.newsTableViewOutlet.reloadData()
             }
         }, failure: { error in
