@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import MBProgressHUD
 
 class NewsDetailsViewController: BaseViewController {
     
@@ -23,7 +24,7 @@ class NewsDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //updateUI()
+        MBProgressHUD.showAdded(to: view, animated: true)
         setupUI()
     }
     
@@ -43,6 +44,18 @@ private extension NewsDetailsViewController {
                 return
         }
         let request = URLRequest(url: newsDetailURL)
+        self.webview.navigationDelegate = self
         self.webview.load(request)
+    }
+}
+
+extension NewsDetailsViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        print("Start loading")
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        print("End loading")
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 }
