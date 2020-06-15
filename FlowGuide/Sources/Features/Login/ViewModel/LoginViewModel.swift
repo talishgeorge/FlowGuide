@@ -18,7 +18,7 @@ final class LoginViewModel: BaseViewModel {
     
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
-            let password = password , !password.isEmpty else {
+            let password = password, !password.isEmpty else {
                 return false
         }
         return true

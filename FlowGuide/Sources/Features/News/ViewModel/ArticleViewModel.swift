@@ -22,16 +22,16 @@ extension ArticleViewModel {
 extension ArticleViewModel {
     
     var title: String {
-        return self.article.title
+        return self.article.title ?? ""
     }
     
     var description: String? {
         return self.article.description
     }
     
-    func image(completion: @escaping (UIImage?) -> ()) {
+    func image(completion: @escaping (UIImage?) -> Void) {
         
-        guard let imageURL = article.imageUrl else {
+        guard let imageURL = article.imageURL else {
             completion(UIImage.imageForPlaceHolder())
             return
         }
@@ -43,4 +43,3 @@ extension ArticleViewModel {
         }
     }
 }
-

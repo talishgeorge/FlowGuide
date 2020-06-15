@@ -77,7 +77,7 @@ final class CommonErrorsUtility {
             let errors: [[String: Any]] = dictionaryJson[keyString] as? [[String: Any]] {
             errorArray = errors
             dictionary = dictionaryJson
-            if errors.count > 0 {
+            if !errors.isEmpty {
                 code = errors[0][ErrorKey.code.rawValue] as? String
                 name = errors[0][ErrorKey.name.rawValue] as? String
                 errorDescription = errors[0][ErrorKey.description.rawValue] as? String
@@ -96,13 +96,11 @@ final class CommonErrorsUtility {
             return ErrorKey.errors.rawValue
         } else if errorDictionary.keys.contains(ErrorKey.error.rawValue) {
             return ErrorKey.error.rawValue
-        }
-        else if errorDictionary.keys.contains(ErrorKey.cod.rawValue) {
+        } else if errorDictionary.keys.contains(ErrorKey.cod.rawValue) {
             return ErrorKey.cod.rawValue
-        }
-        else if errorDictionary.keys.contains(ErrorKey.message.rawValue) {
+        } else if errorDictionary.keys.contains(ErrorKey.message.rawValue) {
             return ErrorKey.message.rawValue
-        }else {
+        } else {
             return nil
         }
     }

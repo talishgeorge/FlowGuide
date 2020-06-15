@@ -45,13 +45,6 @@ extension String {
         return attributedStringwithImage
     }
 
-    
-    // MARK: Public functions
-    
-    /// Method to convert string from one date format to expected format
-    ///
-    /// - Parameter format: expected date format
-    /// - Returns: converted date string
     func formattedDateString(inFormat format: DateFormat) -> String {
         if let date = self.formattedDate() {
             let formatter = DateFormatter.formatter(with: format)
@@ -60,7 +53,6 @@ extension String {
         return self
     }
     
-
     func formattedDate(from format: DateFormat = .defaultFormat,
                        withLocale: Locale = Locale(identifier: DateConstants.locale),
                        timeZone: Timezone = .none) -> Date? {

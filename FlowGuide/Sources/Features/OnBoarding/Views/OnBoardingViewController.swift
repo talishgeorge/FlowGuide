@@ -44,7 +44,7 @@ final class OnBoardingViewController: BaseViewController {
     
     // MARK: - IBActions
     
-    @IBAction func userTappedOnBoarding(_ sender: UIButton) {
+    @IBAction private func userTappedOnBoarding(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.Segue.showLoginSignup, sender: nil)
     }
 }
@@ -67,7 +67,7 @@ private extension OnBoardingViewController {
     }
     
     private func setupUIForLocalization() {
-        getStartedButton.setTitle(OnBoardingLocalization.get_started.localized, for: .normal)
+        getStartedButton.setTitle(OnBoardingLocalization.get_started_key.localized, for: .normal)
     }
 }
 
@@ -77,8 +77,8 @@ extension OnBoardingViewController {
     
     func showCaption(atIndex index: Int) {
         let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
-        titleLabel.text = (index == 1) ? OnBoardingLocalization.onboarding_title1.localized:
-                          (index == 2) ? OnBoardingLocalization.onboarding_title2.localized:                    OnBoardingLocalization.onboarding_title3.localized
+        titleLabel.text = (index == 1) ? OnBoardingLocalization.onboarding_title1_key.localized:
+                          (index == 2) ? OnBoardingLocalization.onboarding_title2_key.localized:                    OnBoardingLocalization.onboarding_title3_key.localized
         descriptionLabel.text = onboardingItemInfo.description
     }
 }

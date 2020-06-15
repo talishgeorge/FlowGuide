@@ -9,7 +9,8 @@ target 'FlowGuide' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'Firebase/Auth'
   pod 'Loaf'
-
+  pod 'SwiftLint'
+  
   target 'FlowGuideTests' do
     inherit! :search_paths
     # Pods for testing

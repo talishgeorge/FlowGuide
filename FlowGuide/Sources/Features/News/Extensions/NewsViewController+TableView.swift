@@ -34,7 +34,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
-            else{
+            else {
                 return UITableViewHeaderFooterView()
         }
         let headerName = categoryListVM?.categoryAtIndex(index: section).name
@@ -43,11 +43,14 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //article = viewModel.selectedCell(section: indexPath.section, indexPath: indexPath.row)
+        guard tableView.indexPathForSelectedRow != nil else {
+            fatalError("Unable to get the selected row")
+        }
         performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsHeaderView: UITableViewHeaderFooterView,TableViewCellProtocol {
+class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
     
     @IBOutlet private weak var titleLabel: UILabel!
     

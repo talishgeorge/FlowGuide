@@ -6,7 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-
 final class ErrorProvider: Error {
     
     var errorDescription: String?

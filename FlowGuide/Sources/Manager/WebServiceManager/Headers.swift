@@ -6,7 +6,6 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
-
 struct APIHeaderKeys {
     static let accept = "Accept"
     static let contentType = "Content-Type"
@@ -17,14 +16,18 @@ struct APIHeaderKeys {
 struct APIHeaders {
     static var common: [String: String] {
         let language = "en"
-        return [APIHeaderKeys.accept: "application/json",
+        return [
+                APIHeaderKeys.accept: "application/json",
                 APIHeaderKeys.contentType: "application/json",
-                APIHeaderKeys.acceptLanguage: language]
+                APIHeaderKeys.acceptLanguage: language
+               ]
     }
     static var generic: [String: String] {
         let language = "en"
-        return [APIHeaderKeys.accept: "application/json",
+        return [
+                APIHeaderKeys.accept: "application/json",
                 APIHeaderKeys.contentType: "application/json",
-                APIHeaderKeys.acceptLanguage: language]
+                APIHeaderKeys.acceptLanguage: language
+               ]
     }
 }

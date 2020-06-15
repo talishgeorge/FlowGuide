@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .appBackground
         configureUI()
     }
@@ -21,7 +22,7 @@ extension BaseViewController {
     func presentAlertWithTitle(title: String, message: String, options: String..., completion: @escaping (Int) -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for (index, option) in options.enumerated() {
-            alertController.addAction(UIAlertAction.init(title: option, style: .default, handler: { (action) in
+            alertController.addAction(UIAlertAction.init(title: option, style: .default, handler: { _ in
                 completion(index)
             }))
         }
@@ -53,9 +54,8 @@ extension BaseViewController {
     
     func configureUI() {
         let gradient = CAGradientLayer()
-        //gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
         gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemTeal.cgColor]
-        gradient.locations = [0,1]
+        gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
     }

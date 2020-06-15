@@ -7,8 +7,8 @@
 //
 
 enum OnBoardingLocalization: String, Localizable {
-    case get_started = "get_started"
-    case onboarding_title1 = "onboarding_title1"
-    case onboarding_title2 = "onboarding_title2"
-    case onboarding_title3 = "onboarding_title3"
+    case get_started_key = "get_started"
+    case onboarding_title1_key = "onboarding_title1"
+    case onboarding_title2_key = "onboarding_title2"
+    case onboarding_title3_key = "onboarding_title3"
 }

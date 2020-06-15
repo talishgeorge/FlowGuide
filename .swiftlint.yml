@@ -1,0 +1,52 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+  allowed_symbols: ["_"] # these are allowed in type names
+
+disabled_rules:
+  - file_length
+  - type_body_length
+  - function_body_length
+  - trailing_whitespace
+  - empty_enum_arguments
+  - function_parameter_count
+  - line_length
+  
+opt_in_rules:
+  - private_action
+  - private_outlet
+  - prefixed_toplevel_constant
+  - overridden_super_call
+  - nesting
+  - weak_delegate
+  - collection_alignment
+  - empty_count
+  - empty_string
+  - fatal_error_message
+  - function_default_parameter_at_end
+  - last_where
+  - legacy_random
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - override_in_extension
+  - sorted_first_last
+  - toggle_bool
+  - unused_optional_binding
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+
+identifier_name:
+ allowed_symbols: "_"
+ min_length: 1
+ max_length: 
+    warning: 90
+    error: 1000
+ 

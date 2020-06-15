@@ -9,7 +9,7 @@
 import Alamofire
 
 final class Connectivity {
-    static var isReachable:Bool {
+    static var isReachable: Bool {
         return NetworkReachabilityManager()!.isReachable
     }
 }

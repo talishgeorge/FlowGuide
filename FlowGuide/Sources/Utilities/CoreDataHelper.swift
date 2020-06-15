@@ -31,7 +31,7 @@ import CoreData
                 return nil
             }
             return result
-        } catch let error as NSError {
+        } catch _ as NSError {
             return nil
         }
     }
@@ -48,7 +48,7 @@ import CoreData
         do {
             let count = try managedObjectContext.count(for: fetchRequest)
             return count
-        } catch let error as NSError {
+        } catch let _ as NSError {
             return 0
         }
     }
@@ -68,7 +68,7 @@ import CoreData
                     managedObjectContext.delete(managedObject)
                 }
             }
-        } catch let error as NSError {
+        } catch _ as NSError {
         }
     }
 

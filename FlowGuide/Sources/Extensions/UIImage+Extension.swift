@@ -15,7 +15,7 @@ extension UIImage {
         return UIImage(named: "placeholder")!
     }
     
-    static func imageForHeadline(url: String, completion: @escaping (UIImage) -> ()) {
+    static func imageForHeadline(url: String, completion: @escaping (UIImage) -> Void) {
         
         guard let imageURL = URL(string: url) else {
             completion(UIImage.imageForPlaceHolder())

@@ -90,7 +90,7 @@ private extension LoginViewController {
 
 extension LoginViewController {
     
-    @IBAction func loginButtonTaooed(_ sender: UIButton) {
+    @IBAction private func loginButtonTaooed(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
             showErrorMessage(text: LoginLocalization.invalid_form.localized)
@@ -108,7 +108,7 @@ extension LoginViewController {
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
-                self?.presentAlertWithTitle(title: LoginLocalization.loginError.localized, message: LoginLocalization.loginErrorMessage.localized, options: LoginLocalization.ok.localized,LoginLocalization.cancel.localized) { (value) in
+                self?.presentAlertWithTitle(title: LoginLocalization.loginError.localized, message: LoginLocalization.loginErrorMessage.localized, options: LoginLocalization.ok.localized, LoginLocalization.cancel.localized) { (value) in
                     if value == 0 {
                         this.delegate?.showMainTabBarController()
                     }
@@ -117,7 +117,7 @@ extension LoginViewController {
         }
     }
     
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+    @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
         let cancelAction = UIAlertAction(title: LoginLocalization.cancel.localized, style: .cancel, handler: nil)
@@ -150,7 +150,7 @@ extension LoginViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func sigunpButtonTapped(_ sender: UIButton) {
+    @IBAction private func sigunpButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
@@ -176,7 +176,7 @@ extension LoginViewController {
         }
     }
     
-    @IBAction func segmentedContollValueChanged(_ sender: UISegmentedControl) {
+    @IBAction private func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
 }
@@ -195,4 +195,3 @@ extension LoginViewController: UITextFieldDelegate {
         signUpViewModel.confirmPassword = confirmPasswordTextField.text
     }
 }
-

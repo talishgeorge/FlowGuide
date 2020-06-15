@@ -26,6 +26,7 @@
 		8308153B248D48AF0036B52D /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081539248D48AF0036B52D /* EndPoints.swift */; };
 		83081544248DF9540036B52D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 83081543248DF9540036B52D /* Alamofire */; };
 		830815462494B6720036B52D /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 830815452494B6720036B52D /* Article.json */; };
+		8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308154724973D680036B52D /* NewsDetailViewModel.swift */; };
 		831523ED246F796900F48DDA /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
 		831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F4246F802300F48DDA /* SettingsViewController.swift */; };
 		831523F82471020500F48DDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
@@ -143,6 +144,7 @@
 		83081536248D25020036B52D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		83081539248D48AF0036B52D /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		830815452494B6720036B52D /* Article.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Article.json; sourceTree = "<group>"; };
+		8308154724973D680036B52D /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 		831523EC246F796900F48DDA /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		831523F4246F802300F48DDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		831523F72471020500F48DDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 			children = (
 				83081533248D24DB0036B52D /* CategoryListViewModel.swift */,
 				83081536248D25020036B52D /* ArticleViewModel.swift */,
+				8308154724973D680036B52D /* NewsDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				83006B8F246EE22B00B08094 /* Frameworks */,
 				83006B90246EE22B00B08094 /* Resources */,
 				91DCB9769914627562FAF78E /* [CP] Embed Pods Frameworks */,
+				83081549249780340036B52D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -851,6 +855,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83081549249780340036B52D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		91DCB9769914627562FAF78E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -913,6 +934,7 @@
 				8394EA5B2477F8A0002FA8EF /* UIApplication+Extension.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				83357142247C20C5002E26A0 /* CommonErrorUtility.swift in Sources */,
+				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* BaseViewModel.swift in Sources */,
 				83357148247C20C5002E26A0 /* ErrorProvider.swift in Sources */,
 				83006BBE246EE29200B08094 /* LoadingViewController.swift in Sources */,

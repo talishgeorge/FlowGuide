@@ -37,7 +37,7 @@ extension SettingsViewController {
 
 extension SettingsViewController {
     
-    @IBAction func logoutAction(_ sender: UIBarButtonItem) {
+    @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 2.0) { [weak self] in
             guard let this = self else {
@@ -49,7 +49,7 @@ extension SettingsViewController {
             case .success:
                 PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure(let error):
-                print ("Error signing out: %@", error.localizedDescription)
+                print("Error signing out: %@", error.localizedDescription)
                 Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
                     switch dismissalType {
                     case .tapped: print("Tapped!")

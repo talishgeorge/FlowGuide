@@ -40,4 +40,3 @@ extension OnBoardingViewController: UICollectionViewDelegate,
         pageControl.currentPage = index
     }
 }
-

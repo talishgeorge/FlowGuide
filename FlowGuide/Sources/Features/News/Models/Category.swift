@@ -15,10 +15,10 @@ struct Category {
 
 extension Category {
     
-    static func loadLocalData() -> [Category]  {
+    static func loadLocalData() -> [Category] {
         var categories = [Category]()
         do {
-            if let bundlePath = Bundle.main.path(forResource: "Article",ofType: "json"),
+            if let bundlePath = Bundle.main.path(forResource: "Article", ofType: "json"),
                 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 do {
                     let data = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData).articles

@@ -12,8 +12,8 @@ protocol TableViewProtocol {
     var cellIdentifier: String {get}
     var headerIdentifier: String {get}
     func numberOfRowsInSection() -> Int
-    func getCellForRow<T:UITableViewDelegate>(tableView: UITableView, delegate: T, indexPath: IndexPath) -> UITableViewCell
-    func getHeader<T:UITableViewDelegate>(tableView: UITableView, delegate: T, section: Int) -> UITableViewHeaderFooterView
+    func getCellForRow<T: UITableViewDelegate>(tableView: UITableView, delegate: T, indexPath: IndexPath) -> UITableViewCell
+    func getHeader<T: UITableViewDelegate>(tableView: UITableView, delegate: T, section: Int) -> UITableViewHeaderFooterView
     func getSelectedCell(indexPath: IndexPath) -> Any
 }
 
