@@ -20,4 +20,6 @@ enum LoginLocalization: String, Localizable {
     case email = "email"
     case password = "password"
     case confirm_password = "confirm_password"
+    case loginError = "Something went wrong"
+    case loginErrorMessage = "Do you want to continue without SignIn"
 }

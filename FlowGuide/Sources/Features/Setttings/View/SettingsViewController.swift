@@ -29,7 +29,7 @@ class SettingsViewController: BaseViewController {
 extension SettingsViewController {
     
     private func setupViews() {
-        self.title = K.NavigationTitle.settings
+        self.title = Constants.NavigationTitle.settings
     }
 }
 

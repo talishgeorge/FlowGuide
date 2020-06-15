@@ -104,10 +104,15 @@ extension LoginViewController {
             }
             MBProgressHUD.hide(for: this.view, animated: true)
             switch result {
-            case .success(let user):
+            case .success( _):
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
+                self?.presentAlertWithTitle(title: LoginLocalization.loginError.localized, message: LoginLocalization.loginErrorMessage.localized, options: LoginLocalization.ok.localized,LoginLocalization.cancel.localized) { (value) in
+                    if value == 0 {
+                        this.delegate?.showMainTabBarController()
+                    }
+                }
             }
         }
     }
@@ -170,7 +175,7 @@ extension LoginViewController {
             }
         }
     }
-
+    
     @IBAction func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
@@ -190,3 +195,4 @@ extension LoginViewController: UITextFieldDelegate {
         signUpViewModel.confirmPassword = confirmPasswordTextField.text
     }
 }
+

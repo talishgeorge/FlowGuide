@@ -1,5 +1,5 @@
 //
-//  CoreAPIRequestModel.swift
+//  APIRequestModel.swift
 //  WeatherForecast
 //
 //  Created by Talish George on 07/06/20.

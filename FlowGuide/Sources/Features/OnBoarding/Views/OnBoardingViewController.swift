@@ -35,7 +35,7 @@ final class OnBoardingViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.Segue.showLoginSignup {
+        if segue.identifier == Constants.Segue.showLoginSignup {
             if let destination = segue.destination as? LoginViewController {
                 destination.delegate = self
             }
@@ -45,7 +45,7 @@ final class OnBoardingViewController: BaseViewController {
     // MARK: - IBActions
     
     @IBAction func userTappedOnBoarding(_ sender: UIButton) {
-        performSegue(withIdentifier: K.Segue.showLoginSignup, sender: nil)
+        performSegue(withIdentifier: Constants.Segue.showLoginSignup, sender: nil)
     }
 }
 

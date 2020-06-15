@@ -8,7 +8,7 @@
 
 import  UIKit
 
-struct K {
+struct Constants {
     
     enum AuthError: Error {
         case unknownError

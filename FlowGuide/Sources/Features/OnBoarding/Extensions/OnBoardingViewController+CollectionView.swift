@@ -13,7 +13,7 @@ extension OnBoardingViewController: UICollectionViewDelegate,
                                     UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
             return UICollectionViewCell()
         }
         let imageName = viewModel.getOnboardingItemImageName(index: indexPath.row) ?? ""

@@ -1,5 +1,5 @@
 //
-//  Service.swift
+//  WebService.swift
 //  WeatherForecast
 //
 //  Created by Talish George on 07/06/20.

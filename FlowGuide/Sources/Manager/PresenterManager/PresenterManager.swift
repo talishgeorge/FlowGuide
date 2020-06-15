@@ -26,11 +26,11 @@ class PresenterManager {
         
         switch viewMode {
         case .mainTabBarConttoller:
-            viewController = UIStoryboard(name: K.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: K.StoryBoardID.mainTabBarController)
+            viewController = UIStoryboard(name: Constants.StoryBoardID.main,
+                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.mainTabBarController)
         case .onBoarding:
-            viewController = UIStoryboard(name: K.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: K.StoryBoardID.onBoardingViewController)
+            viewController = UIStoryboard(name: Constants.StoryBoardID.main,
+                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.onBoardingViewController)
         }
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
             let window = sceneDelegate.window {

@@ -22,7 +22,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.newsCell, for: indexPath) as? NewsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.newsCell, for: indexPath) as? NewsTableViewCell else {
             return UITableViewCell()
         }
         let newsData = self.categoryListVM?.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
@@ -33,7 +33,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableView Delege Protocol
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: K.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
+        guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
             else{
                 return UITableViewHeaderFooterView()
         }
@@ -44,7 +44,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //article = viewModel.selectedCell(section: indexPath.section, indexPath: indexPath.row)
-        performSegue(withIdentifier: K.Segue.showNewsDetail, sender: self)
+        performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

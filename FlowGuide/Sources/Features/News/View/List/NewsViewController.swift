@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import MBProgressHUD
 
 class NewsViewController: BaseViewController {
     
@@ -24,9 +25,9 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let headerNib = UINib.init(nibName: K.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
-        newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: K.CellIdentifiers.newsHeaderCell)
-        self.title = K.NavigationTitle.home
+        let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
+        newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
+        self.title = Constants.NavigationTitle.home
         if let email = Auth.auth().currentUser?.email {
             userNameLabel.text = "Logged in - \(email)"
         }
@@ -51,16 +52,27 @@ private extension NewsViewController {
     }
     
     func fetchNews(by category: String) {
+        MBProgressHUD.showAdded(to: view, animated: true)
         self.newsService.getNewsData(category: category, success: { news in
             DispatchQueue.main.async {
-                self.categoryListVM = CategoryListViewModel(categories: news )
-                // self.categoryListVM = CategoryListViewModel(categories: Category.loadLocalData())
-                self.newsTableViewOutlet.reloadData()
+                self.loadData(categories: news)
             }
         }, failure: { error in
             guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
+                self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized,NewsLocalization.cancel.localized) { (value) in
+                    if value == 0 {
+                        self.loadData(categories: Category.loadLocalData())
+                    }
+                }
                 return
             }
         })
     }
+
+    func loadData(categories: [Category]) {
+        self.categoryListVM = CategoryListViewModel(categories: categories)
+        self.newsTableViewOutlet.reloadData()
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
 }
+

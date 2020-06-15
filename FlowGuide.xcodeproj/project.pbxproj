@@ -25,6 +25,7 @@
 		8308153A248D48AF0036B52D /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081539248D48AF0036B52D /* EndPoints.swift */; };
 		8308153B248D48AF0036B52D /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081539248D48AF0036B52D /* EndPoints.swift */; };
 		83081544248DF9540036B52D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 83081543248DF9540036B52D /* Alamofire */; };
+		830815462494B6720036B52D /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 830815452494B6720036B52D /* Article.json */; };
 		831523ED246F796900F48DDA /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
 		831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F4246F802300F48DDA /* SettingsViewController.swift */; };
 		831523F82471020500F48DDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
@@ -141,6 +142,7 @@
 		83081533248D24DB0036B52D /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
 		83081536248D25020036B52D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		83081539248D48AF0036B52D /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		830815452494B6720036B52D /* Article.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Article.json; sourceTree = "<group>"; };
 		831523EC246F796900F48DDA /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		831523F4246F802300F48DDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		831523F72471020500F48DDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			children = (
 				83357153247E1EEB002E26A0 /* Category.swift */,
 				83357155247E1F8E002E26A0 /* Atricle.swift */,
+				830815452494B6720036B52D /* Article.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830815462494B6720036B52D /* Article.json in Resources */,
 				83006BA5246EE22D00B08094 /* LaunchScreen.storyboard in Resources */,
 				831523F82471020500F48DDA /* Colors.xcassets in Resources */,
 				83006BA2246EE22D00B08094 /* Assets.xcassets in Resources */,

@@ -14,19 +14,23 @@ struct Category {
 }
 
 extension Category {
-    static func loadLocalData() -> [Category] {
-        var articles = [Article]()
-        var article1 = Article()
-        article1.title = "11222"
-        article1.description = "Ddddddd"
-        articles.append(article1)
-        var article2 = Article()
-        article2.title = "113333"
-        article2.description = "Eeeeeee"
-        articles.append(article2)
+    
+    static func loadLocalData() -> [Category]  {
         var categories = [Category]()
-        let category = Category(title: "General", articles: articles)
-        categories.append(category)
+        do {
+            if let bundlePath = Bundle.main.path(forResource: "Article",ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                do {
+                    let data = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData).articles
+                    let category = Category(title: "General", articles: data)
+                    categories.append(category)
+                } catch let error {
+                    print("Error...while decoding JSON! \(error)")
+                }
+            }
+        } catch {
+            print(error)
+        }
         return categories
     }
 }

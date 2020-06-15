@@ -1,0 +1,43 @@
+{
+"articles":[
+    {
+        "title":"George Floyd Protests Inspire Fresh Scrutiny of Policing in Europe, Too - The New York Times",
+        "description":"A history of discrimination has been brought to the surface. But so far, charges of systemic racism have been met mostly with official denial.",
+        "url":"https://www.nytimes.com/2020/06/12/world/europe/george-floyd-protests-europe-police.html",
+        "urlToImage":"https://static01.nyt.com/images/2020/06/11/world/11FRANCE-POLICE-RACISM01sub/11FRANCE-POLICE-RACISM01sub-facebookJumbo.jpg"
+    },
+    {
+        "title":"Starbucks warns employees not to support Black Lives Matter at work - Atlanta Journal Constitution",
+        "description":"Starbucks has warned employees in a memo not to wear accessories or clothes that specifically express support for Black Lives Matter, the American social justice movement at the forefront of protests over the police killing of George Floyd.",
+        "url":"https://www.ajc.com/news/starbucks-warns-employees-not-support-black-lives-matter-work/5VdFM92hS3WrDFBufakalM/",
+        "urlToImage":"https://www.ajc.com/rf/image_large/Pub/p11/AJC/2020/06/11/Videos/4921306.vpx"
+        
+    },
+    {
+        "title":"Pressure Grows On Joe Biden To Pick A Black Woman As His Running Mate - NPR",
+        "description":"As the country again confronts its record of systemic racism, Joe Biden is facing growing calls to choose a black woman as his running mate.",
+        "url":"https://www.npr.org/2020/06/12/875000650/pressure-grows-on-joe-biden-to-pick-a-black-woman-as-his-running-mate",
+        "urlToImage":"https://media.npr.org/assets/img/2020/06/11/gettyimages-955114530_wide-5c523695607e5005f8c52424d4c6dc912d241b27.jpg?s=1400"
+        
+    },
+    {
+        "title":"Dying COVID-19 patient undergoes double lung transplant, believed first of its kind - Fox News",
+        "description":"A desperately ill woman with COVID-19 underwent a double lung transplant last week in Chicago, which is believed to be the first of its kind performed on a patient with the virus.",
+        "url":"https://www.foxnews.com/health/dying-covid-19-patient-undergoes-double-lung-transplant-believed-first-of-its-kind",
+        "urlToImage":"https://static.foxnews.com/foxnews.com/content/uploads/2020/06/855dd7ec-Eg8e84zKbeXr95p4STdrY9-1024-80.jpg"
+        
+    },
+    {
+        "title":"Global markets stabilize after coronavirus fears spark huge Wall Street sell-off - CNN",
+        "description":"Global stocks were mixed Friday after fears of a sharp increase in coronavirus cases produced the worst day for US markets since March.",
+        "url":"https://www.cnn.com/2020/06/11/investing/global-stocks/index.html",
+        "urlToImage":"https://cdn.cnn.com/cnnnext/dam/assets/200611222023-global-stocks-0612-super-tease.jpg"
+        
+    },
+    {
+        "title":"PS5 Digital Edition exists because \"many consumers purchase solely digitally\" - GamesIndustry.biz",
+        "description":"PlayStation boss says no news on price but platform holder is focused on \"getting the value equation right\"",
+        "url":"https://www.gamesindustry.biz/articles/2020-06-12-jim-ryan-ps5-digital-edition-exists-because-many-consumers-purchase-solely-digitally",
+        "urlToImage":"https://images.eurogamer.net/2020/articles/2020-06-12-08-59/ps5_digital.png"},
+    ]}
+

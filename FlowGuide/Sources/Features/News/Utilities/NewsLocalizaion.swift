@@ -10,12 +10,8 @@ import Foundation
 
 enum NewsLocalization: String, Localizable {
     case title = "title_label"
+    case newsFecthError = "Something went wrong"
+    case newsFetchErrorMessage = "Load local JSON data?"
+    case cancel = "cancel"
+    case ok = "ok"
 }
-
-enum NewsType: String {
-    case sports = "Sports"
-    case international = "International"
-    case domestic = "Domestic"
-    case politics = "Politics"
-}
-
