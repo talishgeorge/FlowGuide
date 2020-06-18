@@ -8,12 +8,15 @@
 
 import UIKit
 
+/// News TableView Cell
 class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
     
+     // MARK: - Properties
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var headlineImageView: UIImageView!
     
+   // MARK: - Initilization
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,6 +25,8 @@ class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
         super.setSelected(selected, animated: animated)
     }
     
+    /// Update Cell UI Elements
+    /// - Parameter vm: Generic Type
     func updateUI<T>(value vm: T) {
         guard let news = vm as? ArticleViewModel else { return }
         titleLabel.text = news.title

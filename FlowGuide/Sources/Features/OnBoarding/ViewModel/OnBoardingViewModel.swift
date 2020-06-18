@@ -6,11 +6,13 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// Onboarding item
 struct OnboardingItemInfo {
     var title: String?
     var description: String?
 }
 
+/// OnBoarding View Model
 final class OnBoardingViewModel: BaseViewModel {
     
     // MARK: - Properties
@@ -46,6 +48,8 @@ final class OnBoardingViewModel: BaseViewModel {
 
 extension OnBoardingViewModel {
     
+    /// Set Onboarding Item
+    /// - Parameter index: Int
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
         currentSlide = OnBoardingItem.colllection[index]
         var onboardingItemInfo = OnboardingItemInfo()
@@ -54,10 +58,13 @@ extension OnBoardingViewModel {
         return onboardingItemInfo
     }
     
+    /// Get Onboard Item Count
     func getOnboardingItemCount() -> Int {
         return OnBoardingItem.colllection.count
     }
     
+    /// Get Onboard Item Image
+    /// - Parameter index: Int
     func getOnboardingItemImageName(index: Int) -> String? {
         currentSlide = OnBoardingItem.colllection[index]
         return onboardingItemImageName

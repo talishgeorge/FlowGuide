@@ -6,6 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// API Header keys Model
 struct APIHeaderKeys {
     static let accept = "Accept"
     static let contentType = "Content-Type"
@@ -13,6 +14,7 @@ struct APIHeaderKeys {
     static let charSet = "charset"
 }
 
+/// API Header  Model
 struct APIHeaders {
     static var common: [String: String] {
         let language = "en"

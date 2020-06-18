@@ -9,6 +9,7 @@
 import Alamofire
 import UIKit
 
+/// API Request Model
 struct APIRequestModel {
     var url: URL?
     var httpMethod: HTTPMethod = .get

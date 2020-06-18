@@ -8,7 +8,10 @@
 
 import Alamofire
 
+/// Class for check Connectivity
 final class Connectivity {
+    
+    /// Check network reachable
     static var isReachable: Bool {
         return NetworkReachabilityManager()!.isReachable
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// News Localization
 enum NewsLocalization: String, Localizable {
     case title = "title_label"
     case newsFecthError = "Something went wrong"

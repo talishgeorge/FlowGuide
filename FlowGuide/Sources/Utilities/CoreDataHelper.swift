@@ -8,8 +8,17 @@
 
 import CoreData
 
+/// Helper Class for Mange Coredata
 @objcMembers final class CoreDataHelper: NSObject {
     
+    /// Fetch Objects from Entity
+    /// - Parameters:
+    ///   - entityName: String Type
+    ///   - managedObjectContext: ManagedObjectContext
+    ///   - predicate: Predicate for Filter
+    ///   - sortKey: String Type
+    ///   - sortAscending: Bool
+    ///   - withNoFaults: Bool
     static func getObjectsForEntity(_ entityName: String,
                                     andContext managedObjectContext: NSManagedObjectContext,
                                     withPredicate predicate: NSPredicate? = nil,
@@ -35,7 +44,12 @@ import CoreData
             return nil
         }
     }
-
+    
+    /// Return object count
+    /// - Parameters:
+    ///   - entityName: String Type
+    ///   - managedObjectContext:ManagedObjectContext
+    ///   - predicate:Predicate for filter
     static func countForEntity(_ entityName: String,
                                andContext managedObjectContext: NSManagedObjectContext,
                                withPredicate predicate: NSPredicate? = nil) -> Int {
@@ -48,11 +62,16 @@ import CoreData
         do {
             let count = try managedObjectContext.count(for: fetchRequest)
             return count
-        } catch let _ as NSError {
+        } catch _ as NSError {
             return 0
         }
     }
-
+    
+    /// Remove all Objects from Entity
+    /// - Parameters:
+    ///   - entityName: String
+    ///   - managedObjectContext: ManagedObjectContext
+    ///   - predicate: Predicate for Filter
     static func deleteAllObjectsForEntity(_ entityName: String,
                                           andContext managedObjectContext: NSManagedObjectContext,
                                           withPredicate predicate: NSPredicate? = nil) {
@@ -71,7 +90,11 @@ import CoreData
         } catch _ as NSError {
         }
     }
-
+    
+    /// Fetch data from Entity
+    /// - Parameters:
+    ///   - entityName: String
+    ///   - context:ManagedObjectContext
     static private func fetchRequest(forEntity entityName: String,
                                      withContext context: NSManagedObjectContext) -> NSFetchRequest<NSFetchRequestResult> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()

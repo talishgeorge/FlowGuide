@@ -6,6 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// Localization
 protocol Localizable {
     var localized: String { get }
 }

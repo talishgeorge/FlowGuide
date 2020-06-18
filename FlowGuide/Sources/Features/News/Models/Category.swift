@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Category Model
 struct Category {
     let title: String
     let articles: [Article]
@@ -15,6 +16,7 @@ struct Category {
 
 extension Category {
     
+    /// If API fails, Load data from Local JSON
     static func loadLocalData() -> [Category] {
         var categories = [Category]()
         do {

@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+/// Article View Model
 struct ArticleViewModel {
     private(set) var article: Article
 }
 
 extension ArticleViewModel {
+    
+    // MARK: - Initilization
+    
     init(_ article: Article) {
         self.article = article
     }
@@ -21,6 +25,8 @@ extension ArticleViewModel {
 
 extension ArticleViewModel {
     
+    // MARK: - Properties
+
     var title: String {
         return self.article.title ?? ""
     }
@@ -29,6 +35,8 @@ extension ArticleViewModel {
         return self.article.description
     }
     
+    /// Set Image from URL
+    /// - Parameter completion: UIImage Type
     func image(completion: @escaping (UIImage?) -> Void) {
         
         guard let imageURL = article.imageURL else {

@@ -10,6 +10,7 @@ import UIKit
 import MBProgressHUD
 import Loaf
 
+/// Settings ViewController
 class SettingsViewController: BaseViewController {
     
     // MARK: - Properties
@@ -28,6 +29,7 @@ class SettingsViewController: BaseViewController {
 
 extension SettingsViewController {
     
+    /// Initial SetUp
     private func setupViews() {
         self.title = Constants.NavigationTitle.settings
     }
@@ -37,6 +39,8 @@ extension SettingsViewController {
 
 extension SettingsViewController {
     
+    /// Logout
+    /// - Parameter sender: UIBarButtonItem Type
     @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 2.0) { [weak self] in

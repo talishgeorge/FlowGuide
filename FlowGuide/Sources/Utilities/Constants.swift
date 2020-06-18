@@ -8,39 +8,47 @@
 
 import  UIKit
 
+/// Constants
 struct Constants {
     
+    /// Authentication error type
     enum AuthError: Error {
         case unknownError
     }
     
+    /// Navigation Title Name
     struct NavigationTitle {
         static let settings = "Settings"
         static let home = "Home"
     }
     
+    /// Segue Constants
     struct Segue {
         static let showOnBoarding = "showOnBoarding"
         static let showLoginSignup = "showLoginSignup"
         static let showNewsDetail = "showNewsDetail"
     }
     
+    /// StoryBoard Id
     struct StoryBoardID {
         static let main  = "Main"
         static let mainTabBarController  = "MainTabBarController"
         static let onBoardingViewController  = "OnBoardingViewController"
     }
     
+    /// Cell Identifiers
     struct CellIdentifiers {
         static let newsHeaderCell  = "NewsHeaderView"
         static let newsCell  = "NewsTableViewCell"
     }
     
+    /// Reuse Identifiers
     struct ReUseIdentifier {
         static let onBoardingColletionViewCell = "cellId"
     }
 }
 
+/// API Constants
 struct ApiConstants {
     static let apiKey = "6a3ce0a5c952460fb0ea2fd9163d9ddf"
     static let baseUrl = "https://newsapi.org"

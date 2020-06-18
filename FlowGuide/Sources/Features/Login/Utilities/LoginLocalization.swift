@@ -6,6 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// Login Localization
 enum LoginLocalization: String, Localizable {
     case forget_password = "forget_password"
     case enter_email = "enter_email"

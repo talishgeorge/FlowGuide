@@ -9,6 +9,7 @@
 import Foundation
 
 extension Dictionary {
+    
     subscript(keyPath keyPath: String) -> Any? {
         get {
             guard let keyPath = Dictionary.keyPathKeys(forKeyPath: keyPath)
@@ -22,6 +23,8 @@ extension Dictionary {
         }
     }
     
+    /// Get Keys
+    /// - Parameter forKeyPath: String Type
     static private func keyPathKeys(forKeyPath: String) -> [Key]? {
         let keys = forKeyPath.components(separatedBy: ".")
                              .reversed()
@@ -52,6 +55,7 @@ extension Dictionary {
 
 extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
     
+    // MARK: - Properties
     var errors: [[String: Any]]? {
         return self["_errors"] as? [[String: Any]]
     }

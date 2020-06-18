@@ -6,6 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// OnBoarding Localization
 enum OnBoardingLocalization: String, Localizable {
     case get_started_key = "get_started"
     case onboarding_title1_key = "onboarding_title1"

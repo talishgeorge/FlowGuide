@@ -19,6 +19,10 @@ class RequestHandler {
         return sharedRequestHandler
     }
     
+    /// API Request
+    /// - Parameters:
+    ///   - requestModel:APIRequestModel
+    ///   - success:response
     func request(requestModel: APIRequestModel,
                  success: @escaping ( _ response: DataResponse<Any>) -> Void) {
         let sessionManager: Alamofire.SessionManager

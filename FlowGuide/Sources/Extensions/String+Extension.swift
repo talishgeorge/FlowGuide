@@ -10,32 +10,39 @@ import UIKit
 
 extension String {
     
+    // MARK: - Properties
+
     var hex: Int? {
         return Int(self, radix: 16)
     }
 
+    var insertBraces: String {
+           String(format: "(%@)", self)
+       }
+    
+    /// Return Capitalizing First Letter
     func capitalizingFirstLetter() -> String {
         prefix(1).uppercased() + self.lowercased().dropFirst()
     }
-
+    
+    /// Return Upper Camel Cased
     func upperCamelCased() -> String? {
         self.lowercased()
             .split(separator: " ")
             .map { $0.lowercased().capitalizingFirstLetter() }
             .joined(separator: " ")
     }
-
+    
+    /// Return Lower Camel Cased
     func lowerCamelCased() -> String? {
         guard let upperCased = self.upperCamelCased() else {
             return nil
         }
         return upperCased.prefix(1).lowercased() + upperCased.dropFirst()
     }
-
-    var insertBraces: String {
-        String(format: "(%@)", self)
-    }
-
+    
+    /// Prefix Image
+    /// - Parameter imageName: String Type
     func prefixWithImage(_ imageName: String) -> NSMutableAttributedString? {
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(named: imageName)
@@ -44,7 +51,9 @@ extension String {
         attributedStringwithImage.append(attribuedString)
         return attributedStringwithImage
     }
-
+    
+    /// Return Date Formatter as String
+    /// - Parameter format: Date Format
     func formattedDateString(inFormat format: DateFormat) -> String {
         if let date = self.formattedDate() {
             let formatter = DateFormatter.formatter(with: format)
@@ -53,6 +62,11 @@ extension String {
         return self
     }
     
+    ///  Date Formatter
+    /// - Parameters:
+    ///   - format: date format
+    ///   - withLocale: accepts date constants
+    ///   - timeZone: accepts timezone
     func formattedDate(from format: DateFormat = .defaultFormat,
                        withLocale: Locale = Locale(identifier: DateConstants.locale),
                        timeZone: Timezone = .none) -> Date? {
@@ -62,6 +76,13 @@ extension String {
         return formatter.date(from: self)
     }
     
+    /// Attributed String
+    /// - Parameters:
+    ///   - lineSpace: CGFloat
+    ///   - fontName: UIFont
+    ///   - textColor: UIColor
+    ///   - isStrikethrough: Bool
+    ///   - textAlignment: NSTextAlignment
     func attributedString(lineSpace: CGFloat,
                           font fontName: UIFont?,
                           color textColor: UIColor?,
@@ -85,6 +106,7 @@ extension String {
         return attributedString
     }
     
+    /// Localized String
     func localized() -> String {
         // return NSLocalizedString(self, value: "**\(self)**", comment: "")
         let value = NSLocalizedString(self, comment: "")

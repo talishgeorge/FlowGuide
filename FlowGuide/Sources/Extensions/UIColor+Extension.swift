@@ -10,10 +10,15 @@ import UIKit
 
 extension UIColor {
     // Setup custom colours we can use throughout the app using hex values
+    
+    // MARK: - Properties
+
     static let seemuBlue = UIColor(hex: 0x00adf7)
     static let transparentBlack = UIColor(hex: 0x000000, a: 0.5)
     static let appBackground = UIColor(hexString: "1e90ff")//UIColor(hexString: "0fbcf9")
     
+    // MARK: - Initilization
+
     convenience init(hex: Int) {
         self.init(hex: hex, a: 1.0)
     }

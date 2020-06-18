@@ -8,9 +8,14 @@
 
 import FirebaseAuth
 
+/// Login ViewModel
 final class LoginViewModel: BaseViewModel {
     
     // MARK: - Properties
+    
+    //private let auth = Auth.auth()
+    var password: String?
+    var email: String?
     
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
@@ -25,6 +30,11 @@ final class LoginViewModel: BaseViewModel {
 
 extension LoginViewModel {
     
+    /// Login User
+    /// - Parameters:
+    ///   - email: String
+    ///   - password: String
+    ///   - completion: return type failure/success
     func loginUser(withEmail email: String,
                    password: String,
                    completion: @escaping (Result<User, Error>) -> Void) {
@@ -39,6 +49,10 @@ extension LoginViewModel {
         }
     }
     
+    /// Reset Password
+    /// - Parameters:
+    ///   - email: String
+    ///   - completion: return type failure/success
     func resetPassword(withEmail email: String, completion: @escaping (Result<Void, Error>) -> Void) {
         auth.sendPasswordReset(withEmail: email) { (error) in
             if let error = error {
@@ -49,6 +63,7 @@ extension LoginViewModel {
         }
     }
     
+    /// Logout
     func logoutUser() -> Result<Void, Error> {
         do {
             try auth.signOut()
@@ -63,6 +78,7 @@ extension LoginViewModel {
 
 extension LoginViewModel {
     
+    /// Return current logined User
     static func isUserLoggedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }

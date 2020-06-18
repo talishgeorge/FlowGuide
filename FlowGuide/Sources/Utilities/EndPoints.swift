@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// API Endpoint
 struct Endpoint {
     var path: String
     var queryItems: [URLQueryItem] = []
@@ -23,6 +24,8 @@ extension Endpoint {
         return url
     }
     
+    /// News URL
+    /// - Parameter category: String
     static func news(for category: String) -> Self {
         Endpoint(path: ApiConstants.baseUrl + "/v2/top-headlines?category=\(category)&country=us&apiKey=" + ApiConstants.apiKey)
     }

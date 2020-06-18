@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Error Keys
 private enum ErrorKey: String {
     case errors = "errors",
     code = "code",
@@ -25,7 +26,8 @@ private enum ErrorKey: String {
 }
 
 final class CommonErrorsUtility {
-    
+    // MARK: - Properties
+
      static let shared = CommonErrorsUtility()
      var code: String?
      var errorDescription: String?
@@ -37,6 +39,10 @@ final class CommonErrorsUtility {
      var errorCode: Int?
      var message: String?
     
+    // MARK: - Initilization
+    
+    /// Decode JSON
+    /// - Parameter json: Dictionary
     convenience init(json: [String: Any]) {
         self.init()
         do {
@@ -69,6 +75,8 @@ final class CommonErrorsUtility {
         }
     }
     
+    /// Return Error
+    /// - Parameter dictionaryJson:Dictionary
     private func extractErrorValues(dictionaryJson: [String: Any]) {
         errorCode = dictionaryJson[ErrorKey.cod.rawValue] as? Int
         message = dictionaryJson[ErrorKey.message.rawValue] as? String
@@ -91,6 +99,8 @@ final class CommonErrorsUtility {
         errorId = errorResponse[ErrorKey.errorId.rawValue] as? String
     }
     
+    /// Return Error as String
+    /// - Parameter errorDictionary: Dictionary
     private func getErrorKeyString(from errorDictionary: [String: Any]) -> String? {
         if errorDictionary.keys.contains(ErrorKey.errors.rawValue) {
             return ErrorKey.errors.rawValue

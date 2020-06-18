@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Date Fromat
 enum DateFormat: String {
     case flyingBlueFormat = "dd MMMM yyyy"
     case defaultFormat = "yyyy-MM-dd"
@@ -24,16 +25,19 @@ enum DateFormat: String {
     
 }
 
+/// Tiimezone
 enum Timezone: String {
     case utc = "UTC"
     case cet = "CET"
     case none
 }
 
+/// Date Constants
 enum DateConstants {
     static let locale = "en_US_POSIX"
 }
 
+// MARK: - Properties
 var currentDate: Date {
     Date()
 }
@@ -48,6 +52,11 @@ var formatterUTC: DateFormatter? {
 
 extension DateFormatter {
     
+    /// Date Formatter
+    /// - Parameters:
+    ///   - dateFormat: Date Fromat
+    ///   - expectedLocale: Expected Type
+    ///   - expectedZone: Expected Timezone
     static func formatter(with dateFormat: DateFormat = .defaultFormat,
                           forLocale expectedLocale: Locale? = nil,
                           withZone expectedZone: Timezone = .none) -> DateFormatter {
@@ -62,6 +71,11 @@ extension DateFormatter {
         return dateFormatter
     }
     
+    /// Return date difference
+    /// - Parameters:
+    ///   - startDate: Start Date
+    ///   - endDate: End date
+    ///   - component: Difference in Int type
     static func findDifference(from startDate: Date,
                                to endDate: Date,
                                component: Calendar.Component = .year) -> Int? {

@@ -9,6 +9,7 @@
 import MBProgressHUD
 import Loaf
 
+/// Login ViewController Class
 final class LoginViewController: BaseViewController {
     
     // MARK: - Properties
@@ -23,8 +24,8 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     weak var delegate: OnBoardingDelegate?
-    private var loginViewModel = LoginViewModel()
-    private var signUpViewModel = SignUpViewModel()
+    private let loginViewModel = LoginViewModel()
+    private let signUpViewModel = SignUpViewModel()
     
     private enum PageType {
         case login
@@ -61,6 +62,8 @@ final class LoginViewController: BaseViewController {
 
 private extension LoginViewController {
     
+    /// Initial View setup
+    /// - Parameter pageType: Login or signUp type
     private func setupViewsFor(pageType: PageType) {
         errorMessage = nil
         passwordConfirmationTextFields.isHidden = pageType == .login
@@ -69,11 +72,14 @@ private extension LoginViewController {
         loginButton.isHidden = pageType == .signUp
     }
     
+    /// Error message
+    /// - Parameter text: Error message String type
     private func showErrorMessage(text: String?) {
         errorLabel.isHidden = text == nil
         errorLabel.text = text
     }
     
+    /// Localization
     private func setupUIForLocalization() {
         forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
         sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)
@@ -90,12 +96,15 @@ private extension LoginViewController {
 
 extension LoginViewController {
     
-    @IBAction private func loginButtonTapped(_ sender: UIButton) {
+    /// Login Button
+    /// - Parameter sender: UIButton
+    @IBAction private func loginButtonTaooed(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
             showErrorMessage(text: LoginLocalization.invalid_form.localized)
             return
         }
+        
         MBProgressHUD.showAdded(to: view, animated: true)
         loginViewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
@@ -116,6 +125,8 @@ extension LoginViewController {
         }
     }
     
+    /// Forgot Password Button
+    /// - Parameter sender: UIButton
     @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
@@ -149,8 +160,9 @@ extension LoginViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    /// SignUp Button
+    /// - Parameter sender: UIButton
     @IBAction private func sigunpButtonTapped(_ sender: UIButton) {
-        view.endEditing(true)
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
@@ -176,6 +188,8 @@ extension LoginViewController {
         }
     }
     
+    /// Segement Control
+    /// - Parameter sender: UISegementedControl
     @IBAction private func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
@@ -183,14 +197,19 @@ extension LoginViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
+    /// UITextField BeginEditing delegate
+    /// - Parameter textField: UITextField
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        loginViewModel.email = emailTextField.text
+        loginViewModel.password = passwordTextField.text
+        signUpViewModel.confirmPassword = confirmPasswordTextField.text
+    }
+    
+    /// UITextField EndEditing delegate
+    /// - Parameter textField: UITextField
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let email = emailTextField.text
-        let password = passwordTextField.text
-        let confirmPassword = confirmPasswordTextField.text
-        loginViewModel = LoginViewModel(email,
-                                        password)
-        signUpViewModel = SignUpViewModel(email,
-                                          password,
-                                          confirmPassword)
+        loginViewModel.email = emailTextField.text
+        loginViewModel.password = passwordTextField.text
+        signUpViewModel.confirmPassword = confirmPasswordTextField.text
     }
 }

@@ -8,11 +8,14 @@
 
 import Foundation
 
+/// News Response
 struct  NewsSourcesResponse: Decodable {
     let articles: [Article]
 }
 
 struct Article: Decodable {
+    
+    // MARK: - Properties
     
     let title: String?
     let description: String?
@@ -20,6 +23,7 @@ struct Article: Decodable {
     let imageURL: String?
     let sourceName: String
     
+    /// Coding Keys
     private enum ArticleKeys: String, CodingKey {
         case title
         case description
@@ -32,6 +36,8 @@ struct Article: Decodable {
         case name
     }
     
+    // MARK: - Initilization
+
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: ArticleKeys.self)

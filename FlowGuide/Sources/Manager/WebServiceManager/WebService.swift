@@ -13,8 +13,14 @@ import UIKit
 typealias SuccessCompletionBlock = (_ resoponse: ([Category])) -> Void
 typealias FailureBlock = (_ error: Error?) -> Void
 
+/// Web Service Class
 class WebService {
     
+    /// Fetch News Data
+    /// - Parameters:
+    ///   - category: String
+    ///   - success:SuccessCompletionBlock
+    ///   - failure: FailureBlock
     func getNewsData(category: String?, success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
         guard let url = URL(string: ApiConstants.newsOpenURL) else {
             failure(nil)
@@ -30,6 +36,11 @@ class WebService {
         }
     }
     
+    /// Handle JSON response from API
+    /// - Parameters:
+    ///   - response:The server's response to the URL request.
+    ///   - success: SuccessCompletionBlock
+    ///   - failure: FailureBlock
     func handleResponseJSON(_ response: DataResponse<Any>, success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
         switch response.result {
         case .success:
@@ -53,6 +64,11 @@ class WebService {
         }
     }
     
+    /// Decode JSON data
+    /// - Parameters:
+    ///   - json: JSON
+    ///   - success: SuccessCompletionBlock
+    ///   - failure: FailureBlock
     func handleCodableData(from json: [String: Any], success: @escaping SuccessCompletionBlock, failure: @escaping FailureBlock) {
         var categories = [Category]()
         if let jsonData = json.jsonString.data(using: .utf8) {
@@ -68,6 +84,8 @@ class WebService {
         }
     }
     
+    /// Show error based on response
+    /// - Parameter response:The server's response to the URL request.
     func extractErrorValues(response: DataResponse<Any>) {
         guard case let .failure(error) = response.result else { return }
         
@@ -83,6 +101,9 @@ class WebService {
 }
 
 private extension WebService {
+    
+    /// Error for each case
+    /// - Parameter error: Alamofire Error type
     func extractError(_ error: AFError) {
         switch error {
         case .invalidURL(let url):

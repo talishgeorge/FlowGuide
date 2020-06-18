@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+/// Theme Manger Class
 class ThemeManager {
     
+    /// Initial NavigationBar setup
     static func setup() {
         UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 47/255, green: 54/255, blue: 64/255, alpha: 1.0)

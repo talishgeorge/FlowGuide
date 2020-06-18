@@ -10,8 +10,9 @@ import UIKit
 
 extension UIApplication {
     
+    /// Dismiss Alert
     static func dismissAlert() {
-        var topController = self.shared.keyWindow?.rootViewController
+        var topController =  UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController
         while topController?.presentedViewController != nil {
             topController = topController?.presentedViewController
         }

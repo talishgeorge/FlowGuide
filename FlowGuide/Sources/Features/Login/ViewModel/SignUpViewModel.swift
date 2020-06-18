@@ -8,7 +8,13 @@
 
 import FirebaseAuth
 
+/// SignUp View Model
 final class SignUpViewModel: BaseViewModel {
+    
+    // MARK: - Properties
+    var password: String?
+    var email: String?
+    var confirmPassword: String?
     
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
@@ -19,6 +25,11 @@ final class SignUpViewModel: BaseViewModel {
         return true
     }
     
+    /// SignUp New User
+    /// - Parameters:
+    ///   - email: String
+    ///   - password: String
+    ///   - completion: Return failure/success
     func signUpNewUser(withEmail email: String,
                        password: String,
                        completion: @escaping (Result<User, Error>) -> Void) {

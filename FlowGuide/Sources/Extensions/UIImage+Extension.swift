@@ -11,10 +11,15 @@ import UIKit
 
 extension UIImage {
     
+    /// Default Image placeHolder
     static func imageForPlaceHolder() -> UIImage {
         return UIImage(named: "placeholder")!
     }
     
+    /// Fetch Image from URL for News Headline
+    /// - Parameters:
+    ///   - url: String Type
+    ///   - completion: UIImage
     static func imageForHeadline(url: String, completion: @escaping (UIImage) -> Void) {
         
         guard let imageURL = URL(string: url) else {

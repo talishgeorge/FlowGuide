@@ -8,11 +8,14 @@
 
 import Foundation
 
+/// News Details Model
 struct NewsDetailsViewModel {
     let article: Article
 }
 
 extension NewsDetailsViewModel {
+    
+    // MARK: - Initilization
     init(_ article: Article) {
         self.article = article
     }
@@ -20,6 +23,7 @@ extension NewsDetailsViewModel {
 
 extension NewsDetailsViewModel {
     
+    // MARK: - Properties
     var sourceName: String {
         return self.article.sourceName
     }

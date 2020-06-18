@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import MBProgressHUD
 
+/// News Details ViewController
 class NewsDetailsViewController: BaseViewController {
     
     // MARK: - Properties
@@ -28,6 +29,7 @@ class NewsDetailsViewController: BaseViewController {
         setupUI()
     }
     
+    /// Update UI
     func updateUI() {
         titleLabel.text = article.title
         descriptionLabel.text = article.description
@@ -35,6 +37,8 @@ class NewsDetailsViewController: BaseViewController {
 }
 
 private extension NewsDetailsViewController {
+    
+    /// Initial UI Setup
     func setupUI() {
         self.newsDetailsVM = NewsDetailsViewModel(article)
         self.navigationItem.largeTitleDisplayMode = .never
@@ -50,10 +54,19 @@ private extension NewsDetailsViewController {
 }
 
 extension NewsDetailsViewController: WKNavigationDelegate {
+    
+    /// WebView Delegate
+    /// - Parameters:
+    ///   - webView: Start Loading
+    ///   - navigation:
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("Start loading")
     }
     
+    /// WebView Delegate
+    /// - Parameters:
+    ///   - webView: Finish Loading
+    ///   - navigation: 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("End loading")
         MBProgressHUD.hide(for: self.view, animated: true)

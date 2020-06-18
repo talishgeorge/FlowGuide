@@ -10,6 +10,7 @@ import Foundation
 
 final class LoadingViewModel: BaseViewModel {
     
+    /// Return Current User
     static func isUserLoggedIn() -> Bool {
         return LoginViewModel.isUserLoggedIn()
     }

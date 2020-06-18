@@ -8,10 +8,14 @@
 
 import UIKit
 
+/// News Header
 class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
     
+     // MARK: - Properties
     @IBOutlet private weak var titleLabel: UILabel!
     
+    /// UpdateUI
+    /// - Parameter value: Generic Type
     func updateUI<T>(value: T) {
         guard let title = value as? String else { return }
         titleLabel.text = title

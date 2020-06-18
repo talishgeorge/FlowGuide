@@ -10,6 +10,7 @@ import UIKit
 
 extension UIScreen {
     
+    /// Set Screen Size
     static func screenSize() -> CGSize {
         self.main.bounds.size
     }

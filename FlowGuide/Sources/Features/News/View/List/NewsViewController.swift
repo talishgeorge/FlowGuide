@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import MBProgressHUD
 
+/// News ViewController
 class NewsViewController: BaseViewController {
     
     // MARK: - Properties
@@ -49,10 +50,13 @@ class NewsViewController: BaseViewController {
 
 private extension NewsViewController {
     
+    /// Fetch News by category
     func populateNews() {
         fetchNews(by: "General")
     }
     
+    /// Fetch News by category
+    /// - Parameter category: String
     func fetchNews(by category: String) {
         MBProgressHUD.showAdded(to: view, animated: true)
         self.newsService.getNewsData(category: category, success: { news in
@@ -71,6 +75,8 @@ private extension NewsViewController {
         })
     }
     
+    /// Load data
+    /// - Parameter categories: Category Array
     func loadData(categories: [Category]) {
         self.categoryListVM = CategoryListViewModel(categories: categories)
         self.newsTableViewOutlet.reloadData()

@@ -8,6 +8,8 @@
 
 final class ErrorProvider: Error {
     
+    // MARK: - Properties
+
     var errorDescription: String?
     var errorCode: Int?
     var errorMessage: String?
@@ -18,7 +20,8 @@ final class ErrorProvider: Error {
         case noProviderFound
         case baseURLNotFound
     }
-    
+    // MARK: - Initilization
+
     init(handler: CommonErrorsUtility?) {
         switch handler?.errorCode {
         case GenericError.noProviderFound.code:
