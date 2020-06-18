@@ -12,9 +12,6 @@ import FirebaseAuth
 final class SignUpViewModel: BaseViewModel {
     
     // MARK: - Properties
-    var password: String?
-    var email: String?
-    var confirmPassword: String?
     
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,

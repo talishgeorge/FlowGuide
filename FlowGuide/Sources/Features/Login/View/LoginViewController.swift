@@ -24,8 +24,8 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
     weak var delegate: OnBoardingDelegate?
-    private let loginViewModel = LoginViewModel()
-    private let signUpViewModel = SignUpViewModel()
+    private var loginViewModel = LoginViewModel()
+    private var signUpViewModel = SignUpViewModel()
     
     private enum PageType {
         case login
@@ -98,7 +98,7 @@ extension LoginViewController {
     
     /// Login Button
     /// - Parameter sender: UIButton
-    @IBAction private func loginButtonTaooed(_ sender: UIButton) {
+    @IBAction private func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
             showErrorMessage(text: LoginLocalization.invalid_form.localized)
@@ -163,6 +163,7 @@ extension LoginViewController {
     /// SignUp Button
     /// - Parameter sender: UIButton
     @IBAction private func sigunpButtonTapped(_ sender: UIButton) {
+        view.endEditing(true)
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
@@ -197,19 +198,14 @@ extension LoginViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
-    /// UITextField BeginEditing delegate
-    /// - Parameter textField: UITextField
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        loginViewModel.email = emailTextField.text
-        loginViewModel.password = passwordTextField.text
-        signUpViewModel.confirmPassword = confirmPasswordTextField.text
-    }
-    
-    /// UITextField EndEditing delegate
-    /// - Parameter textField: UITextField
     func textFieldDidEndEditing(_ textField: UITextField) {
-        loginViewModel.email = emailTextField.text
-        loginViewModel.password = passwordTextField.text
-        signUpViewModel.confirmPassword = confirmPasswordTextField.text
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        let confirmPassword = confirmPasswordTextField.text
+        loginViewModel = LoginViewModel(email,
+                                        password)
+        signUpViewModel = SignUpViewModel(email,
+                                          password,
+                                          confirmPassword)
     }
 }
