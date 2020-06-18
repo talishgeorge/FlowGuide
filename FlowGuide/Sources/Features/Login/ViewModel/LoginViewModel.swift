@@ -12,10 +12,6 @@ final class LoginViewModel: BaseViewModel {
     
     // MARK: - Properties
     
-    //private let auth = Auth.auth()
-    var password: String?
-    var email: String?
-    
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
             let password = password, !password.isEmpty else {

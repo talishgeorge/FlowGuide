@@ -263,7 +263,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButtonTaooed:" destination="TtS-Nv-y5J" eventType="touchUpInside" id="yzn-DC-3MT"/>
+                                            <action selector="loginButtonTapped:" destination="TtS-Nv-y5J" eventType="touchUpInside" id="yzn-DC-3MT"/>
                                         </connections>
                                     </button>
                                 </subviews>
