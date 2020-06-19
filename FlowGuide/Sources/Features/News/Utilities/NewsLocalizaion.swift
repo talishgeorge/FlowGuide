@@ -16,4 +16,6 @@ enum NewsLocalization: String, Localizable {
     case cancel = "cancel"
     case ok = "ok"
     case feature_enable_info = "Feature is not available"
+    case news_details_feature = "News_Details_Screen"
+    case on = "on"
 }

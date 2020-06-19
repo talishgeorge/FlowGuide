@@ -65,7 +65,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         guard tableView.indexPathForSelectedRow != nil else {
             fatalError("Unable to get the selected row")
         }
-        if let featureFlag = SDKInitializationService.shared.featureFlag, featureFlag == true {
+        if let featureFlag = SDKManager.shared.featureFlag, featureFlag == true {
             performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
             Loaf(NewsLocalization.feature_enable_info.localized, state: .error, location: .top, sender: self).show()

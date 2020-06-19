@@ -56,3 +56,9 @@ struct ApiConstants {
     static let openWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&Appid=315a5a4dae4ad2b0554677c7fdfdada1"
     static let newsUrl = "https://samples.openweathermap.org/data/2.5/forecast/daily?q=M%C3%BCnchen,DE&appid=b6907d289e10d714a6e88b30761fae22"
 }
+
+/// Split IO Constants
+struct SplitAPI {
+    static let apiKey = "vog4cgfglueelkiherg7a169p09p673fsldh"
+    static let customerID = "CUSTOMER_ID"
+}

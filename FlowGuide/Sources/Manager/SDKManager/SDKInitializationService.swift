@@ -9,11 +9,11 @@
 import Foundation
 import Split
 
-class SDKManager {
+class SDKInitializationService {
     
-    static let shared = SDKManager()
-    let apiKey: String = SplitAPI.apiKey
-    let key: Key = Key(matchingKey: SplitAPI.customerID)
+    static let shared = SDKInitializationService()
+    let apiKey: String = "vog4cgfglueelkiherg7a169p09p673fsldh"
+    let key: Key = Key(matchingKey: "CUSTOMER_ID")
     let config = SplitClientConfig()
     let builder = DefaultSplitFactoryBuilder()
     var featureFlag: Bool? = false
@@ -22,8 +22,8 @@ class SDKManager {
         let factory = builder.setApiKey(apiKey).setKey(key).setConfig(config).build()
         let client = factory?.client
         client?.on(event: SplitEvent.sdkReady) {
-            let treatment = client?.getTreatment(NewsLocalization.news_details_feature.localized)
-            self.featureFlag = (treatment == NewsLocalization.on.localized) ? true : false
+            let treatment = client?.getTreatment("News_Details_Screen")
+            self.featureFlag = (treatment == "on") ? true : false
             print(self.featureFlag)
         }
         client?.on(event: SplitEvent.sdkReadyTimedOut) {

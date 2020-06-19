@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         ThemeManager.setup()
-        SDKInitializationService.shared.initializeSplitSDK()
+        SDKManager.shared.initializeSplitSDK()
         return true
     }
     
