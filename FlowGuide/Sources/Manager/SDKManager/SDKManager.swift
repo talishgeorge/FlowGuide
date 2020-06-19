@@ -24,7 +24,7 @@ class SDKManager {
     // MARK: - internal Methods
     
     /// Initilize Split IO SDK
-    func initializeSplitSDK() {
+    func initializeSplitIOSDK() {
         let factory = builder.setApiKey(apiKey).setKey(key).setConfig(config).build()
         let client = factory?.client
         client?.on(event: SplitEvent.sdkReady) {

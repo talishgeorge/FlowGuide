@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         SDKManager.shared.initilizeFirebaseSDK()
-        SDKManager.shared.initializeSplitSDK()
+        SDKManager.shared.initializeSplitIOSDK()
         SDKManager.shared.initilizeThemeManager()
         return true
     }
