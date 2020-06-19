@@ -10,6 +10,7 @@ target 'FlowGuide' do
   pod 'Firebase/Auth'
   pod 'Loaf'
   pod 'SwiftLint'
+  pod 'Split', '~> 2.5.2'
   
   target 'FlowGuideTests' do
     inherit! :search_paths

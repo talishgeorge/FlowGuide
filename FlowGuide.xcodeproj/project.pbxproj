@@ -108,6 +108,7 @@
 		8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */; };
 		8394EA662477F8A0002FA8EF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */; };
 		8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8394EA672478C88C002FA8EF /* GoogleService-Info.plist */; };
+		83F30CB8249CAB60008B2B53 /* SDKInitializationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F30CB7249CAB60008B2B53 /* SDKInitializationService.swift */; };
 		F5D8A3154D18FC7379488972 /* Pods_FlowGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +204,7 @@
 		8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		8394EA672478C88C002FA8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83F30CB7249CAB60008B2B53 /* SDKInitializationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKInitializationService.swift; sourceTree = "<group>"; };
 		B15D3A0F8827ED010F4F9A6C /* Pods-FlowGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.release.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,6 +327,7 @@
 		831523EB246F794400F48DDA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				83F30CBA249CF0D3008B2B53 /* SDKManager */,
 				83357150247D8244002E26A0 /* ThemeManager */,
 				8335711B247BEB3B002E26A0 /* WebServiceManager */,
 				8335714A247C29EF002E26A0 /* PresenterManager */,
@@ -697,6 +700,14 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		83F30CBA249CF0D3008B2B53 /* SDKManager */ = {
+			isa = PBXGroup;
+			children = (
+				83F30CB7249CAB60008B2B53 /* SDKInitializationService.swift */,
+			);
+			path = SDKManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -912,6 +923,7 @@
 				833570E5247A8A33002E26A0 /* BaseViewController.swift in Sources */,
 				83081537248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
+				83F30CB8249CAB60008B2B53 /* SDKInitializationService.swift in Sources */,
 				831523ED246F796900F48DDA /* PresenterManager.swift in Sources */,
 				833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
