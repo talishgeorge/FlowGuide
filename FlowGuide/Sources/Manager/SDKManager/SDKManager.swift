@@ -8,8 +8,11 @@
 
 import Foundation
 import Split
+import Firebase
 
 class SDKManager {
+    
+    // MARK: - Properties
     
     static let shared = SDKManager()
     let apiKey: String = SplitAPI.apiKey
@@ -18,16 +21,27 @@ class SDKManager {
     let builder = DefaultSplitFactoryBuilder()
     var featureFlag: Bool? = false
     
+    // MARK: - internal Methods
+    
+    /// Initilize Split IO SDK
     func initializeSplitSDK() {
         let factory = builder.setApiKey(apiKey).setKey(key).setConfig(config).build()
         let client = factory?.client
         client?.on(event: SplitEvent.sdkReady) {
             let treatment = client?.getTreatment(NewsLocalization.news_details_feature.localized)
             self.featureFlag = (treatment == NewsLocalization.on.localized) ? true : false
-            print(self.featureFlag)
         }
         client?.on(event: SplitEvent.sdkReadyTimedOut) {
             print("SDK time out")
         }
     }
+    
+    func initilizeFirebaseSDK() {
+        FirebaseApp.configure()
+    }
+    
+    func initilizeThemeManager() {
+        ThemeManager.setup()
+    }
+    
 }
