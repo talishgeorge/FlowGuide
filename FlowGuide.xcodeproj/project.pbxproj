@@ -327,8 +327,8 @@
 		831523EB246F794400F48DDA /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				83F30CBA249CF0D3008B2B53 /* SDKManager */,
 				83357150247D8244002E26A0 /* ThemeManager */,
+				83F30CBA249CF0D3008B2B53 /* SDKManager */,
 				8335711B247BEB3B002E26A0 /* WebServiceManager */,
 				8335714A247C29EF002E26A0 /* PresenterManager */,
 			);
