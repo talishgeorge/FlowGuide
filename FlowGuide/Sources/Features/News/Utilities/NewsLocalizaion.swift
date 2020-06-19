@@ -15,4 +15,5 @@ enum NewsLocalization: String, Localizable {
     case newsFetchErrorMessage = "Load local JSON data?"
     case cancel = "cancel"
     case ok = "ok"
+    case feature_enable_info = "Feature is not available"
 }

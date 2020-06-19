@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Loaf
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -64,7 +65,11 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         guard tableView.indexPathForSelectedRow != nil else {
             fatalError("Unable to get the selected row")
         }
-        performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
+        if let featureFlag = SDKInitializationService.shared.featureFlag, featureFlag == true {
+            performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
+        } else {
+            Loaf(NewsLocalization.feature_enable_info.localized, state: .error, location: .top, sender: self).show()
+        }
     }
     
     /// Height for Row
@@ -74,5 +79,5 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
+    
 }
