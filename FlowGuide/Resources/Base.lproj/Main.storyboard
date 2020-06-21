@@ -12,28 +12,33 @@
         <!--Loading View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoadingViewController" customModule="FlowGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoadingViewController" customModule="FlowGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTr-Ll-e6a">
-                                <rect key="frame" x="163.5" y="434.5" width="87" height="27.5"/>
+                                <rect key="frame" x="163.5" y="434.5" width="87" height="27"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Sd3-jI-Rfm">
-                                <rect key="frame" x="125" y="435" width="47" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Sd3-jI-Rfm">
+                                <rect key="frame" x="121" y="438" width="47" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="4fp-50-GJV"/>
+                                    <constraint firstAttribute="height" constant="20" id="FFi-6T-eMC"/>
+                                </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="bg1"/>
                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qTr-Ll-e6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D8M-La-vdg"/>
-                            <constraint firstItem="qTr-Ll-e6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ma5-7a-3eH"/>
+                            <constraint firstItem="Sd3-jI-Rfm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="ZHs-px-auP"/>
+                            <constraint firstItem="qTr-Ll-e6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dlw-Bk-a11"/>
+                            <constraint firstItem="qTr-Ll-e6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vRz-N2-C7I"/>
+                            <constraint firstItem="Sd3-jI-Rfm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="x0p-vx-5Be"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

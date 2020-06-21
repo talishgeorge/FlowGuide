@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Udo-Xf-78Q">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Udo-Xf-78Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="938"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Udo-Xf-78Q" secondAttribute="bottomMargin" id="QWH-OW-0wc"/>
+                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="ZgJ-k5-JFf"/>
+                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cQL-uw-qIJ"/>
+                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hth-le-th5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -30,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="374.5" height="672"/>
+        <image name="splash" width="187.5" height="406"/>
     </resources>
 </document>
