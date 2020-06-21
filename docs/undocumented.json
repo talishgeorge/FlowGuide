@@ -9,35 +9,28 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/AppConfiguration /AppDelegate.swift",
-      "line": 15,
-      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/AppConfiguration /AppDelegate.swift",
-      "line": 25,
+      "line": 29,
       "symbol": "AppDelegate.application(_:configurationForConnecting:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/AppConfiguration /AppDelegate.swift",
-      "line": 31,
+      "line": 35,
       "symbol": "AppDelegate.application(_:didDiscardSceneSessions:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/AppConfiguration /AppDelegate.swift",
-      "line": 39,
+      "line": 43,
       "symbol": "AppDelegate.persistentContainer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/AppConfiguration /AppDelegate.swift",
-      "line": 68,
+      "line": 72,
       "symbol": "AppDelegate.saveContext()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -145,13 +138,6 @@
       "line": 20,
       "symbol": "BaseViewModel.isReachable",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/BaseClasses/BaseViewModel.swift",
-      "line": 24,
-      "symbol": "BaseViewModel.init(_:_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -324,51 +310,23 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 137,
+      "line": 132,
       "symbol": "String.subscript(_:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 155,
-      "symbol": "String.getAttributedStringForAlignemnt()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 164,
+      "line": 160,
       "symbol": "String.digits",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 169,
+      "line": 165,
       "symbol": "String.validated",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 173,
-      "symbol": "String.applyBoardingPassErrorStyle()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 181,
-      "symbol": "String.containsIgnoringCase(find:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/String+Extension.swift",
-      "line": 185,
-      "symbol": "String.widthOfString(usingFont:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -425,13 +383,6 @@
       "line": 38,
       "symbol": "UIColor.init(hexString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Extensions/UIDevice+Extension.swift",
-      "line": 13,
-      "symbol": "UIDevice.deviceSize",
-      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -583,21 +534,21 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/Login/View/LoginViewController.swift",
-      "line": 49,
+      "line": 52,
       "symbol": "LoginViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/Login/View/LoginViewController.swift",
-      "line": 55,
+      "line": 58,
       "symbol": "LoginViewController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/Login/View/LoginViewController.swift",
-      "line": 201,
+      "line": 204,
       "symbol": "LoginViewController.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -737,14 +688,14 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/View/CustomCell/NewsTableViewCell.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "NewsTableViewCell.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/View/CustomCell/NewsTableViewCell.swift",
-      "line": 24,
+      "line": 25,
       "symbol": "NewsTableViewCell.setSelected(_:animated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -806,20 +757,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/ViewModel/ArticleViewModel.swift",
-      "line": 30,
-      "symbol": "ArticleViewModel.title",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/ViewModel/ArticleViewModel.swift",
-      "line": 34,
-      "symbol": "ArticleViewModel.description",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/ViewModel/CategoryListViewModel.swift",
       "line": 13,
       "symbol": "CategoryListViewModel.categories",
@@ -869,20 +806,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/ViewModel/NewsDetailViewModel.swift",
-      "line": 27,
-      "symbol": "NewsDetailsViewModel.sourceName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/News/ViewModel/NewsDetailViewModel.swift",
-      "line": 31,
-      "symbol": "NewsDetailsViewModel.url",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/Models/OnBoardingItem.swift",
       "line": 9,
       "symbol": "OnBoardingItem",
@@ -915,20 +838,6 @@
       "line": 19,
       "symbol": "OnBoardingItem.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/Models/OnBoardingItem.swift",
-      "line": 21,
-      "symbol": "OnBoardingItem.init(imageName:title:description:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/Models/OnBoardingItem.swift",
-      "line": 29,
-      "symbol": "OnBoardingItem.colllection",
-      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
@@ -970,34 +879,6 @@
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/ViewModel/OnBoardingViewModel.swift",
       "line": 12,
       "symbol": "OnboardingItemInfo.description",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/ViewModel/OnBoardingViewModel.swift",
-      "line": 20,
-      "symbol": "OnBoardingViewModel.currentSlide",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/ViewModel/OnBoardingViewModel.swift",
-      "line": 22,
-      "symbol": "OnBoardingViewModel.onboardingItemTitle",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/ViewModel/OnBoardingViewModel.swift",
-      "line": 30,
-      "symbol": "OnBoardingViewModel.onboardingItemDescription",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/ViewModel/OnBoardingViewModel.swift",
-      "line": 38,
-      "symbol": "OnBoardingViewModel.onboardingItemImageName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -1114,13 +995,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/CommonErrorUtility.swift",
-      "line": 58,
-      "symbol": "CommonErrorsUtility.init(jsonData:withOption:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
       "line": 11,
       "symbol": "APIError",
@@ -1171,154 +1045,133 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 26,
-      "symbol": "APIError.error(with:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 38,
-      "symbol": "APIError.errors(with:errorKey:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 58,
+      "line": 64,
       "symbol": "GenericError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 59,
+      "line": 65,
       "symbol": "GenericError.undefined",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 60,
+      "line": 66,
       "symbol": "GenericError.noNetwork",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 61,
+      "line": 67,
       "symbol": "GenericError.noProviderFound",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 62,
+      "line": 68,
       "symbol": "GenericError.baseURLNotFound",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 63,
+      "line": 69,
       "symbol": "GenericError.endPointUndefined",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 64,
+      "line": 70,
       "symbol": "GenericError.http(error:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 65,
+      "line": 71,
       "symbol": "GenericError.jsonParsing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 67,
+      "line": 73,
       "symbol": "GenericError.ConstantCode",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 68,
+      "line": 74,
       "symbol": "GenericError.ConstantCode.undefined",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 69,
+      "line": 75,
       "symbol": "GenericError.ConstantCode.noNetwork",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 70,
+      "line": 76,
       "symbol": "GenericError.ConstantCode.noProviderFound",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 71,
+      "line": 77,
       "symbol": "GenericError.ConstantCode.baseURLNotFound",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 72,
+      "line": 78,
       "symbol": "GenericError.ConstantCode.endPointUndefined",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 73,
+      "line": 79,
       "symbol": "GenericError.ConstantCode.jsonParsing",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 77,
-      "symbol": "GenericError.init(code:message:description:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 96,
+      "line": 108,
       "symbol": "GenericError.init(json:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 101,
+      "line": 113,
       "symbol": "GenericError.code",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 120,
+      "line": 132,
       "symbol": "GenericError.message",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorHandler.swift",
-      "line": 129,
+      "line": 141,
       "symbol": "GenericError.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -1387,13 +1240,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/ErrorManager/ErrorProvider.swift",
-      "line": 25,
-      "symbol": "ErrorProvider.init(handler:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/PresenterManager/PresenterManager.swift",
       "line": 11,
       "symbol": "PresenterManager",
@@ -1426,13 +1272,6 @@
       "line": 19,
       "symbol": "PresenterManager.ViewMode.onBoarding",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/PresenterManager/PresenterManager.swift",
-      "line": 24,
-      "symbol": "PresenterManager.show(viewMode:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1482,20 +1321,6 @@
       "line": 22,
       "symbol": "SDKManager.featureFlag",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/SDKManager/SDKManager.swift",
-      "line": 39,
-      "symbol": "SDKManager.initilizeFirebaseSDK()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/SDKManager/SDKManager.swift",
-      "line": 43,
-      "symbol": "SDKManager.initilizeThemeManager()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1583,31 +1408,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/Headers.swift",
-      "line": 19,
-      "symbol": "APIHeaders.common",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/Headers.swift",
-      "line": 27,
-      "symbol": "APIHeaders.generic",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/RequestHandler.swift",
       "line": 11,
       "symbol": "RequestHandler",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/RequestHandler.swift",
-      "line": 18,
-      "symbol": "RequestHandler.shared()",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
@@ -1710,35 +1514,49 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
-      "line": 53,
-      "symbol": "ApiConstants.apiKey",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "line": 50,
+      "symbol": "Constants.CoreApp",
+      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
-      "line": 54,
-      "symbol": "ApiConstants.baseUrl",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
-      "line": 55,
-      "symbol": "ApiConstants.newsOpenURL",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
-      "line": 56,
-      "symbol": "ApiConstants.openWeatherURL",
+      "line": 51,
+      "symbol": "Constants.CoreApp.loggedIn",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
       "line": 57,
+      "symbol": "ApiConstants.apiKey",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 58,
+      "symbol": "ApiConstants.baseUrl",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 59,
+      "symbol": "ApiConstants.newsOpenURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 60,
+      "symbol": "ApiConstants.openWeatherURL",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 61,
       "symbol": "ApiConstants.newsUrl",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -1746,13 +1564,34 @@
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
       "line": 62,
-      "symbol": "SplitAPI.apiKey",
+      "symbol": "ApiConstants.newsCategory",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
       "line": 63,
+      "symbol": "ApiConstants.article",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 64,
+      "symbol": "ApiConstants.decodingType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 69,
+      "symbol": "SplitAPI.apiKey",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/Constants.swift",
+      "line": 70,
       "symbol": "SplitAPI.customerID",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -1843,14 +1682,7 @@
     },
     {
       "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/TableViewProtocol.swift",
-      "line": 20,
-      "symbol": "TableViewCellProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/talishgeorge/Desktop/Sweedbank/Source Code & Technical Doc/POC/FlowGuide/FlowGuide/Sources/Utilities/TableViewProtocol.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "TableViewCellProtocol.updateUI(value:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

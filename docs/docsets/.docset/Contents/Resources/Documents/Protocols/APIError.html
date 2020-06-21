@@ -14,7 +14,7 @@
     <a title="APIError Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> 1.0.0 Docs</a> (38% documented)</p>
+        <p><a href="../index.html"> 1.0.0 Docs</a> (44% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -286,6 +286,9 @@
                 <a href="../Structs/Constants/ReUseIdentifier.html">– ReUseIdentifier</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/Constants/CoreApp.html">– CoreApp</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Endpoint.html">Endpoint</a>
               </li>
               <li class="nav-group-task">
@@ -501,7 +504,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Error</p>
 
                       </div>
                       <div class="declaration">
@@ -511,6 +514,25 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">error</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">with</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">E</span><span class="p">?</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">APIError</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -531,7 +553,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Errors</p>
 
                       </div>
                       <div class="declaration">
@@ -541,6 +563,37 @@
                           <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="n">errors</span><span class="o">&lt;</span><span class="kt">E</span><span class="o">&gt;</span><span class="p">(</span><span class="n">with</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">errorKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"errors"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">E</span><span class="p">]</span> <span class="k">where</span> <span class="kt">E</span> <span class="p">:</span> <span class="kt">APIError</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
