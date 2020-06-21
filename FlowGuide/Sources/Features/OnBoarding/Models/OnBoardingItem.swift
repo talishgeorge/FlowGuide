@@ -18,6 +18,11 @@ struct OnBoardingItem {
     
     init() { }
     
+    /// Init
+    /// - Parameters:
+    ///   - imageName: String
+    ///   - title: title
+    ///   - description: description
     init(imageName: String?, title: String?, description: String?) {
         self.imageName = imageName
         self.title = title
@@ -26,6 +31,7 @@ struct OnBoardingItem {
     
     // MARK: - Static Methods
     
+    /// Onboarding items
     static var colllection: [OnBoardingItem] = [
         OnBoardingItem(imageName: "slide1",
                        title: "Why Use MVVM",

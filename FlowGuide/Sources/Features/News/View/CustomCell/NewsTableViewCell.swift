@@ -17,6 +17,7 @@ class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
     @IBOutlet private weak var headlineImageView: UIImageView!
     
    // MARK: - Initilization
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

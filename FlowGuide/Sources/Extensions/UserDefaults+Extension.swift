@@ -20,14 +20,13 @@ extension UserDefaults {
             print("Type mismatch")
             return
         }
-//        let archiver = NSKeyedArchiver.archivedData(withRootObject: dict)
         do {
             let archiver = try NSKeyedArchiver.archivedData(withRootObject: dict, requiringSecureCoding: false)
             UserDefaults.standard.set(archiver, forKey: key)
         } catch {
             print("Couldn't write to UserDefaults")
         }
-
+        
     }
     
     /// Save Object to UserDeafults

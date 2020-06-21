@@ -27,17 +27,20 @@ final class LoginViewController: BaseViewController {
     private var loginViewModel = LoginViewModel()
     private var signUpViewModel = SignUpViewModel()
     
+    /// Page Types for login flow
     private enum PageType {
         case login
         case signUp
     }
     
+    /// Current page type for login flow
     private var currentPageType: PageType = .login {
         didSet {
             setupViewsFor(pageType: currentPageType)
         }
     }
     
+    /// Error message
     private  var errorMessage: String? {
         didSet {
             showErrorMessage(text: errorMessage)
@@ -79,7 +82,7 @@ private extension LoginViewController {
         errorLabel.text = text
     }
     
-    /// Localization
+    /// Setup Localization
     private func setupUIForLocalization() {
         forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
         sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)

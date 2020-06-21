@@ -55,6 +55,10 @@ final class CommonErrorsUtility {
         }
     }
     
+    /// Init
+    /// - Parameters:
+    ///   - jsonData: Data
+    ///   - readingOption: JSONSerialization.ReadingOptions
     convenience init(jsonData: Data?, withOption readingOption: JSONSerialization.ReadingOptions) {
         self.init()
         guard let data = jsonData else {

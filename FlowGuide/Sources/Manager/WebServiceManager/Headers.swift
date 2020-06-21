@@ -16,6 +16,8 @@ struct APIHeaderKeys {
 
 /// API Header  Model
 struct APIHeaders {
+    
+    /// Common Header
     static var common: [String: String] {
         let language = "en"
         return [
@@ -24,6 +26,8 @@ struct APIHeaders {
                 APIHeaderKeys.acceptLanguage: language
                ]
     }
+    
+    /// Generic header
     static var generic: [String: String] {
         let language = "en"
         return [

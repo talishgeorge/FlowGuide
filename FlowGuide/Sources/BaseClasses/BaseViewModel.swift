@@ -21,6 +21,11 @@ class BaseViewModel: NSObject {
         return Connectivity.isReachable
     }
     
+    /// Init
+    /// - Parameters:
+    ///   - email: Email for signup and login
+    ///   - password: Password to login
+    ///   - confirmPassword: Password for signup
     init(_ email: String? = nil, _ password: String? = nil, _ confirmPassword: String? = nil) {
         self.email = email
         self.password = password

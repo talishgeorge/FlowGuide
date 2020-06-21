@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OnBoardingViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/OnBoardingViewController" class="dashAnchor"></a>
+    <a title="OnBoardingViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> 1.0.0 Docs</a> (38% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        OnBoardingViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewController.html">BaseViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewModel.html">BaseViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommonErrorsUtility.html">CommonErrorsUtility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Connectivity.html">Connectivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CoreDataHelper.html">CoreDataHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider.html">ErrorProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider/CommonError.html">– CommonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewController.html">LoadingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewModel.html">LoadingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewModel.html">LoginViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsDetailsViewController.html">NewsDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsHeaderView.html">NewsHeaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsTableViewCell.html">NewsTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsViewController.html">NewsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingCollectionViewCell.html">OnBoardingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewController.html">OnBoardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewModel.html">OnBoardingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager.html">PresenterManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager/ViewMode.html">– ViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestHandler.html">RequestHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDKManager.html">SDKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignUpViewModel.html">SignUpViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThemeManager.html">ThemeManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WebService.html">WebService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11currentDate10Foundation0D0Vvp">currentDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide12formatterUTCSo15NSDateFormatterCSgvp">formatterUTC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11localePOSIX10Foundation6LocaleVvp">localePOSIX</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DateConstants.html">DateConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError.html">GenericError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError/ConstantCode.html">– ConstantCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoadingLocalization.html">LoadingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginLocalization.html">LoginLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NewsLocalization.html">NewsLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OnBoardingLocalization.html">OnBoardingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Timezone.html">Timezone</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9FlowGuide5delay17durationInSeconds10completionySd_yyctF">delay(durationInSeconds:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/APIError.html">APIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Localizable.html">Localizable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OnBoardingDelegate.html">OnBoardingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewCellProtocol.html">TableViewCellProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewProtocol.html">TableViewProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaderKeys.html">APIHeaderKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaders.html">APIHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIRequestModel.html">APIRequestModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ApiConstants.html">ApiConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Article.html">Article</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArticleViewModel.html">ArticleViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category.html">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryListViewModel.html">CategoryListViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryViewModel.html">CategoryViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants.html">Constants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/AuthError.html">– AuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/NavigationTitle.html">– NavigationTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/Segue.html">– Segue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/StoryBoardID.html">– StoryBoardID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/CellIdentifiers.html">– CellIdentifiers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/ReUseIdentifier.html">– ReUseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsDetailsViewModel.html">NewsDetailsViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsSourcesResponse.html">NewsSourcesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnBoardingItem.html">OnBoardingItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnboardingItemInfo.html">OnboardingItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SplitAPI.html">SplitAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OnBoardingViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">OnBoardingViewController</span> <span class="p">:</span> <span class="kt"><a href="../Classes/BaseViewController.html">BaseViewController</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">OnBoardingViewController</span><span class="p">:</span> <span class="kt">UICollectionViewDelegate</span><span class="p">,</span>
+                                    <span class="kt">UICollectionViewDataSource</span><span class="p">,</span>
+                                    <span class="kt">UICollectionViewDelegateFlowLayout</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">OnBoardingViewController</span><span class="p">:</span> <span class="kt"><a href="../Protocols/OnBoardingDelegate.html">OnBoardingDelegate</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>OnBoarding View Controller</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide24OnBoardingViewControllerC9viewModelAA0cdeH0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/viewModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide24OnBoardingViewControllerC9viewModelAA0cdeH0Cvp">viewModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="kt"><a href="../Classes/OnBoardingViewModel.html">OnBoardingViewModel</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/View%20Life%20Cycle"></a>
+                <a name="//apple_ref/swift/Section/View Life Cycle" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/View%20Life%20Cycle"></a>
+                  <h3 class="section-name"><p>View Life Cycle</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@FlowGuide@objc(cs)OnBoardingViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@FlowGuide@objc(cs)OnBoardingViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@FlowGuide@objc(cs)OnBoardingViewController(im)prepareForSegue:sender:"></a>
+                    <a name="//apple_ref/swift/Method/prepare(for:sender:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@FlowGuide@objc(cs)OnBoardingViewController(im)prepareForSegue:sender:">prepare(for:<wbr>sender:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="nv">segue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span><span class="p">,</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:cellForItemAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:cellForItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:cellForItemAtIndexPath:">collectionView(_:<wbr>cellForItemAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CollectionView delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">cellForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Return UICollectionView Cell</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index Path</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:numberOfItemsInSection:"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:numberOfItemsInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:numberOfItemsInSection:">collectionView(_:<wbr>numberOfItemsInSection:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CollectionView delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">numberOfItemsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Return OnBoarding Items Count</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>section</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Section</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:layout:sizeForItemAtIndexPath:"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:layout:sizeForItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:layout:sizeForItemAtIndexPath:">collectionView(_:<wbr>layout:<wbr>sizeForItemAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CollectonView delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">layout</span> <span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="n">sizeForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Return frame size</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionViewLayout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UICollectionView Layout</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index Path</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:layout:minimumLineSpacingForSectionAtIndex:"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:layout:minimumLineSpacingForSectionAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)collectionView:layout:minimumLineSpacingForSectionAtIndex:">collectionView(_:<wbr>layout:<wbr>minimumLineSpacingForSectionAt:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CollectionView Spacing for Section</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">layout</span> <span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="n">minimumLineSpacingForSectionAt</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minimum Line Spacing For Section</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionViewLayout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CollectionView Layout</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>section</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Section Int</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Internal%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Internal Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Internal%20Methods"></a>
+                  <h3 class="section-name"><p>Internal Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide24OnBoardingViewControllerC11showCaption7atIndexySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/showCaption(atIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide24OnBoardingViewControllerC11showCaption7atIndexySi_tF">showCaption(atIndex:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Show Caption</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showCaption</span><span class="p">(</span><span class="n">atIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Int</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/OnBoarding%20Delegate%20Methods"></a>
+                <a name="//apple_ref/swift/Section/OnBoarding Delegate Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/OnBoarding%20Delegate%20Methods"></a>
+                  <h3 class="section-name"><p>OnBoarding Delegate Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide24OnBoardingViewControllerC014showMainTabBarF0yyF"></a>
+                    <a name="//apple_ref/swift/Method/showMainTabBarController()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide24OnBoardingViewControllerC014showMainTabBarF0yyF">showMainTabBarController()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Show TabBar Controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">showMainTabBarController</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)scrollViewDidEndDecelerating:"></a>
+                    <a name="//apple_ref/swift/Method/scrollViewDidEndDecelerating(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlowGuide@objc(cs)OnBoardingViewController(im)scrollViewDidEndDecelerating:">scrollViewDidEndDecelerating(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ScrollView Delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scrollViewDidEndDecelerating</span><span class="p">(</span><span class="n">_</span> <span class="nv">scrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scrollView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIScrollView</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Talish</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

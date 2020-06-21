@@ -10,11 +10,13 @@ import Alamofire
 
 class RequestHandler {
     
+    /// Shared variable
     private static var sharedRequestHandler: RequestHandler = {
         let requestHandler = RequestHandler()
         return requestHandler
     }()
     
+    /// Return shared request handler
     class func shared() -> RequestHandler {
         return sharedRequestHandler
     }

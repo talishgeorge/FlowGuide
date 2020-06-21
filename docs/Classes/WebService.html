@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/WebService" class="dashAnchor"></a>
+    <a title="WebService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> 1.0.0 Docs</a> (38% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        WebService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewController.html">BaseViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewModel.html">BaseViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommonErrorsUtility.html">CommonErrorsUtility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Connectivity.html">Connectivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CoreDataHelper.html">CoreDataHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider.html">ErrorProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider/CommonError.html">– CommonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewController.html">LoadingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewModel.html">LoadingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewModel.html">LoginViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsDetailsViewController.html">NewsDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsHeaderView.html">NewsHeaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsTableViewCell.html">NewsTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsViewController.html">NewsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingCollectionViewCell.html">OnBoardingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewController.html">OnBoardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewModel.html">OnBoardingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager.html">PresenterManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager/ViewMode.html">– ViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestHandler.html">RequestHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDKManager.html">SDKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignUpViewModel.html">SignUpViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThemeManager.html">ThemeManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WebService.html">WebService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11currentDate10Foundation0D0Vvp">currentDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide12formatterUTCSo15NSDateFormatterCSgvp">formatterUTC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11localePOSIX10Foundation6LocaleVvp">localePOSIX</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DateConstants.html">DateConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError.html">GenericError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError/ConstantCode.html">– ConstantCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoadingLocalization.html">LoadingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginLocalization.html">LoginLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NewsLocalization.html">NewsLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OnBoardingLocalization.html">OnBoardingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Timezone.html">Timezone</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9FlowGuide5delay17durationInSeconds10completionySd_yyctF">delay(durationInSeconds:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/APIError.html">APIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Localizable.html">Localizable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OnBoardingDelegate.html">OnBoardingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewCellProtocol.html">TableViewCellProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewProtocol.html">TableViewProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaderKeys.html">APIHeaderKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaders.html">APIHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIRequestModel.html">APIRequestModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ApiConstants.html">ApiConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Article.html">Article</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArticleViewModel.html">ArticleViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category.html">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryListViewModel.html">CategoryListViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryViewModel.html">CategoryViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants.html">Constants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/AuthError.html">– AuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/NavigationTitle.html">– NavigationTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/Segue.html">– Segue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/StoryBoardID.html">– StoryBoardID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/CellIdentifiers.html">– CellIdentifiers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/ReUseIdentifier.html">– ReUseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsDetailsViewModel.html">NewsDetailsViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsSourcesResponse.html">NewsSourcesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnBoardingItem.html">OnBoardingItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnboardingItemInfo.html">OnboardingItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SplitAPI.html">SplitAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>WebService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">WebService</span></code></pre>
+
+                </div>
+              </div>
+            <p>Web Service Class</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide10WebServiceC11getNewsData8category7success7failureySSSg_ySayAA8CategoryVGcys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/getNewsData(category:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide10WebServiceC11getNewsData8category7success7failureySSSg_ySayAA8CategoryVGcys5Error_pSgctF">getNewsData(category:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch News Data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getNewsData</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a></span><span class="p">,</span> <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>category</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SuccessCompletionBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>FailureBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide10WebServiceC18handleResponseJSON_7success7failurey9Alamofire04DataF0VyypG_ySayAA8CategoryVGcys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/handleResponseJSON(_:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide10WebServiceC18handleResponseJSON_7success7failurey9Alamofire04DataF0VyypG_ySayAA8CategoryVGcys5Error_pSgctF">handleResponseJSON(_:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle JSON response from API</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handleResponseJSON</span><span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a></span><span class="p">,</span> <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The server&rsquo;s response to the URL request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SuccessCompletionBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>FailureBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide10WebServiceC17handleCodableData4from7success7failureySDySSypG_ySayAA8CategoryVGcys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/handleCodableData(from:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide10WebServiceC17handleCodableData4from7success7failureySDySSypG_ySayAA8CategoryVGcys5Error_pSgctF">handleCodableData(from:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decode JSON data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">handleCodableData</span><span class="p">(</span><span class="n">from</span> <span class="nv">json</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a></span><span class="p">,</span> <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>json</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>JSON</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SuccessCompletionBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>FailureBlock</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9FlowGuide10WebServiceC18extractErrorValues8responsey9Alamofire12DataResponseVyypG_tF"></a>
+                    <a name="//apple_ref/swift/Method/extractErrorValues(response:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9FlowGuide10WebServiceC18extractErrorValues8responsey9Alamofire12DataResponseVyypG_tF">extractErrorValues(response:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Show error based on response</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">extractErrorValues</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The server&rsquo;s response to the URL request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Talish</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

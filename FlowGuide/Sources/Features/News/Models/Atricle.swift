@@ -32,12 +32,15 @@ struct Article: Decodable {
         case source
     }
     
+    /// Source Keys
     private enum SourceKeys: String, CodingKey {
         case name
     }
     
     // MARK: - Initilization
-
+    
+    /// Init
+    /// - Parameter decoder: Decoder
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: ArticleKeys.self)
@@ -45,7 +48,6 @@ struct Article: Decodable {
         self.description = try? container.decode(String.self, forKey: .description)
         self.url = try? container.decode(String.self, forKey: .url)
         self.imageURL = try? container.decode(String.self, forKey: .imageURL)
-        
         let sourceContainer = try container.nestedContainer(keyedBy: SourceKeys.self, forKey: .source)
         self.sourceName = try sourceContainer.decode(String.self, forKey: .name)
     }

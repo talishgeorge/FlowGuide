@@ -31,6 +31,7 @@ final class LoadingViewController: BaseViewController {
     
     // MARK: - Private Methods
     
+    /// Show Initial View
     private func showInitialView() {
         if LoadingViewModel.isUserLoggedIn() {
             PresenterManager.shared.show(viewMode: .mainTabBarConttoller)

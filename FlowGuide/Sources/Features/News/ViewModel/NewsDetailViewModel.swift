@@ -24,10 +24,13 @@ extension NewsDetailsViewModel {
 extension NewsDetailsViewModel {
     
     // MARK: - Properties
+    
+    /// Source name
     var sourceName: String {
         return self.article.sourceName
     }
     
+    /// Article URL
     var url: String? {
         return self.article.url
     }

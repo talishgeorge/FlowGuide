@@ -21,7 +21,9 @@ final class ErrorProvider: Error {
         case baseURLNotFound
     }
     // MARK: - Initilization
-
+    
+    /// Init
+    /// - Parameter handler: CommonErrorsUtility
     init(handler: CommonErrorsUtility?) {
         switch handler?.errorCode {
         case GenericError.noProviderFound.code:

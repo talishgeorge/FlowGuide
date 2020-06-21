@@ -11,7 +11,8 @@ import UIKit
 /// News Header
 class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
     
-     // MARK: - Properties
+    // MARK: - Properties
+    
     @IBOutlet private weak var titleLabel: UILabel!
     
     /// UpdateUI

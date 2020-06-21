@@ -17,6 +17,7 @@ protocol TableViewProtocol {
     func getSelectedCell(indexPath: IndexPath) -> Any
 }
 
+/// Tableview custom protocol
 protocol TableViewCellProtocol {
     func updateUI<T>(value: T)
 }

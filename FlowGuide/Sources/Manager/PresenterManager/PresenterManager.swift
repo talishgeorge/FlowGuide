@@ -21,6 +21,8 @@ class PresenterManager {
     
     // MARK: - Internal Methods
     
+    /// Show view based on the mode
+    /// - Parameter viewMode: ViewMode
     func show(viewMode: ViewMode) {
         var viewController: UIViewController
         

@@ -17,8 +17,10 @@ final class OnBoardingViewModel: BaseViewModel {
     
     // MARK: - Properties
     
+    /// Current Onboarding item
     var currentSlide: OnBoardingItem? = OnBoardingItem()
     
+    /// Onboarding item title
     var onboardingItemTitle: String? {
         if let title = currentSlide?.title {
             return title
@@ -27,6 +29,7 @@ final class OnBoardingViewModel: BaseViewModel {
         }
     }
     
+    /// Onboarding Item Description
     var onboardingItemDescription: String? {
         if let description = currentSlide?.description {
             return description
@@ -35,6 +38,7 @@ final class OnBoardingViewModel: BaseViewModel {
         }
     }
     
+    /// Onboarding Item Image name
     var onboardingItemImageName: String? {
         if let imageName = currentSlide?.imageName {
             return imageName

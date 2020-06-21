@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIDevice {
-
+    
+    /// Device size
     static var deviceSize: CGSize {
         UIScreen.main.bounds.size
     }

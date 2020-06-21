@@ -22,7 +22,9 @@ protocol APIError {
 }
 
 extension APIError {
- 
+    
+    /// Error
+    /// - Parameter data: Data
     static func error<E: APIError>(with data: Data) -> E? {
         do {
             guard let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
@@ -34,7 +36,11 @@ extension APIError {
             return nil
         }
     }
-
+    
+    /// Errors
+    /// - Parameters:
+    ///   - data: Data
+    ///   - key: String
     static func errors<E: APIError>(with data: Data, errorKey key: String = "errors") -> [E] {
         do {
             guard let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
@@ -74,6 +80,12 @@ enum GenericError: APIError {
     }
 
     // MARK: - Init
+    
+    /// Init
+    /// - Parameters:
+    ///   - code: Int
+    ///   - message: String
+    ///   - description: String
     public init?(code: Int, message: String?, description: String?) {
         switch code {
         case ConstantCode.undefined:

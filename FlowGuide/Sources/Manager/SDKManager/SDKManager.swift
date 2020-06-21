@@ -36,12 +36,13 @@ class SDKManager {
         }
     }
     
+    /// Initilize Firebase SDK
     func initilizeFirebaseSDK() {
         FirebaseApp.configure()
     }
     
+    /// Initilize ThemeManager
     func initilizeThemeManager() {
         ThemeManager.setup()
-    }
-    
+    }    
 }

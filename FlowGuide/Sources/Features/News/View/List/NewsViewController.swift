@@ -29,7 +29,7 @@ class NewsViewController: BaseViewController {
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
         self.title = Constants.NavigationTitle.home
         if let email = Auth.auth().currentUser?.email {
-            userNameLabel.text = "Logged in - \(email)"
+            userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
         populateNews()
     }
@@ -52,7 +52,7 @@ private extension NewsViewController {
     
     /// Fetch News by category
     func populateNews() {
-        fetchNews(by: "General")
+        fetchNews(by: ApiConstants.newsCategory)
     }
     
     /// Fetch News by category

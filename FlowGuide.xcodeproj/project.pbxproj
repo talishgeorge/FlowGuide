@@ -445,16 +445,8 @@
 				83357139247C20C4002E26A0 /* Headers.swift */,
 				8335713A247C20C5002E26A0 /* RequestHandler.swift */,
 				83357135247C20C4002E26A0 /* WebService.swift */,
-				83357131247BEE29002E26A0 /* BO */,
 			);
 			path = WebServiceManager;
-			sourceTree = "<group>";
-		};
-		83357131247BEE29002E26A0 /* BO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BO;
 			sourceTree = "<group>";
 		};
 		8335714A247C29EF002E26A0 /* PresenterManager */ = {
@@ -1170,6 +1162,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAB2KB38Y4;
 				INFOPLIST_FILE = FlowGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1188,6 +1181,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAB2KB38Y4;
 				INFOPLIST_FILE = FlowGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

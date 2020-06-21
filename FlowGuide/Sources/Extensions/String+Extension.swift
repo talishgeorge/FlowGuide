@@ -108,7 +108,6 @@ extension String {
     
     /// Localized String
     func localized() -> String {
-        // return NSLocalizedString(self, value: "**\(self)**", comment: "")
         let value = NSLocalizedString(self, comment: "")
         if value != self || NSLocale.preferredLanguages.first == "en" {
             return value
@@ -122,10 +121,6 @@ extension String {
         return NSLocalizedString(self, bundle: bundle, comment: "")
     }
 
-//    func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
-//        return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
-//    }
-    
     ///These subscripts help in accessing a substring easily, like xString[0...2] or xString[1..<3]
     
     subscript (bounds: CountableClosedRange<Int>) -> String {
@@ -152,6 +147,7 @@ extension String {
         return self != characterSetArray.joined()
     }
     
+    /// Get attributed string
     func getAttributedStringForAlignemnt() -> NSMutableAttributedString {
         let attrString = NSMutableAttributedString(string: self)
         let paragraphStyle = NSMutableParagraphStyle()
@@ -169,19 +165,9 @@ extension String {
     var validated: String {
         self
     }
-
-    func applyBoardingPassErrorStyle() -> NSAttributedString? {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.minimumLineHeight = 28.0
-        paragraphStyle.maximumLineHeight = 28.0
-        let description = NSAttributedString(string: self, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-        return description
-    }
-
-    func containsIgnoringCase(find: String) -> Bool {
-        self.range(of: find, options: .caseInsensitive) != nil
-    }
     
+    /// Width of string based on font
+    /// - Parameter font: UIFont
     func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)

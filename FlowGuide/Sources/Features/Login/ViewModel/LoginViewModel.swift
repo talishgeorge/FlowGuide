@@ -59,7 +59,7 @@ extension LoginViewModel {
         }
     }
     
-    /// Logout
+    /// Logout User
     func logoutUser() -> Result<Void, Error> {
         do {
             try auth.signOut()

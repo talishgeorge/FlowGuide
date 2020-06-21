@@ -26,11 +26,13 @@ extension ArticleViewModel {
 extension ArticleViewModel {
     
     // MARK: - Properties
-
+    
+    /// Title
     var title: String {
         return self.article.title ?? ""
     }
     
+    /// Description
     var description: String? {
         return self.article.description
     }
@@ -43,7 +45,6 @@ extension ArticleViewModel {
             completion(UIImage.imageForPlaceHolder())
             return
         }
-        
         UIImage.imageForHeadline(url: imageURL) { image in
             DispatchQueue.main.async {
                 completion(image)
