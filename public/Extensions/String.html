@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>String Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/String" class="dashAnchor"></a>
+    <a title="String Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> 1.0.0 Docs</a> (44% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        String Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewController.html">BaseViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseViewModel.html">BaseViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommonErrorsUtility.html">CommonErrorsUtility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Connectivity.html">Connectivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CoreDataHelper.html">CoreDataHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider.html">ErrorProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorProvider/CommonError.html">– CommonError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewController.html">LoadingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingViewModel.html">LoadingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewModel.html">LoginViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsDetailsViewController.html">NewsDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsHeaderView.html">NewsHeaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsTableViewCell.html">NewsTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NewsViewController.html">NewsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingCollectionViewCell.html">OnBoardingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewController.html">OnBoardingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OnBoardingViewModel.html">OnBoardingViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager.html">PresenterManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresenterManager/ViewMode.html">– ViewMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestHandler.html">RequestHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SDKManager.html">SDKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignUpViewModel.html">SignUpViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThemeManager.html">ThemeManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WebService.html">WebService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11currentDate10Foundation0D0Vvp">currentDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide12formatterUTCSo15NSDateFormatterCSgvp">formatterUTC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:9FlowGuide11localePOSIX10Foundation6LocaleVvp">localePOSIX</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DateConstants.html">DateConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError.html">GenericError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GenericError/ConstantCode.html">– ConstantCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoadingLocalization.html">LoadingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LoginLocalization.html">LoginLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NewsLocalization.html">NewsLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OnBoardingLocalization.html">OnBoardingLocalization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Timezone.html">Timezone</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreen.html">UIScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:9FlowGuide5delay17durationInSeconds10completionySd_yyctF">delay(durationInSeconds:completion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/APIError.html">APIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Localizable.html">Localizable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/OnBoardingDelegate.html">OnBoardingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewCellProtocol.html">TableViewCellProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TableViewProtocol.html">TableViewProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaderKeys.html">APIHeaderKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIHeaders.html">APIHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/APIRequestModel.html">APIRequestModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ApiConstants.html">ApiConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Article.html">Article</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ArticleViewModel.html">ArticleViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category.html">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryListViewModel.html">CategoryListViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoryViewModel.html">CategoryViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants.html">Constants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/AuthError.html">– AuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/NavigationTitle.html">– NavigationTitle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/Segue.html">– Segue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/StoryBoardID.html">– StoryBoardID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/CellIdentifiers.html">– CellIdentifiers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/ReUseIdentifier.html">– ReUseIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Constants/CoreApp.html">– CoreApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsDetailsViewModel.html">NewsDetailsViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NewsSourcesResponse.html">NewsSourcesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnBoardingItem.html">OnBoardingItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OnboardingItemInfo.html">OnboardingItemInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SplitAPI.html">SplitAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide12FailureBlocka">FailureBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9FlowGuide22SuccessCompletionBlocka">SuccessCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>String</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">String</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE3hexSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE3hexSiSgvp">hex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE12insertBracesSSvp"></a>
+                    <a name="//apple_ref/swift/Property/insertBraces" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE12insertBracesSSvp">insertBraces</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">insertBraces</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE23capitalizingFirstLetterSSyF"></a>
+                    <a name="//apple_ref/swift/Method/capitalizingFirstLetter()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE23capitalizingFirstLetterSSyF">capitalizingFirstLetter()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return Capitalizing First Letter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">capitalizingFirstLetter</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE15upperCamelCasedSSSgyF"></a>
+                    <a name="//apple_ref/swift/Method/upperCamelCased()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE15upperCamelCasedSSSgyF">upperCamelCased()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return Upper Camel Cased</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">upperCamelCased</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE15lowerCamelCasedSSSgyF"></a>
+                    <a name="//apple_ref/swift/Method/lowerCamelCased()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE15lowerCamelCasedSSSgyF">lowerCamelCased()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return Lower Camel Cased</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lowerCamelCased</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE15prefixWithImageySo25NSMutableAttributedStringCSgSSF"></a>
+                    <a name="//apple_ref/swift/Method/prefixWithImage(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE15prefixWithImageySo25NSMutableAttributedStringCSgSSF">prefixWithImage(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prefix Image</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prefixWithImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSMutableAttributedString</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String Type</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE19formattedDateString8inFormatSSAA0dG0O_tF"></a>
+                    <a name="//apple_ref/swift/Method/formattedDateString(inFormat:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE19formattedDateString8inFormatSSAA0dG0O_tF">formattedDateString(inFormat:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return Date Formatter as String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">formattedDateString</span><span class="p">(</span><span class="n">inFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/DateFormat.html">DateFormat</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Date Format</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE13formattedDate4from10withLocale8timeZone10Foundation0D0VSgAA0D6FormatO_AF0G0VAA8TimezoneOtF"></a>
+                    <a name="//apple_ref/swift/Method/formattedDate(from:withLocale:timeZone:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE13formattedDate4from10withLocale8timeZone10Foundation0D0VSgAA0D6FormatO_AF0G0VAA8TimezoneOtF">formattedDate(from:<wbr>withLocale:<wbr>timeZone:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Date Formatter</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">formattedDate</span><span class="p">(</span><span class="n">from</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/DateFormat.html">DateFormat</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">defaultFormat</span><span class="p">,</span>
+                   <span class="nv">withLocale</span><span class="p">:</span> <span class="kt">Locale</span> <span class="o">=</span> <span class="kt">Locale</span><span class="p">(</span><span class="nv">identifier</span><span class="p">:</span> <span class="kt"><a href="../Enums/DateConstants.html">DateConstants</a></span><span class="o">.</span><span class="n">locale</span><span class="p">),</span>
+                   <span class="nv">timeZone</span><span class="p">:</span> <span class="kt"><a href="../Enums/Timezone.html">Timezone</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE16attributedString9lineSpace4font5color15isStrikethrough13textAlignmentSo012NSAttributedD0C12CoreGraphics7CGFloatV_So6UIFontCSgSo7UIColorCSgSbSo06NSTextL0VSgtF"></a>
+                    <a name="//apple_ref/swift/Method/attributedString(lineSpace:font:color:isStrikethrough:textAlignment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE16attributedString9lineSpace4font5color15isStrikethrough13textAlignmentSo012NSAttributedD0C12CoreGraphics7CGFloatV_So6UIFontCSgSo7UIColorCSgSbSo06NSTextL0VSgtF">attributedString(lineSpace:<wbr>font:<wbr>color:<wbr>isStrikethrough:<wbr>textAlignment:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attributed String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">attributedString</span><span class="p">(</span><span class="nv">lineSpace</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                      <span class="n">font</span> <span class="nv">fontName</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">?,</span>
+                      <span class="n">color</span> <span class="nv">textColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?,</span>
+                      <span class="nv">isStrikethrough</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                      <span class="nv">textAlignment</span><span class="p">:</span> <span class="kt">NSTextAlignment</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lineSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CGFloat</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fontName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIFont</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>textColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIColor</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isStrikethrough</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bool</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>textAlignment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSTextAlignment</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE9localizedSSyF"></a>
+                    <a name="//apple_ref/swift/Method/localized()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE9localizedSSyF">localized()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Localized String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">localized</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideEySSSNySiGcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideEySSSNySiGcip">subscript(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>These subscripts help in accessing a substring easily, like xString[0&hellip;2] or xString[1..&lt;3]</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="kt">CountableClosedRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideEySSSnySiGcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideEySSSnySiGcip">subscript(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="kt">CountableRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE9isNumericSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNumeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE9isNumericSbvp">isNumeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Variable to validate wether the all charactes are numeric</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isNumeric</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE14numberFilteredSbvp"></a>
+                    <a name="//apple_ref/swift/Property/numberFiltered" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE14numberFilteredSbvp">numberFiltered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Variable to validate wether the textfield only contains numeric values</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">numberFiltered</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE31getAttributedStringForAlignemntSo09NSMutabledE0CyF"></a>
+                    <a name="//apple_ref/swift/Method/getAttributedStringForAlignemnt()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE31getAttributedStringForAlignemntSo09NSMutabledE0CyF">getAttributedStringForAlignemnt()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get attributed string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAttributedStringForAlignemnt</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSMutableAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE6digitsSSvp"></a>
+                    <a name="//apple_ref/swift/Property/digits" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE6digitsSSvp">digits</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">digits</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE9validatedSSvp"></a>
+                    <a name="//apple_ref/swift/Property/validated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE9validatedSSvp">validated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validated</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9FlowGuideE13widthOfString9usingFont12CoreGraphics7CGFloatVSo6UIFontC_tF"></a>
+                    <a name="//apple_ref/swift/Method/widthOfString(usingFont:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9FlowGuideE13widthOfString9usingFont12CoreGraphics7CGFloatVSo6UIFontC_tF">widthOfString(usingFont:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Width of string based on font</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">widthOfString</span><span class="p">(</span><span class="n">usingFont</span> <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIFont</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Talish</a>. All rights reserved. (Last updated: 2020-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
