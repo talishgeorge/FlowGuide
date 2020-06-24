@@ -45,7 +45,7 @@ extension LoginViewModel {
         }
     }
     
-    /// Reset Password
+    /// Reset Password with Email as Input
     /// - Parameters:
     ///   - email: String
     ///   - completion: return type failure/success
@@ -59,7 +59,7 @@ extension LoginViewModel {
         }
     }
     
-    /// Logout User
+    /// Logout User from Firebase with return type success and failure
     func logoutUser() -> Result<Void, Error> {
         do {
             try auth.signOut()
@@ -74,7 +74,7 @@ extension LoginViewModel {
 
 extension LoginViewModel {
     
-    /// Return current logined User
+    /// Return isUser Loggedin as Bool
     static func isUserLoggedIn() -> Bool {
         return Auth.auth().currentUser != nil
     }

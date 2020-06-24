@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// News Header
+/// News Header Class
 class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
     
     // MARK: - Properties

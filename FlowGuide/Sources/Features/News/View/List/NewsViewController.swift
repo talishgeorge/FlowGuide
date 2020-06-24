@@ -25,6 +25,8 @@ class NewsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /// Loading Header from Bundle
         let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
         self.title = Constants.NavigationTitle.home
@@ -55,7 +57,7 @@ private extension NewsViewController {
         fetchNews(by: ApiConstants.newsCategory)
     }
     
-    /// Fetch News by category
+    /// GET API Request: Fetch News by category
     /// - Parameter category: String
     func fetchNews(by category: String) {
         MBProgressHUD.showAdded(to: view, animated: true)
@@ -75,7 +77,7 @@ private extension NewsViewController {
         })
     }
     
-    /// Load data
+    /// Fetch Local Data
     /// - Parameter categories: Category Array
     func loadData(categories: [Category]) {
         self.categoryListVM = CategoryListViewModel(categories: categories)

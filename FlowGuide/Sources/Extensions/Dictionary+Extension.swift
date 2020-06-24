@@ -34,6 +34,9 @@ extension Dictionary {
     
     // recursively (attempt to) access queried subdictionaries
     // (keyPath will never be empty here; the explicit unwrapping is safe)
+    
+    /// Recursively (attempt to) access queried subdictionaries
+    /// - Parameter keyPath: Key
     private func getValue(forKeyPath keyPath: [Key]) -> Any? {
         guard let value = self[keyPath.last!] else { return nil }
         return keyPath.count == 1 ? value : (value as? [Key: Any])
@@ -42,6 +45,11 @@ extension Dictionary {
     
     // recursively (attempt to) access the queried subdictionaries to
     // finally replace the "inner value", given that the key path is valid
+    
+    /// Recursively (attempt to) access the queried subdictionaries
+    /// - Parameters:
+    ///   - value: Any
+    ///   - keyPath: Key
     private mutating func setValue(_ value: Any, forKeyPath keyPath: [Key]) {
         guard self[keyPath.last!] != nil else { return }
         if keyPath.count == 1 {

@@ -11,6 +11,8 @@ import UIKit
 
 /// Article View Model
 struct ArticleViewModel {
+    // MARK: - Properties
+    
     private(set) var article: Article
 }
 

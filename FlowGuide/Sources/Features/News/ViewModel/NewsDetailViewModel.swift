@@ -10,6 +10,8 @@ import Foundation
 
 /// News Details Model
 struct NewsDetailsViewModel {
+    // MARK: - Properties
+
     let article: Article
 }
 

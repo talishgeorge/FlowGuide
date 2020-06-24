@@ -10,17 +10,19 @@ import UIKit
 
 /// Category List Model
 struct CategoryListViewModel {
+    // MARK: - Properties
+
     private(set) var categories: [Category]
 }
 
 extension CategoryListViewModel {
     
-    /// Return Number of Sections
+    /// Return Number of Sections for UITableView
     var numberOfSections: Int {
         return self.categories.count
     }
     
-    /// Return Number of Rows in Sections
+    /// Return Number of Rows in Sections for UITableView
     /// - Parameter section: Int Value
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.categories[section].articles.count
@@ -29,7 +31,7 @@ extension CategoryListViewModel {
 
 extension CategoryListViewModel {
     
-    /// Return Category View Model
+    /// Return Category ViewModel
     /// - Parameter index: Int Value
     func categoryAtIndex(index: Int) -> CategoryViewModel {
         return CategoryViewModel(name: categories[index].title, articles: categories[index].articles)
@@ -45,7 +47,8 @@ extension CategoryListViewModel {
 }
 
 struct CategoryViewModel {
-    
+    // MARK: - Properties
+
     let name: String
     let articles: [Article]
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol TableViewProtocol {
+      // MARK: - Properties
     var cellIdentifier: String {get}
     var headerIdentifier: String {get}
     func numberOfRowsInSection() -> Int

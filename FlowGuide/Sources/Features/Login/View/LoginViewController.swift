@@ -99,7 +99,7 @@ private extension LoginViewController {
 
 extension LoginViewController {
     
-    /// Login Button
+    /// Login Button with TextField Validations
     /// - Parameter sender: UIButton
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
@@ -163,7 +163,7 @@ extension LoginViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    /// SignUp Button
+    /// SignUp Button with TextField Validations
     /// - Parameter sender: UIButton
     @IBAction private func sigunpButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
@@ -201,6 +201,8 @@ extension LoginViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
+    /// UITextField Delegate for set values to ViewModel
+    /// - Parameter textField: UITextField Type
     func textFieldDidEndEditing(_ textField: UITextField) {
         let email = emailTextField.text
         let password = passwordTextField.text

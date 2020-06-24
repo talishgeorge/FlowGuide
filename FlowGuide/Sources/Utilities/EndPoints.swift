@@ -10,11 +10,13 @@ import Foundation
 
 /// API Endpoint
 struct Endpoint {
+      // MARK: - Properties
     var path: String
     var queryItems: [URLQueryItem] = []
 }
 
 extension Endpoint {
+      // MARK: - Properties
     var url: URL {
         guard let url = URL(string: path) else {
             preconditionFailure(

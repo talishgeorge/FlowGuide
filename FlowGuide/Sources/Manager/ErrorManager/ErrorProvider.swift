@@ -6,6 +6,7 @@
 //  Copyright © 2020 Talish George. All rights reserved.
 //
 
+/// Error Provider class based on Network Error Code
 final class ErrorProvider: Error {
     
     // MARK: - Properties

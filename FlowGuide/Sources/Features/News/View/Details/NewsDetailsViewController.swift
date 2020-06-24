@@ -29,7 +29,7 @@ class NewsDetailsViewController: BaseViewController {
         setupUI()
     }
     
-    /// Update UI
+    /// Update UI with Values
     func updateUI() {
         titleLabel.text = article.title
         descriptionLabel.text = article.description

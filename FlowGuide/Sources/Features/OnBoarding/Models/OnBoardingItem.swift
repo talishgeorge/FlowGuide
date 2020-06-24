@@ -31,7 +31,7 @@ struct OnBoardingItem {
     
     // MARK: - Static Methods
     
-    /// Onboarding items
+    /// Onboarding items with static values
     static var colllection: [OnBoardingItem] = [
         OnBoardingItem(imageName: "slide1",
                        title: "Why Use MVVM",
