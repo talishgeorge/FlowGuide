@@ -9,6 +9,7 @@
 import UIKit
 import MBProgressHUD
 import Loaf
+import OakLib
 
 /// Settings ViewController
 class SettingsViewController: BaseViewController {
@@ -22,6 +23,22 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        NavBarConstants.titleText = "Settings"
+        configureNavigaionBar()
+        navBar.onLeftButtonAction = { success in
+            self.navBar.hideProgressBar()
+            self.navBar.navigationController()?.popViewController(animated: true)
+            print("Navigation Bar Left Button Actoin")
+        }
+        navBar.onRightButtonAction = { success in
+            print("Navigation Bar Right Button Action")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }
 

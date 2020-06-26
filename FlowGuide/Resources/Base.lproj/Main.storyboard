@@ -312,29 +312,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enbale Push Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-XL-v8k">
-                                <rect key="frame" x="48" y="137" width="187" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enbale Push Notification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-XL-v8k">
+                                <rect key="frame" x="48" y="167" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-hv-ICN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-hv-ICN">
                                 <rect key="frame" x="148" y="762" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83u-g0-k3L">
-                                <rect key="frame" x="335" y="132" width="51" height="31"/>
+                                <rect key="frame" x="335" y="163" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="83u-g0-k3L" firstAttribute="leading" secondItem="hLT-XL-v8k" secondAttribute="trailing" constant="100" id="3Gl-8P-Q8h"/>
-                            <constraint firstItem="hLT-XL-v8k" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="49" id="K0L-pY-X2m"/>
+                            <constraint firstItem="hLT-XL-v8k" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="79" id="K0L-pY-X2m"/>
+                            <constraint firstItem="ZSM-hv-ICN" firstAttribute="top" secondItem="hLT-XL-v8k" secondAttribute="bottom" constant="574" id="SiQ-33-up0"/>
                             <constraint firstItem="T8X-ws-08c" firstAttribute="trailing" secondItem="83u-g0-k3L" secondAttribute="trailing" constant="30" id="daR-4h-VKW"/>
-                            <constraint firstItem="83u-g0-k3L" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="44" id="kLv-1y-yEb"/>
+                            <constraint firstItem="ZSM-hv-ICN" firstAttribute="leading" secondItem="T8X-ws-08c" secondAttribute="leading" constant="148" id="hfF-1Z-Y11"/>
+                            <constraint firstItem="83u-g0-k3L" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="75" id="kLv-1y-yEb"/>
                             <constraint firstItem="hLT-XL-v8k" firstAttribute="leading" secondItem="T8X-ws-08c" secondAttribute="leading" constant="48" id="l9a-0n-isI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T8X-ws-08c"/>
@@ -545,7 +546,7 @@
         <scene sceneID="1Jj-XW-f84">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WNv-nI-00Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="settings" id="aQc-xR-Xcz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="aQc-xR-Xcz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C5s-ys-jrp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -564,7 +565,7 @@
         <scene sceneID="cpv-fF-Dgv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CjD-Ut-IgD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="home" id="UDr-xb-NeQ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="UDr-xb-NeQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uqU-X2-ed5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

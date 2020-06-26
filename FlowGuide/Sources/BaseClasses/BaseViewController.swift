@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import OakLib
 
 /// Base ViewController for all ViewController
 class BaseViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    public var navBar = CustomNavigationView.loadNavigationBar()
     
     // MARK: - View Life Cycle
     
@@ -75,5 +80,24 @@ extension BaseViewController {
         gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
+    }
+}
+
+extension BaseViewController {
+    
+    func configureNavigaionBar() {
+        navBar.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(navBar)
+        let safeGuide = self.view.safeAreaLayoutGuide
+        navBar.setupSafeArea(guide: safeGuide)
+        NavBarConstants.rootNavigationController = self.navigationController
+        NavBarConstants.barBGColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
+        NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
+        NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
+        NavBarConstants.rightNavButtonImage = UIImage(named: "menu")!
+        NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
+        NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
+        NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
+        navBar.configureNavigationBar()
     }
 }
