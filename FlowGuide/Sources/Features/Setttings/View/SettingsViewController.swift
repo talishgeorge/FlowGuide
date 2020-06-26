@@ -23,15 +23,10 @@ class SettingsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        NavBarConstants.titleText = "Settings"
-        configureNavigaionBar()
-        navBar.onLeftButtonAction = { success in
-            self.navBar.hideProgressBar()
-            self.navBar.navigationController()?.popViewController(animated: true)
-            print("Navigation Bar Left Button Actoin")
-        }
+        NavBarConstants.titleText = SettingsLocalization.settings.localized
+        configureCustomNavigaionView()
         navBar.onRightButtonAction = { success in
-            print("Navigation Bar Right Button Action")
+            self.logout()
         }
     }
     
@@ -48,17 +43,16 @@ extension SettingsViewController {
     
     /// Initial SetUp
     private func setupViews() {
-        self.title = Constants.NavigationTitle.settings
+        self.title = SettingsLocalization.settings.localized
     }
 }
 
 // MARK: - IBActions
 
-extension SettingsViewController {
+private extension SettingsViewController {
     
-    /// Logout
-    /// - Parameter sender: UIBarButtonItem Type
-    @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
+    /// Logout the current user
+    func logout() {
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 2.0) { [weak self] in
             guard let this = self else {
@@ -80,5 +74,11 @@ extension SettingsViewController {
             }
             MBProgressHUD.hide(for: this.view, animated: true)
         }
+    }
+    
+    /// Logout
+    /// - Parameter sender: UIBarButtonItem Type
+    @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
+        logout()
     }
 }

@@ -85,7 +85,7 @@ extension BaseViewController {
 
 extension BaseViewController {
     
-    func configureNavigaionBar() {
+    func configureCustomNavigaionView() {
         navBar.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
@@ -93,8 +93,7 @@ extension BaseViewController {
         NavBarConstants.rootNavigationController = self.navigationController
         NavBarConstants.barBGColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
-        NavBarConstants.leftNavButtonImage = UIImage(named: "back-navigation")!
-        NavBarConstants.rightNavButtonImage = UIImage(named: "menu")!
+        NavBarConstants.rightNavButtonImage = UIImage(named: "logout")!
         NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)

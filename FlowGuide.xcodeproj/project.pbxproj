@@ -111,6 +111,8 @@
 		8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */; };
 		8394EA662477F8A0002FA8EF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */; };
 		8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8394EA672478C88C002FA8EF /* GoogleService-Info.plist */; };
+		83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
+		83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F30CB7249CAB60008B2B53 /* SDKManager.swift */; };
 		F5D8A3154D18FC7379488972 /* Pods_FlowGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */; };
 /* End PBXBuildFile section */
@@ -222,6 +224,7 @@
 		8394EA4D2477F8A0002FA8EF /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		8394EA4E2477F8A0002FA8EF /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		8394EA672478C88C002FA8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83B0176B24A603D300A1D88D /* SettingsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocalization.swift; sourceTree = "<group>"; };
 		83F30CB7249CAB60008B2B53 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
 		B15D3A0F8827ED010F4F9A6C /* Pods-FlowGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.release.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -604,6 +607,7 @@
 		8394EA292477F1D2002FA8EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				83B0176B24A603D300A1D88D /* SettingsLocalization.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -974,6 +978,7 @@
 				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				8394EA5F2477F8A0002FA8EF /* String+Extension.swift in Sources */,
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
+				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				833570E2247A8579002E26A0 /* Connectivity.swift in Sources */,
 				8335713C247C20C5002E26A0 /* WebService.swift in Sources */,
 				83357146247C20C5002E26A0 /* RequestHandler.swift in Sources */,
@@ -1001,6 +1006,7 @@
 				833570E9247AA0C1002E26A0 /* UIColor+Extension.swift in Sources */,
 				833570E3247A8579002E26A0 /* Connectivity.swift in Sources */,
 				83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
+				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
