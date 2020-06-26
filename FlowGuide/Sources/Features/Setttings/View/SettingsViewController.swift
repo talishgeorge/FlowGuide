@@ -22,6 +22,7 @@ class SettingsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navBar.startLinearProgressbar()
         setupViews()
         NavBarConstants.titleText = SettingsLocalization.settings.localized
         configureCustomNavigaionView()
@@ -32,8 +33,10 @@ class SettingsViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        delay(durationInSeconds: 2.0, completion: {
+            self.navBar.hideProgressBar()
+        })
     }
 }
 
