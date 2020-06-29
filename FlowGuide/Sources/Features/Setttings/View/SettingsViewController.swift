@@ -22,10 +22,8 @@ class SettingsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navBar.startLinearProgressbar()
         setupViews()
         NavBarConstants.titleText = SettingsLocalization.settings.localized
-        configureCustomNavigaionView()
         navBar.onRightButtonAction = { success in
             self.logout()
         }
@@ -33,7 +31,10 @@ class SettingsViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.addSubview(navBar)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        configureCustomNavigaionView()
+        navBar.startHorizontalProgressbar()
         delay(durationInSeconds: 2.0, completion: {
             self.navBar.hideProgressBar()
         })
@@ -67,7 +68,6 @@ private extension SettingsViewController {
             case .success:
                 PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure(let error):
-                print("Error signing out: %@", error.localizedDescription)
                 Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
                     switch dismissalType {
                     case .tapped: print("Tapped!")

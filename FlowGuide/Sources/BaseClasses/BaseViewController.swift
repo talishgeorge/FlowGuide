@@ -87,7 +87,6 @@ extension BaseViewController {
     
     func configureCustomNavigaionView() {
         navBar.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.rootNavigationController = self.navigationController
