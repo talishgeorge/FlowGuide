@@ -9,6 +9,15 @@
           "revision": "747c8db8d57b68d5e35275f10c92d55f982adbd4",
           "version": "4.9.1"
         }
+      },
+      {
+        "package": "SBNLib",
+        "repositoryURL": "https://github.com/talishgeorge/SBNLib.git",
+        "state": {
+          "branch": null,
+          "revision": "fc678e155d2ee1ce0f9d72a70a6caa275a095a21",
+          "version": "1.0.0"
+        }
       }
     ]
   },

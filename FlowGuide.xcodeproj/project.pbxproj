@@ -23,7 +23,6 @@
 		83081538248D25020036B52D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081536248D25020036B52D /* ArticleViewModel.swift */; };
 		8308153A248D48AF0036B52D /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081539248D48AF0036B52D /* EndPoints.swift */; };
 		8308153B248D48AF0036B52D /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081539248D48AF0036B52D /* EndPoints.swift */; };
-		83081544248DF9540036B52D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 83081543248DF9540036B52D /* Alamofire */; };
 		830815462494B6720036B52D /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 830815452494B6720036B52D /* Article.json */; };
 		8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308154724973D680036B52D /* NewsDetailViewModel.swift */; };
 		831523ED246F796900F48DDA /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
@@ -31,7 +30,6 @@
 		831523F82471020500F48DDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
 		831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FA2472151D00F48DDA /* OnBoardingViewController.swift */; };
 		831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */; };
-		831E96FA24AC4AF3006D39B7 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 831E96F924AC4AF3006D39B7 /* SBNLib */; };
 		831E96FE24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
 		831E96FF24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
 		831E970424AC549F006D39B7 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E970324AC549E006D39B7 /* Dictionary+Extension.swift */; };
@@ -78,6 +76,8 @@
 		83357158247E2CFA002E26A0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357157247E2CFA002E26A0 /* URL+Extension.swift */; };
 		83357159247E2CFA002E26A0 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357157247E2CFA002E26A0 /* URL+Extension.swift */; };
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
+		8388D85124AC93E500CAC649 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85024AC93E500CAC649 /* SBNLib */; };
+		8388D85424AC964C00CAC649 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85324AC964C00CAC649 /* Alamofire */; };
 		8394E9ED24779AA9002FA8EF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EA24779AA8002FA8EF /* Helper.swift */; };
 		8394E9EE24779AA9002FA8EF /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */; };
 		8394E9EF24779AA9002FA8EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EC24779AA8002FA8EF /* Constants.swift */; };
@@ -154,7 +154,6 @@
 		831523F72471020500F48DDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		831E96F824AC4ADC006D39B7 /* SBNLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SBNLib; path = ../SwiftPackages/SBNLib; sourceTree = "<group>"; };
 		831E96FD24AC5416006D39B7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		831E970324AC549E006D39B7 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
@@ -212,9 +211,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831E96FA24AC4AF3006D39B7 /* SBNLib in Frameworks */,
+				8388D85424AC964C00CAC649 /* Alamofire in Frameworks */,
+				8388D85124AC93E500CAC649 /* SBNLib in Frameworks */,
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
-				83081544248DF9540036B52D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +250,6 @@
 		83006B89246EE22B00B08094 = {
 			isa = PBXGroup;
 			children = (
-				831E96F824AC4ADC006D39B7 /* SBNLib */,
 				83006B94246EE22B00B08094 /* FlowGuide */,
 				83006BAE246EE22D00B08094 /* FlowGuideTests */,
 				83006B93246EE22B00B08094 /* Products */,
@@ -715,8 +713,8 @@
 			);
 			name = FlowGuide;
 			packageProductDependencies = (
-				83081543248DF9540036B52D /* Alamofire */,
-				831E96F924AC4AF3006D39B7 /* SBNLib */,
+				8388D85024AC93E500CAC649 /* SBNLib */,
+				8388D85324AC964C00CAC649 /* Alamofire */,
 			);
 			productName = FlowGuide;
 			productReference = 83006B92246EE22B00B08094 /* FlowGuide.app */;
@@ -771,7 +769,8 @@
 			);
 			mainGroup = 83006B89246EE22B00B08094;
 			packageReferences = (
-				83081542248DF9540036B52D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */,
+				8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 83006B93246EE22B00B08094 /* Products */;
 			projectDirPath = "";
@@ -1272,7 +1271,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		83081542248DF9540036B52D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/talishgeorge/SBNLib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1283,14 +1290,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		83081543248DF9540036B52D /* Alamofire */ = {
+		8388D85024AC93E500CAC649 /* SBNLib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 83081542248DF9540036B52D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		831E96F924AC4AF3006D39B7 /* SBNLib */ = {
-			isa = XCSwiftPackageProductDependency;
+			package = 8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */;
 			productName = SBNLib;
+		};
+		8388D85324AC964C00CAC649 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
