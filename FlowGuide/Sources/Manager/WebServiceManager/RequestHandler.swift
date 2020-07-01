@@ -7,18 +7,18 @@
 //
 
 import Alamofire
-import SBNLib
+//import SBNLib
 
-class RequestHandler {
+public class RequestHandler {
     
     /// Shared variable
-    private static var sharedRequestHandler: RequestHandler = {
+    public static var sharedRequestHandler: RequestHandler = {
         let requestHandler = RequestHandler()
         return requestHandler
     }()
     
     /// Return shared request handler
-    class func shared() -> RequestHandler {
+    public class func shared() -> RequestHandler {
         return sharedRequestHandler
     }
     
@@ -26,7 +26,7 @@ class RequestHandler {
     /// - Parameters:
     ///   - requestModel:APIRequestModel
     ///   - success:response
-    func request(requestModel: APIRequestModel,
+    public func request(requestModel: APIRequestModel,
                  success: @escaping ( _ response: DataResponse<Any>) -> Void) {
         let sessionManager: Alamofire.SessionManager
         sessionManager = Alamofire.SessionManager.default
