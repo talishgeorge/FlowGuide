@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SBNLib
 
 /// Error Keys
 private enum ErrorKey: String {

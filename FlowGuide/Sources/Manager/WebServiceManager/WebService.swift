@@ -9,6 +9,7 @@
 import Alamofire
 import Foundation
 import UIKit
+import SBNLib
 
 typealias SuccessCompletionBlock = (_ resoponse: ([Category])) -> Void
 typealias FailureBlock = (_ error: Error?) -> Void
