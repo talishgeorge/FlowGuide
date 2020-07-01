@@ -12,7 +12,6 @@ import SBNLib
 
 typealias SuccessCompletionBlock = (_ resoponse: ([Category])) -> Void
 typealias FailureBlock = (_ error: Error?) -> Void
-typealias SuccessHandlerCompletionBlock = (_ resoponse: ([String: Any])) -> Void
 
 /// Web Service Class
 class WebService {
@@ -26,7 +25,6 @@ class WebService {
             failure(nil)
             return
         }
-        
         RequestHandler.configureRequest(url: url, success: { news in
             self.handleCodableData(from: news, success: success, failure: failure)
         }, failure: failure)
