@@ -7,6 +7,7 @@
 //
 
 import FirebaseAuth
+import SBNLib
 
 /// Base View Model
 class BaseViewModel: NSObject {
