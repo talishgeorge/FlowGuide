@@ -33,6 +33,10 @@
 		831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FA2472151D00F48DDA /* OnBoardingViewController.swift */; };
 		831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */; };
 		831E96FA24AC4AF3006D39B7 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 831E96F924AC4AF3006D39B7 /* SBNLib */; };
+		831E96FE24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
+		831E96FF24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
+		831E970424AC549F006D39B7 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E970324AC549E006D39B7 /* Dictionary+Extension.swift */; };
+		831E970524AC549F006D39B7 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E970324AC549E006D39B7 /* Dictionary+Extension.swift */; };
 		832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -70,8 +74,6 @@
 		83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357110247BB13F002E26A0 /* LoadingLocalization.swift */; };
 		83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357117247BDEA8002E26A0 /* OnBoardingItem.swift */; };
 		83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357117247BDEA8002E26A0 /* OnBoardingItem.swift */; };
-		8335713C247C20C5002E26A0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357135247C20C4002E26A0 /* WebService.swift */; };
-		8335713D247C20C5002E26A0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357135247C20C4002E26A0 /* WebService.swift */; };
 		8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335714D247D58AD002E26A0 /* SignUpViewModel.swift */; };
 		83357152247D8278002E26A0 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357151247D8278002E26A0 /* ThemeManager.swift */; };
 		83357154247E1EEB002E26A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357153247E1EEB002E26A0 /* Category.swift */; };
@@ -87,7 +89,6 @@
 		8394E9FE2477BF1D002FA8EF /* NewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8394E9F82477BF1D002FA8EF /* NewsHeaderView.xib */; };
 		8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9FA2477BF1D002FA8EF /* NewsDetailsViewController.swift */; };
 		8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9FB2477BF1D002FA8EF /* NewsViewController.swift */; };
-		8394EA4F2477F8A0002FA8EF /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA372477F89E002FA8EF /* Dictionary+Extension.swift */; };
 		8394EA522477F8A0002FA8EF /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA3A2477F89E002FA8EF /* DateFormatter+Extension.swift */; };
 		8394EA532477F8A0002FA8EF /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA3B2477F89E002FA8EF /* UINavigationController+Extension.swift */; };
 		8394EA542477F8A0002FA8EF /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394EA3C2477F89E002FA8EF /* NSManagedObjectContext+Extension.swift */; };
@@ -160,6 +161,8 @@
 		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		831E96F824AC4ADC006D39B7 /* SBNLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SBNLib; path = ../SwiftPackages/SBNLib; sourceTree = "<group>"; };
+		831E96FD24AC5416006D39B7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		831E970324AC549E006D39B7 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		833570DE247A660D002E26A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -180,7 +183,6 @@
 		8335710F247BA091002E26A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83357110247BB13F002E26A0 /* LoadingLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLocalization.swift; sourceTree = "<group>"; };
 		83357117247BDEA8002E26A0 /* OnBoardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingItem.swift; sourceTree = "<group>"; };
-		83357135247C20C4002E26A0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8335714D247D58AD002E26A0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		83357151247D8278002E26A0 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -195,7 +197,6 @@
 		8394E9F82477BF1D002FA8EF /* NewsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsHeaderView.xib; sourceTree = "<group>"; };
 		8394E9FA2477BF1D002FA8EF /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		8394E9FB2477BF1D002FA8EF /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		8394EA372477F89E002FA8EF /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		8394EA3A2477F89E002FA8EF /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		8394EA3B2477F89E002FA8EF /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		8394EA3C2477F89E002FA8EF /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
@@ -448,7 +449,7 @@
 		8335711B247BEB3B002E26A0 /* WebServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				83357135247C20C4002E26A0 /* WebService.swift */,
+				831E96FD24AC5416006D39B7 /* WebService.swift */,
 			);
 			path = WebServiceManager;
 			sourceTree = "<group>";
@@ -667,8 +668,8 @@
 		8394EA332477F247002FA8EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				831E970324AC549E006D39B7 /* Dictionary+Extension.swift */,
 				8394EA3A2477F89E002FA8EF /* DateFormatter+Extension.swift */,
-				8394EA372477F89E002FA8EF /* Dictionary+Extension.swift */,
 				8394EA3C2477F89E002FA8EF /* NSManagedObjectContext+Extension.swift */,
 				8394EA472477F89F002FA8EF /* String+Extension.swift */,
 				8394EA442477F89F002FA8EF /* UIApplication+AppVersion.swift */,
@@ -908,6 +909,7 @@
 			files = (
 				8394E9ED24779AA9002FA8EF /* Helper.swift in Sources */,
 				833570E8247AA0C1002E26A0 /* UIColor+Extension.swift in Sources */,
+				831E96FE24AC5416006D39B7 /* WebService.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
 				833570FB247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
 				83357158247E2CFA002E26A0 /* URL+Extension.swift in Sources */,
@@ -934,6 +936,7 @@
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
 				833570EF247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
+				831E970424AC549F006D39B7 /* Dictionary+Extension.swift in Sources */,
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				83081531248D246C0036B52D /* UIImage+Extension.swift in Sources */,
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
@@ -956,13 +959,11 @@
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				833570E2247A8579002E26A0 /* Connectivity.swift in Sources */,
-				8335713C247C20C5002E26A0 /* WebService.swift in Sources */,
 				8394EA652477F8A0002FA8EF /* UserDefaults+Extension.swift in Sources */,
 				8394EA662477F8A0002FA8EF /* CoreDataHelper.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
 				8394E9EE24779AA9002FA8EF /* TableViewProtocol.swift in Sources */,
-				8394EA4F2477F8A0002FA8EF /* Dictionary+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,12 +984,13 @@
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
-				8335713D247C20C5002E26A0 /* WebService.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
+				831E970524AC549F006D39B7 /* Dictionary+Extension.swift in Sources */,
 				833570FC247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
 				83006BB0246EE22D00B08094 /* FlowGuideTests.swift in Sources */,
+				831E96FF24AC5416006D39B7 /* WebService.swift in Sources */,
 				83081532248D246C0036B52D /* UIImage+Extension.swift in Sources */,
 				83357159247E2CFA002E26A0 /* URL+Extension.swift in Sources */,
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,

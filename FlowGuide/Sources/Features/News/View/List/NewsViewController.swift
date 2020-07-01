@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import MBProgressHUD
+import SBNLib
 
 /// News ViewController
 class NewsViewController: BaseViewController {
