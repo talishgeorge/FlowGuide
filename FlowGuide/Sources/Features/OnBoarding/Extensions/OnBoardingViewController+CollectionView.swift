@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UtilitiesLib
 
 extension OnBoardingViewController: UICollectionViewDelegate,
                                     UICollectionViewDataSource,

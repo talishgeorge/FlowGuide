@@ -7,6 +7,7 @@
 //
 
 import FirebaseAuth
+import UtilitiesLib
 
 /// Login ViewModel
 final class LoginViewModel: BaseViewModel {

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SBNLib
 import ExtensionsLib
+import UtilitiesLib
 
 typealias SuccessCompletionBlock = (_ resoponse: ([Category])) -> Void
 typealias FailureBlock = (_ error: Error?) -> Void

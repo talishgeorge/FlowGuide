@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UtilitiesLib
 
 /// API Endpoint
 struct Endpoint {

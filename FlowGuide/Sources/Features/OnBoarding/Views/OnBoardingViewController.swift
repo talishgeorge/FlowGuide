@@ -8,6 +8,7 @@
 
 //import Foundation
 import UIKit
+import UtilitiesLib
 
 /// Protocol
 protocol OnBoardingDelegate: class {

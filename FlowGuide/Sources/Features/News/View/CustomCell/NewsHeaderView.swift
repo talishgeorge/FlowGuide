@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UtilitiesLib
 
 /// News Header Class
 class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {

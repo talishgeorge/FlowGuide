@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UtilitiesLib
 
 /// News TableView Cell
 class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {

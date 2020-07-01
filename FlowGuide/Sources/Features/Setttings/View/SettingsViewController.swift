@@ -10,6 +10,7 @@ import UIKit
 import MBProgressHUD
 import Loaf
 import OakLib
+import UtilitiesLib
 
 /// Settings ViewController
 class SettingsViewController: BaseViewController {
