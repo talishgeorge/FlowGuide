@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "ExtensionsLib",
+        "repositoryURL": "https://github.com/talishgeorge/ExtensionsLib.git",
+        "state": {
+          "branch": null,
+          "revision": "afd55ce284a9692e7a0ba82c9e299bd03a6f4adf",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "SBNLib",
         "repositoryURL": "https://github.com/talishgeorge/SBNLib.git",
         "state": {

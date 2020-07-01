@@ -70,7 +70,7 @@
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
 		8388D85124AC93E500CAC649 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85024AC93E500CAC649 /* SBNLib */; };
 		8388D85424AC964C00CAC649 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85324AC964C00CAC649 /* Alamofire */; };
-		8388D85724AC9D8400CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85624AC9D8400CAC649 /* ExtensionsLib */; };
+		8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85924ACA4F700CAC649 /* ExtensionsLib */; };
 		8394E9ED24779AA9002FA8EF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EA24779AA8002FA8EF /* Helper.swift */; };
 		8394E9EE24779AA9002FA8EF /* TableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */; };
 		8394E9EF24779AA9002FA8EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9EC24779AA8002FA8EF /* Constants.swift */; };
@@ -160,7 +160,6 @@
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		83357155247E1F8E002E26A0 /* Atricle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atricle.swift; sourceTree = "<group>"; };
 		834FEB9B2474D9E800D66A37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8388D85524AC9D2100CAC649 /* ExtensionsLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ExtensionsLib; path = ../SwiftPackages/ExtensionsLib; sourceTree = "<group>"; };
 		8394E9EA24779AA8002FA8EF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8394E9EB24779AA8002FA8EF /* TableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProtocol.swift; sourceTree = "<group>"; };
 		8394E9EC24779AA8002FA8EF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -181,7 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8388D85724AC9D8400CAC649 /* ExtensionsLib in Frameworks */,
+				8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */,
 				8388D85424AC964C00CAC649 /* Alamofire in Frameworks */,
 				8388D85124AC93E500CAC649 /* SBNLib in Frameworks */,
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
@@ -221,7 +220,6 @@
 		83006B89246EE22B00B08094 = {
 			isa = PBXGroup;
 			children = (
-				8388D85524AC9D2100CAC649 /* ExtensionsLib */,
 				83006B94246EE22B00B08094 /* FlowGuide */,
 				83006BAE246EE22D00B08094 /* FlowGuideTests */,
 				83006B93246EE22B00B08094 /* Products */,
@@ -665,7 +663,7 @@
 			packageProductDependencies = (
 				8388D85024AC93E500CAC649 /* SBNLib */,
 				8388D85324AC964C00CAC649 /* Alamofire */,
-				8388D85624AC9D8400CAC649 /* ExtensionsLib */,
+				8388D85924ACA4F700CAC649 /* ExtensionsLib */,
 			);
 			productName = FlowGuide;
 			productReference = 83006B92246EE22B00B08094 /* FlowGuide.app */;
@@ -722,6 +720,7 @@
 			packageReferences = (
 				8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */,
 				8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */,
 			);
 			productRefGroup = 83006B93246EE22B00B08094 /* Products */;
 			projectDirPath = "";
@@ -1220,6 +1219,14 @@
 				minimumVersion = 4.9.1;
 			};
 		};
+		8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/talishgeorge/ExtensionsLib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1233,8 +1240,9 @@
 			package = 8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		8388D85624AC9D8400CAC649 /* ExtensionsLib */ = {
+		8388D85924ACA4F700CAC649 /* ExtensionsLib */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */;
 			productName = ExtensionsLib;
 		};
 /* End XCSwiftPackageProductDependency section */
