@@ -67,9 +67,9 @@
 		8388D85124AC93E500CAC649 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85024AC93E500CAC649 /* SBNLib */; };
 		8388D85424AC964C00CAC649 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85324AC964C00CAC649 /* Alamofire */; };
 		8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85924ACA4F700CAC649 /* ExtensionsLib */; };
-		8388D85D24ACA73E00CAC649 /* UtilitiesLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85C24ACA73E00CAC649 /* UtilitiesLib */; };
 		8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
 		8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
+		8388D86C24AD0E2C00CAC649 /* UtilitiesLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D86B24AD0E2C00CAC649 /* UtilitiesLib */; };
 		8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9F62477BF1C002FA8EF /* NewsHeaderView.swift */; };
 		8394E9FD2477BF1D002FA8EF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9F72477BF1C002FA8EF /* NewsTableViewCell.swift */; };
 		8394E9FE2477BF1D002FA8EF /* NewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8394E9F82477BF1D002FA8EF /* NewsHeaderView.xib */; };
@@ -153,7 +153,6 @@
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		83357155247E1F8E002E26A0 /* Atricle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atricle.swift; sourceTree = "<group>"; };
 		834FEB9B2474D9E800D66A37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8388D85B24ACA71500CAC649 /* UtilitiesLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UtilitiesLib; path = ../SwiftPackages/UtilitiesLib; sourceTree = "<group>"; };
 		8388D86124ACAA0100CAC649 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		8394E9F62477BF1C002FA8EF /* NewsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 		8394E9F72477BF1C002FA8EF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,7 +173,7 @@
 				8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */,
 				8388D85424AC964C00CAC649 /* Alamofire in Frameworks */,
 				8388D85124AC93E500CAC649 /* SBNLib in Frameworks */,
-				8388D85D24ACA73E00CAC649 /* UtilitiesLib in Frameworks */,
+				8388D86C24AD0E2C00CAC649 /* UtilitiesLib in Frameworks */,
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +211,6 @@
 		83006B89246EE22B00B08094 = {
 			isa = PBXGroup;
 			children = (
-				8388D85B24ACA71500CAC649 /* UtilitiesLib */,
 				83006B94246EE22B00B08094 /* FlowGuide */,
 				83006BAE246EE22D00B08094 /* FlowGuideTests */,
 				83006B93246EE22B00B08094 /* Products */,
@@ -652,7 +650,7 @@
 				8388D85024AC93E500CAC649 /* SBNLib */,
 				8388D85324AC964C00CAC649 /* Alamofire */,
 				8388D85924ACA4F700CAC649 /* ExtensionsLib */,
-				8388D85C24ACA73E00CAC649 /* UtilitiesLib */,
+				8388D86B24AD0E2C00CAC649 /* UtilitiesLib */,
 			);
 			productName = FlowGuide;
 			productReference = 83006B92246EE22B00B08094 /* FlowGuide.app */;
@@ -710,6 +708,7 @@
 				8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */,
 				8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */,
+				8388D86A24AD0E2C00CAC649 /* XCRemoteSwiftPackageReference "UtilitiesLib" */,
 			);
 			productRefGroup = 83006B93246EE22B00B08094 /* Products */;
 			projectDirPath = "";
@@ -1210,6 +1209,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8388D86A24AD0E2C00CAC649 /* XCRemoteSwiftPackageReference "UtilitiesLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/talishgeorge/UtilitiesLib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1228,8 +1235,9 @@
 			package = 8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */;
 			productName = ExtensionsLib;
 		};
-		8388D85C24ACA73E00CAC649 /* UtilitiesLib */ = {
+		8388D86B24AD0E2C00CAC649 /* UtilitiesLib */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 8388D86A24AD0E2C00CAC649 /* XCRemoteSwiftPackageReference "UtilitiesLib" */;
 			productName = UtilitiesLib;
 		};
 /* End XCSwiftPackageProductDependency section */

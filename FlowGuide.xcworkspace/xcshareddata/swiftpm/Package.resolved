@@ -27,6 +27,15 @@
           "revision": "fc678e155d2ee1ce0f9d72a70a6caa275a095a21",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "UtilitiesLib",
+        "repositoryURL": "https://github.com/talishgeorge/UtilitiesLib.git",
+        "state": {
+          "branch": null,
+          "revision": "268cafe66c97b5bb4dae56617ea3cdde641c9bd3",
+          "version": "1.0.0"
+        }
       }
     ]
   },
