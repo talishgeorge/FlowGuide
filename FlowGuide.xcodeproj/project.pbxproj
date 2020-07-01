@@ -72,16 +72,8 @@
 		83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357117247BDEA8002E26A0 /* OnBoardingItem.swift */; };
 		8335713C247C20C5002E26A0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357135247C20C4002E26A0 /* WebService.swift */; };
 		8335713D247C20C5002E26A0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357135247C20C4002E26A0 /* WebService.swift */; };
-		83357140247C20C5002E26A0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357137247C20C4002E26A0 /* ErrorHandler.swift */; };
-		83357141247C20C5002E26A0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357137247C20C4002E26A0 /* ErrorHandler.swift */; };
-		83357142247C20C5002E26A0 /* CommonErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357138247C20C4002E26A0 /* CommonErrorUtility.swift */; };
-		83357143247C20C5002E26A0 /* CommonErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357138247C20C4002E26A0 /* CommonErrorUtility.swift */; };
-		83357144247C20C5002E26A0 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357139247C20C4002E26A0 /* Headers.swift */; };
-		83357145247C20C5002E26A0 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357139247C20C4002E26A0 /* Headers.swift */; };
 		83357146247C20C5002E26A0 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335713A247C20C5002E26A0 /* RequestHandler.swift */; };
 		83357147247C20C5002E26A0 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335713A247C20C5002E26A0 /* RequestHandler.swift */; };
-		83357148247C20C5002E26A0 /* ErrorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335713B247C20C5002E26A0 /* ErrorProvider.swift */; };
-		83357149247C20C5002E26A0 /* ErrorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335713B247C20C5002E26A0 /* ErrorProvider.swift */; };
 		8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335714D247D58AD002E26A0 /* SignUpViewModel.swift */; };
 		83357152247D8278002E26A0 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357151247D8278002E26A0 /* ThemeManager.swift */; };
 		83357154247E1EEB002E26A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357153247E1EEB002E26A0 /* Category.swift */; };
@@ -191,11 +183,7 @@
 		83357110247BB13F002E26A0 /* LoadingLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLocalization.swift; sourceTree = "<group>"; };
 		83357117247BDEA8002E26A0 /* OnBoardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingItem.swift; sourceTree = "<group>"; };
 		83357135247C20C4002E26A0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		83357137247C20C4002E26A0 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorHandler.swift; path = ../ErrorManager/ErrorHandler.swift; sourceTree = "<group>"; };
-		83357138247C20C4002E26A0 /* CommonErrorUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonErrorUtility.swift; path = ../ErrorManager/CommonErrorUtility.swift; sourceTree = "<group>"; };
-		83357139247C20C4002E26A0 /* Headers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
 		8335713A247C20C5002E26A0 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
-		8335713B247C20C5002E26A0 /* ErrorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorProvider.swift; path = ../ErrorManager/ErrorProvider.swift; sourceTree = "<group>"; };
 		8335714D247D58AD002E26A0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		83357151247D8278002E26A0 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -463,10 +451,6 @@
 		8335711B247BEB3B002E26A0 /* WebServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				83357138247C20C4002E26A0 /* CommonErrorUtility.swift */,
-				83357137247C20C4002E26A0 /* ErrorHandler.swift */,
-				8335713B247C20C5002E26A0 /* ErrorProvider.swift */,
-				83357139247C20C4002E26A0 /* Headers.swift */,
 				8335713A247C20C5002E26A0 /* RequestHandler.swift */,
 				83357135247C20C4002E26A0 /* WebService.swift */,
 			);
@@ -930,7 +914,6 @@
 				833570E8247AA0C1002E26A0 /* UIColor+Extension.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
 				833570FB247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
-				83357144247C20C5002E26A0 /* Headers.swift in Sources */,
 				83357158247E2CFA002E26A0 /* URL+Extension.swift in Sources */,
 				8394EA632477F8A0002FA8EF /* UIScreen+Extension.swift in Sources */,
 				83081534248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
@@ -963,16 +946,13 @@
 				8394E9EF24779AA9002FA8EF /* Constants.swift in Sources */,
 				8394EA5B2477F8A0002FA8EF /* UIApplication+Extension.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
-				83357142247C20C5002E26A0 /* CommonErrorUtility.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* BaseViewModel.swift in Sources */,
-				83357148247C20C5002E26A0 /* ErrorProvider.swift in Sources */,
 				83006BBE246EE29200B08094 /* LoadingViewController.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
 				833570F5247AD9A2002E26A0 /* Localizable.swift in Sources */,
 				8394EA612477F8A0002FA8EF /* UIDevice+Extension.swift in Sources */,
 				83357111247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
-				83357140247C20C5002E26A0 /* ErrorHandler.swift in Sources */,
 				8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */,
 				8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */,
 				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
@@ -998,7 +978,6 @@
 				833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				833570EC247AA2C1002E26A0 /* Styles.swift in Sources */,
-				83357149247C20C5002E26A0 /* ErrorProvider.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				833570F6247AD9A2002E26A0 /* Localizable.swift in Sources */,
@@ -1011,14 +990,11 @@
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				8335713D247C20C5002E26A0 /* WebService.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
-				83357145247C20C5002E26A0 /* Headers.swift in Sources */,
 				833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
-				83357141247C20C5002E26A0 /* ErrorHandler.swift in Sources */,
 				833570FC247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
 				83006BB0246EE22D00B08094 /* FlowGuideTests.swift in Sources */,
 				83081532248D246C0036B52D /* UIImage+Extension.swift in Sources */,
-				83357143247C20C5002E26A0 /* CommonErrorUtility.swift in Sources */,
 				83357159247E2CFA002E26A0 /* URL+Extension.swift in Sources */,
 				83357147247C20C5002E26A0 /* RequestHandler.swift in Sources */,
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
