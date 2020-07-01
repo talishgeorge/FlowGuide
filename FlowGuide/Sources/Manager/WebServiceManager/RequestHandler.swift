@@ -27,7 +27,7 @@ public class RequestHandler {
     ///   - requestModel:APIRequestModel
     ///   - success:response
     public func request(requestModel: APIRequestModel,
-                 success: @escaping ( _ response: DataResponse<Any>) -> Void) {
+                        success: @escaping ( _ response: DataResponse<Any>) -> Void) {
         let sessionManager: Alamofire.SessionManager
         sessionManager = Alamofire.SessionManager.default
         if let baseURL = requestModel.url {
