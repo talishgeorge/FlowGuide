@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EAB83F97C084839CF1016B3 /* Pods_FlowGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76797B00750CE7074ABE689C /* Pods_FlowGuide.framework */; };
 		83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006B95246EE22B00B08094 /* AppDelegate.swift */; };
 		83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006B97246EE22B00B08094 /* SceneDelegate.swift */; };
 		83006B9D246EE22B00B08094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83006B9B246EE22B00B08094 /* Main.storyboard */; };
@@ -102,7 +101,6 @@
 		83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F30CB7249CAB60008B2B53 /* SDKManager.swift */; };
-		F5D8A3154D18FC7379488972 /* Pods_FlowGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +131,6 @@
 		07B101422FFB8273DF8E10A7 /* Pods-FlowGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuide.debug.xcconfig"; path = "Target Support Files/Pods-FlowGuide/Pods-FlowGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		3802C48D57E3E00969F68F45 /* Pods-FlowGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50DF644C2FDC1DB60BD5F58A /* Pods-FlowGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuide.release.xcconfig"; path = "Target Support Files/Pods-FlowGuide/Pods-FlowGuide.release.xcconfig"; sourceTree = "<group>"; };
-		76797B00750CE7074ABE689C /* Pods_FlowGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowGuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83006B92246EE22B00B08094 /* FlowGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83006B95246EE22B00B08094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83006B97246EE22B00B08094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				831E96FA24AC4AF3006D39B7 /* SBNLib in Frameworks */,
-				4EAB83F97C084839CF1016B3 /* Pods_FlowGuide.framework in Frameworks */,
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
 				83081544248DF9540036B52D /* Alamofire in Frameworks */,
 			);
@@ -228,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */,
-				F5D8A3154D18FC7379488972 /* Pods_FlowGuideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				832C7F3024AA571B0032EC52 /* OakLib.framework */,
-				76797B00750CE7074ABE689C /* Pods_FlowGuide.framework */,
-				7CB5C13AA283FE438C71D86C /* Pods_FlowGuideTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
