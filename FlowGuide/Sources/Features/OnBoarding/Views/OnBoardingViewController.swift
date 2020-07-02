@@ -74,6 +74,7 @@ private extension OnBoardingViewController {
     /// Localization
     private func setupUIForLocalization() {
         getStartedButton.setTitle(OnBoardingLocalization.get_started_key.localized, for: .normal)
+            getStartedButton.cornerRadiusWithBorder(button: getStartedButton)
     }
 }
 

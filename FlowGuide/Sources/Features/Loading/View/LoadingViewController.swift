@@ -11,6 +11,8 @@ import UtilitiesLib
 
 final class LoadingViewController: BaseViewController {
     
+    var timer: Timer?
+
     // MARK: - Properties
     
     @IBOutlet private weak var loadingLabel: UILabel!
@@ -21,10 +23,12 @@ final class LoadingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingLabel.text = LoadingLocalization.loading.localized
+        loadingLabel.text = "Loading ."
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        showLoading()
         delay(durationInSeconds: 2.0, completion: {
             self.showInitialView()
         })
@@ -32,6 +36,20 @@ final class LoadingViewController: BaseViewController {
     
     // MARK: - Private Methods
     
+    /// Show Loading
+    func showLoading() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.40, repeats: true) { _ in
+            var string: String {
+                switch self.loadingLabel.text {
+                case "Loading .":       return "Loading .."
+                case "Loading ..":      return "Loading ..."
+                case "Loading ...":     return "Loading ."
+                default:                return "Loading"
+                }
+            }
+            self.loadingLabel.text = string
+        }
+    }
     /// Show Initial View
     private func showInitialView() {
         if LoadingViewModel.isUserLoggedIn() {

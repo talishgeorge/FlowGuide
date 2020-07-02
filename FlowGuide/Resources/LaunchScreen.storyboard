@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Udo-Xf-78Q">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="938"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Udo-Xf-78Q" secondAttribute="bottomMargin" id="QWH-OW-0wc"/>
-                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="ZgJ-k5-JFf"/>
-                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cQL-uw-qIJ"/>
-                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hth-le-th5"/>
+                            <constraint firstAttribute="bottom" secondItem="Udo-Xf-78Q" secondAttribute="bottom" id="4pE-G6-LlY"/>
+                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="R3d-4B-pjd"/>
+                            <constraint firstItem="Udo-Xf-78Q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eQB-Ku-p0v"/>
+                            <constraint firstAttribute="trailing" secondItem="Udo-Xf-78Q" secondAttribute="trailing" id="i1K-vC-TzF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

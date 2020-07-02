@@ -92,6 +92,9 @@ private extension LoginViewController {
         confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
         segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
         segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
+        loginButton.cornerRadiusWithBorder(button: loginButton)
+        sigunpButton.cornerRadiusWithBorder(button: sigunpButton)
+        
     }
 }
 
