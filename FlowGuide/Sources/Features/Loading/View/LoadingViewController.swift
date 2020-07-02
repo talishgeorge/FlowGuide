@@ -29,7 +29,7 @@ final class LoadingViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showLoading()
-        delay(durationInSeconds: 2.0, completion: {
+        delay(durationInSeconds: 2.5, completion: {
             self.showInitialView()
         })
     }
