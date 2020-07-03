@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
        configureUI()
     }
     func configureUI() {
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next Condensed", size: 16)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Avenir Next Condensed", size: 18)!], for: .normal)
         UITabBar.appearance().unselectedItemTintColor = UIColor.lightText
     }
     /*

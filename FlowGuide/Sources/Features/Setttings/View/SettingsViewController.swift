@@ -15,6 +15,7 @@ import UtilitiesLib
 /// Settings ViewController
 class SettingsViewController: BaseViewController {
     
+    @IBOutlet private weak var pushNotificationView: UIView!
     // MARK: - Properties
     
     private let loginViewModel = LoginViewModel()
@@ -49,6 +50,8 @@ extension SettingsViewController {
     /// Initial SetUp
     private func setupViews() {
         self.title = SettingsLocalization.settings.localized
+        pushNotificationView.layer.borderWidth = 1
+        pushNotificationView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
     }
 }
 

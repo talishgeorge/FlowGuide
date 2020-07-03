@@ -26,7 +26,14 @@ final class LoginViewController: BaseViewController {
     weak var delegate: OnBoardingDelegate?
     private var loginViewModel = LoginViewModel()
     private var signUpViewModel = SignUpViewModel()
+    @IBOutlet private weak var emailView: UIView!
+    @IBOutlet private weak var passwordView: UIView!
+    @IBOutlet private weak var confirmPswdView: UIView!
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var errorView: UIView!
+    @IBOutlet private weak var loginButtonView: UIView!
     
+    @IBOutlet private weak var signUpButtonView: UIView!
     /// Page Types for login flow
     private enum PageType {
         case login
@@ -69,16 +76,17 @@ private extension LoginViewController {
     /// - Parameter pageType: Login or signUp type
     private func setupViewsFor(pageType: PageType) {
         errorMessage = nil
-        passwordConfirmationTextFields.isHidden = pageType == .login
-        sigunpButton.isHidden = pageType == .login
+        confirmPswdView.isHidden = pageType == .login
+        signUpButtonView.isHidden = pageType == .login
+        configureButtonUI(customView: signUpButtonView)
         forgotPasswordButton.isHidden = pageType == .signUp
-        loginButton.isHidden = pageType == .signUp
+        loginButtonView.isHidden = pageType == .signUp
     }
     
     /// Error message
     /// - Parameter text: Error message String type
     private func showErrorMessage(text: String?) {
-        errorLabel.isHidden = text == nil
+        errorView.isHidden = text == nil
         errorLabel.text = text
     }
     
@@ -92,8 +100,19 @@ private extension LoginViewController {
         confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
         segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
         segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
-        loginButton.cornerRadiusWithBorder(button: loginButton)
-        sigunpButton.cornerRadiusWithBorder(button: sigunpButton)
+        cardView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        emailView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        passwordView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        confirmPswdView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        signUpButtonView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        loginButtonView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        cardView.layer.borderWidth = 1
+        passwordView.layer.borderWidth = 1
+        confirmPswdView.layer.borderWidth = 1
+        emailView.layer.borderWidth = 1
+        signUpButtonView.layer.borderWidth = 1
+        loginButtonView.layer.borderWidth = 1
+        configureButtonUI(customView: loginButtonView)
         
     }
 }
@@ -215,5 +234,12 @@ extension LoginViewController: UITextFieldDelegate {
         signUpViewModel = SignUpViewModel(email,
                                           password,
                                           confirmPassword)
+    }
+    func configureButtonUI(customView: UIView) {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemTeal.cgColor]
+        gradient.locations = [0, 1]
+        customView.layer.insertSublayer(gradient, at: 0)
+        gradient.frame = customView.frame
     }
 }

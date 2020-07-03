@@ -11,8 +11,8 @@ import UIKit
 extension UIButton {
     
     func cornerRadiusWithBorder(button: UIButton) {
-        button.layer.cornerRadius = 18
+        button.layer.cornerRadius = 15
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderColor =  UIColor(named: "ViewBorderColour")?.cgColor
     }
 }

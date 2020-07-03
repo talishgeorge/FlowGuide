@@ -95,7 +95,7 @@ extension BaseViewController {
         NavBarConstants.rightNavButtonImage = UIImage(named: "logout")!
         NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
-        NavBarConstants.titleFont = UIFont.boldSystemFont(ofSize: 26)
+        NavBarConstants.titleFont = (UIFont.init(name: "Avenir Next Condensed", size: 23) ?? nil)!
         navBar.configureNavigationBar()
     }
 }
