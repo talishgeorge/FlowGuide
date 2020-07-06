@@ -100,12 +100,12 @@ private extension LoginViewController {
         confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
         segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
         segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
-        cardView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
-        emailView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
-        passwordView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
-        confirmPswdView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
-        signUpButtonView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
-        loginButtonView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        cardView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        emailView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        passwordView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        confirmPswdView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        signUpButtonView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        loginButtonView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         cardView.layer.borderWidth = 1
         passwordView.layer.borderWidth = 1
         confirmPswdView.layer.borderWidth = 1

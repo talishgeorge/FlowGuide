@@ -31,7 +31,7 @@ class NewsViewController: BaseViewController {
         /// Loading Header from Bundle
         navigationController?.navigationBar.barTintColor = UIColor(named: "ThemeBlueTop")! 
         newsTableViewOutlet.layer.borderWidth = 1.2
-        newsTableViewOutlet.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        newsTableViewOutlet.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
         self.title = Constants.NavigationTitle.home
