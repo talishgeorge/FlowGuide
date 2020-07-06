@@ -237,7 +237,7 @@ extension LoginViewController: UITextFieldDelegate {
     }
     func configureButtonUI(customView: UIView) {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemTeal.cgColor]
+        gradient.colors = [UIColor(named: "ThemeBlueTop")?.cgColor ?? UIColor.systemIndigo, UIColor(named: "ThemeBottom")?.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
         customView.layer.insertSublayer(gradient, at: 0)
         gradient.frame = customView.frame
