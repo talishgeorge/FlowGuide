@@ -12,12 +12,12 @@ import UtilitiesLib
 final class LoadingViewController: BaseViewController {
     
     var timer: Timer?
-
+    
     // MARK: - Properties
     
     @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
-
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -41,10 +41,14 @@ final class LoadingViewController: BaseViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 0.40, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
-                case "Loading .":       return "Loading .."
-                case "Loading ..":      return "Loading ..."
-                case "Loading ...":     return "Loading ."
-                default:                return "Loading"
+                case LoadingLocalization.loading1.localized:
+                    return LoadingLocalization.loading2.localized
+                case LoadingLocalization.loading2.localized:
+                    return LoadingLocalization.loading3.localized
+                case LoadingLocalization.loading3.localized:
+                    return LoadingLocalization.loading1.localized
+                default:
+                    return LoadingLocalization.loading.localized
                 }
             }
             self.loadingLabel.text = string

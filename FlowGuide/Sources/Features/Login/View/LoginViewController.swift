@@ -102,8 +102,10 @@ private extension LoginViewController {
         cardView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         emailView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         passwordView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        confirmPswdView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         emailView.layer.borderWidth = 1
         passwordView.layer.borderWidth = 1
+        confirmPswdView.layer.borderWidth = 1
         configureButtonUI(customButton: loginButtonView, viewButton: loginButton)
         configureButtonUI(customButton: signUpButtonView, viewButton: sigunpButton)
     }
