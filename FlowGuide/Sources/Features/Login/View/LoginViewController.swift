@@ -78,7 +78,6 @@ private extension LoginViewController {
         errorMessage = nil
         confirmPswdView.isHidden = pageType == .login
         signUpButtonView.isHidden = pageType == .login
-        configureButtonUI(customView: signUpButtonView)
         forgotPasswordButton.isHidden = pageType == .signUp
         loginButtonView.isHidden = pageType == .signUp
     }
@@ -103,17 +102,8 @@ private extension LoginViewController {
         cardView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         emailView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
         passwordView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
-        confirmPswdView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
-        signUpButtonView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
-        loginButtonView.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
-        cardView.layer.borderWidth = 1
-        passwordView.layer.borderWidth = 1
-        confirmPswdView.layer.borderWidth = 1
-        emailView.layer.borderWidth = 1
-        signUpButtonView.layer.borderWidth = 1
-        loginButtonView.layer.borderWidth = 1
-        configureButtonUI(customView: loginButtonView)
-        
+        configureButtonUI(customButton: loginButtonView, viewButton: loginButton)
+        configureButtonUI(customButton: signUpButtonView, viewButton: sigunpButton)
     }
 }
 
@@ -234,12 +224,5 @@ extension LoginViewController: UITextFieldDelegate {
         signUpViewModel = SignUpViewModel(email,
                                           password,
                                           confirmPassword)
-    }
-    func configureButtonUI(customView: UIView) {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor(named: "ThemeBlueTop")?.cgColor ?? UIColor.systemIndigo, UIColor(named: "ThemeBottom")?.cgColor ?? UIColor.systemTeal]
-        gradient.locations = [0, 1]
-        customView.layer.insertSublayer(gradient, at: 0)
-        gradient.frame = customView.frame
     }
 }

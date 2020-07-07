@@ -20,6 +20,7 @@ final class OnBoardingViewController: BaseViewController {
     
     // MARK: - Properties
     
+    @IBOutlet private weak var getStartedView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
@@ -74,7 +75,8 @@ private extension OnBoardingViewController {
     /// Localization
     private func setupUIForLocalization() {
         getStartedButton.setTitle(OnBoardingLocalization.get_started_key.localized, for: .normal)
-            getStartedButton.cornerRadiusWithBorder(button: getStartedButton)
+        configureButtonUI(customButton: getStartedView, viewButton: getStartedButton)
+        
     }
 }
 

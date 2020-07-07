@@ -81,6 +81,23 @@ extension BaseViewController {
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
     }
+
+    func configureButtonUI(customButton: UIView, viewButton: UIButton) {
+        let myNewView = UIView(frame: CGRect(x: 0, y: 0, width: customButton.frame.width, height: customButton.frame.height))
+        myNewView.clipsToBounds = true
+        myNewView.layer.cornerRadius = customButton.frame.height/2
+        myNewView.layer.borderWidth = 0.8
+        myNewView.layer.borderColor = UIColor.white.cgColor
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor(named: "ThemeBlueTop")?.cgColor ?? UIColor.systemIndigo, UIColor(named: "ThemeBottom")?.cgColor ?? UIColor.systemTeal]
+        gradient.locations = [0, 1]
+        myNewView.layer.insertSublayer(gradient, at: 0)
+        gradient.frame = myNewView.frame
+        // Add UIView as a Subview
+        customButton.addSubview(myNewView)
+        customButton.addSubview(viewButton)
+    }
+
 }
 
 extension BaseViewController {
