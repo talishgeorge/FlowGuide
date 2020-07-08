@@ -6,7 +6,10 @@
   Copyright © 2020 Talish George. All rights reserved.
 */
 //Loading
-"loading" = "Loading";
+"loading_0" = "Loading";
+"loading_1" = "Loading .";
+"loading_2" = "Loading ..";
+"loading_3" = "Loading ...";
 //Login
 "forget_password" = "Forget Password?";
 "enter_email" = "Please Enter your Email Address";

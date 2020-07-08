@@ -6,7 +6,10 @@
   Copyright © 2020 Talish George. All rights reserved.
 */
 //Loading
-"loading" = "Läser in";
+"loading_0" = "Läser in";
+"loading_1" = "Läser in .";
+"loading_2" = "Läser in ..";
+"loading_3" = "Läser in ...";
 //Login
 "forget_password" = "Glöm lösenord?";
 "enter_email" = "Var god skriv in din e-postadress";

@@ -10,8 +10,8 @@ import Foundation
 
 /// Loading Localizatioin
 enum LoadingLocalization: String, Localizable {
-    case loading1 = "Loading ."
-    case loading2 = "Loading .."
-    case loading3 = "Loading ..."
-    case loading = "Loading"
+    case loading1 = "loading_1"
+    case loading2 = "loading_2"
+    case loading3 = "loading_3"
+    case loading = "loading_0"
 }

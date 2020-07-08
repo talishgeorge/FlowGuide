@@ -22,8 +22,7 @@ final class LoadingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadingLabel.text = LoadingLocalization.loading.localized
-        loadingLabel.text = "Loading ."
+        loadingLabel.text = LoadingLocalization.loading1.localized
     }
     
     override func viewDidAppear(_ animated: Bool) {
