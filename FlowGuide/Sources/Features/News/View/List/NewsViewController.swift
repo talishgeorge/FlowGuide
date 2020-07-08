@@ -9,8 +9,13 @@
 import UIKit
 import FirebaseAuth
 import MBProgressHUD
-import SBNLib
 import UtilitiesLib
+
+/// Protocol
+protocol NewsViewControllerDelegate: class {
+    func loadData(categories: [Category])
+    func showError(error: Error?)
+}
 
 /// News ViewController
 class NewsViewController: BaseViewController {
@@ -20,8 +25,8 @@ class NewsViewController: BaseViewController {
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var newsTableViewOutlet: UITableView!
     
-    var categoryListVM: CategoryListViewModel?
-    var newsService: WebService = WebService()
+    var categoryListVM = CategoryListViewModel()
+    //    var newsService: WebService = WebService()
     
     // MARK: - View Life Cycle
     
@@ -38,6 +43,7 @@ class NewsViewController: BaseViewController {
         if let email = Auth.auth().currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
+        categoryListVM.delegate = self
         populateNews()
     }
     
@@ -49,8 +55,8 @@ class NewsViewController: BaseViewController {
             guard let indexPath = newsTableViewOutlet.indexPathForSelectedRow else {
                 fatalError("Unable to get the selected row")
             }
-            let articleVM = self.categoryListVM?.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
-            newsDetailsVC?.article = articleVM?.article
+            let articleVM = self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
+            newsDetailsVC?.article = articleVM.article
         }
     }
 }
@@ -59,34 +65,28 @@ private extension NewsViewController {
     
     /// Fetch News by category
     func populateNews() {
-        fetchNews(by: ApiConstants.newsCategory)
-    }
-    
-    /// GET API Request: Fetch News by category
-    /// - Parameter category: String
-    func fetchNews(by category: String) {
         MBProgressHUD.showAdded(to: view, animated: true)
-        self.newsService.getNewsData(category: category, success: { news in
-            DispatchQueue.main.async {
-                self.loadData(categories: news)
-            }
-        }, failure: { error in
-            guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-                self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
-                    if value == 0 {
-                        self.loadData(categories: Category.loadLocalData())
-                    }
-                }
-                return
-            }
-        })
+        categoryListVM.fetchNews(by: ApiConstants.newsCategory)
     }
+}
+
+extension NewsViewController: NewsViewControllerDelegate {
     
-    /// Fetch Local Data
-    /// - Parameter categories: Category Array
     func loadData(categories: [Category]) {
+        MBProgressHUD.showAdded(to: view, animated: true)
         self.categoryListVM = CategoryListViewModel(categories: categories)
         self.newsTableViewOutlet.reloadData()
         MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func showError(error: Error?) {
+        guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
+            self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
+                if value == 0 {
+                    self.loadData(categories: Category.loadLocalData())
+                }
+            }
+            return
+        }
     }
 }

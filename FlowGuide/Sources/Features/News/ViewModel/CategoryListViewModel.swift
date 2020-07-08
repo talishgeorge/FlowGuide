@@ -11,8 +11,10 @@ import UIKit
 /// Category List Model
 struct CategoryListViewModel {
     // MARK: - Properties
-
-    private(set) var categories: [Category]
+    
+    private(set) var categories: [Category] = []
+    weak var delegate: NewsViewControllerDelegate?
+    var newsService: WebService = WebService()
 }
 
 extension CategoryListViewModel {
@@ -44,11 +46,19 @@ extension CategoryListViewModel {
     func articleForSectionAtIndex(section: Int, index: Int) -> ArticleViewModel {
         return categoryAtIndex(index: section).articleAtIndex(index)
     }
+    
+    func fetchNews(by category: String) {
+        self.newsService.getNewsData(category: category, success: { news in
+            self.delegate?.loadData(categories: news)
+        }, failure: { error in
+            self.delegate?.showError(error: error)
+        })
+    }
 }
 
 struct CategoryViewModel {
     // MARK: - Properties
-
+    
     let name: String
     let articles: [Article]
 }
