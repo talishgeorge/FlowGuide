@@ -13,7 +13,7 @@ import UtilitiesLib
 
 /// Protocol
 protocol NewsViewControllerDelegate: class {
-    func loadData(categories: [Category])
+    func loadData(vm: CategoryListViewModel)
     func showError(error: Error?)
 }
 
@@ -26,7 +26,6 @@ class NewsViewController: BaseViewController {
     @IBOutlet private weak var newsTableViewOutlet: UITableView!
     
     var categoryListVM = CategoryListViewModel()
-    //    var newsService: WebService = WebService()
     
     // MARK: - View Life Cycle
     
@@ -72,9 +71,9 @@ private extension NewsViewController {
 
 extension NewsViewController: NewsViewControllerDelegate {
     
-    func loadData(categories: [Category]) {
+    func loadData(vm: CategoryListViewModel) {
         MBProgressHUD.showAdded(to: view, animated: true)
-        self.categoryListVM = CategoryListViewModel(categories: categories)
+        self.categoryListVM = vm
         self.newsTableViewOutlet.reloadData()
         MBProgressHUD.hide(for: self.view, animated: true)
     }
@@ -83,7 +82,7 @@ extension NewsViewController: NewsViewControllerDelegate {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
             self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
                 if value == 0 {
-                    self.loadData(categories: Category.loadLocalData())
+                    self.categoryListVM.showOfflineData()
                 }
             }
             return

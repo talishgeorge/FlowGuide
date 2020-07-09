@@ -49,10 +49,14 @@ extension CategoryListViewModel {
     
     func fetchNews(by category: String) {
         self.newsService.getNewsData(category: category, success: { news in
-            self.delegate?.loadData(categories: news)
+            self.delegate?.loadData(vm: CategoryListViewModel(categories: news))
         }, failure: { error in
             self.delegate?.showError(error: error)
         })
+    }
+    
+    func showOfflineData() {
+        self.delegate?.loadData(vm: CategoryListViewModel(categories: Category.loadLocalData()))
     }
 }
 
