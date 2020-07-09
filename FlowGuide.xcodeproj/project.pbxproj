@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
+		524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
 		52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884224ADD12100BCC2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DD884124ADD12100BCC2D0 /* Main.storyboard */; };
@@ -117,6 +119,7 @@
 		07B101422FFB8273DF8E10A7 /* Pods-FlowGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuide.debug.xcconfig"; path = "Target Support Files/Pods-FlowGuide/Pods-FlowGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		3802C48D57E3E00969F68F45 /* Pods-FlowGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50DF644C2FDC1DB60BD5F58A /* Pods-FlowGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuide.release.xcconfig"; path = "Target Support Files/Pods-FlowGuide/Pods-FlowGuide.release.xcconfig"; sourceTree = "<group>"; };
+		524EEE7524B6D91900B5574F /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		52DD884124ADD12100BCC2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		52DD884424ADD13700BCC2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -419,6 +422,7 @@
 			children = (
 				833570EA247AA2C1002E26A0 /* Styles.swift */,
 				83357151247D8278002E26A0 /* ThemeManager.swift */,
+				524EEE7524B6D91900B5574F /* ColorConstants.swift */,
 			);
 			path = ThemeManager;
 			sourceTree = "<group>";
@@ -849,6 +853,7 @@
 				83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 				831E96FE24AC5416006D39B7 /* WebService.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
+				524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */,
 				833570FB247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
 				83081534248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */,
@@ -903,6 +908,7 @@
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
+				524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,

@@ -768,7 +768,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="war-vm-cLT"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="newsTableViewOutlet" destination="GjB-MU-R3b" id="Bc7-ns-3S8"/>
+                        <outlet property="tableView" destination="GjB-MU-R3b" id="Bc7-ns-3S8"/>
                         <outlet property="userNameLabel" destination="vaE-MD-kj2" id="KzE-sU-YcM"/>
                         <segue destination="H9h-xK-vFj" kind="show" identifier="showNewsDetail" id="yvg-d2-Bg1"/>
                     </connections>

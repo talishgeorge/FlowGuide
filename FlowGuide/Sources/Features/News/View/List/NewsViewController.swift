@@ -22,7 +22,7 @@ final class NewsViewController: BaseViewController {
     // MARK: - Properties
     
     @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet weak var newsTableViewOutlet: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var categoryListVM = CategoryListViewModel()
     
     // MARK: - View Life Cycle
@@ -31,11 +31,11 @@ final class NewsViewController: BaseViewController {
         super.viewDidLoad()
         
         /// Loading Header from Bundle
-        navigationController?.navigationBar.barTintColor = UIColor(named: "ThemeBlueTop")! 
-        newsTableViewOutlet.layer.borderWidth = 1.2
-        newsTableViewOutlet.layer.borderColor = UIColor(named: "ThemeBlueTop")?.cgColor
+        navigationController?.navigationBar.barTintColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemIndigo
+        tableView.layer.borderWidth = 1.2
+        tableView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
-        newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
         self.title = Constants.NavigationTitle.home
         
         if let email = auth.currentUser?.email {
@@ -50,7 +50,7 @@ final class NewsViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is NewsDetailsViewController {
             let newsDetailsVC = segue.destination as? NewsDetailsViewController
-            guard let indexPath = newsTableViewOutlet.indexPathForSelectedRow else {
+            guard let indexPath = tableView.indexPathForSelectedRow else {
                 fatalError("Unable to get the selected row")
             }
             let articleVM = self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)

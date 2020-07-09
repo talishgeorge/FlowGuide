@@ -78,25 +78,25 @@ extension BaseViewController {
     /// Setup initial UI
     func configureUI() {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor(named: "ThemeBlueTop")?.cgColor ?? UIColor.systemIndigo, UIColor(named: "ThemeBottom")?.cgColor ?? UIColor.systemTeal]
+        gradient.colors = [UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor ?? UIColor.systemIndigo, UIColor(named: ThemeColor.themeBottom.rawValue)?.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
     }
 
     func configureButtonUI(customButton: UIView, viewButton: UIButton) {
-        let myNewView = UIView(frame: CGRect(x: 0, y: 0, width: customButton.frame.width, height: customButton.frame.height))
-        myNewView.clipsToBounds = true
-        myNewView.layer.cornerRadius = customButton.frame.height/2
-        myNewView.layer.borderWidth = 0.8
-        myNewView.layer.borderColor = UIColor.white.cgColor
+        let newView = UIView(frame: CGRect(x: 0, y: 0, width: customButton.frame.width, height: customButton.frame.height))
+        newView.clipsToBounds = true
+        newView.layer.cornerRadius = customButton.frame.height/2
+        newView.layer.borderWidth = 0.8
+        newView.layer.borderColor = UIColor.white.cgColor
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor(named: "ThemeBlueTop")?.cgColor ?? UIColor.systemIndigo, UIColor(named: "ThemeBottom")?.cgColor ?? UIColor.systemTeal]
+        gradient.colors = [UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor ?? UIColor.systemIndigo, UIColor(named: ThemeColor.themeBottom.rawValue)?.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
-        myNewView.layer.insertSublayer(gradient, at: 0)
-        gradient.frame = myNewView.frame
+        newView.layer.insertSublayer(gradient, at: 0)
+        gradient.frame = newView.frame
         // Add UIView as a Subview
-        customButton.addSubview(myNewView)
+        customButton.addSubview(newView)
         customButton.addSubview(viewButton)
     }
 
@@ -109,12 +109,12 @@ extension BaseViewController {
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.rootNavigationController = self.navigationController
-        NavBarConstants.barBGColor = UIColor(named: "ThemeBlueTop")!
+        NavBarConstants.barBGColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.rightNavButtonImage = UIImage(named: "logout")!
-        NavBarConstants.titleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
-        NavBarConstants.transparentTitleColor = UIColor.init(hexString: "#F3F3F3", alpha: 1.0)
-        NavBarConstants.titleFont = (UIFont.init(name: "Avenir Next Condensed", size: 23) ?? nil)!
+        NavBarConstants.titleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
+        NavBarConstants.transparentTitleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
+        NavBarConstants.titleFont = (UIFont.init(name: FontType.avenirNextCondensed.rawValue, size: 23) ?? nil)!
         navBar.configureNavigationBar()
     }
 }
