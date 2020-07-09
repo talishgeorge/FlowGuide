@@ -74,7 +74,6 @@ extension NewsViewController: NewsViewControllerDelegate {
     /// Show list of live news and details
     /// - Parameter vm: Category List ViewModel
     func loadData(vm: CategoryListViewModel) {
-        MBProgressHUD.showAdded(to: view, animated: true)
         self.categoryListVM = vm
         self.newsTableViewOutlet.reloadData()
         MBProgressHUD.hide(for: self.view, animated: true)
