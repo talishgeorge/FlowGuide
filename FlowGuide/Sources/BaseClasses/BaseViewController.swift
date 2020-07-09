@@ -8,6 +8,7 @@
 
 import UIKit
 import OakLib
+import Firebase
 
 /// Base ViewController for all ViewController
 class BaseViewController: UIViewController {
@@ -15,6 +16,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     
     public var navBar = CustomNavigationView.loadNavigationBar()
+    public let auth = Auth.auth()
     
     // MARK: - View Life Cycle
     

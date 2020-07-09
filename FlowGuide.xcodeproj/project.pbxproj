@@ -84,6 +84,8 @@
 		8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8394EA672478C88C002FA8EF /* GoogleService-Info.plist */; };
 		83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
+		83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */; };
+		83D6C00B24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */; };
 		83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F30CB7249CAB60008B2B53 /* SDKManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +169,7 @@
 		8394E9FB2477BF1D002FA8EF /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		8394EA672478C88C002FA8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83B0176B24A603D300A1D88D /* SettingsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocalization.swift; sourceTree = "<group>"; };
+		83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+LoadData.swift"; sourceTree = "<group>"; };
 		83F30CB7249CAB60008B2B53 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
 		B15D3A0F8827ED010F4F9A6C /* Pods-FlowGuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.release.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -381,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				83357101247B741D002E26A0 /* NewsViewController+TableView.swift */,
+				83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -842,6 +846,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 				831E96FE24AC5416006D39B7 /* WebService.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
 				833570FB247ADB67002E26A0 /* LoginLocalization.swift in Sources */,
@@ -908,6 +913,7 @@
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				833570E0247A660D002E26A0 /* BaseViewModel.swift in Sources */,
+				83D6C00B24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

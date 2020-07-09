@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import MBProgressHUD
 import UtilitiesLib
 
@@ -18,13 +17,12 @@ protocol NewsViewControllerDelegate: class {
 }
 
 /// News ViewController
-class NewsViewController: BaseViewController {
+final class NewsViewController: BaseViewController {
     
     // MARK: - Properties
     
     @IBOutlet private weak var userNameLabel: UILabel!
-    @IBOutlet private weak var newsTableViewOutlet: UITableView!
-    
+    @IBOutlet weak var newsTableViewOutlet: UITableView!
     var categoryListVM = CategoryListViewModel()
     
     // MARK: - View Life Cycle
@@ -39,7 +37,8 @@ class NewsViewController: BaseViewController {
         let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         newsTableViewOutlet.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
         self.title = Constants.NavigationTitle.home
-        if let email = Auth.auth().currentUser?.email {
+        
+        if let email = auth.currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
         categoryListVM.delegate = self
@@ -61,34 +60,9 @@ class NewsViewController: BaseViewController {
 }
 
 private extension NewsViewController {
-    
     /// Fetch News by category
     func populateNews() {
         MBProgressHUD.showAdded(to: view, animated: true)
         categoryListVM.fetchNews(by: ApiConstants.newsCategory)
-    }
-}
-
-extension NewsViewController: NewsViewControllerDelegate {
-    
-    /// Show list of live news and details
-    /// - Parameter vm: Category List ViewModel
-    func loadData(vm: CategoryListViewModel) {
-        self.categoryListVM = vm
-        self.newsTableViewOutlet.reloadData()
-        MBProgressHUD.hide(for: self.view, animated: true)
-    }
-    
-    /// ShowError
-    /// - Parameter error: Error
-    func showError(error: Error?) {
-        guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-            self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
-                if value == 0 {
-                    self.categoryListVM.showOfflineData()
-                }
-            }
-            return
-        }
     }
 }
