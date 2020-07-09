@@ -10,6 +10,7 @@ import UIKit
 
 /// Category List Model
 struct CategoryListViewModel {
+    
     // MARK: - Properties
     
     private(set) var categories: [Category] = []

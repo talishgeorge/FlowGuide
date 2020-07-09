@@ -54,7 +54,7 @@ final class NewsViewController: BaseViewController {
                 fatalError("Unable to get the selected row")
             }
             let articleVM = self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
-            newsDetailsVC?.article = articleVM.article
+            newsDetailsVC?.newsDetailsVM = NewsDetailsViewModel(articleVM.article)
         }
     }
 }

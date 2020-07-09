@@ -18,8 +18,7 @@ class NewsDetailsViewController: BaseViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var webview: WKWebView!
-    private var newsDetailsVM: NewsDetailsViewModel!
-    var article: Article!
+    var newsDetailsVM: NewsDetailsViewModel!
     
     // MARK: - View Life Cycle
     
@@ -31,8 +30,8 @@ class NewsDetailsViewController: BaseViewController {
     
     /// Update UI with Values
     func updateUI() {
-        titleLabel.text = article.title
-        descriptionLabel.text = article.description
+        titleLabel.text = newsDetailsVM.article.title
+        descriptionLabel.text = newsDetailsVM.article.description
     }
 }
 
@@ -40,7 +39,6 @@ private extension NewsDetailsViewController {
     
     /// Initial UI Setup
     func setupUI() {
-        self.newsDetailsVM = NewsDetailsViewModel(article)
         self.navigationItem.largeTitleDisplayMode = .never
         self.title = self.newsDetailsVM.sourceName
         guard let url = self.newsDetailsVM.url,

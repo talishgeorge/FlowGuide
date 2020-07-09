@@ -10,14 +10,16 @@ import Foundation
 
 /// News Details Model
 struct NewsDetailsViewModel {
+    
     // MARK: - Properties
-
+    
     let article: Article
 }
 
 extension NewsDetailsViewModel {
     
     // MARK: - Initilization
+    
     init(_ article: Article) {
         self.article = article
     }
