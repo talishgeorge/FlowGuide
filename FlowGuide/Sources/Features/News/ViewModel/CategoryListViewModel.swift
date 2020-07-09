@@ -47,6 +47,8 @@ extension CategoryListViewModel {
         return categoryAtIndex(index: section).articleAtIndex(index)
     }
     
+    /// Fetch News
+    /// - Parameter category: String
     func fetchNews(by category: String) {
         self.newsService.getNewsData(category: category, success: { news in
             self.delegate?.loadData(vm: CategoryListViewModel(categories: news))
@@ -55,12 +57,15 @@ extension CategoryListViewModel {
         })
     }
     
+    /// Show offline data
     func showOfflineData() {
         self.delegate?.loadData(vm: CategoryListViewModel(categories: Category.loadLocalData()))
     }
 }
 
+/// Category view model
 struct CategoryViewModel {
+    
     // MARK: - Properties
     
     let name: String

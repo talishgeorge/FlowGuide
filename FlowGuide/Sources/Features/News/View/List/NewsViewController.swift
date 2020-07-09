@@ -71,6 +71,8 @@ private extension NewsViewController {
 
 extension NewsViewController: NewsViewControllerDelegate {
     
+    /// Show list of live news and details
+    /// - Parameter vm: Category List ViewModel
     func loadData(vm: CategoryListViewModel) {
         MBProgressHUD.showAdded(to: view, animated: true)
         self.categoryListVM = vm
@@ -78,6 +80,8 @@ extension NewsViewController: NewsViewControllerDelegate {
         MBProgressHUD.hide(for: self.view, animated: true)
     }
     
+    /// ShowError
+    /// - Parameter error: Error
     func showError(error: Error?) {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
             self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
