@@ -18,7 +18,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     /// Return Number of Sections
     /// - Parameter tableView: UITTableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.categoryListVM == nil ? 0 : categoryListVM.numberOfSections ?? 0
+        return categoryListVM.numberOfSections
     }
     
     /// Return Number of Rows in Sections
@@ -26,7 +26,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     ///   - tableView: UITableView
     ///   - section: Int Value
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.categoryListVM == nil ? 0 : categoryListVM.numberOfRowsInSection(section) ?? 0
+        return categoryListVM.numberOfRowsInSection(section)
     }
     
     /// Return Cell for Row
