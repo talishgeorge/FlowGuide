@@ -2,8 +2,8 @@
 //  LoginViewController.swift
 //  FlowGuide
 //
-//  Created by Talish George on 20/05/20.
-//  Copyright © 2020 Talish George. All rights reserved.
+//  Created by TCS on 20/05/20.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import MBProgressHUD
