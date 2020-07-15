@@ -12,10 +12,10 @@ import Foundation
 
 extension String {
     enum Loading: String, Localizable {
-        case loading1 = "loading_1"
-        case loading2 = "loading_2"
-        case loading3 = "loading_3"
-        case loading = "loading_0"
+        case loading1
+        case loading2
+        case loading3
+        case loading
         var tableName: String {
             return "Loading"
         }

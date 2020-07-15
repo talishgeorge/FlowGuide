@@ -89,12 +89,12 @@ private extension LoginViewController {
     
     /// Setup Localization
     private func setupUIForLocalization() {
-        forgotPasswordButton.setTitle(String.Login.forget_password.localized, for: .normal)
+        forgotPasswordButton.setTitle(String.Login.forgetPassword.localized, for: .normal)
         sigunpButton.setTitle(String.Login.signup.localized, for: .normal)
         loginButton.setTitle(String.Login.login.localized, for: .normal)
         emailTextField.placeholder = String.Login.email.localized
         passwordTextField.placeholder = String.Login.password.localized
-        confirmPasswordTextField.placeholder = String.Login.confirm_password.localized
+        confirmPasswordTextField.placeholder = String.Login.confirmPassword.localized
         segmentedControll.setTitle(String.Login.login.localized, forSegmentAt: 0)
         segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
         cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
@@ -118,7 +118,7 @@ private extension LoginViewController {
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
-            showErrorMessage(text: String.Login.invalid_form.localized)
+            showErrorMessage(text: String.Login.invalidForm.localized)
             return
         }
         
@@ -145,7 +145,7 @@ private extension LoginViewController {
     /// Forgot Password Button
     /// - Parameter sender: UIButton
     @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
-        let alertController = UIAlertController(title: String.Login.forget_password.localized, message: String.Login.enter_email.localized, preferredStyle: .alert)
+        let alertController = UIAlertController(title: String.Login.forgetPassword.localized, message: String.Login.enterEmail.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
         let cancelAction = UIAlertAction(title: String.Global.cancel.localized, style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: String.Global.ok.localized, style: .default) { [weak self] (_) in
@@ -160,7 +160,7 @@ private extension LoginViewController {
                     }
                     switch result {
                     case .success:
-                        this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.check_email.localized)
+                        this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
                         Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
                             switch dismissalType {
@@ -184,11 +184,11 @@ private extension LoginViewController {
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
-                showErrorMessage(text: String.Login.invalid_form.localized)
+                showErrorMessage(text: String.Login.invalidForm.localized)
                 return
         }
         guard password == confirmationPassword else {
-            showErrorMessage(text: String.Login.password_incorrect.localized)
+            showErrorMessage(text: String.Login.passwordIncorrect.localized)
             return
         }
         MBProgressHUD.showAdded(to: view, animated: true)

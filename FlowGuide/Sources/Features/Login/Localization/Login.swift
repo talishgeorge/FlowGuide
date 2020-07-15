@@ -9,19 +9,19 @@
 /// Login Localization
 extension String {
     enum Login: String, Localizable {
-        case forget_password = "forget_password"
-        case enter_email = "enter_email"
-        case passwordReset = "password_reset"
-        case check_email = "tcheck_email"
-        case invalid_form = "invalid_form"
-        case password_incorrect = "password_incorrect"
-        case login = "login"
-        case signup = "signup"
-        case email = "email"
-        case password = "password"
-        case confirm_password = "confirm_password"
-        case loginError = "Something went wrong"
-        case loginErrorMessage = "Do you want to continue without SignIn"
+        case forgetPassword
+        case enterEmail
+        case passwordReset
+        case checkEmail
+        case invalidForm
+        case passwordIncorrect
+        case login
+        case signup
+        case email
+        case password
+        case confirmPassword
+        case loginError
+        case loginErrorMessage
         var tableName: String {
             return "Login"
         }

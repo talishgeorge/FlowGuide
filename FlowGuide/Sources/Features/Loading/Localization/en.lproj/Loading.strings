@@ -6,7 +6,7 @@
   Copyright © 2020 TCS. All rights reserved.
 */
 //Loading
-"loading_0" = "Loading";
-"loading_1" = "Loading .";
-"loading_2" = "Loading ..";
-"loading_3" = "Loading ...";
+"loading" = "Loading";
+"loading1" = "Loading .";
+"loading2" = "Loading ..";
+"loading3" = "Loading ...";

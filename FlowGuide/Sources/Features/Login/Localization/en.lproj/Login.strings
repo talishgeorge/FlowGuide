@@ -6,13 +6,13 @@
   Copyright © 2020 TCS. All rights reserved.
 */
 "login" = "Login";
-"forget_password" = "Forget Password?";
-"enter_email" = "Please Enter your Email Address";
-"password_reset" = "Password Reset is Successful";
-"check_email" = "Please check your email to find the reset link.";
-"invalid_form" = "Invalid Form";
-"password_incorrect" = "Passwords are incorrect";
+"forgetPassword" = "Forget Password?";
+"enterEmail" = "Please Enter your Email Address";
+"passwordReset" = "Password Reset is Successful";
+"checkEmail" = "Please check your email to find the reset link.";
+"invalidForm" = "Invalid Form";
+"passwordIncorrect" = "Passwords are incorrect";
 "signup" = "Sign up";
 "email" = "Email";
 "password" = "Password";
-"confirm_password" = "Confirm Password";
+"confirmPassword" = "Confirm Password";

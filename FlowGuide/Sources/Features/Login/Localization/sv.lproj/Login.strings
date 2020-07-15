@@ -6,13 +6,13 @@
   Copyright © 2020 TCS. All rights reserved.
 */
 "login" = "Logga in";
-"forget_password" = "Glöm lösenord?";
-"enter_email" = "Var god skriv in din e-postadress";
-"password_reset" = "Återställning av lösenord är framgångsrikt";
-"check_email" = "Kontrollera din e-post för att hitta återställningslänken.";
-"invalid_form" = "Ogiltig form";
-"password_incorrect" = "Lösenord är felaktiga";
+"forgetPassword" = "Glöm lösenord?";
+"enterEmail" = "Var god skriv in din e-postadress";
+"passwordReset" = "Återställning av lösenord är framgångsrikt";
+"checkEmail" = "Kontrollera din e-post för att hitta återställningslänken.";
+"invalidForm" = "Ogiltig form";
+"passwordIncorrect" = "Lösenord är felaktiga";
 "signup" = "Bli Medlem";
 "email" = "E-post";
 "password" = "Lösenord";
-"confirm_password" = "Bekräfta lösenord";
+"confirmPassword" = "Bekräfta lösenord";

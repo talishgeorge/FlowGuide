@@ -49,7 +49,6 @@
 		833570EB247AA2C1002E26A0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570EA247AA2C1002E26A0 /* Styles.swift */; };
 		833570EC247AA2C1002E26A0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570EA247AA2C1002E26A0 /* Styles.swift */; };
 		833570EF247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570EE247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift */; };
-		833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570EE247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift */; };
 		833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570F1247AD948002E26A0 /* OnBoardingLocalization.swift */; };
 		833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570F1247AD948002E26A0 /* OnBoardingLocalization.swift */; };
 		833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570F7247ADA01002E26A0 /* LoginViewModel.swift */; };
@@ -362,7 +361,6 @@
 				831523FC24722BB500F48DDA /* Views */,
 				8394EA242477F1A6002FA8EF /* ViewModel */,
 				831523FF24722F6E00F48DDA /* Models */,
-				833570ED247ACBA8002E26A0 /* Extensions */,
 				8394EA252477F1B5002FA8EF /* Localization */,
 			);
 			path = OnBoarding;
@@ -373,6 +371,7 @@
 			children = (
 				831523FA2472151D00F48DDA /* OnBoardingViewController.swift */,
 				831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */,
+				833570EE247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,14 +407,6 @@
 				833570DE247A660D002E26A0 /* BaseViewModel.swift */,
 			);
 			path = BaseClasses;
-			sourceTree = "<group>";
-		};
-		833570ED247ACBA8002E26A0 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				833570EE247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83357100247B73FE002E26A0 /* Extensions */ = {
@@ -944,7 +935,6 @@
 				524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
-				833570F0247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				838FBA0224BEEF72008F7E24 /* String+Extension.swift in Sources */,
 				833570FC247ADB67002E26A0 /* Login.swift in Sources */,

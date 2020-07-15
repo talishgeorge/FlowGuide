@@ -5,8 +5,7 @@
   Created by TCS on 15/07/20.
   Copyright © 2020 TCS. All rights reserved.
 */
-//OnBoarding
-"get_started" = "Komma igång";
-"onboarding_title1" = "Varför använda MVVM";
-"onboarding_title2" = "Fördelarna med MVVM";
-"onboarding_title3" = "När ska man använda MVVM";
+"getStarted" = "Komma igång";
+"onboardingTitle1" = "Varför använda MVVM";
+"onboardingTitle2" = "Fördelarna med MVVM";
+"onboardingTitle3" = "När ska man använda MVVM";

@@ -6,7 +6,7 @@
   Copyright © 2020 TCS. All rights reserved.
 */
 //Loading
-"loading_0" = "Läser in";
-"loading_1" = "Läser in .";
-"loading_2" = "Läser in ..";
-"loading_3" = "Läser in ...";
+"loading" = "Läser in";
+"loading1" = "Läser in .";
+"loading2" = "Läser in ..";
+"loading3" = "Läser in ...";

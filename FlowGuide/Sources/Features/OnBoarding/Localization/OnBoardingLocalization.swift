@@ -9,10 +9,10 @@
 /// OnBoarding Localization
 extension String {
     enum OnBoarding: String, Localizable {
-        case get_started_key = "get_started"
-        case onboarding_title1_key = "onboarding_title1"
-        case onboarding_title2_key = "onboarding_title2"
-        case onboarding_title3_key = "onboarding_title3"
+        case getStarted
+        case onboardingTitle1
+        case onboardingTitle2
+        case onboardingTitle3
         var tableName: String {
             return "OnBoarding"
         }

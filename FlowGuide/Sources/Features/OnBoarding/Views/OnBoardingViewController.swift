@@ -72,7 +72,7 @@ private extension OnBoardingViewController {
     
     /// Localization
     private func setupUIForLocalization() {
-        getStartedButton.setTitle(String.OnBoarding.get_started_key.localized, for: .normal)
+        getStartedButton.setTitle(String.OnBoarding.getStarted.localized, for: .normal)
         configureButtonUI(customButton: getStartedView, viewButton: getStartedButton)
         
     }
@@ -86,8 +86,8 @@ private extension OnBoardingViewController {
     /// - Parameter index: Int
     func showCaption(atIndex index: Int) {
         let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
-        titleLabel.text = (index == 1) ? String.OnBoarding.onboarding_title1_key.localized:
-            (index == 2) ? String.OnBoarding.onboarding_title2_key.localized: String.OnBoarding.onboarding_title3_key.localized
+        titleLabel.text = (index == 1) ? String.OnBoarding.onboardingTitle1.localized:
+            (index == 2) ? String.OnBoarding.onboardingTitle2.localized: String.OnBoarding.onboardingTitle3.localized
         descriptionLabel.text = onboardingItemInfo.description
     }
 }

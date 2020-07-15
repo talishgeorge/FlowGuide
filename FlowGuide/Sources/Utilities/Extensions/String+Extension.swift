@@ -13,8 +13,8 @@ extension String {
 
 extension String {
     enum Global: String, Localizable {
-        case cancel = "cancel_key"
-        case ok = "ok_key"
+        case cancel
+        case ok
         var tableName: String {
             return "Localizable"
         }
