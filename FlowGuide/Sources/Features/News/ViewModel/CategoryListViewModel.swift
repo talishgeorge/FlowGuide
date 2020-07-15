@@ -11,8 +11,8 @@ import UIKit
 /// Category List Model
 
 final class CategoryListViewModel {
-    private(set) var categories: [Category] = []
     weak var delegate: NewsViewControllerDelegate?
+    private(set) var categories: [Category] = []
     private let newsService: WebService = WebService()
 }
 
