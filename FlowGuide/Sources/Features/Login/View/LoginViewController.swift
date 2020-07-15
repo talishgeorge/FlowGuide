@@ -57,6 +57,8 @@ final class LoginViewController: BaseViewController {
         super.viewDidLoad()
         setupViewsFor(pageType: currentPageType)
         setupUIForLocalization()
+        view.dodo.style.bar.hideAfterDelaySeconds = 3
+        view.dodo.success("Everybody has won and all must have prizes.")
     }
     
     override func viewDidAppear(_ animated: Bool) {
