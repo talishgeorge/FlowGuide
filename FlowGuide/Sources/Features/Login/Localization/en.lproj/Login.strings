@@ -1,0 +1,20 @@
+/* 
+  Login.strings
+  FlowGuide
+
+  Created by Talish George on 15/07/20.
+  Copyright © 2020 Talish George. All rights reserved.
+*/
+"login" = "Login";
+"forget_password" = "Forget Password?";
+"enter_email" = "Please Enter your Email Address";
+"cancel" = "Cancel";
+"ok" = "Ok";
+"password_reset" = "Password Reset is Successful";
+"check_email" = "Please check your email to find the reset link.";
+"invalid_form" = "Invalid Form";
+"password_incorrect" = "Passwords are incorrect";
+"signup" = "Sign up";
+"email" = "Email";
+"password" = "Password";
+"confirm_password" = "Confirm Password";

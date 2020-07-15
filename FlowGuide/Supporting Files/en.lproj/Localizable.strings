@@ -10,19 +10,6 @@
 "loading_1" = "Loading .";
 "loading_2" = "Loading ..";
 "loading_3" = "Loading ...";
-//Login
-"forget_password" = "Forget Password?";
-"enter_email" = "Please Enter your Email Address";
-"cancel" = "Cancel";
-"ok" = "Ok";
-"password_reset" = "Password Reset is Successful";
-"check_email" = "Please check your email to find the reset link.";
-"invalid_form" = "Invalid Form";
-"password_incorrect" = "Passwords are incorrect";
-"signup" = "Sign up";
-"email" = "Email";
-"password" = "Password";
-"confirm_password" = "Confirm Password";
 //OnBoarding
 "get_started" = "Get Started";
 "onboarding_title1" = "Why Use MVVM";

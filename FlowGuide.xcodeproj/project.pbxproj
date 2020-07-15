@@ -284,8 +284,7 @@
 			children = (
 				8394EA2E2477F215002FA8EF /* View */,
 				8394EA2F2477F219002FA8EF /* ViewModel */,
-				8394EA312477F226002FA8EF /* Models */,
-				8394EA302477F21F002FA8EF /* Utilities */,
+				8394EA302477F21F002FA8EF /* Localization */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -605,20 +604,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		8394EA302477F21F002FA8EF /* Utilities */ = {
+		8394EA302477F21F002FA8EF /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				833570FA247ADB67002E26A0 /* Login.swift */,
 				838FB9FE24BEEB92008F7E24 /* Login.strings */,
 			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		8394EA312477F226002FA8EF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		8394EA322477F23A002FA8EF /* AppConfiguration  */ = {

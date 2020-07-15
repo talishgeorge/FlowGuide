@@ -10,19 +10,6 @@
 "loading_1" = "Läser in .";
 "loading_2" = "Läser in ..";
 "loading_3" = "Läser in ...";
-//Login
-"forget_password" = "Glöm lösenord?";
-"enter_email" = "Var god skriv in din e-postadress";
-"cancel" = "Avbryt";
-"ok" = "Ok";
-"password_reset" = "Återställning av lösenord är framgångsrikt";
-"check_email" = "Kontrollera din e-post för att hitta återställningslänken.";
-"invalid_form" = "Ogiltig form";
-"password_incorrect" = "Lösenord är felaktiga";
-"signup" = "Bli Medlem";
-"email" = "E-post";
-"password" = "Lösenord";
-"confirm_password" = "Bekräfta lösenord";
 //OnBoarding
 "get_started" = "Komma igång";
 "onboarding_title1" = "Varför använda MVVM";
