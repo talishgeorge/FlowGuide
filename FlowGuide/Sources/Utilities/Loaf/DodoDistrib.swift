@@ -420,7 +420,7 @@ struct FBLoafMockMessage {
 
 public class FBLoafMock: FBLoafInterface {
     /// This property is used in unit tests to verify which messages were displayed in the message bar.
-    public var results = DodoMockResults()
+    public var results = FBLoafMockResults()
     
     /**
      Specify optional anchor for positioning the bar view.
@@ -534,7 +534,7 @@ public class FBLoafMock: FBLoafInterface {
  Used in unit tests to verify the messages that were shown in the message bar.
  
  */
-public struct DodoMockResults {
+public struct FBLoafMockResults {
     /// An array of success messages displayed in the message bar.
     public var success: [String] {
         return messages.filter({ $0.preset == FBPresets.success }).map({ $0.message })
@@ -567,7 +567,7 @@ public struct DodoMockResults {
 }
 
 /// Collection of animation effects use for hiding the notification bar.
-struct DodoAnimationsHide {
+struct FBLoafAnimationsHide {
     /**
      
      Animation that rotates the bar around X axis in perspective with spring effect.
@@ -579,11 +579,11 @@ struct DodoAnimationsHide {
     static func rotate(_ view: UIView,
                        duration: TimeInterval?,
                        locationTop: Bool,
-                       completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doRotate(duration,
-                                showView: false,
-                                view: view,
-                                completed: completed)
+                       completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doRotate(duration,
+                                  showView: false,
+                                  view: view,
+                                  completed: completed)
     }
     
     /**
@@ -597,8 +597,8 @@ struct DodoAnimationsHide {
     static func slideLeft(_ view: UIView,
                           duration: TimeInterval?,
                           locationTop: Bool,
-                          completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doSlide(duration, right: false, showView: false, view: view, completed: completed)
+                          completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doSlide(duration, right: false, showView: false, view: view, completed: completed)
     }
     
     /**
@@ -612,9 +612,9 @@ struct DodoAnimationsHide {
     static func slideRight(_ view: UIView,
                            duration: TimeInterval?,
                            locationTop: Bool,
-                           completed: @escaping DodoAnimationCompleted) {
+                           completed: @escaping FBLoafAnimationCompleted) {
         
-        DodoAnimations.doSlide(duration, right: true, showView: false, view: view, completed: completed)
+        FBLoafAnimations.doSlide(duration, right: true, showView: false, view: view, completed: completed)
     }
     
     /**
@@ -628,9 +628,9 @@ struct DodoAnimationsHide {
     static func fade(_ view: UIView,
                      duration: TimeInterval?,
                      locationTop: Bool,
-                     completed: @escaping DodoAnimationCompleted) {
+                     completed: @escaping FBLoafAnimationCompleted) {
         
-        DodoAnimations.doFade(duration, showView: false, view: view, completed: completed)
+        FBLoafAnimations.doFade(duration, showView: false, view: view, completed: completed)
     }
     
     /**
@@ -644,16 +644,16 @@ struct DodoAnimationsHide {
     static func slideVertically(_ view: UIView,
                                 duration: TimeInterval?,
                                 locationTop: Bool,
-                                completed: @escaping DodoAnimationCompleted) {
+                                completed: @escaping FBLoafAnimationCompleted) {
         
-        DodoAnimations.doSlideVertically(duration,
+        FBLoafAnimations.doSlideVertically(duration,
                                          showView: false,
                                          view: view,
                                          locationTop: locationTop, completed: completed)
     }
 }
 /// Collection of animation effects use for showing and hiding the notification bar.
-public enum DodoAnimations: String {
+public enum FBLoafAnimations: String {
     /// Animation that fades the bar in/out.
     case fade = "Fade"
     
@@ -679,25 +679,25 @@ public enum DodoAnimations: String {
      - returns: Animation function.
      
      */
-    public var show: DodoAnimation {
+    public var show: FBLoafAnimation {
         switch self {
         case .fade:
-            return DodoAnimationsShow.fade
+            return FBLoafAnimationsShow.fade
             
         case .noAnimation:
-            return DodoAnimations.doNoAnimation
+            return FBLoafAnimations.doNoAnimation
             
         case .rotate:
-            return DodoAnimationsShow.rotate
+            return FBLoafAnimationsShow.rotate
             
         case .slideLeft:
-            return DodoAnimationsShow.slideLeft
+            return FBLoafAnimationsShow.slideLeft
             
         case .slideRight:
-            return DodoAnimationsShow.slideRight
+            return FBLoafAnimationsShow.slideRight
             
         case .slideVertically:
-            return DodoAnimationsShow.slideVertically
+            return FBLoafAnimationsShow.slideVertically
         }
     }
     
@@ -708,25 +708,25 @@ public enum DodoAnimations: String {
      - returns: Animation function.
      
      */
-    public var hide: DodoAnimation {
+    public var hide: FBLoafAnimation {
         switch self {
         case .fade:
-            return DodoAnimationsHide.fade
+            return FBLoafAnimationsHide.fade
             
         case .noAnimation:
-            return DodoAnimations.doNoAnimation
+            return FBLoafAnimations.doNoAnimation
             
         case .rotate:
-            return DodoAnimationsHide.rotate
+            return FBLoafAnimationsHide.rotate
             
         case .slideLeft:
-            return DodoAnimationsHide.slideLeft
+            return FBLoafAnimationsHide.slideLeft
             
         case .slideRight:
-            return DodoAnimationsHide.slideRight
+            return FBLoafAnimationsHide.slideRight
             
         case .slideVertically:
-            return DodoAnimationsHide.slideVertically
+            return FBLoafAnimationsHide.slideVertically
         }
     }
     
@@ -742,7 +742,7 @@ public enum DodoAnimations: String {
     static func doNoAnimation(_ view: UIView,
                               duration: TimeInterval?,
                               locationTop: Bool,
-                              completed: DodoAnimationCompleted) {
+                              completed: FBLoafAnimationCompleted) {
         completed()
     }
     
@@ -750,7 +750,7 @@ public enum DodoAnimations: String {
     static func doFade(_ duration: TimeInterval?,
                        showView: Bool,
                        view: UIView,
-                       completed: @escaping DodoAnimationCompleted) {
+                       completed: @escaping FBLoafAnimationCompleted) {
         
         let actualDuration = duration ?? 0.5
         let startAlpha: CGFloat = showView ? 0 : 1
@@ -771,7 +771,7 @@ public enum DodoAnimations: String {
                                   showView: Bool,
                                   view: UIView,
                                   locationTop: Bool,
-                                  completed: @escaping DodoAnimationCompleted) {
+                                  completed: @escaping FBLoafAnimationCompleted) {
         
         let actualDuration = duration ?? 0.5
         view.layoutIfNeeded()
@@ -808,7 +808,7 @@ public enum DodoAnimations: String {
     static weak var timer: MoaTimer?
     
     /// Animation that rotates the bar around X axis in perspective with spring effect.
-    static func doRotate(_ duration: TimeInterval?, showView: Bool, view: UIView, completed: @escaping DodoAnimationCompleted) {
+    static func doRotate(_ duration: TimeInterval?, showView: Bool, view: UIView, completed: @escaping FBLoafAnimationCompleted) {
         
         let actualDuration = duration ?? 2.0
         let start: Double = showView ? Double(Double.pi / 2) : 0
@@ -845,7 +845,7 @@ public enum DodoAnimations: String {
                         right: Bool,
                         showView: Bool,
                         view: UIView,
-                        completed: @escaping DodoAnimationCompleted) {
+                        completed: @escaping FBLoafAnimationCompleted) {
         
         let actualDuration = duration ?? 0.4
         let distance = UIScreen.main.bounds.width
@@ -875,7 +875,7 @@ public enum DodoAnimations: String {
 }
 
 /// Collection of animation effects use for showing the notification bar.
-struct DodoAnimationsShow {
+struct FBLoafAnimationsShow {
     /**
      
      Animation that rotates the bar around X axis in perspective with spring effect.
@@ -887,9 +887,9 @@ struct DodoAnimationsShow {
     static func rotate(_ view: UIView,
                        duration: TimeInterval?,
                        locationTop: Bool,
-                       completed: @escaping DodoAnimationCompleted) {
+                       completed: @escaping FBLoafAnimationCompleted) {
         
-        DodoAnimations.doRotate(duration, showView: true, view: view, completed: completed)
+        FBLoafAnimations.doRotate(duration, showView: true, view: view, completed: completed)
     }
     
     /**
@@ -903,8 +903,8 @@ struct DodoAnimationsShow {
     static func slideLeft(_ view: UIView,
                           duration: TimeInterval?,
                           locationTop: Bool,
-                          completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doSlide(duration, right: false, showView: true, view: view, completed: completed)
+                          completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doSlide(duration, right: false, showView: true, view: view, completed: completed)
     }
     
     /**
@@ -918,8 +918,8 @@ struct DodoAnimationsShow {
     static func slideRight(_ view: UIView,
                            duration: TimeInterval?,
                            locationTop: Bool,
-                           completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doSlide(duration, right: true, showView: true, view: view, completed: completed)
+                           completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doSlide(duration, right: true, showView: true, view: view, completed: completed)
     }
     
     /**
@@ -933,8 +933,8 @@ struct DodoAnimationsShow {
     static func fade(_ view: UIView,
                      duration: TimeInterval?,
                      locationTop: Bool,
-                     completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doFade(duration, showView: true, view: view, completed: completed)
+                     completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doFade(duration, showView: true, view: view, completed: completed)
     }
     
     /**
@@ -948,8 +948,8 @@ struct DodoAnimationsShow {
     static func slideVertically(_ view: UIView,
                                 duration: TimeInterval?,
                                 locationTop: Bool,
-                                completed: @escaping DodoAnimationCompleted) {
-        DodoAnimations.doSlideVertically(duration,
+                                completed: @escaping FBLoafAnimationCompleted) {
+        FBLoafAnimations.doSlideVertically(duration,
                                          showView: true,
                                          view: view,
                                          locationTop: locationTop,
@@ -958,13 +958,13 @@ struct DodoAnimationsShow {
 }
 
 /// A closure that is called for animation of the bar when it is being shown or hidden.
-public typealias DodoAnimation = (UIView,
+public typealias FBLoafAnimation = (UIView,
     _ duration: TimeInterval?,
     _ locationTop: Bool,
-    _ completed: @escaping DodoAnimationCompleted) -> Void
+    _ completed: @escaping FBLoafAnimationCompleted) -> Void
 
 /// A closure that is called by the animator when animation has finished.
-public typealias DodoAnimationCompleted = () -> Void
+public typealias FBLoafAnimationCompleted = () -> Void
 
 /**
  Creates a timer that executes code after delay.
@@ -1470,7 +1470,7 @@ class TegAutolayoutConstraints {
     }
 }
 
-public class DodoColor {
+public class FBLoafColor {
     /**
      
      Creates a UIColor object from a string.
@@ -1487,7 +1487,7 @@ public class DodoColor {
         var alpha: CGFloat = 1.0
         
         if !rgba.hasPrefix("#") {
-            print("Warning: DodoColor.fromHexString, # character missing")
+            print("Warning: FBLoafColor.fromHexString, # character missing")
             return UIColor()
         }
         
@@ -1497,7 +1497,7 @@ public class DodoColor {
         var hexValue: CUnsignedLongLong = 0
         
         if !scanner.scanHexInt64(&hexValue) {
-            print("Warning: DodoColor.fromHexString, error scanning hex value")
+            print("Warning: FBLoafColor.fromHexString, error scanning hex value")
             return UIColor()
         }
         
@@ -1511,7 +1511,7 @@ public class DodoColor {
             blue  = CGFloat((hexValue & 0x0000FF00) >> 8)  / 255.0
             alpha = CGFloat(hexValue & 0x000000FF)         / 255.0
         } else {
-            print("Warning: DodoColor.fromHexString, invalid rgb string, length should be 7 or 9")
+            print("Warning: FBLoafColor.fromHexString, invalid rgb string, length should be 7 or 9")
             return UIColor()
         }
         
@@ -1519,12 +1519,12 @@ public class DodoColor {
     }
 }
 /// Defines styles related to the bar view in general.
-public class DodoBarStyle {
+public class FBLoafBarStyle {
     
     /// The parent style is used to get the property value if the object is missing one.
-    var parent: DodoBarStyle?
+    var parent: FBLoafBarStyle?
     
-    init(parentStyle: DodoBarStyle? = nil) {
+    init(parentStyle: FBLoafBarStyle? = nil) {
         self.parent = parentStyle
     }
     
@@ -1548,12 +1548,12 @@ public class DodoBarStyle {
     
     // -----------------------------
     
-    private var _animationHide: DodoAnimation?
+    private var _animationHide: FBLoafAnimation?
     
     /// Specify a function for animating the bar when it is hidden.
-    public var animationHide: DodoAnimation {
+    public var animationHide: FBLoafAnimation {
         get {
-            return (_animationHide ?? parent?.animationHide) ?? DodoBarDefaultStyles.animationHide
+            return (_animationHide ?? parent?.animationHide) ?? FBLoafBarDefaultStyles.animationHide
         }
         
         set {
@@ -1569,7 +1569,7 @@ public class DodoBarStyle {
     public var animationHideDuration: TimeInterval? {
         get {
             return (_animationHideDuration ?? parent?.animationHideDuration) ??
-                DodoBarDefaultStyles.animationHideDuration
+                FBLoafBarDefaultStyles.animationHideDuration
         }
         
         set {
@@ -1579,12 +1579,12 @@ public class DodoBarStyle {
     
     // ---------------------------
     
-    private var _animationShow: DodoAnimation?
+    private var _animationShow: FBLoafAnimation?
     
     /// Specify a function for animating the bar when it is shown.
-    public var animationShow: DodoAnimation {
+    public var animationShow: FBLoafAnimation {
         get {
-            return (_animationShow ?? parent?.animationShow) ?? DodoBarDefaultStyles.animationShow
+            return (_animationShow ?? parent?.animationShow) ?? FBLoafBarDefaultStyles.animationShow
         }
         
         set {
@@ -1600,7 +1600,7 @@ public class DodoBarStyle {
     public var animationShowDuration: TimeInterval? {
         get {
             return (_animationShowDuration ?? parent?.animationShowDuration) ??
-                DodoBarDefaultStyles.animationShowDuration
+                FBLoafBarDefaultStyles.animationShowDuration
         }
         
         set {
@@ -1615,7 +1615,7 @@ public class DodoBarStyle {
     /// Background color of the bar.
     public var backgroundColor: UIColor? {
         get {
-            return _backgroundColor ?? parent?.backgroundColor ?? DodoBarDefaultStyles.backgroundColor
+            return _backgroundColor ?? parent?.backgroundColor ?? FBLoafBarDefaultStyles.backgroundColor
         }
         
         set {
@@ -1630,7 +1630,7 @@ public class DodoBarStyle {
     /// Color of the bar's border.
     public var borderColor: UIColor? {
         get {
-            return _borderColor ?? parent?.borderColor ?? DodoBarDefaultStyles.borderColor
+            return _borderColor ?? parent?.borderColor ?? FBLoafBarDefaultStyles.borderColor
         }
         
         set {
@@ -1645,7 +1645,7 @@ public class DodoBarStyle {
     /// Border width of the bar.
     public var borderWidth: CGFloat {
         get {
-            return _borderWidth ?? parent?.borderWidth ?? DodoBarDefaultStyles.borderWidth
+            return _borderWidth ?? parent?.borderWidth ?? FBLoafBarDefaultStyles.borderWidth
         }
         
         set {
@@ -1660,7 +1660,7 @@ public class DodoBarStyle {
     /// Corner radius of the bar view.
     public var cornerRadius: CGFloat {
         get {
-            return _cornerRadius ?? parent?.cornerRadius ?? DodoBarDefaultStyles.cornerRadius
+            return _cornerRadius ?? parent?.cornerRadius ?? FBLoafBarDefaultStyles.cornerRadius
         }
         
         set {
@@ -1675,7 +1675,7 @@ public class DodoBarStyle {
     /// When true it highlights the view background for spotting layout issues.
     public var debugMode: Bool {
         get {
-            return _debugMode ?? parent?.debugMode ?? DodoBarDefaultStyles.debugMode
+            return _debugMode ?? parent?.debugMode ?? FBLoafBarDefaultStyles.debugMode
         }
         
         set {
@@ -1696,7 +1696,7 @@ public class DodoBarStyle {
     public var hideAfterDelaySeconds: TimeInterval {
         get {
             return _hideAfterDelaySeconds ?? parent?.hideAfterDelaySeconds ??
-                DodoBarDefaultStyles.hideAfterDelaySeconds
+                FBLoafBarDefaultStyles.hideAfterDelaySeconds
         }
         
         set {
@@ -1709,7 +1709,7 @@ public class DodoBarStyle {
     public var hideOnTap: Bool {
         get {
             return _hideOnTap ?? parent?.hideOnTap ??
-                DodoBarDefaultStyles.hideOnTap
+                FBLoafBarDefaultStyles.hideOnTap
         }
         
         set {
@@ -1722,7 +1722,7 @@ public class DodoBarStyle {
     /// Position of the bar. When true the bar is shown on top of the screen.
     public var locationTop: Bool {
         get {
-            return _locationTop ?? parent?.locationTop ?? DodoBarDefaultStyles.locationTop
+            return _locationTop ?? parent?.locationTop ?? FBLoafBarDefaultStyles.locationTop
         }
         
         set {
@@ -1736,19 +1736,19 @@ public class DodoBarStyle {
     public var marginToSuperview: CGSize {
         get {
             return _marginToSuperview ?? parent?.marginToSuperview ??
-                DodoBarDefaultStyles.marginToSuperview
+                FBLoafBarDefaultStyles.marginToSuperview
         }
         
         set {
             _marginToSuperview = newValue
         }
     }
-    private var _onTap: DodoBarOnTap?
+    private var _onTap: FBLoafBarOnTap?
     
     /// Supply a function that will be called when user taps the bar.
-    public var onTap: DodoBarOnTap? {
+    public var onTap: FBLoafBarOnTap? {
         get {
-            return _onTap ?? parent?.onTap ?? DodoBarDefaultStyles.onTap
+            return _onTap ?? parent?.onTap ?? FBLoafBarDefaultStyles.onTap
         }
         
         set {
@@ -1810,16 +1810,16 @@ public enum FBPresets {
         
         switch preset {
         case .success:
-            style.bar.backgroundColor = DodoColor.fromHexString("#00CC03C9")
+            style.bar.backgroundColor = FBLoafColor.fromHexString("#00CC03C9")
             
         case .info:
-            style.bar.backgroundColor = DodoColor.fromHexString("#0057FF96")
+            style.bar.backgroundColor = FBLoafColor.fromHexString("#0057FF96")
             
         case .warning:
-            style.bar.backgroundColor = DodoColor.fromHexString("#CEC411DD")
+            style.bar.backgroundColor = FBLoafColor.fromHexString("#CEC411DD")
             
         case .error:
-            style.bar.backgroundColor = DodoColor.fromHexString("#FF0B0BCC")
+            style.bar.backgroundColor = FBLoafColor.fromHexString("#FF0B0BCC")
         }
         
         return style
@@ -1832,7 +1832,7 @@ public enum FBPresets {
  Default styles are used when individual element styles are not set.
  
  */
-public struct DodoButtonDefaultStyles {
+public struct FBLoafButtonDefaultStyles {
     
     /// Revert the property values to their defaults
     public static func resetToDefaults() {
@@ -1913,7 +1913,7 @@ public class FBButtonStyle {
      */
     public var accessibilityLabel: String? {
         get {
-            return _accessibilityLabel ?? parent?.accessibilityLabel ?? DodoButtonDefaultStyles.accessibilityLabel
+            return _accessibilityLabel ?? parent?.accessibilityLabel ?? FBLoafButtonDefaultStyles.accessibilityLabel
         }
         
         set {
@@ -1928,7 +1928,7 @@ public class FBButtonStyle {
     /// When true it hides the bar when the button is tapped.
     public var hideOnTap: Bool {
         get {
-            return _hideOnTap ?? parent?.hideOnTap ?? DodoButtonDefaultStyles.hideOnTap
+            return _hideOnTap ?? parent?.hideOnTap ?? FBLoafButtonDefaultStyles.hideOnTap
         }
         
         set {
@@ -1941,7 +1941,7 @@ public class FBButtonStyle {
     public var horizontalMarginToBar: CGFloat {
         get {
             return _horizontalMarginToBar ?? parent?.horizontalMarginToBar ??
-                DodoButtonDefaultStyles.horizontalMarginToBar
+                FBLoafButtonDefaultStyles.horizontalMarginToBar
         }
         
         set {
@@ -1953,7 +1953,7 @@ public class FBButtonStyle {
     /// When set it shows one of the default Dodo icons. Use `image` property to supply a custom image. The color of the image can be changed with `tintColor` property.
     public var icon: DodoIcons? {
         get {
-            return _icon ?? parent?.icon ?? DodoButtonDefaultStyles.icon
+            return _icon ?? parent?.icon ?? FBLoafButtonDefaultStyles.icon
         }
         
         set {
@@ -1966,7 +1966,7 @@ public class FBButtonStyle {
     /// Custom image for the button. One can also use the `icon` property to show one of the default Dodo icons. The color of the image can be changed with `tintColor` property.
     public var image: UIImage? {
         get {
-            return _image ?? parent?.image ?? DodoButtonDefaultStyles.image
+            return _image ?? parent?.image ?? FBLoafButtonDefaultStyles.image
         }
         
         set {
@@ -1977,7 +1977,7 @@ public class FBButtonStyle {
     /// Supply a function that will be called when user taps the button.
     public var onTap: FBButtonOnTap? {
         get {
-            return _onTap ?? parent?.onTap ?? DodoButtonDefaultStyles.onTap
+            return _onTap ?? parent?.onTap ?? FBLoafButtonDefaultStyles.onTap
         }
         
         set {
@@ -1989,7 +1989,7 @@ public class FBButtonStyle {
     /// Size of the button.
     public var size: CGSize {
         get {
-            return _size ?? parent?.size ?? DodoButtonDefaultStyles.size
+            return _size ?? parent?.size ?? FBLoafButtonDefaultStyles.size
         }
         
         set {
@@ -2001,7 +2001,7 @@ public class FBButtonStyle {
     /// Replaces the color of the image or icon. The original colors are used when nil.
     public var tintColor: UIColor? {
         get {
-            return _tintColor ?? parent?.tintColor ?? DodoButtonDefaultStyles.tintColor
+            return _tintColor ?? parent?.tintColor ?? FBLoafButtonDefaultStyles.tintColor
         }
         
         set {
@@ -2036,9 +2036,9 @@ public class FBLoafStyle {
      
      */
     public static func resetDefaultStyles() {
-        DodoBarDefaultStyles.resetToDefaults()
-        DodoLabelDefaultStyles.resetToDefaults()
-        DodoButtonDefaultStyles.resetToDefaults()
+        FBLoafBarDefaultStyles.resetToDefaults()
+        FBLoafLabelDefaultStyles.resetToDefaults()
+        FBLoafButtonDefaultStyles.resetToDefaults()
     }
     
     /// Clears the styles for all properties for this style object. The styles will be taken from parent and default properties.
@@ -2054,10 +2054,10 @@ public class FBLoafStyle {
      Styles for the bar view.
      
      */
-    public lazy var bar: DodoBarStyle = self.initBarStyle()
+    public lazy var bar: FBLoafBarStyle = self.initBarStyle()
     
-    private func initBarStyle() -> DodoBarStyle {
-        return DodoBarStyle(parentStyle: parent?.bar)
+    private func initBarStyle() -> FBLoafBarStyle {
+        return FBLoafBarStyle(parentStyle: parent?.bar)
     }
     
     /**
@@ -2121,7 +2121,7 @@ public class DodoLabelStyle {
     /// Color of the label text.
     public var color: UIColor {
         get {
-            return _color ?? parent?.color ?? DodoLabelDefaultStyles.color
+            return _color ?? parent?.color ?? FBLoafLabelDefaultStyles.color
         }
         
         set {
@@ -2136,7 +2136,7 @@ public class DodoLabelStyle {
     /// Color of the label text.
     public var font: UIFont {
         get {
-            return _font ?? parent?.font ?? DodoLabelDefaultStyles.font
+            return _font ?? parent?.font ?? FBLoafLabelDefaultStyles.font
         }
         
         set {
@@ -2152,7 +2152,7 @@ public class DodoLabelStyle {
     public var horizontalMargin: CGFloat {
         get {
             return _horizontalMargin ?? parent?.horizontalMargin ??
-                DodoLabelDefaultStyles.horizontalMargin
+                FBLoafLabelDefaultStyles.horizontalMargin
         }
         
         set {
@@ -2168,7 +2168,7 @@ public class DodoLabelStyle {
     public var numberOfLines: Int {
         get {
             return _numberOfLines ?? parent?.numberOfLines ??
-                DodoLabelDefaultStyles.numberOfLines
+                FBLoafLabelDefaultStyles.numberOfLines
         }
         
         set {
@@ -2183,7 +2183,7 @@ public class DodoLabelStyle {
     /// Color of text shadow.
     public var shadowColor: UIColor? {
         get {
-            return _shadowColor ?? parent?.shadowColor ?? DodoLabelDefaultStyles.shadowColor
+            return _shadowColor ?? parent?.shadowColor ?? FBLoafLabelDefaultStyles.shadowColor
         }
         
         set {
@@ -2196,7 +2196,7 @@ public class DodoLabelStyle {
     /// Text shadow offset.
     public var shadowOffset: CGSize {
         get {
-            return _shadowOffset ?? parent?.shadowOffset ?? DodoLabelDefaultStyles.shadowOffset
+            return _shadowOffset ?? parent?.shadowOffset ?? FBLoafLabelDefaultStyles.shadowOffset
         }
         
         set {
@@ -2211,7 +2211,7 @@ public class DodoLabelStyle {
  Default styles are used when individual element styles are not set.
  
  */
-public struct DodoLabelDefaultStyles {
+public struct FBLoafLabelDefaultStyles {
     
     /// Revert the property values to their defaults
     public static func resetToDefaults() {
@@ -2258,7 +2258,7 @@ public struct DodoLabelDefaultStyles {
  Default styles are used when individual element styles are not set.
  
  */
-public struct DodoBarDefaultStyles {
+public struct FBLoafBarDefaultStyles {
     
     /// Revert the property values to their defaults
     public static func resetToDefaults() {
@@ -2278,20 +2278,20 @@ public struct DodoBarDefaultStyles {
         onTap = _onTap
     }
     
-    private static let _animationHide: DodoAnimation = DodoAnimationsHide.rotate
+    private static let _animationHide: FBLoafAnimation = FBLoafAnimationsHide.rotate
     
     /// Specify a function for animating the bar when it is hidden.
-    public static var animationHide: DodoAnimation = _animationHide
+    public static var animationHide: FBLoafAnimation = _animationHide
     
     private static let _animationHideDuration: TimeInterval? = nil
     
     /// Duration of hide animation. When nil it uses default duration for selected animation function.
     public static var animationHideDuration: TimeInterval? = _animationHideDuration
     
-    private static let _animationShow: DodoAnimation = DodoAnimationsShow.rotate
+    private static let _animationShow: FBLoafAnimation = FBLoafAnimationsShow.rotate
     
     /// Specify a function for animating the bar when it is shown.
-    public static var animationShow: DodoAnimation = _animationShow
+    public static var animationShow: FBLoafAnimation = _animationShow
     
     private static let _animationShowDuration: TimeInterval? = nil
     
@@ -2347,7 +2347,7 @@ public struct DodoBarDefaultStyles {
     
     /// Margin between the bar edge and its superview.
     public static var marginToSuperview = _marginToSuperview
-    private static let _onTap: DodoBarOnTap? = nil
+    private static let _onTap: FBLoafBarOnTap? = nil
     /// Supply a function that will be called when user taps the bar.
     public static var onTap = _onTap
     
@@ -2629,4 +2629,4 @@ struct FBTouchTarget {
 }
 
 /// A closure that is called when a bar is tapped
-public typealias DodoBarOnTap = () -> Void
+public typealias FBLoafBarOnTap = () -> Void
