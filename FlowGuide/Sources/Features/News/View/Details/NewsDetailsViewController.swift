@@ -25,12 +25,6 @@ final class NewsDetailsViewController: BaseViewController {
         MBProgressHUD.showAdded(to: view, animated: true)
         setupUI()
     }
-    
-    /// Update UI with Values
-    func updateUI() {
-        titleLabel.text = newsDetailsVM.article.title
-        descriptionLabel.text = newsDetailsVM.article.description
-    }
 }
 
 // MARK: - Internal Methods
