@@ -59,7 +59,6 @@ extension NewsDetailsViewController: WKNavigationDelegate {
     ///   - webView: Start Loading
     ///   - navigation:
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("Start loading")
     }
     
     /// WebView Delegate
@@ -67,7 +66,6 @@ extension NewsDetailsViewController: WKNavigationDelegate {
     ///   - webView: Finish Loading
     ///   - navigation: 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("End loading")
         MBProgressHUD.hide(for: self.view, animated: true)
     }
 }

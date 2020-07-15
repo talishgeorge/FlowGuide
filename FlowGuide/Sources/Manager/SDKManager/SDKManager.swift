@@ -31,7 +31,6 @@ final class SDKManager {
             self.featureFlag = (treatment == NewsLocalization.on.localized) ? true : false
         }
         client?.on(event: SplitEvent.sdkReadyTimedOut) {
-            print("SDK time out")
         }
     }
     

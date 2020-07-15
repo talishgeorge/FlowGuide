@@ -28,12 +28,10 @@ extension Category {
                     let data = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData).articles
                     let category = Category(title: ApiConstants.newsCategory, articles: data)
                     categories.append(category)
-                } catch let error {
-                    print("Error...while decoding JSON! \(error)")
+                } catch _ {
                 }
             }
         } catch {
-            print(error)
         }
         return categories
     }

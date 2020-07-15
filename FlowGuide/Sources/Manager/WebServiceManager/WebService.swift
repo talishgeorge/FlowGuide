@@ -46,7 +46,6 @@ class WebService {
                 categories.append(category)
                 success(categories)
             } catch {
-                print("Error...while decoding JSON!")
                 failure(nil)
             }
         }
