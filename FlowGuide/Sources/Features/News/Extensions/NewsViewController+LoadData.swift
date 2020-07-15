@@ -23,7 +23,7 @@ extension NewsViewController: NewsViewControllerDelegate {
     /// - Parameter error: Error
     func showError(error: Error?) {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-            self.presentAlertWithTitle(title: NewsLocalization.newsFecthError.localized, message: NewsLocalization.newsFetchErrorMessage.localized, options: NewsLocalization.ok.localized, NewsLocalization.cancel.localized) { (value) in
+            self.presentAlertWithTitle(title: String.News.newsFecthError.localized, message: String.News.newsFetchErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
                 if value == 0 {
                     self.categoryListVM.showOfflineData()
                 }

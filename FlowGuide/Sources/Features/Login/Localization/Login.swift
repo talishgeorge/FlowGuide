@@ -11,8 +11,6 @@ extension String {
     enum Login: String, Localizable {
         case forget_password = "forget_password"
         case enter_email = "enter_email"
-        case cancel = "cancel"
-        case ok = "ok"
         case passwordReset = "password_reset"
         case check_email = "tcheck_email"
         case invalid_form = "invalid_form"

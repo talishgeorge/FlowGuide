@@ -5,13 +5,6 @@
   Created by TCS on 25/05/20.
   Copyright © 2020 TCS. All rights reserved.
 */
-//Loading
-"loading_0" = "Läser in";
-"loading_1" = "Läser in .";
-"loading_2" = "Läser in ..";
-"loading_3" = "Läser in ...";
-//OnBoarding
-"get_started" = "Komma igång";
-"onboarding_title1" = "Varför använda MVVM";
-"onboarding_title2" = "Fördelarna med MVVM";
-"onboarding_title3" = "När ska man använda MVVM";
+//Global
+"cancel" = "Avbryt";
+"ok" = "Ok";

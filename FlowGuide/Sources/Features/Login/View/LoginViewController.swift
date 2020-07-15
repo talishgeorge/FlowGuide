@@ -133,7 +133,7 @@ private extension LoginViewController {
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
-                self?.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Login.ok.localized, String.Login.cancel.localized) { (value) in
+                self?.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
                     if value == 0 {
                         this.delegate?.showMainTabBarController()
                     }
@@ -147,8 +147,8 @@ private extension LoginViewController {
     @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: String.Login.forget_password.localized, message: String.Login.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
-        let cancelAction = UIAlertAction(title: String.Login.cancel.localized, style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: String.Login.ok.localized, style: .default) { [weak self] (_) in
+        let cancelAction = UIAlertAction(title: String.Global.cancel.localized, style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: String.Global.ok.localized, style: .default) { [weak self] (_) in
             guard let this = self else {
                 return
             }

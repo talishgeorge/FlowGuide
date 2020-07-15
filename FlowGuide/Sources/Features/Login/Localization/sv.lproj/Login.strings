@@ -8,8 +8,6 @@
 "login" = "Logga in";
 "forget_password" = "Glöm lösenord?";
 "enter_email" = "Var god skriv in din e-postadress";
-"cancel" = "Avbryt";
-"ok" = "Ok";
 "password_reset" = "Återställning av lösenord är framgångsrikt";
 "check_email" = "Kontrollera din e-post för att hitta återställningslänken.";
 "invalid_form" = "Ogiltig form";

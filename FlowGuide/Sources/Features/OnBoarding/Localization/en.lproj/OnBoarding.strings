@@ -1,0 +1,11 @@
+/* 
+  OnBoarding.strings
+  FlowGuide
+
+  Created by Talish George on 15/07/20.
+  Copyright © 2020 Talish George. All rights reserved.
+*/
+"get_started" = "Get Started";
+"onboarding_title1" = "Why Use MVVM";
+"onboarding_title2" = "Benefits of MVVM";
+"onboarding_title3" = "When to Use MVVM";

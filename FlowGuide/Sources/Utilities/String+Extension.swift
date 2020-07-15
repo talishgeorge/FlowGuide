@@ -10,3 +10,13 @@ extension String {
         return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
     }
 }
+
+extension String {
+    enum Global: String, Localizable {
+        case cancel = "cancel"
+        case ok = "ok"
+        var tableName: String {
+            return "Localizable"
+        }
+    }
+}

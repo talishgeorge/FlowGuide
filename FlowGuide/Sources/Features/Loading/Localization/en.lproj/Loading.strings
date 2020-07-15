@@ -1,0 +1,12 @@
+/* 
+  Loading.strings
+  FlowGuide
+
+  Created by Talish George on 15/07/20.
+  Copyright © 2020 Talish George. All rights reserved.
+*/
+//Loading
+"loading_0" = "Loading";
+"loading_1" = "Loading .";
+"loading_2" = "Loading ..";
+"loading_3" = "Loading ...";

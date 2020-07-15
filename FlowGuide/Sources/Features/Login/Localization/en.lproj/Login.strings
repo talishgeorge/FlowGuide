@@ -8,8 +8,6 @@
 "login" = "Login";
 "forget_password" = "Forget Password?";
 "enter_email" = "Please Enter your Email Address";
-"cancel" = "Cancel";
-"ok" = "Ok";
 "password_reset" = "Password Reset is Successful";
 "check_email" = "Please check your email to find the reset link.";
 "invalid_form" = "Invalid Form";

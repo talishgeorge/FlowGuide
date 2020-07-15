@@ -19,7 +19,7 @@ final class LoadingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadingLabel.text = LoadingLocalization.loading1.localized
+        loadingLabel.text = String.Loading.loading1.localized
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,14 +37,14 @@ final class LoadingViewController: BaseViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 0.40, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
-                case LoadingLocalization.loading1.localized:
-                    return LoadingLocalization.loading2.localized
-                case LoadingLocalization.loading2.localized:
-                    return LoadingLocalization.loading3.localized
-                case LoadingLocalization.loading3.localized:
-                    return LoadingLocalization.loading1.localized
+                case String.Loading.loading1.localized:
+                    return String.Loading.loading2.localized
+                case String.Loading.loading2.localized:
+                    return String.Loading.loading3.localized
+                case String.Loading.loading3.localized:
+                    return String.Loading.loading1.localized
                 default:
-                    return LoadingLocalization.loading.localized
+                    return String.Loading.loading.localized
                 }
             }
             self.loadingLabel.text = string

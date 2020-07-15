@@ -27,8 +27,8 @@ final class SDKManager {
         let factory = builder.setApiKey(apiKey).setKey(key).setConfig(config).build()
         let client = factory?.client
         client?.on(event: SplitEvent.sdkReady) {
-            let treatment = client?.getTreatment(NewsLocalization.news_details_feature.localized)
-            self.featureFlag = (treatment == NewsLocalization.on.localized) ? true : false
+            let treatment = client?.getTreatment(String.News.news_details_feature.localized)
+            self.featureFlag = (treatment == String.News.on.localized) ? true : false
         }
         client?.on(event: SplitEvent.sdkReadyTimedOut) {
         }
