@@ -129,13 +129,13 @@ public typealias FBButtonOnTap = () -> Void
  
  Coordinates the process of showing and hiding of the message bar.
  
- The instance is created automatically in the `dodo` property of any UIView instance.
+ The instance is created automatically in the `FBLoaf` property of any UIView instance.
  It is not expected to be instantiated manually anywhere except unit tests.
  
  For example:
  
  let view = UIView()
- view.dodo.info("Horses are blue?")
+ view.FBLoaf.info("Horses are blue?")
  
  */
 public protocol FBLoafInterface: class {  
@@ -218,13 +218,13 @@ public protocol FBLoafInterface: class {
  
  Main class that coordinates the process of showing and hiding of the message bar.
  
- Instance of this class is created automatically in the `dodo` property of any UIView instance.
+ Instance of this class is created automatically in the `FBLoaf` property of any UIView instance.
  It is not expected to be instantiated manually anywhere except unit tests.
  
  For example:
  
  let view = UIView()
- view.dodo.info("Horses are blue?")
+ view.FBLoaf.info("Horses are blue?")
  
  */
 final class FBLoaf: FBLoafInterface, FBButtonViewDelegate {
@@ -263,7 +263,7 @@ final class FBLoaf: FBLoafInterface, FBButtonViewDelegate {
     /// Defines styles for the bar.
     var style = FBLoafStyle(parentStyle: FBPresets.defaultPreset.style)
     
-    /// Creates an instance of Dodo class
+    /// Creates an instance of FBLoaf class
     init(superview: UIView) {
         self.superview = superview
         
@@ -400,7 +400,7 @@ final class FBLoaf: FBLoafInterface, FBButtonViewDelegate {
         }
     }
     
-    // MARK: - DodoButtonViewDelegate
+    // MARK: - FBLoafButtonViewDelegate
     
     func buttonDelegateDidTap(_ buttonStyle: FBButtonStyle) {
         if buttonStyle.hideOnTap {
@@ -451,7 +451,7 @@ public class FBLoafMock: FBLoafInterface {
     /// Defines styles for the bar.
     public var style = FBLoafStyle(parentStyle: FBPresets.defaultPreset.style)
     
-    /// Creates an instance of DodoMock class
+    /// Creates an instance of FBLoafMock class
     public init() { }
     
     /// Changes the style preset for the bar widget.
@@ -1862,12 +1862,12 @@ public struct FBLoafButtonDefaultStyles {
     
     /// Margin between the bar edge and the button
     public static var horizontalMarginToBar = _horizontalMarginToBar
-    private static let _icon: DodoIcons? = nil
+    private static let _icon: FBLoafIcons? = nil
     
-    /// When set it shows one of the default Dodo icons. Use `image` property to supply a custom image. The color of the image can be changed with `tintColor` property.
+    /// When set it shows one of the default FBLoaf icons. Use `image` property to supply a custom image. The color of the image can be changed with `tintColor` property.
     public static var icon = _icon
     private static let _image: UIImage? = nil
-    /// Custom image for the button. One can also use the `icon` property to show one of the default Dodo icons. The color of the image can be changed with `tintColor` property.
+    /// Custom image for the button. One can also use the `icon` property to show one of the default FBLoaf icons. The color of the image can be changed with `tintColor` property.
     public static var image = _image
     private static let _onTap: FBButtonOnTap? = nil
     /// Supply a function that will be called when user taps the button.
@@ -1948,10 +1948,10 @@ public class FBButtonStyle {
             _horizontalMarginToBar = newValue
         }
     }
-    private var _icon: DodoIcons?
+    private var _icon: FBLoafIcons?
     
-    /// When set it shows one of the default Dodo icons. Use `image` property to supply a custom image. The color of the image can be changed with `tintColor` property.
-    public var icon: DodoIcons? {
+    /// When set it shows one of the default FBLoaf icons. Use `image` property to supply a custom image. The color of the image can be changed with `tintColor` property.
+    public var icon: FBLoafIcons? {
         get {
             return _icon ?? parent?.icon ?? FBLoafButtonDefaultStyles.icon
         }
@@ -1963,7 +1963,7 @@ public class FBButtonStyle {
     
     private var _image: UIImage?
     
-    /// Custom image for the button. One can also use the `icon` property to show one of the default Dodo icons. The color of the image can be changed with `tintColor` property.
+    /// Custom image for the button. One can also use the `icon` property to show one of the default FBLoaf icons. The color of the image can be changed with `tintColor` property.
     public var image: UIImage? {
         get {
             return _image ?? parent?.image ?? FBLoafButtonDefaultStyles.image
@@ -2065,10 +2065,10 @@ public class FBLoafStyle {
      Styles for the text label.
      
      */
-    public lazy var label: DodoLabelStyle = self.initLabelStyle()
+    public lazy var label: FBLoafLabelStyle = self.initLabelStyle()
     
-    private func initLabelStyle() -> DodoLabelStyle {
-        return DodoLabelStyle(parentStyle: parent?.label)
+    private func initLabelStyle() -> FBLoafLabelStyle {
+        return FBLoafLabelStyle(parentStyle: parent?.label)
     }
     
     /**
@@ -2095,12 +2095,12 @@ public class FBLoafStyle {
 }
 
 /// Defines styles related to the text label.
-public class DodoLabelStyle {
+public class FBLoafLabelStyle {
     
     /// The parent style is used to get the property value if the object is missing one.
-    var parent: DodoLabelStyle?
+    var parent: FBLoafLabelStyle?
     
-    init(parentStyle: DodoLabelStyle? = nil) {
+    init(parentStyle: FBLoafLabelStyle? = nil) {
         self.parent = parentStyle
     }
     
@@ -2540,10 +2540,10 @@ class SBToolbar: UIView {
 
 /**
  
- Collection of icons included with Dodo library.
+ Collection of icons included with FBLoaf library.
  
  */
-public enum DodoIcons: String {
+public enum FBLoafIcons: String {
     /// Icon for closing the bar.
     case close = "Close"
     
@@ -2557,31 +2557,31 @@ private var sabAssociationKey: UInt8 = 0
  UIView extension for showing a notification widget.
  
  let view = UIView()
- view.dodo.show("Hello World!")
+ view.FBLoaf.show("Hello World!")
  
  */
 public extension UIView {
     /**
      
      Message bar extension.
-     Call `dodo.show`, `dodo.success`, dodo.error` functions to show a notification widget in the view.
+     Call `FBLoaf.show`, `FBLoaf.success`, FBLoaf.error` functions to show a notification widget in the view.
      
      let view = UIView()
-     view.dodo.show("Hello World!")
+     view.FBLoaf.show("Hello World!")
      
      */
-    var dodo: FBLoafInterface {
+    var popup: FBLoafInterface {
         get {
             if let value = objc_getAssociatedObject(self, &sabAssociationKey) as? FBLoafInterface {
                 return value
             } else {
-                let dodo = FBLoaf(superview: self)
+                let popup = FBLoaf(superview: self)
                 
                 objc_setAssociatedObject(self,
-                                         &sabAssociationKey, dodo,
+                                         &sabAssociationKey, popup,
                                          objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
                 
-                return dodo
+                return popup
             }
         }
         
