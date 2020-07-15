@@ -9,6 +9,7 @@
 import UIKit
 import UtilitiesLib
 
+// MARK: - Internal Delegate Methods
 extension OnBoardingViewController: UICollectionViewDelegate,
                                     UICollectionViewDataSource,
                                     UICollectionViewDelegateFlowLayout {

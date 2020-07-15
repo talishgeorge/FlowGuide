@@ -25,6 +25,8 @@ class BaseViewController: UIViewController {
     }
 }
 
+// MARK: - Internal Methods
+
 extension BaseViewController {
     
     /// Show Alert with Actions
@@ -99,6 +101,7 @@ extension BaseViewController {
     }
 
 }
+// MARK: - Custom Navigation
 
 extension BaseViewController {
     

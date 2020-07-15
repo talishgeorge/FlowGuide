@@ -33,6 +33,7 @@ final class NewsDetailsViewController: BaseViewController {
     }
 }
 
+// MARK: - Internal Methods
 private extension NewsDetailsViewController {
     
     /// Initial UI Setup
@@ -48,6 +49,8 @@ private extension NewsDetailsViewController {
         self.webview.load(request)
     }
 }
+
+// MARK: - Delegate Methods
 
 extension NewsDetailsViewController: WKNavigationDelegate {
     

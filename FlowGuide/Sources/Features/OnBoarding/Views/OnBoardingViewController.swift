@@ -80,7 +80,7 @@ private extension OnBoardingViewController {
 
 // MARK: - Internal Methods
 
-extension OnBoardingViewController {
+private extension OnBoardingViewController {
     
     /// Show Caption
     /// - Parameter index: Int

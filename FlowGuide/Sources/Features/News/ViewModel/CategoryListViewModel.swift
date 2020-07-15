@@ -10,11 +10,13 @@ import UIKit
 
 /// Category List Model
 
-class CategoryListViewModel {
+final class CategoryListViewModel {
     private(set) var categories: [Category] = []
     weak var delegate: NewsViewControllerDelegate?
     private let newsService: WebService = WebService()
 }
+
+// MARK: - Internal Methods for TableView
 
 extension CategoryListViewModel {
     
@@ -30,6 +32,7 @@ extension CategoryListViewModel {
     }
 }
 
+// MARK: - Internal Methods
 extension CategoryListViewModel {
     
     /// Return Category ViewModel
