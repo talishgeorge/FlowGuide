@@ -6,7 +6,7 @@
 //  Copyright © 2020 TCS. All rights reserved.
 //
 
-import Loaf
+import UIKit
 
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
@@ -57,8 +57,6 @@ final class LoginViewController: BaseViewController {
         super.viewDidLoad()
         setupViewsFor(pageType: currentPageType)
         setupUIForLocalization()
-        view.dodo.style.bar.hideAfterDelaySeconds = 3
-        view.dodo.success("Everybody has won and all must have prizes.")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -163,12 +161,8 @@ private extension LoginViewController {
                     case .success:
                         this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
-                        Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
-                            switch dismissalType {
-                            case .tapped: break
-                            case .timedOut: break
-                            }
-                        }
+                        self?.view.popup.style.bar.hideAfterDelaySeconds = 3
+                        self?.view.popup.success(error.localizedDescription)
                     }
                 }
             }

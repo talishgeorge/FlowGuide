@@ -57,8 +57,8 @@
 		8324DF0824BF36C00026B884 /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */; };
 		8324DF0A24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
 		8324DF0B24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
-		8324DF2124BF55AA0026B884 /* DodoDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF2024BF55AA0026B884 /* DodoDistrib.swift */; };
-		8324DF2224BF55AA0026B884 /* DodoDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF2024BF55AA0026B884 /* DodoDistrib.swift */; };
+		8324DF2124BF55AA0026B884 /* FBLoaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF2024BF55AA0026B884 /* FBLoaf.swift */; };
+		8324DF2224BF55AA0026B884 /* FBLoaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF2024BF55AA0026B884 /* FBLoaf.swift */; };
 		832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -185,7 +185,7 @@
 		8324DF0124BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActivityInidicatorViewStyle+Animation.swift"; sourceTree = "<group>"; };
 		8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
 		8324DF0924BF3A540026B884 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		8324DF2024BF55AA0026B884 /* DodoDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DodoDistrib.swift; sourceTree = "<group>"; };
+		8324DF2024BF55AA0026B884 /* FBLoaf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoaf.swift; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		833570DE247A660D002E26A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -496,7 +496,7 @@
 		8324DF1F24BF55890026B884 /* Loaf */ = {
 			isa = PBXGroup;
 			children = (
-				8324DF2024BF55AA0026B884 /* DodoDistrib.swift */,
+				8324DF2024BF55AA0026B884 /* FBLoaf.swift */,
 			);
 			path = Loaf;
 			sourceTree = "<group>";
@@ -996,7 +996,7 @@
 				831523ED246F796900F48DDA /* PresenterManager.swift in Sources */,
 				833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
-				8324DF2124BF55AA0026B884 /* DodoDistrib.swift in Sources */,
+				8324DF2124BF55AA0026B884 /* FBLoaf.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				8324DF0A24BF3A540026B884 /* App.swift in Sources */,
@@ -1051,7 +1051,7 @@
 				8324DF0B24BF3A540026B884 /* App.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
-				8324DF2224BF55AA0026B884 /* DodoDistrib.swift in Sources */,
+				8324DF2224BF55AA0026B884 /* FBLoaf.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,

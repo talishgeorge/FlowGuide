@@ -7,7 +7,6 @@ target 'FlowGuide' do
 
   # Pods for FlowGuide
   pod 'Firebase/Auth'
-  pod 'Loaf'
   pod 'SwiftLint'
   pod 'Split', '~> 2.5.2'
   

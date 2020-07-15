@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Loaf
 import UtilitiesLib
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -69,7 +68,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         if let featureFlag = SDKManager.shared.featureFlag, featureFlag == true {
             performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
-            Loaf(String.News.featureEnableInfo.localized, state: .error, location: .top, sender: self).show()
+           view.popup.style.bar.hideAfterDelaySeconds = 3
+           view.popup.success(String.News.featureEnableInfo.localized)
         }
     }
     

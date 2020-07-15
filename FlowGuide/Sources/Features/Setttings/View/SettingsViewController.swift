@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Loaf
 import OakLib
 import UtilitiesLib
 
@@ -69,8 +68,8 @@ private extension SettingsViewController {
             case .success:
                 PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure(let error):
-                Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { _ in
-                }
+                self?.view.popup.style.bar.hideAfterDelaySeconds = 3
+                self?.view.popup.success(String.News.featureEnableInfo.localized)
             }
             ActivityIndicator.dismiss()
         }
