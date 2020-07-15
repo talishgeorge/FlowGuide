@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Theme Manger Class
-class ThemeManager {
+final class ThemeManager {
     
     /// Initial NavigationBar setup
     static func setup() {

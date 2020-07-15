@@ -9,7 +9,7 @@
 import UIKit
 
 /// OnBoarding Collection View Cell
-class OnBoardingCollectionViewCell: UICollectionViewCell {
+final class OnBoardingCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var slideImageView: UIImageView!
     

@@ -11,7 +11,7 @@ import Split
 import Firebase
 import UtilitiesLib
 
-class SDKManager {
+final class SDKManager {
  
     static public let shared = SDKManager()
     let apiKey: String = SplitAPI.apiKey

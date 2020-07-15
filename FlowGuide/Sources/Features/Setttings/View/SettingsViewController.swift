@@ -13,7 +13,7 @@ import OakLib
 import UtilitiesLib
 
 /// Settings ViewController
-class SettingsViewController: BaseViewController {
+final class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
     private let loginViewModel = LoginViewModel()
