@@ -1,0 +1,440 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios12.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name OakLib
+import Foundation
+import Swift
+import UIKit
+public struct AppConstants {
+  public static var osXOffSet: CoreGraphics.CGFloat
+  public static var defaultOffSet: CoreGraphics.CGFloat
+  public static var yPos: CoreGraphics.CGFloat
+  public static var alpha: CoreGraphics.CGFloat
+}
+public enum ProgressType : Swift.Int {
+  case determine
+  case indetermine
+  case fill
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class UnderKeyboardLayoutConstraint : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+  public func stop()
+  public func setup(_ bottomLayoutConstraint: UIKit.NSLayoutConstraint, view: UIKit.UIView, minMargin: CoreGraphics.CGFloat = 10)
+}
+@objc final public class UnderKeyboardObserver : ObjectiveC.NSObject {
+  public typealias AnimationCallback = (CoreGraphics.CGFloat) -> Swift.Void
+  final public var willAnimateKeyboard: OakLib.UnderKeyboardObserver.AnimationCallback?
+  final public var animateKeyboard: OakLib.UnderKeyboardObserver.AnimationCallback?
+  final public var currentKeyboardHeight: CoreGraphics.CGFloat?
+  @objc override dynamic public init()
+  @objc deinit
+  final public func start()
+  final public func stop()
+}
+public class FBLoafColor {
+  public class func fromHexString(_ rgba: Swift.String) -> UIKit.UIColor
+  @objc deinit
+}
+public typealias FBButtonOnTap = () -> Swift.Void
+public protocol FBLoafInterface : AnyObject {
+  var topAnchor: UIKit.NSLayoutYAxisAnchor? { get set }
+  var bottomAnchor: UIKit.NSLayoutYAxisAnchor? { get set }
+  @available(*, deprecated, message: "use topAnchor instead")
+  var topLayoutGuide: UIKit.UILayoutSupport? { get set }
+  @available(*, deprecated, message: "use bottomAnchor instead")
+  var bottomLayoutGuide: UIKit.UILayoutSupport? { get set }
+  var style: OakLib.FBLoafStyle { get set }
+  var preset: OakLib.FBPresets { get set }
+  func success(_ message: Swift.String)
+  func info(_ message: Swift.String)
+  func warning(_ message: Swift.String)
+  func error(_ message: Swift.String)
+  func show(_ message: Swift.String)
+  func hide()
+}
+public class FBLoafMock : OakLib.FBLoafInterface {
+  public var results: OakLib.FBLoafMockResults
+  public var topAnchor: UIKit.NSLayoutYAxisAnchor?
+  public var bottomAnchor: UIKit.NSLayoutYAxisAnchor?
+  @available(*, deprecated, message: "Use topAnchor instead")
+  public var topLayoutGuide: UIKit.UILayoutSupport? {
+    get
+    set(newValue)
+  }
+  @available(*, deprecated, message: "Use bottomAnchor instead")
+  public var bottomLayoutGuide: UIKit.UILayoutSupport? {
+    get
+    set(newValue)
+  }
+  public var style: OakLib.FBLoafStyle
+  public init()
+  public var preset: OakLib.FBPresets {
+    get
+    set(newValue)
+  }
+  public func success(_ message: Swift.String)
+  public func info(_ message: Swift.String)
+  public func warning(_ message: Swift.String)
+  public func error(_ message: Swift.String)
+  public func show(_ message: Swift.String)
+  public func hide()
+  @objc deinit
+}
+public struct NavBarConstants {
+  public static var barBGColor: UIKit.UIColor
+  public static var transparentBGColor: UIKit.UIColor
+  public static var titleColor: UIKit.UIColor
+  public static var transparentTitleColor: UIKit.UIColor
+  public static var leftNavButtonImage: UIKit.UIImage
+  public static var rightNavButtonImage: UIKit.UIImage
+  public static var titleFont: UIKit.UIFont
+  public static var leftRightTitleFont: UIKit.UIFont
+  public static var titleText: Swift.String
+  public static var leftTitleText: Swift.String
+  public static var rightTitleText: Swift.String
+  public static var backgroundProgressBarColor: UIKit.UIColor
+  public static var progressBarColor: UIKit.UIColor
+  public static var heightForLinearBar: CoreGraphics.CGFloat
+  public static var widthForLinearBar: CoreGraphics.CGFloat
+  public static var animaitonType: OakLib.ProgressType
+  public static var rootNavigationController: UIKit.UINavigationController?
+}
+public typealias OnLeftButtonAction = ((Swift.Bool) -> Swift.Void)?
+public typealias OnRightButtonAction = ((Swift.Bool) -> Swift.Void)?
+@objc public class CustomNavigationView : UIKit.UIView {
+  public var onLeftButtonAction: OakLib.OnLeftButtonAction
+  public var onRightButtonAction: OakLib.OnRightButtonAction
+  public var isLeftTitleHidden: Swift.Bool? {
+    get
+    set(newValue)
+  }
+  public var isRightTitleHidden: Swift.Bool? {
+    get
+    set(newValue)
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CustomNavigationView {
+  public static func loadNavigationBar() -> OakLib.CustomNavigationView
+  public func setupSafeArea(guide: UIKit.UILayoutGuide)
+  public func configureNavigationBar()
+  public func setTransparency(alpha: Swift.Float)
+  public func setBackgroundColorWithAlpha(alpha: Swift.Float)
+  public func startLinearProgressbar()
+  public func startHorizontalProgressbar()
+  public func hideProgressBar()
+}
+public class FBLoafBarStyle {
+  public func clear()
+  public var animationHide: OakLib.FBLoafAnimation {
+    get
+    set(newValue)
+  }
+  public var animationHideDuration: Foundation.TimeInterval? {
+    get
+    set(newValue)
+  }
+  public var animationShow: OakLib.FBLoafAnimation {
+    get
+    set(newValue)
+  }
+  public var animationShowDuration: Foundation.TimeInterval? {
+    get
+    set(newValue)
+  }
+  public var backgroundColor: UIKit.UIColor? {
+    get
+    set(newValue)
+  }
+  public var borderColor: UIKit.UIColor? {
+    get
+    set(newValue)
+  }
+  public var borderWidth: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var cornerRadius: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var debugMode: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public var hideAfterDelaySeconds: Foundation.TimeInterval {
+    get
+    set(newValue)
+  }
+  public var hideOnTap: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public var locationTop: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public var marginToSuperview: CoreGraphics.CGSize {
+    get
+    set(newValue)
+  }
+  public var onTap: OakLib.FBLoafBarOnTap? {
+    get
+    set(newValue)
+  }
+  @objc deinit
+}
+public enum FBPresets {
+  case success
+  case info
+  case warning
+  case error
+  public var style: OakLib.FBLoafStyle {
+    get
+  }
+  public static func resetAll()
+  public func reset()
+  public static func == (a: OakLib.FBPresets, b: OakLib.FBPresets) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct FBLoafButtonDefaultStyles {
+  public static func resetToDefaults()
+  public static var accessibilityLabel: Swift.String?
+  public static var hideOnTap: Swift.Bool
+  public static var horizontalMarginToBar: CoreGraphics.CGFloat
+  public static var icon: OakLib.FBLoafIcons?
+  public static var image: UIKit.UIImage?
+  public static var onTap: OakLib.FBButtonOnTap?
+  public static var size: CoreGraphics.CGSize
+  public static var tintColor: UIKit.UIColor?
+}
+public class FBButtonStyle {
+  public func clear()
+  public var accessibilityLabel: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var hideOnTap: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public var horizontalMarginToBar: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var icon: OakLib.FBLoafIcons? {
+    get
+    set(newValue)
+  }
+  public var image: UIKit.UIImage? {
+    get
+    set(newValue)
+  }
+  public var onTap: OakLib.FBButtonOnTap? {
+    get
+    set(newValue)
+  }
+  public var size: CoreGraphics.CGSize {
+    get
+    set(newValue)
+  }
+  public var tintColor: UIKit.UIColor? {
+    get
+    set(newValue)
+  }
+  @objc deinit
+}
+public class FBLoafStyle {
+  public static func resetDefaultStyles()
+  public func clear()
+  public var bar: OakLib.FBLoafBarStyle {
+    get
+    set(value)
+  }
+  public var label: OakLib.FBLoafLabelStyle {
+    get
+    set(value)
+  }
+  public var leftButton: OakLib.FBButtonStyle {
+    get
+    set(value)
+  }
+  public var rightButton: OakLib.FBButtonStyle {
+    get
+    set(value)
+  }
+  @objc deinit
+}
+@objc public class CustomNavigationBar : UIKit.UINavigationBar {
+  public static var shared: OakLib.CustomNavigationBar
+  public var onLeftButtonAction: OakLib.OnLeftButtonAction
+  public var onRightButtonAction: OakLib.OnRightButtonAction
+  public var navigationBar: UIKit.UINavigationBar?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CustomNavigationBar {
+  public func updateNavigation()
+  public func applyTransparentBackgroundToTheNavigationBar(_ opacity: CoreGraphics.CGFloat, _ color: UIKit.UIColor)
+  public func resetNavigation()
+  public func startHorizontalProgressbar()
+  public func hideProgressBar()
+  public func enableLargeTitleDisplayMode(_ color: UIKit.UIColor)
+}
+public struct FBLoafMockResults {
+  public var success: [Swift.String] {
+    get
+  }
+  public var info: [Swift.String] {
+    get
+  }
+  public var warning: [Swift.String] {
+    get
+  }
+  public var errors: [Swift.String] {
+    get
+  }
+  public var total: Swift.Int {
+    get
+  }
+  public var visible: Swift.Bool
+}
+public enum FBLoafAnimations : Swift.String {
+  case fade
+  case noAnimation
+  case rotate
+  case slideLeft
+  case slideRight
+  case slideVertically
+  public var show: OakLib.FBLoafAnimation {
+    get
+  }
+  public var hide: OakLib.FBLoafAnimation {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias FBLoafAnimation = (UIKit.UIView, Foundation.TimeInterval?, Swift.Bool, @escaping OakLib.FBLoafAnimationCompleted) -> Swift.Void
+public typealias FBLoafAnimationCompleted = () -> Swift.Void
+extension UIColor {
+  public convenience init(hexString: Swift.String, alpha: Swift.Float)
+}
+extension UIViewController {
+  public func getTopViewController() -> UIKit.UIViewController?
+}
+public class FBLoafLabelStyle {
+  public func clear()
+  public var color: UIKit.UIColor {
+    get
+    set(newValue)
+  }
+  public var font: UIKit.UIFont {
+    get
+    set(newValue)
+  }
+  public var horizontalMargin: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var numberOfLines: Swift.Int {
+    get
+    set(newValue)
+  }
+  public var shadowColor: UIKit.UIColor? {
+    get
+    set(newValue)
+  }
+  public var shadowOffset: CoreGraphics.CGSize {
+    get
+    set(newValue)
+  }
+  @objc deinit
+}
+public struct FBLoafLabelDefaultStyles {
+  public static func resetToDefaults()
+  public static var color: UIKit.UIColor
+  public static var font: UIKit.UIFont
+  public static var horizontalMargin: CoreGraphics.CGFloat
+  public static var numberOfLines: Swift.Int
+  public static var shadowColor: UIKit.UIColor?
+  public static var shadowOffset: CoreGraphics.CGSize
+}
+public struct FBLoafBarDefaultStyles {
+  public static func resetToDefaults()
+  public static var animationHide: OakLib.FBLoafAnimation
+  public static var animationHideDuration: Foundation.TimeInterval?
+  public static var animationShow: OakLib.FBLoafAnimation
+  public static var animationShowDuration: Foundation.TimeInterval?
+  public static var backgroundColor: UIKit.UIColor?
+  public static var borderColor: UIKit.UIColor?
+  public static var borderWidth: CoreGraphics.CGFloat
+  public static var cornerRadius: CoreGraphics.CGFloat
+  public static var debugMode: Swift.Bool
+  public static var hideAfterDelaySeconds: Foundation.TimeInterval
+  public static var hideOnTap: Swift.Bool
+  public static var locationTop: Swift.Bool
+  public static var marginToSuperview: CoreGraphics.CGSize
+  public static var onTap: OakLib.FBLoafBarOnTap?
+}
+public enum FBLoafIcons : Swift.String {
+  case close
+  case reload
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIView {
+  public var popup: OakLib.FBLoafInterface {
+    get
+    set(newValue)
+  }
+}
+public typealias FBLoafBarOnTap = () -> Swift.Void
+public enum ActivityIndicatorStyles {
+  case defaultSpinner
+  case spinningFadeCircle
+  case spinningCircle
+  case spinningHalfCircles
+  public static func == (a: OakLib.ActivityIndicatorStyles, b: OakLib.ActivityIndicatorStyles) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc public class ActivityIndicator : ObjectiveC.NSObject {
+  public static func show()
+  public static func show(_ message: Swift.String)
+  public static func show(_ message: Swift.String, userInteractionStatus: Swift.Bool)
+  public static func dismiss()
+  public static func statusLabelFont(_ font: UIKit.UIFont)
+  public static func statusTextColor(_ color: UIKit.UIColor)
+  public static func spinnerColor(_ color: UIKit.UIColor)
+  public static func spinnerStyle(_ spinnerStyle: OakLib.ActivityIndicatorStyles)
+  @objc deinit
+}
+extension UIWindow {
+  public var hasTopNotch: Swift.Bool {
+    get
+  }
+}
+extension UIView {
+  public func controller() -> UIKit.UIViewController?
+  public func navigationController() -> UIKit.UINavigationController?
+}

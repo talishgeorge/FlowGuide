@@ -182,6 +182,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -199,6 +200,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="OakLib",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+
+SWIFT_CLASS("_TtC6OakLib17ActivityIndicator")
+@interface ActivityIndicator : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class NSCoder;
 
@@ -250,6 +258,24 @@ SWIFT_CLASS("_TtC6OakLib20CustomNavigationView")
 
 
 
+
+
+
+
+/// Adjusts the length (constant value) of the bottom layout constraint when keyboard shows and hides.
+SWIFT_CLASS("_TtC6OakLib29UnderKeyboardLayoutConstraint")
+@interface UnderKeyboardLayoutConstraint : NSObject
+/// Creates an instance of the class
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+/// Detects appearance of software keyboard and calls the supplied closures that can be used for changing the layout and moving view from under the keyboard.
+SWIFT_CLASS("_TtC6OakLib21UnderKeyboardObserver")
+@interface UnderKeyboardObserver : NSObject
+/// Creates an instance of the class
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import OakLib
 
 /// News Details ViewController
 final class NewsDetailsViewController: BaseViewController {

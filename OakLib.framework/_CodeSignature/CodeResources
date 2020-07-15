@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		okZPm2Ckh+ClDqMsg8W1bnLJhvM=
+		blU/RrsnIiYES1BsVCTYxl+R/yQ=
 		</data>
 		<key>CustomNavigationBar.nib/objects-13.0+.nib</key>
 		<data>
-		p5XSTKgpxBAYqv8eo2sw2MIoMfM=
+		rJmnYkDbaz/bfHp6Cw+/uuHzXqQ=
 		</data>
 		<key>CustomNavigationBar.nib/runtime.nib</key>
 		<data>
-		cmPk0bUrlwGM/0m+QRYj5+MGzhI=
+		zNriREoKKb0+CVIfVV4I4dICGps=
 		</data>
 		<key>Headers/CNavBarLib.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/OakLib-Swift.h</key>
 		<data>
-		8THRp2DIqvyVcI6IGu4h79enG2Y=
+		m0GvlJFp8Sc3tWfo8VGdv42hoy0=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -34,19 +34,27 @@
 		</data>
 		<key>Modules/OakLib.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		mjwe4HaH5XHqKIpQjPAtVvIFoXI=
+		n5YzZsOq47q7OsmhH4se6rpr21c=
+		</data>
+		<key>Modules/OakLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<data>
+		zLs1e8Ejcgl//9qZuVQ8rnfd6qU=
 		</data>
 		<key>Modules/OakLib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uUQjqlb1cjAeSsDifPrLcNiKN14=
+		OKEDZZVa/TurSMWnPSqOXtPGwns=
 		</data>
 		<key>Modules/OakLib.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		mjwe4HaH5XHqKIpQjPAtVvIFoXI=
+		n5YzZsOq47q7OsmhH4se6rpr21c=
+		</data>
+		<key>Modules/OakLib.swiftmodule/x86_64.swiftinterface</key>
+		<data>
+		zLs1e8Ejcgl//9qZuVQ8rnfd6qU=
 		</data>
 		<key>Modules/OakLib.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		uUQjqlb1cjAeSsDifPrLcNiKN14=
+		OKEDZZVa/TurSMWnPSqOXtPGwns=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,21 +67,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BZHTpMTTXLAuaPZ5waR98b9qVlf/ZZMsP3vilnYgs9g=
+			LILwLIHToyhYmbQkrL4TBY38TUCW5vGXUJhLcS+qnLk=
 			</data>
 		</dict>
 		<key>CustomNavigationBar.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Blgzbr7R8slc7/m1fDQvs+7ZsypIgZg0H5SFtbJ7084=
+			sLkAWrP0juVh3tJHRGhAv3EsP4HASNchQnivxFkNBQU=
 			</data>
 		</dict>
 		<key>CustomNavigationBar.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jh1rVuIRnzxzCBzXAA+jhS7LXL0ZhYP8U4xKmnpNZ0M=
+			Z4stSASXFRlmRlA/9scslR03Mz2tuaol7q8CRYMMCNU=
 			</data>
 		</dict>
 		<key>Headers/CNavBarLib.h</key>
@@ -87,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K50F7NK1nwN8TWjBLrhXt7V0x5Qx2HT3qoauc3bxCbY=
+			PC2Zb2VB4xt12cEO7+RKtlVLh3hMRb4ykekph62lD/4=
 			</data>
 		</dict>
 		<key>LICENSE</key>
@@ -101,28 +109,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8wvctD/Gqprp+9ywRpQEWyGvbbllwsJtGTiaW2faCJ0=
+			98/nSCksZcUimPJ6RuwbZdFGuDB3xljVFG6M/7+Klbg=
+			</data>
+		</dict>
+		<key>Modules/OakLib.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qpUSlVfDVNl9nCZn6B8q390DavGKuII9FsOyZ0cpmrA=
 			</data>
 		</dict>
 		<key>Modules/OakLib.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vD3Hta+oKOyeP/RoON9+EsvPDCDLhAG7euMuJ7tgGL4=
+			WB4tq7q34mMxdwaIeiZq0NNodihUeprE376WzcH6aug=
 			</data>
 		</dict>
 		<key>Modules/OakLib.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8wvctD/Gqprp+9ywRpQEWyGvbbllwsJtGTiaW2faCJ0=
+			98/nSCksZcUimPJ6RuwbZdFGuDB3xljVFG6M/7+Klbg=
+			</data>
+		</dict>
+		<key>Modules/OakLib.swiftmodule/x86_64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qpUSlVfDVNl9nCZn6B8q390DavGKuII9FsOyZ0cpmrA=
 			</data>
 		</dict>
 		<key>Modules/OakLib.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vD3Hta+oKOyeP/RoON9+EsvPDCDLhAG7euMuJ7tgGL4=
+			WB4tq7q34mMxdwaIeiZq0NNodihUeprE376WzcH6aug=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

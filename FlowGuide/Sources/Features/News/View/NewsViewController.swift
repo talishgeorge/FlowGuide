@@ -8,6 +8,7 @@
 
 import UIKit
 import UtilitiesLib
+import OakLib
 
 /// Protocol
 protocol NewsViewControllerDelegate: class {
