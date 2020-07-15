@@ -492,7 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				8394EA672478C88C002FA8EF /* GoogleService-Info.plist */,
-				8335710E247BA086002E26A0 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -527,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				8324DF0924BF3A540026B884 /* Global.swift */,
+				8335710E247BA086002E26A0 /* Localizable.strings */,
 				83A4361424BF82E000F63D02 /* Protocol */,
 			);
 			path = Localization;

@@ -4,6 +4,7 @@
 //  
 
 import Foundation
+
 extension String {
     enum Global: String, Localizable {
         case cancel
