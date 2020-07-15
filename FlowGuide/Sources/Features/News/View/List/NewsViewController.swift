@@ -12,7 +12,7 @@ import UtilitiesLib
 
 /// Protocol
 protocol NewsViewControllerDelegate: class {
-    func loadData(vm: CategoryListViewModel)
+    func loadData()
     func showError(error: Error?)
 }
 

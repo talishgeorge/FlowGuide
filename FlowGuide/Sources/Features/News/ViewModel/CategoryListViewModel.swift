@@ -9,26 +9,25 @@ import Foundation
 import UIKit
 
 /// Category List Model
-struct CategoryListViewModel {
+class CategoryListViewModel {
     
     // MARK: - Properties
-    
-    private(set) var categories: [Category] = []
     weak var delegate: NewsViewControllerDelegate?
-    var newsService: WebService = WebService()
+    private(set) var categories: [Category] = []
+    private let newsService: WebService = WebService()
 }
 
 extension CategoryListViewModel {
     
     /// Return Number of Sections for UITableView
     var numberOfSections: Int {
-        return self.categories.count
+        categories.count
     }
     
     /// Return Number of Rows in Sections for UITableView
     /// - Parameter section: Int Value
     func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.categories[section].articles.count
+        categories[section].articles.count
     }
 }
 
@@ -37,7 +36,7 @@ extension CategoryListViewModel {
     /// Return Category ViewModel
     /// - Parameter index: Int Value
     func categoryAtIndex(index: Int) -> CategoryViewModel {
-        return CategoryViewModel(name: categories[index].title, articles: categories[index].articles)
+        CategoryViewModel(name: categories[index].title, articles: categories[index].articles)
     }
     
     /// Return Article For Section
@@ -45,22 +44,24 @@ extension CategoryListViewModel {
     ///   - section: Int Value
     ///   - index: Int Value
     func articleForSectionAtIndex(section: Int, index: Int) -> ArticleViewModel {
-        return categoryAtIndex(index: section).articleAtIndex(index)
+        categoryAtIndex(index: section).articleAtIndex(index)
     }
     
     /// Fetch News
     /// - Parameter category: String
     func fetchNews(by category: String) {
-        self.newsService.getNewsData(category: category, success: { news in
-            self.delegate?.loadData(vm: CategoryListViewModel(categories: news))
+        let closureSelf = self
+        newsService.getNewsData(category: category, success: { news in
+            closureSelf.categories = news
+            closureSelf.delegate?.loadData()
         }, failure: { error in
-            self.delegate?.showError(error: error)
+            closureSelf.delegate?.showError(error: error)
         })
     }
     
     /// Show offline data
     func showOfflineData() {
-        self.delegate?.loadData(vm: CategoryListViewModel(categories: Category.loadLocalData()))
+        self.delegate?.loadData()
     }
 }
 
