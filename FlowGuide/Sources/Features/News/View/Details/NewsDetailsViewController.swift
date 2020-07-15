@@ -25,14 +25,9 @@ final class NewsDetailsViewController: BaseViewController {
         MBProgressHUD.showAdded(to: view, animated: true)
         setupUI()
     }
-    
-    /// Update UI with Values
-    func updateUI() {
-        titleLabel.text = newsDetailsVM.article.title
-        descriptionLabel.text = newsDetailsVM.article.description
-    }
 }
 
+// MARK: - Internal Methods
 private extension NewsDetailsViewController {
     
     /// Initial UI Setup
@@ -49,6 +44,8 @@ private extension NewsDetailsViewController {
     }
 }
 
+// MARK: - Delegate Methods
+
 extension NewsDetailsViewController: WKNavigationDelegate {
     
     /// WebView Delegate
@@ -56,7 +53,6 @@ extension NewsDetailsViewController: WKNavigationDelegate {
     ///   - webView: Start Loading
     ///   - navigation:
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        print("Start loading")
     }
     
     /// WebView Delegate
@@ -64,7 +60,6 @@ extension NewsDetailsViewController: WKNavigationDelegate {
     ///   - webView: Finish Loading
     ///   - navigation: 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("End loading")
         MBProgressHUD.hide(for: self.view, animated: true)
     }
 }

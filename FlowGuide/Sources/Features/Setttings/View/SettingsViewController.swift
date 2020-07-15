@@ -70,11 +70,7 @@ private extension SettingsViewController {
             case .success:
                 PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure(let error):
-                Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
-                    switch dismissalType {
-                    case .tapped: print("Tapped!")
-                    case .timedOut: print("Timmed out!")
-                    }
+                Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { _ in
                 }
             }
             MBProgressHUD.hide(for: this.view, animated: true)

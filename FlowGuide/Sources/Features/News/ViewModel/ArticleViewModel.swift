@@ -14,14 +14,15 @@ struct ArticleViewModel {
     private(set) var article: Article
 }
 
+// MARK: - Internal Methods
 extension ArticleViewModel {
-    
-    // MARK: - Initilization
-    
+        
     init(_ article: Article) {
         self.article = article
     }
 }
+
+// MARK: - Internal Methods for Article Model
 
 extension ArticleViewModel {
  

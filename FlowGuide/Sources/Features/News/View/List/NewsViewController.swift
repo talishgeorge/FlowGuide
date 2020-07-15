@@ -55,6 +55,7 @@ final class NewsViewController: BaseViewController {
         }
     }
 }
+// MARK: - Internal Methods
 
 private extension NewsViewController {
     /// Fetch News by category

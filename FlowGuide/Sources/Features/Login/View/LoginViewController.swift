@@ -212,7 +212,7 @@ private extension LoginViewController {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
 }
-
+// MARK: - Delegate Methods
 extension LoginViewController: UITextFieldDelegate {
     
     /// UITextField Delegate for set values to ViewModel
