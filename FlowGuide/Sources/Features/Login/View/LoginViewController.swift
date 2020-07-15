@@ -100,9 +100,9 @@ private extension LoginViewController {
         emailView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         passwordView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         confirmPswdView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
-        emailView.layer.borderWidth = 1
-        passwordView.layer.borderWidth = 1
-        confirmPswdView.layer.borderWidth = 1
+        emailView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
+        passwordView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
+        confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         configureButtonUI(customButton: loginButtonView, viewButton: loginButton)
         configureButtonUI(customButton: signUpButtonView, viewButton: sigunpButton)
     }

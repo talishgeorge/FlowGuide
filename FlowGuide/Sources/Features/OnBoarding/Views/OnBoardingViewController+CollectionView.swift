@@ -51,6 +51,6 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     ///   - collectionViewLayout: CollectionView Layout
     ///   - section: Section Int
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         0
+        CGFloat(OnBoardingConstants.minimumLineSpacingForSection)
     }
 }

@@ -25,7 +25,7 @@ final class LoadingViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showLoading()
-        delay(durationInSeconds: 2.5, completion: {
+        delay(durationInSeconds: LoadingConstants.delayInSeconds, completion: {
             self.showInitialView()
         })
     }
@@ -34,7 +34,7 @@ final class LoadingViewController: BaseViewController {
     
     /// Show Loading
     func showLoading() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.40, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: LoadingConstants.timerInterval, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
                 case String.Loading.loading1.localized:

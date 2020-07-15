@@ -11,8 +11,12 @@ enum ThemeColor: String {
     case themeBlueTop = "ThemeBlueTop"
     case themeBottom = "ThemeBottom"
     case navigationTintHex = "#F3F3F3"
+    case viewBorderColour = "ViewBorderColour"
 }
 
 enum FontType: String {
     case avenirNextCondensed = "Avenir Next Condensed"
+}
+enum FontSize: Int {
+    case tabBarFontSize = 18
 }

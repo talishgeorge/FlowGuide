@@ -47,8 +47,8 @@ extension SettingsViewController {
     /// Initial SetUp
     private func setupViews() {
         self.title = SettingsLocalization.settings.localized
-        pushNotificationView.layer.borderWidth = 1
-        pushNotificationView.layer.borderColor = UIColor(named: "ViewBorderColour")?.cgColor
+        pushNotificationView.layer.borderWidth = CGFloat(SettingsConstants.viewBorderWidth)
+        pushNotificationView.layer.borderColor = UIColor(named: ThemeColor.viewBorderColour.rawValue)?.cgColor
     }
 }
 
@@ -59,7 +59,7 @@ private extension SettingsViewController {
     /// Logout the current user
     func logout() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        delay(durationInSeconds: 2.0) { [weak self] in
+        delay(durationInSeconds: SettingsConstants.delayInSeconds) { [weak self] in
             guard let this = self else {
                 return
             }
