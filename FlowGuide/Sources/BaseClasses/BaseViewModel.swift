@@ -17,7 +17,7 @@ class BaseViewModel: NSObject {
     var email: String?
     var confirmPassword: String?
     var isReachable: Bool {
-        return Connectivity.isReachable
+         Connectivity.isReachable
     }
     
     /// Init

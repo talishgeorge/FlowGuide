@@ -17,7 +17,7 @@ extension String {
         case loading3 = "loading_3"
         case loading = "loading_0"
         var tableName: String {
-            return "Loading"
+             "Loading"
         }
     }
 }

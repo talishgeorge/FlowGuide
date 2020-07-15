@@ -18,7 +18,7 @@ extension String {
         case news_details_feature = "News_Details_Screen"
         case on = "on"
         var tableName: String {
-            return "News"
+             "News"
         }
     }
 }

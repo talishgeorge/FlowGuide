@@ -23,7 +23,7 @@ extension String {
         case loginError = "Something went wrong"
         case loginErrorMessage = "Do you want to continue without SignIn"
         var tableName: String {
-            return "Login"
+            "Login"
         }
     }
 }

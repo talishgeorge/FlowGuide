@@ -75,6 +75,6 @@ extension LoginViewModel {
     
     /// Return isUser Loggedin as Bool
     static func isUserLoggedIn() -> Bool {
-        return Auth.auth().currentUser != nil
+         Auth.auth().currentUser != nil
     }
 }

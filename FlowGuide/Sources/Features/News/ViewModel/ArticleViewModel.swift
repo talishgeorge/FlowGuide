@@ -28,12 +28,12 @@ extension ArticleViewModel {
  
     /// Title
     var title: String {
-        return self.article.title ?? ""
+         self.article.title ?? ""
     }
     
     /// Description
     var description: String? {
-        return self.article.description
+         self.article.description
     }
     
     /// Set Image from URL

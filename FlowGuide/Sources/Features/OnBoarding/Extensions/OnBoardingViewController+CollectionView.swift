@@ -33,7 +33,7 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     ///   - collectionView: Return OnBoarding Items Count
     ///   - section: Section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.getOnboardingItemCount()
+         viewModel.getOnboardingItemCount()
     }
     
     /// CollectonView delegate
@@ -42,7 +42,7 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     ///   - collectionViewLayout: UICollectionView Layout
     ///   - indexPath: Index Path
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
+         collectionView.frame.size
     }
     
     /// CollectionView Spacing for Section
@@ -51,6 +51,6 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     ///   - collectionViewLayout: CollectionView Layout
     ///   - section: Section Int
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+         0
     }
 }
