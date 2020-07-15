@@ -6,5 +6,5 @@
   Copyright © 2020 TCS. All rights reserved.
 */
 //Global
-"cancel" = "Avbryt";
-"ok" = "Ok";
+"cancel_key" = "Avbryt";
+"ok_key" = "Ok";

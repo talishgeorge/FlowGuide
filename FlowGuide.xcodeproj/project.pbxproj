@@ -326,8 +326,9 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8324DEFE24BEFC5F0026B884 /* Constants */,
+				8324DEFD24BEFC4C0026B884 /* Extensions */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,
-				838FBA0024BEEF72008F7E24 /* String+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -382,6 +383,21 @@
 				83357117247BDEA8002E26A0 /* OnBoardingItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8324DEFD24BEFC4C0026B884 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				838FBA0024BEEF72008F7E24 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8324DEFE24BEFC5F0026B884 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		833570DD247A65FA002E26A0 /* BaseClasses */ = {
