@@ -18,9 +18,6 @@ protocol NewsViewControllerDelegate: class {
 
 /// News ViewController
 final class NewsViewController: BaseViewController {
-    
-    // MARK: - Properties
-    
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var categoryListVM = CategoryListViewModel()

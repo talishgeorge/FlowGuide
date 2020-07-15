@@ -11,8 +11,6 @@ import UIKit
 
 /// Article View Model
 struct ArticleViewModel {
-    // MARK: - Properties
-    
     private(set) var article: Article
 }
 
@@ -26,9 +24,7 @@ extension ArticleViewModel {
 }
 
 extension ArticleViewModel {
-    
-    // MARK: - Properties
-    
+ 
     /// Title
     var title: String {
         return self.article.title ?? ""

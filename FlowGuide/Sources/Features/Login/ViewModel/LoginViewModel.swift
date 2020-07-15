@@ -11,9 +11,7 @@ import UtilitiesLib
 
 /// Login ViewModel
 final class LoginViewModel: BaseViewModel {
-    
-    // MARK: - Properties
-  
+ 
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
             let password = password, !password.isEmpty else {

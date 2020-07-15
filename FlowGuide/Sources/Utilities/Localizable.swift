@@ -12,9 +12,7 @@ protocol Localizable {
 }
 
 extension Localizable where Self: RawRepresentable, Self.RawValue == String {
-     
-    // MARK: - Properties
-    
+ 
     var localized: String {
         rawValue.localized()
     }

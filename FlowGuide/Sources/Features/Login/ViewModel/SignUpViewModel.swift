@@ -11,9 +11,6 @@ import UtilitiesLib
 
 /// SignUp View Model
 final class SignUpViewModel: BaseViewModel {
-    
-    // MARK: - Properties
-    
     /// Validate Email and Password from form.
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,

@@ -9,10 +9,7 @@
 import Foundation
 
 /// News Details Model
-struct NewsDetailsViewModel {
-    
-    // MARK: - Properties
-    
+struct NewsDetailsViewModel { 
     let article: Article
 }
 
@@ -26,9 +23,6 @@ extension NewsDetailsViewModel {
 }
 
 extension NewsDetailsViewModel {
-    
-    // MARK: - Properties
-    
     /// Source name
     var sourceName: String {
         return self.article.sourceName

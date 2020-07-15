@@ -12,9 +12,7 @@ import Firebase
 import UtilitiesLib
 
 class SDKManager {
-    
-    // MARK: - Properties
-    
+ 
     static public let shared = SDKManager()
     let apiKey: String = SplitAPI.apiKey
     let key: Key = Key(matchingKey: SplitAPI.customerID)

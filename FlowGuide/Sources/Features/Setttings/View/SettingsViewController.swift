@@ -16,8 +16,6 @@ import UtilitiesLib
 class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
-    // MARK: - Properties
-    
     private let loginViewModel = LoginViewModel()
     
     // MARK: - View Life Cycle

@@ -12,9 +12,7 @@ import MBProgressHUD
 
 /// News Details ViewController
 class NewsDetailsViewController: BaseViewController {
-    
-    // MARK: - Properties
-    
+ 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var webview: WKWebView!

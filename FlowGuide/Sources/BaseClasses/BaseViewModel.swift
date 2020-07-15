@@ -12,8 +12,6 @@ import SBNLib
 /// Base View Model
 class BaseViewModel: NSObject {
     
-    // MARK: - Properties
-    
     let auth = Auth.auth()
     var password: String?
     var email: String?

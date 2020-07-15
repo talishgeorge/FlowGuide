@@ -14,9 +14,7 @@ struct OnboardingItemInfo {
 
 /// OnBoarding View Model
 final class OnBoardingViewModel: BaseViewModel {
-    
-    // MARK: - Properties
-    
+  
     /// Current Onboarding item
     var currentSlide: OnBoardingItem? = OnBoardingItem()
     
