@@ -5,3 +5,11 @@
   Created by TCS on 15/07/20.
   Copyright © 2020 TCS. All rights reserved.
 */
+"title" = "Title";
+"newsFecthError" = "Something went wrong";
+"newsFetchErrorMessage" = "Load local JSON data?";
+"featureEnableInfo" = "Feature is not available";
+"newsDetailsFeature" = "News_Details_Screen";
+"on" = "On";
+
+

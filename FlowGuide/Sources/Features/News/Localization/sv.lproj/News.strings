@@ -5,3 +5,9 @@
   Created by TCS on 15/07/20.
   Copyright © 2020 TCS. All rights reserved.
 */
+"title" = "Titel";
+"newsFecthError" = "Något gick fel";
+"newsFetchErrorMessage" = "Ladda lokala JSON-data?";
+"featureEnableInfo" = "Funktionen är inte tillgänglig";
+"newsDetailsFeature" = "News_Details_Screen";
+"on" = "På";

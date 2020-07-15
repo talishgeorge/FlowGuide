@@ -11,12 +11,12 @@ import Foundation
 /// News Localization
 extension String {
     enum News: String, Localizable {
-        case title = "title_label"
-        case newsFecthError = "Something went wrong"
-        case newsFetchErrorMessage = "Load local JSON data?"
-        case feature_enable_info = "Feature is not available"
-        case news_details_feature = "News_Details_Screen"
-        case on = "on"
+        case title
+        case newsFecthError
+        case newsFetchErrorMessage
+        case featureEnableInfo
+        case newsDetailsFeature
+        case on
         var tableName: String {
              "News"
         }

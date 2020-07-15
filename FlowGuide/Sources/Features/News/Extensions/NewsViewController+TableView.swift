@@ -69,7 +69,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         if let featureFlag = SDKManager.shared.featureFlag, featureFlag == true {
             performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
-            Loaf(String.News.feature_enable_info.localized, state: .error, location: .top, sender: self).show()
+            Loaf(String.News.featureEnableInfo.localized, state: .error, location: .top, sender: self).show()
         }
     }
     
