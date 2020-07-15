@@ -6,7 +6,6 @@ target 'FlowGuide' do
   use_frameworks!
 
   # Pods for FlowGuide
-  pod 'MBProgressHUD', '~> 1.2.0'
   pod 'Firebase/Auth'
   pod 'Loaf'
   pod 'SwiftLint'
