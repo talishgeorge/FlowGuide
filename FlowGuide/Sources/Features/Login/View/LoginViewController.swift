@@ -162,6 +162,7 @@ private extension LoginViewController {
                     case .success:
                         this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
+                        self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
                         self?.view.popup.style.bar.hideAfterDelaySeconds = 3
                         self?.view.popup.success(error.localizedDescription)
                     }
