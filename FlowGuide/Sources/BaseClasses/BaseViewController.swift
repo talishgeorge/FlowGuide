@@ -67,7 +67,7 @@ extension BaseViewController {
     }
     
     func setBackGroungColor(_ rgb: Int) -> UIColor {
-        return UIColor(hex: rgb)
+         UIColor(hex: rgb)
     }
     
     /// Hide Keyboard

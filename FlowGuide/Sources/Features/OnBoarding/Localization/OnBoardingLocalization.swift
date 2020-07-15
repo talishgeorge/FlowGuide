@@ -14,7 +14,7 @@ extension String {
         case onboardingTitle2
         case onboardingTitle3
         var tableName: String {
-            return "OnBoarding"
+             "OnBoarding"
         }
     }
 }

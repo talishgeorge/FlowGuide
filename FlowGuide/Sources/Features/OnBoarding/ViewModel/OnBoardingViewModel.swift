@@ -62,7 +62,7 @@ extension OnBoardingViewModel {
     
     /// Get Onboard Item Count
     func getOnboardingItemCount() -> Int {
-        return OnBoardingItem.colllection.count
+         OnBoardingItem.colllection.count
     }
     
     /// Get Onboard Item Image
