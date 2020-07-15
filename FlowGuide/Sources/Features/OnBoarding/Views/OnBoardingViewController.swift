@@ -74,7 +74,6 @@ private extension OnBoardingViewController {
     private func setupUIForLocalization() {
         getStartedButton.setTitle(String.OnBoarding.getStarted.localized, for: .normal)
         configureButtonUI(customButton: getStartedView, viewButton: getStartedButton)
-        
     }
 }
 

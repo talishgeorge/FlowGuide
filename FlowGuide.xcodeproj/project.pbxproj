@@ -49,8 +49,8 @@
 		831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */; };
 		831E96FE24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
 		831E96FF24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
-		8324DF0A24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
-		8324DF0B24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
+		8324DF0A24BF3A540026B884 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* Global.swift */; };
+		8324DF0B24BF3A540026B884 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* Global.swift */; };
 		832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -173,7 +173,7 @@
 		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		831E96FD24AC5416006D39B7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		8324DF0924BF3A540026B884 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		8324DF0924BF3A540026B884 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		833570DE247A660D002E26A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -526,8 +526,8 @@
 		838FBA1B24BEF9C8008F7E24 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				8388D86124ACAA0100CAC649 /* Localizable.swift */,
-				8324DF0924BF3A540026B884 /* App.swift */,
+				8324DF0924BF3A540026B884 /* Global.swift */,
+				83A4361424BF82E000F63D02 /* Protocol */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -718,6 +718,14 @@
 				831523F3246F800C00F48DDA /* Setttings */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		83A4361424BF82E000F63D02 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8388D86124ACAA0100CAC649 /* Localizable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		83F30CBA249CF0D3008B2B53 /* SDKManager */ = {
@@ -966,7 +974,7 @@
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
-				8324DF0A24BF3A540026B884 /* App.swift in Sources */,
+				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
 				833570EB247AA2C1002E26A0 /* Styles.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
@@ -1010,7 +1018,7 @@
 				83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				52546D5924BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */,
-				8324DF0B24BF3A540026B884 /* App.swift in Sources */,
+				8324DF0B24BF3A540026B884 /* Global.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
