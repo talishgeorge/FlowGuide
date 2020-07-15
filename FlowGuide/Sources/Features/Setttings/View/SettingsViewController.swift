@@ -69,7 +69,7 @@ private extension SettingsViewController {
                 PresenterManager.shared.show(viewMode: .onBoarding)
             case .failure( _):
                 self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
-                self?.view.popup.style.bar.hideAfterDelaySeconds = 3
+                self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
                 self?.view.popup.success(String.News.featureEnableInfo.localized)
             }
             ActivityIndicator.dismiss()

@@ -107,6 +107,8 @@
 		8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9FA2477BF1D002FA8EF /* NewsDetailsViewController.swift */; };
 		8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394E9FB2477BF1D002FA8EF /* NewsViewController.swift */; };
 		8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8394EA672478C88C002FA8EF /* GoogleService-Info.plist */; };
+		83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4361524BF83E800F63D02 /* AppConstants.swift */; };
+		83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4361524BF83E800F63D02 /* AppConstants.swift */; };
 		83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */; };
@@ -210,6 +212,7 @@
 		8394E9FA2477BF1D002FA8EF /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		8394E9FB2477BF1D002FA8EF /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		8394EA672478C88C002FA8EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83A4361524BF83E800F63D02 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		83B0176B24A603D300A1D88D /* SettingsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocalization.swift; sourceTree = "<group>"; };
 		83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+LoadData.swift"; sourceTree = "<group>"; };
 		83F30CB7249CAB60008B2B53 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
@@ -465,6 +468,7 @@
 		8324DEFE24BEFC5F0026B884 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				83A4361524BF83E800F63D02 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -996,6 +1000,7 @@
 				52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
+				83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
 				8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
@@ -1026,6 +1031,7 @@
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,
 				524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
+				83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				838FBA0224BEEF72008F7E24 /* String+Extension.swift in Sources */,

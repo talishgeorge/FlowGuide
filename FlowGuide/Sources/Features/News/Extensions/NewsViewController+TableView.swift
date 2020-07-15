@@ -69,7 +69,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
           view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
-           view.popup.style.bar.hideAfterDelaySeconds = 3
+           view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
            view.popup.success(String.News.featureEnableInfo.localized)
         }
     }

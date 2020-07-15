@@ -11,7 +11,7 @@ import OakLib
 
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
-  
+    
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -163,7 +163,7 @@ private extension LoginViewController {
                         this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
                         self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
-                        self?.view.popup.style.bar.hideAfterDelaySeconds = 3
+                        self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
                         self?.view.popup.success(error.localizedDescription)
                     }
                 }
