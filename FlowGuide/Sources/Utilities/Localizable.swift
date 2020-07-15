@@ -8,12 +8,12 @@
 
 /// Localization
 protocol Localizable {
+    var tableName: String { get }
     var localized: String { get }
 }
 
 extension Localizable where Self: RawRepresentable, Self.RawValue == String {
- 
     var localized: String {
-        rawValue.localized()
+        rawValue.localized(tableName: tableName)
     }
 }

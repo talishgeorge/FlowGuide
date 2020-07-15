@@ -12,4 +12,7 @@ enum OnBoardingLocalization: String, Localizable {
     case onboarding_title1_key = "onboarding_title1"
     case onboarding_title2_key = "onboarding_title2"
     case onboarding_title3_key = "onboarding_title3"
+    var tableName: String {
+           return "Localizable"
+       }
 }

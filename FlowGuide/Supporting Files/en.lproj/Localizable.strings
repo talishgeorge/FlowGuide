@@ -19,7 +19,6 @@
 "check_email" = "Please check your email to find the reset link.";
 "invalid_form" = "Invalid Form";
 "password_incorrect" = "Passwords are incorrect";
-"login" = "Login";
 "signup" = "Sign up";
 "email" = "Email";
 "password" = "Password";

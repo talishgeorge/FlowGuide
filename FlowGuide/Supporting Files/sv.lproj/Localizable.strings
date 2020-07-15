@@ -19,7 +19,6 @@
 "check_email" = "Kontrollera din e-post för att hitta återställningslänken.";
 "invalid_form" = "Ogiltig form";
 "password_incorrect" = "Lösenord är felaktiga";
-"login" = "Logga in";
 "signup" = "Bli Medlem";
 "email" = "E-post";
 "password" = "Lösenord";

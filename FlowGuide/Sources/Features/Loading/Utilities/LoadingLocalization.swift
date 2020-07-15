@@ -9,9 +9,13 @@
 import Foundation
 
 /// Loading Localizatioin
+
 enum LoadingLocalization: String, Localizable {
     case loading1 = "loading_1"
     case loading2 = "loading_2"
     case loading3 = "loading_3"
     case loading = "loading_0"
+    var tableName: String {
+        return "Localizable"
+    }
 }

@@ -89,14 +89,14 @@ private extension LoginViewController {
     
     /// Setup Localization
     private func setupUIForLocalization() {
-        forgotPasswordButton.setTitle(LoginLocalization.forget_password.localized, for: .normal)
-        sigunpButton.setTitle(LoginLocalization.signup.localized, for: .normal)
-        loginButton.setTitle(LoginLocalization.login.localized, for: .normal)
-        emailTextField.placeholder = LoginLocalization.email.localized
-        passwordTextField.placeholder = LoginLocalization.password.localized
-        confirmPasswordTextField.placeholder = LoginLocalization.confirm_password.localized
-        segmentedControll.setTitle(LoginLocalization.login.localized, forSegmentAt: 0)
-        segmentedControll.setTitle(LoginLocalization.signup.localized, forSegmentAt: 1)
+        forgotPasswordButton.setTitle(String.Login.forget_password.localized, for: .normal)
+        sigunpButton.setTitle(String.Login.signup.localized, for: .normal)
+        loginButton.setTitle(String.Login.login.localized, for: .normal)
+        emailTextField.placeholder = String.Login.email.localized
+        passwordTextField.placeholder = String.Login.password.localized
+        confirmPasswordTextField.placeholder = String.Login.confirm_password.localized
+        segmentedControll.setTitle(String.Login.login.localized, forSegmentAt: 0)
+        segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
         cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         emailView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         passwordView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
@@ -118,7 +118,7 @@ private extension LoginViewController {
     @IBAction private func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
-            showErrorMessage(text: LoginLocalization.invalid_form.localized)
+            showErrorMessage(text: String.Login.invalid_form.localized)
             return
         }
         
@@ -133,7 +133,7 @@ private extension LoginViewController {
                 this.delegate?.showMainTabBarController()
             case .failure(let error):
                 this.showErrorMessage(text: error.localizedDescription)
-                self?.presentAlertWithTitle(title: LoginLocalization.loginError.localized, message: LoginLocalization.loginErrorMessage.localized, options: LoginLocalization.ok.localized, LoginLocalization.cancel.localized) { (value) in
+                self?.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Login.ok.localized, String.Login.cancel.localized) { (value) in
                     if value == 0 {
                         this.delegate?.showMainTabBarController()
                     }
@@ -145,10 +145,10 @@ private extension LoginViewController {
     /// Forgot Password Button
     /// - Parameter sender: UIButton
     @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
-        let alertController = UIAlertController(title: LoginLocalization.forget_password.localized, message: LoginLocalization.enter_email.localized, preferredStyle: .alert)
+        let alertController = UIAlertController(title: String.Login.forget_password.localized, message: String.Login.enter_email.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
-        let cancelAction = UIAlertAction(title: LoginLocalization.cancel.localized, style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: LoginLocalization.ok.localized, style: .default) { [weak self] (_) in
+        let cancelAction = UIAlertAction(title: String.Login.cancel.localized, style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: String.Login.ok.localized, style: .default) { [weak self] (_) in
             guard let this = self else {
                 return
             }
@@ -160,7 +160,7 @@ private extension LoginViewController {
                     }
                     switch result {
                     case .success:
-                        this.showAlert(title: LoginLocalization.password_reset.localized, message: LoginLocalization.check_email.localized)
+                        this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.check_email.localized)
                     case .failure(let error):
                         Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { dismissalType in
                             switch dismissalType {
@@ -184,11 +184,11 @@ private extension LoginViewController {
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmationPassword = confirmPasswordTextField.text, signUpViewModel.formIsValid else {
-                showErrorMessage(text: LoginLocalization.invalid_form.localized)
+                showErrorMessage(text: String.Login.invalid_form.localized)
                 return
         }
         guard password == confirmationPassword else {
-            showErrorMessage(text: LoginLocalization.password_incorrect.localized)
+            showErrorMessage(text: String.Login.password_incorrect.localized)
             return
         }
         MBProgressHUD.showAdded(to: view, animated: true)

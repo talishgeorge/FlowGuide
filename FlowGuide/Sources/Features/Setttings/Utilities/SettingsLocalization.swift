@@ -11,4 +11,7 @@ import Foundation
 /// News Localization
 enum SettingsLocalization: String, Localizable {
     case settings = "Settings"
+    var tableName: String {
+           return "Localizable"
+       }
 }
