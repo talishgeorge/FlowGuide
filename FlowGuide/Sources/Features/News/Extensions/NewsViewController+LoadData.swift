@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import MBProgressHUD
 
 extension NewsViewController: NewsViewControllerDelegate {
     
@@ -16,7 +15,7 @@ extension NewsViewController: NewsViewControllerDelegate {
     func loadData() {
         
         self.tableView.reloadData()
-        MBProgressHUD.hide(for: self.view, animated: true)
+        ActivityIndicator.dismiss()
     }
     
     /// ShowError

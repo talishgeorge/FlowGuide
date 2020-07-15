@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 import Loaf
 import OakLib
 import UtilitiesLib
@@ -59,7 +58,7 @@ private extension SettingsViewController {
     
     /// Logout the current user
     func logout() {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ActivityIndicator.show(String.Global.pleaseWait.localized)
         delay(durationInSeconds: 2.0) { [weak self] in
             guard let this = self else {
                 return
@@ -73,7 +72,7 @@ private extension SettingsViewController {
                 Loaf(error.localizedDescription, state: .error, location: .top, sender: this).show(.custom(20)) { _ in
                 }
             }
-            MBProgressHUD.hide(for: this.view, animated: true)
+            ActivityIndicator.dismiss()
         }
     }
     

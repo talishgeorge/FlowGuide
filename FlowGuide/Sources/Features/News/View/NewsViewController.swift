@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 import UtilitiesLib
 
 /// Protocol
@@ -60,7 +59,7 @@ final class NewsViewController: BaseViewController {
 private extension NewsViewController {
     /// Fetch News by category
     func populateNews() {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ActivityIndicator.show(String.Global.pleaseWait.localized)
         categoryListVM.fetchNews(by: ApiConstants.newsCategory)
     }
 }

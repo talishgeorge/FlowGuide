@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import MBProgressHUD
 
 /// News Details ViewController
 final class NewsDetailsViewController: BaseViewController {
@@ -22,7 +21,7 @@ final class NewsDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ActivityIndicator.show(String.Global.pleaseWait.localized)
         setupUI()
     }
 }
@@ -60,6 +59,6 @@ extension NewsDetailsViewController: WKNavigationDelegate {
     ///   - webView: Finish Loading
     ///   - navigation: 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        MBProgressHUD.hide(for: self.view, animated: true)
+        ActivityIndicator.dismiss()
     }
 }

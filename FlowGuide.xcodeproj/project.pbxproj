@@ -37,6 +37,14 @@
 		831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */; };
 		831E96FE24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
 		831E96FF24AC5416006D39B7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E96FD24AC5416006D39B7 /* WebService.swift */; };
+		8324DF0324BF36C00026B884 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0024BF36C00026B884 /* ActivityIndicatorView.swift */; };
+		8324DF0424BF36C00026B884 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0024BF36C00026B884 /* ActivityIndicatorView.swift */; };
+		8324DF0524BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0124BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift */; };
+		8324DF0624BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0124BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift */; };
+		8324DF0724BF36C00026B884 /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */; };
+		8324DF0824BF36C00026B884 /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */; };
+		8324DF0A24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
+		8324DF0B24BF3A540026B884 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8324DF0924BF3A540026B884 /* App.swift */; };
 		832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -153,6 +161,10 @@
 		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		831523FD24722BD500F48DDA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		831E96FD24AC5416006D39B7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		8324DF0024BF36C00026B884 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		8324DF0124BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActivityInidicatorViewStyle+Animation.swift"; sourceTree = "<group>"; };
+		8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		8324DF0924BF3A540026B884 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		833570DE247A660D002E26A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -325,6 +337,7 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8324DEFF24BF36A00026B884 /* ActivityIndicator */,
 				8324DEFE24BEFC5F0026B884 /* Constants */,
 				8324DEFD24BEFC4C0026B884 /* Extensions */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,
@@ -399,6 +412,16 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		8324DEFF24BF36A00026B884 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				8324DF0024BF36C00026B884 /* ActivityIndicatorView.swift */,
+				8324DF0224BF36C00026B884 /* ActivityIndicatorViewStyle.swift */,
+				8324DF0124BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
 		833570DD247A65FA002E26A0 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				8388D86124ACAA0100CAC649 /* Localizable.swift */,
+				8324DF0924BF3A540026B884 /* App.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -891,6 +915,7 @@
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
+				8324DF0A24BF3A540026B884 /* App.swift in Sources */,
 				833570EB247AA2C1002E26A0 /* Styles.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
@@ -900,17 +925,20 @@
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				83357152247D8278002E26A0 /* ThemeManager.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
+				8324DF0324BF36C00026B884 /* ActivityIndicatorView.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* BaseViewModel.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
 				83357111247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */,
 				8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */,
+				8324DF0724BF36C00026B884 /* ActivityIndicatorViewStyle.swift in Sources */,
 				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
+				8324DF0524BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift in Sources */,
 				8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
 				838FBA0124BEEF72008F7E24 /* String+Extension.swift in Sources */,
@@ -924,10 +952,13 @@
 				833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */,
 				8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
+				8324DF0424BF36C00026B884 /* ActivityIndicatorView.swift in Sources */,
+				8324DF0824BF36C00026B884 /* ActivityIndicatorViewStyle.swift in Sources */,
 				833570EC247AA2C1002E26A0 /* Styles.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
+				8324DF0B24BF3A540026B884 /* App.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
@@ -943,6 +974,7 @@
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				833570E0247A660D002E26A0 /* BaseViewModel.swift in Sources */,
+				8324DF0624BF36C00026B884 /* ActivityInidicatorViewStyle+Animation.swift in Sources */,
 				83D6C00B24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

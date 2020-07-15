@@ -11,12 +11,3 @@ extension String {
     }
 }
 
-extension String {
-    enum Global: String, Localizable {
-        case cancel
-        case ok
-        var tableName: String {
-             "Localizable"
-        }
-    }
-}

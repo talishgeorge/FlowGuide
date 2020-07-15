@@ -6,7 +6,6 @@
 //  Copyright © 2020 TCS. All rights reserved.
 //
 
-import MBProgressHUD
 import Loaf
 
 /// Login ViewController Class
@@ -122,12 +121,12 @@ private extension LoginViewController {
             return
         }
         
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ActivityIndicator.show(String.Global.pleaseWait.localized)
         loginViewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
-            MBProgressHUD.hide(for: this.view, animated: true)
+            ActivityIndicator.dismiss()
             switch result {
             case .success( _):
                 this.delegate?.showMainTabBarController()
@@ -191,12 +190,12 @@ private extension LoginViewController {
             showErrorMessage(text: String.Login.passwordIncorrect.localized)
             return
         }
-        MBProgressHUD.showAdded(to: view, animated: true)
+        ActivityIndicator.show(String.Global.pleaseWait.localized)
         signUpViewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
-            MBProgressHUD.hide(for: this.view, animated: true)
+            ActivityIndicator.dismiss()
             switch result {
             case .success:
                 this.delegate?.showMainTabBarController()
