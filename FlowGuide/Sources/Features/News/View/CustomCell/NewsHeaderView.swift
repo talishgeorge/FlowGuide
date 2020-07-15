@@ -10,10 +10,8 @@ import UIKit
 import UtilitiesLib
 
 /// News Header Class
-class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
-    
-    // MARK: - Properties
-    
+final class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
+
     @IBOutlet private weak var titleLabel: UILabel!
     
     /// UpdateUI

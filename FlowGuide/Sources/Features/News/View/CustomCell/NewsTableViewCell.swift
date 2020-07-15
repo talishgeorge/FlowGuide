@@ -10,9 +10,8 @@ import UIKit
 import UtilitiesLib
 
 /// News TableView Cell
-class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
-    
-     // MARK: - Properties
+final class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
+  
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var headlineImageView: UIImageView!

@@ -10,8 +10,6 @@ import UIKit
 
 /// Configure Theme
 struct Theme {
-    
-    // MARK: - Properties
 
     static var backgroundColor: UIColor?
     static var buttonTextColor: UIColor?

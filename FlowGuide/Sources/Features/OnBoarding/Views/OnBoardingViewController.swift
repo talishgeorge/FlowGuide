@@ -17,9 +17,7 @@ protocol OnBoardingDelegate: class {
 
 /// OnBoarding View Controller
 final class OnBoardingViewController: BaseViewController {
-    
-    // MARK: - Properties
-    
+  
     @IBOutlet private weak var getStartedView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var titleLabel: UILabel!

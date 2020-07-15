@@ -11,8 +11,6 @@ import UtilitiesLib
 
 /// Category Model
 struct Category {
-    // MARK: - Properties
-
     let title: String
     let articles: [Article]
 }

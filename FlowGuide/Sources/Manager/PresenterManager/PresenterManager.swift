@@ -10,8 +10,7 @@ import UIKit
 import UtilitiesLib
 
 class PresenterManager {
-    
-    // MARK: - Properties
+   
     static let shared = PresenterManager()
     private init() {}
     

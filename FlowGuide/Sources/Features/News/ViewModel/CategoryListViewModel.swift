@@ -9,11 +9,10 @@ import Foundation
 import UIKit
 
 /// Category List Model
+
 class CategoryListViewModel {
-    
-    // MARK: - Properties
-    weak var delegate: NewsViewControllerDelegate?
     private(set) var categories: [Category] = []
+    weak var delegate: NewsViewControllerDelegate?
     private let newsService: WebService = WebService()
 }
 
@@ -67,9 +66,6 @@ extension CategoryListViewModel {
 
 /// Category view model
 struct CategoryViewModel {
-    
-    // MARK: - Properties
-    
     let name: String
     let articles: [Article]
 }

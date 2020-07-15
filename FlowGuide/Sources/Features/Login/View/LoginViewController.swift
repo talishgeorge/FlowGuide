@@ -11,9 +11,7 @@ import Loaf
 
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
-    
-    // MARK: - Properties
-    
+  
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -113,7 +111,7 @@ private extension LoginViewController {
 
 // MARK: - IBActions
 
-extension LoginViewController {
+private extension LoginViewController {
     
     /// Login Button with TextField Validations
     /// - Parameter sender: UIButton

@@ -12,9 +12,6 @@ import UtilitiesLib
 final class LoadingViewController: BaseViewController {
     
     var timer: Timer?
-    
-    // MARK: - Properties
-    
     @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
     

@@ -12,9 +12,7 @@ import Firebase
 
 /// Base ViewController for all ViewController
 class BaseViewController: UIViewController {
-    
-    // MARK: - Properties
-    
+
     public var navBar = CustomNavigationView.loadNavigationBar()
     public let auth = Auth.auth()
     

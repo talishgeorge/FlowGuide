@@ -9,9 +9,8 @@
 import UIKit
 
 /// OnBoarding Collection View Cell
-class OnBoardingCollectionViewCell: UICollectionViewCell {
-    
-    // MARK: - Properties
+final class OnBoardingCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet private weak var slideImageView: UIImageView!
     
     /// Set CollectionView Cell
