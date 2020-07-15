@@ -1,8 +1,9 @@
-//  NearestAirPortCell.swift
-//  Airports
 //
-//  Created by Talish George on 6/9/19.
-//  Copyright © 2019 Airports. All rights reserved.
+//  ActivityIndicator.swift
+//  FlowGuide
+//
+//  Created by TCS on 16/05/20.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import Foundation
@@ -154,8 +155,9 @@ public class ActivityIndicator: NSObject {
             let viewLayer = spinnerContainerView!.layer
             let animationRectsize = CGSize(width: 37, height: 37)
             ActivityIndicatorStyle().createSpinner(in: viewLayer,
-                                                 size: animationRectsize, color: spinnerColor,
-                                                 style: activityIndicatorStyle)
+                                                   size: animationRectsize,
+                                                   color: spinnerColor,
+                                                   style: activityIndicatorStyle)
         }
         
         if spinnerContainerView?.superview == nil {

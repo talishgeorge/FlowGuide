@@ -10,4 +10,3 @@ extension String {
          NSLocalizedString(self, tableName: tableName, value: "\(self)", comment: "")
     }
 }
-

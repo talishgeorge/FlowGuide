@@ -1,16 +1,17 @@
 //
-//  ActivityInidicatorViewStyle+Animation.swift
-//  Airports
+//  ActivityIndicatorStyle.swift
+//  FlowGuide
 //
-//  Created by Talish George on 6/12/19.
-//  Copyright © 2019 Airports. All rights reserved.
+//  Created by TCS on 16/05/20.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 extension ActivityIndicatorStyle {
-    func createAnimationIn(duration: CFTimeInterval, timingFunction: CAMediaTimingFunction,
+    func createAnimationIn(duration: CFTimeInterval,
+                           timingFunction: CAMediaTimingFunction,
                            reverse: Bool) -> CAAnimation {
         // Scale animation
         let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -41,9 +42,12 @@ extension ActivityIndicatorStyle {
         return animation
     }
     
-    func innerCircleOf(duration: CFTimeInterval, timingFunction: CAMediaTimingFunction,
+    func innerCircleOf(duration: CFTimeInterval,
+                       timingFunction: CAMediaTimingFunction,
                        layer: CALayer,
-                       size: CGFloat, color: UIColor, reverse: Bool) {
+                       size: CGFloat,
+                       color: UIColor,
+                       reverse: Bool) {
         let circle = innerHalfCirclelayerWith(size: CGSize(width: size, height: size), color: color)
         let frame = CGRect(x: (layer.bounds.size.width - size) / 2,
                            y: (layer.bounds.size.height - size) / 2,
@@ -86,8 +90,12 @@ extension ActivityIndicatorStyle {
         return layer
     }
     
-    func outerCircleOf(duration: CFTimeInterval, timingFunction: CAMediaTimingFunction,
-                       layer: CALayer, size: CGFloat, color: UIColor, reverse: Bool) {
+    func outerCircleOf(duration: CFTimeInterval,
+                       timingFunction: CAMediaTimingFunction,
+                       layer: CALayer,
+                       size: CGFloat,
+                       color: UIColor,
+                       reverse: Bool) {
         let circle = outerHalfCirclelayerWith(size: CGSize(width: size, height: size), color: color)
         let frame = CGRect(x: (layer.bounds.size.width - size) / 2,
                            y: (layer.bounds.size.height - size) / 2,
