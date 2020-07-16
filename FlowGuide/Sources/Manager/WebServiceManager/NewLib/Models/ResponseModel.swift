@@ -7,7 +7,6 @@ import Foundation
 
 struct ResponseModel<T: Decodable>: Decodable {
     
-    // MARK: - Properties
     var status: String
     var totalResults: Int
     var error: ErrorModel {
@@ -30,10 +29,10 @@ struct ResponseModel<T: Decodable>: Decodable {
     }
 }
 
-// MARK: - Private Functions
-extension ResponseModel {
+// MARK: - Internal Functions
 
-    private enum CodingKeys: String, CodingKey {
+private extension ResponseModel {
+    enum CodingKeys: String, CodingKey {
         case status
         case totalResults
         case data

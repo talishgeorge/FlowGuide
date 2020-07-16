@@ -11,8 +11,7 @@ enum RequestHTTPMethod: String {
 }
 
 class RequestModel: NSObject {
-    
-    // MARK: - Properties
+
     var path: String {
         return ""
     }
@@ -35,26 +34,22 @@ class RequestModel: NSObject {
     }
 }
 
-// MARK: - Public Functions
+// MARK: - Internal Functions
+
 extension RequestModel {
     
     func urlRequest() -> URLRequest {
         var endpoint: String = ServiceManager.shared.baseURL.appending(path)
-        
         for parameter in parameters {
             if let value = parameter.value as? String {
                 endpoint.append("?\(parameter.key)=\(value)")
             }
         }
-        
         var request: URLRequest = URLRequest(url: URL(string: endpoint)!)
-        
         request.httpMethod = method.rawValue
-        
         for header in headers {
             request.addValue(header.value, forHTTPHeaderField: header.key)
         }
-        
         if method == RequestHTTPMethod.post {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: body, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -62,7 +57,6 @@ extension RequestModel {
                 LogManager.e("Request body parse error: \(error.localizedDescription)")
             }
         }
-        
         return request
     }
 }

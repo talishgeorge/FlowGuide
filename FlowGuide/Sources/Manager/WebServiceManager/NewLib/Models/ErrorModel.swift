@@ -5,7 +5,6 @@
 
 class ErrorModel: Error {
     
-    // MARK: - Properties
     var messageKey: String
     var message: String {
         return messageKey.localized()
@@ -17,6 +16,7 @@ class ErrorModel: Error {
 }
 
 // MARK: - Public Functions
+
 extension ErrorModel {
     
     class func generalError() -> ErrorModel {
