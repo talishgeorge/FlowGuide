@@ -4,12 +4,10 @@
 //  
 
 import Foundation
-import SBNLib
 
 class BaseViewModel: NSObject {
     
     var isReachable: Bool {
-            Connectivity.isReachable
-       }
-    
+        Reachability.isConnectedToNetwork()
+    }
 }

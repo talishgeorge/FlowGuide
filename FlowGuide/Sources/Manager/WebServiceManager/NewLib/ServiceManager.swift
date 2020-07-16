@@ -1,4 +1,3 @@
-
 import Foundation
 
 class ServiceManager {
@@ -34,6 +33,7 @@ extension ServiceManager {
             } else {
                 completion(Result.failure(ErrorModel.generalError()))
             }
-        }.resume()
+        }
+        .resume()
     }
 }

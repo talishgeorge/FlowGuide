@@ -53,18 +53,10 @@ extension CategoryListViewModel {
     /// - Parameter category: String
     func fetchNews(by category: String) {
         let closureSelf = self
-//        newsService.getNewsData(category: category, success: { news in
-//            closureSelf.categories = news
-//            closureSelf.delegate?.loadData()
-//        }, failure: { error in
-//            closureSelf.delegate?.showError(error: error)
-//        })
-        
         newsService.getNews(category: category) { result in
             var categories = [Category]()
             switch result {
             case Result.success(let response):
-                print("Success\(result)")
                 let category = Category(title: "General", articles: response.articles)
                 categories.append(category)
                 closureSelf.categories = categories
@@ -72,7 +64,9 @@ extension CategoryListViewModel {
                     closureSelf.delegate?.loadData()
                 }
             case Result.failure(let error):
-                print("Failure")
+                DispatchQueue.main.async {
+                    closureSelf.delegate?.showError(error: error)
+                }
             }
         }
     }

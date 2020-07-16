@@ -88,8 +88,6 @@
 		83357154247E1EEB002E26A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357153247E1EEB002E26A0 /* Category.swift */; };
 		83357156247E1F8E002E26A0 /* Atricle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357155247E1F8E002E26A0 /* Atricle.swift */; };
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
-		8388D85124AC93E500CAC649 /* SBNLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85024AC93E500CAC649 /* SBNLib */; };
-		8388D85424AC964C00CAC649 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85324AC964C00CAC649 /* Alamofire */; };
 		8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85924ACA4F700CAC649 /* ExtensionsLib */; };
 		8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
 		8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
@@ -127,6 +125,8 @@
 		83A4363B24C06DDA00F63D02 /* ErrorKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4363924C06DDA00F63D02 /* ErrorKeys.swift */; };
 		83A4363E24C06EB600F63D02 /* NewsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4363D24C06EB600F63D02 /* NewsRequestModel.swift */; };
 		83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4363D24C06EB600F63D02 /* NewsRequestModel.swift */; };
+		83A4364124C0770400F63D02 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4364024C0770400F63D02 /* Reachability.swift */; };
+		83A4364224C0770400F63D02 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4364024C0770400F63D02 /* Reachability.swift */; };
 		83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0176B24A603D300A1D88D /* SettingsLocalization.swift */; };
 		83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */; };
@@ -240,6 +240,7 @@
 		83A4363424C06DA800F63D02 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		83A4363924C06DDA00F63D02 /* ErrorKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorKeys.swift; sourceTree = "<group>"; };
 		83A4363D24C06EB600F63D02 /* NewsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestModel.swift; sourceTree = "<group>"; };
+		83A4364024C0770400F63D02 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		83B0176B24A603D300A1D88D /* SettingsLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocalization.swift; sourceTree = "<group>"; };
 		83D6C00924B6BC7600C25484 /* NewsViewController+LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+LoadData.swift"; sourceTree = "<group>"; };
 		83F30CB7249CAB60008B2B53 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
@@ -253,8 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */,
-				8388D85424AC964C00CAC649 /* Alamofire in Frameworks */,
-				8388D85124AC93E500CAC649 /* SBNLib in Frameworks */,
 				8388D86C24AD0E2C00CAC649 /* UtilitiesLib in Frameworks */,
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
 				53472A3927FF2466F1264B37 /* Pods_FlowGuide.framework in Frameworks */,
@@ -759,6 +758,7 @@
 				83A4363224C06D8800F63D02 /* Constant */,
 				83A4362824C06D2A00F63D02 /* Models */,
 				83A4362724C06CFC00F63D02 /* Managers */,
+				83A4364024C0770400F63D02 /* Reachability.swift */,
 			);
 			path = NewLib;
 			sourceTree = "<group>";
@@ -829,8 +829,6 @@
 			);
 			name = FlowGuide;
 			packageProductDependencies = (
-				8388D85024AC93E500CAC649 /* SBNLib */,
-				8388D85324AC964C00CAC649 /* Alamofire */,
 				8388D85924ACA4F700CAC649 /* ExtensionsLib */,
 				8388D86B24AD0E2C00CAC649 /* UtilitiesLib */,
 			);
@@ -887,8 +885,6 @@
 			);
 			mainGroup = 83006B89246EE22B00B08094;
 			packageReferences = (
-				8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */,
-				8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */,
 				8388D86A24AD0E2C00CAC649 /* XCRemoteSwiftPackageReference "UtilitiesLib" */,
 			);
@@ -1061,6 +1057,7 @@
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				83357152247D8278002E26A0 /* ThemeManager.swift in Sources */,
+				83A4364124C0770400F63D02 /* Reachability.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
@@ -1127,6 +1124,7 @@
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				83D6C00B24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
+				83A4364224C0770400F63D02 /* Reachability.swift in Sources */,
 				83A4363624C06DA800F63D02 /* ServiceConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1437,22 +1435,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/talishgeorge/SBNLib.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.1;
-			};
-		};
 		8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/talishgeorge/ExtensionsLib.git";
@@ -1472,16 +1454,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8388D85024AC93E500CAC649 /* SBNLib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8388D84F24AC93E500CAC649 /* XCRemoteSwiftPackageReference "SBNLib" */;
-			productName = SBNLib;
-		};
-		8388D85324AC964C00CAC649 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8388D85224AC964C00CAC649 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		8388D85924ACA4F700CAC649 /* ExtensionsLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */;
