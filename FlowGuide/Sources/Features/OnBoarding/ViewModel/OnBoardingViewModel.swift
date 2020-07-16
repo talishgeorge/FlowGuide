@@ -13,7 +13,7 @@ struct OnboardingItemInfo {
 }
 
 /// OnBoarding View Model
-final class OnBoardingViewModel: BaseViewModel {
+final class OnBoardingViewModel: AuthViewModel {
   
     /// Current Onboarding item
     var currentSlide: OnBoardingItem? = OnBoardingItem()

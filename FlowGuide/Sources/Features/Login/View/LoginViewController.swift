@@ -68,7 +68,7 @@ final class LoginViewController: BaseViewController {
 
 // MARK: - Privte Methods
 
-private extension LoginViewController {
+extension LoginViewController {
     
     /// Initial View setup
     /// - Parameter pageType: Login or signUp type

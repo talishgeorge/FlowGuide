@@ -3,6 +3,6 @@
 //  Copyright © 2020 TCS. All rights reserved.
 //  
 
-public struct LoginConstants {
+struct LoginConstants {
     static public let textFieldBorderWidth = 1
 }

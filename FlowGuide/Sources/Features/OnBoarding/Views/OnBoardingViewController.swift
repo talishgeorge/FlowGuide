@@ -56,7 +56,7 @@ final class OnBoardingViewController: BaseViewController {
 private extension OnBoardingViewController {
     
     /// Collection View Setup
-    private func setupCollectionView() {
+     func setupCollectionView() {
         let layout =  UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView.backgroundColor = .clear//.systemGroupedBackground
@@ -66,12 +66,12 @@ private extension OnBoardingViewController {
     }
     
     /// Set Page
-    private func setupPageControl() {
+     func setupPageControl() {
         pageControl.numberOfPages = viewModel.getOnboardingItemCount()
     }
     
     /// Localization
-    private func setupUIForLocalization() {
+     func setupUIForLocalization() {
         getStartedButton.setTitle(String.OnBoarding.getStarted.localized, for: .normal)
         configureButtonUI(customButton: getStartedView, viewButton: getStartedButton)
     }

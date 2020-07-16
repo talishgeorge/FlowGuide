@@ -10,6 +10,8 @@
 		3CD09DD6A09B6B5179C8E573 /* Pods_FlowGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B855E4FBF46D50B8B42C77 /* Pods_FlowGuideTests.framework */; };
 		524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
 		524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
+		5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
+		5250851E24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
 		52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D5724BF42380047C6DB /* Constants+Login.swift */; };
 		52546D5924BF42380047C6DB /* Constants+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D5724BF42380047C6DB /* Constants+Login.swift */; };
 		52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D5A24BF42F50047C6DB /* Constants+OnBoarding.swift */; };
@@ -56,8 +58,8 @@
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */; };
 		833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */; };
-		833570DF247A660D002E26A0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DE247A660D002E26A0 /* BaseViewModel.swift */; };
-		833570E0247A660D002E26A0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DE247A660D002E26A0 /* BaseViewModel.swift */; };
+		833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DE247A660D002E26A0 /* AuthViewModel.swift */; };
+		833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DE247A660D002E26A0 /* AuthViewModel.swift */; };
 		833570E5247A8A33002E26A0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570E4247A8A33002E26A0 /* BaseViewController.swift */; };
 		833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570E4247A8A33002E26A0 /* BaseViewController.swift */; };
 		833570EB247AA2C1002E26A0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570EA247AA2C1002E26A0 /* Styles.swift */; };
@@ -144,6 +146,7 @@
 		3802C48D57E3E00969F68F45 /* Pods-FlowGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuideTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowGuideTests/Pods-FlowGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		50DF644C2FDC1DB60BD5F58A /* Pods-FlowGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowGuide.release.xcconfig"; path = "Target Support Files/Pods-FlowGuide/Pods-FlowGuide.release.xcconfig"; sourceTree = "<group>"; };
 		524EEE7524B6D91900B5574F /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		5250851C24C0391700CF1BC8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		52546D5724BF42380047C6DB /* Constants+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Login.swift"; sourceTree = "<group>"; };
 		52546D5A24BF42F50047C6DB /* Constants+OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+OnBoarding.swift"; sourceTree = "<group>"; };
 		52546D5D24BF437B0047C6DB /* Constants+News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+News.swift"; sourceTree = "<group>"; };
@@ -176,7 +179,7 @@
 		8324DF0924BF3A540026B884 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
-		833570DE247A660D002E26A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		833570DE247A660D002E26A0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		833570E4247A8A33002E26A0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		833570EA247AA2C1002E26A0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		833570EE247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -466,7 +469,8 @@
 			children = (
 				833570E4247A8A33002E26A0 /* BaseViewController.swift */,
 				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
-				833570DE247A660D002E26A0 /* BaseViewModel.swift */,
+				833570DE247A660D002E26A0 /* AuthViewModel.swift */,
+				5250851C24C0391700CF1BC8 /* BaseViewModel.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -950,6 +954,7 @@
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
 				524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */,
 				52546D5E24BF437B0047C6DB /* Constants+News.swift in Sources */,
+				5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */,
 				833570FB247ADB67002E26A0 /* Login.swift in Sources */,
 				83081534248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */,
@@ -978,7 +983,7 @@
 				83357152247D8278002E26A0 /* ThemeManager.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
-				833570DF247A660D002E26A0 /* BaseViewModel.swift in Sources */,
+				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
 				52546D6224BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				83357111247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
@@ -1010,6 +1015,7 @@
 				83357103247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				52546D5924BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */,
+				5250851E24C0391700CF1BC8 /* BaseViewModel.swift in Sources */,
 				8324DF0B24BF3A540026B884 /* Global.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
@@ -1026,7 +1032,7 @@
 				831E96FF24AC5416006D39B7 /* WebService.swift in Sources */,
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
-				833570E0247A660D002E26A0 /* BaseViewModel.swift in Sources */,
+				833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				83D6C00B24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import FirebaseAuth
 import UtilitiesLib
 
 /// SignUp View Model
-final class SignUpViewModel: BaseViewModel {
+final class SignUpViewModel: AuthViewModel {
     /// Validate Email and Password from form.
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
