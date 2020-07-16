@@ -50,4 +50,12 @@ class WebService {
             }
         }
     }
+    
+    func getNews(category: String?, completion: @escaping(Swift.Result<NewsSourcesResponse, ErrorModel>) -> Void) {
+        var categories = [Category]()
+        ServiceManager.shared.sendRequest(request: NewsRequestModel()) { (result) in
+            //categories.append(result)
+            completion(result)
+        }
+    }
 }

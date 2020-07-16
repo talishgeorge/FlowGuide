@@ -36,5 +36,53 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA13D38D-FB03-48B3-8005-EFC81B6E061A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Sources/Manager/WebServiceManager/WebService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getNewsData(category:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA13D38D-FB03-48B3-8005-EFC81B6E061A - b1cf2214a7aa41d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlowGuide.WebService.getNewsData(category: Swift.Optional&lt;Swift.String&gt;, success: (Swift.Array&lt;FlowGuide.Category&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "462">
+               </Location>
+               <Location
+                  uuid = "CA13D38D-FB03-48B3-8005-EFC81B6E061A - f617f9d2146ef8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in FlowGuide.WebService.getNewsData(category: Swift.Optional&lt;Swift.String&gt;, success: (Swift.Array&lt;FlowGuide.Category&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Manager/WebServiceManager/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
