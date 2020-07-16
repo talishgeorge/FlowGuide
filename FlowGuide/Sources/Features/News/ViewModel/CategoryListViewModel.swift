@@ -13,7 +13,7 @@ import UIKit
 final class CategoryListViewModel {
     weak var delegate: NewsViewControllerDelegate?
     private(set) var categories: [Category] = []
-    private let newsService: WebService = WebService()
+    private let newsService = BaseViewModel.shared.webService
 }
 
 // MARK: - Internal Methods for TableView

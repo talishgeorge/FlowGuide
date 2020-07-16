@@ -6,8 +6,11 @@
 import Foundation
 
 class BaseViewModel: NSObject {
-    
+    static public let shared = BaseViewModel()
+    var webService = WebService()
     var isReachable: Bool {
         Reachability.isConnectedToNetwork()
+        
     }
+    
 }
