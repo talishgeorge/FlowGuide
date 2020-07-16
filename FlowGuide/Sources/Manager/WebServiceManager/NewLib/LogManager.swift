@@ -1,4 +1,3 @@
-
 import Foundation
 
 /// Enum which maps an appropiate symbol which added as prefix for each log message
@@ -177,7 +176,7 @@ extension LogManager {
             log += "[\(ServiceManager.shared.baseURL)\(path)]\n"
         }
         
-        log += "[isSuccess: \(status)]\n[message: \(status)]"
+        log += "[isSuccess: \(status)]\n[message: \(message)]"
         
         if let json = dataJSON {
             log += "\n[\(json)]"

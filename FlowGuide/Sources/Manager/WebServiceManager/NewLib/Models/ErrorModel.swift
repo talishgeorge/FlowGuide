@@ -1,3 +1,8 @@
+//
+//  Created by TCS.
+//  Copyright © 2020 TCS. All rights reserved.
+//
+
 class ErrorModel: Error {
     
     // MARK: - Properties
