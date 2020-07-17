@@ -79,6 +79,7 @@ extension CategoryListViewModel {
     
     /// Show offline data
     func showOfflineData() {
+        categories = Category.loadLocalData()
         self.delegate?.serviceStartUpdating(self)
     }
 }

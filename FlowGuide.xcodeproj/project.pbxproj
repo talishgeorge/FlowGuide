@@ -293,20 +293,20 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		52D378DF24C16B3700D28A0A /* JsonFIles */ = {
-			isa = PBXGroup;
-			children = (
-				830815452494B6720036B52D /* Article.json */,
-			);
-			path = JsonFIles;
-			sourceTree = "<group>";
-		};
 		52D378E024C1A0FB00D28A0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				52D378E124C1A12900D28A0A /* UIFont+Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		52D378E524C1B35B00D28A0A /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				830815452494B6720036B52D /* Article.json */,
+			);
+			path = JsonData;
 			sourceTree = "<group>";
 		};
 		7032875B5185FF55DEF801D3 /* Frameworks */ = {
@@ -438,7 +438,7 @@
 		831523F6247101E000F48DDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				52D378DF24C16B3700D28A0A /* JsonFIles */,
+				52D378E524C1B35B00D28A0A /* JsonData */,
 				83006BA1246EE22D00B08094 /* Assets.xcassets */,
 				831523F72471020500F48DDA /* Colors.xcassets */,
 				52DD884124ADD12100BCC2D0 /* Main.storyboard */,
