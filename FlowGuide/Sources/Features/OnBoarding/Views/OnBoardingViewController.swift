@@ -67,7 +67,7 @@ private extension OnBoardingViewController {
     
     /// Set Page
      func setupPageControl() {
-        pageControl.numberOfPages = viewModel.getOnboardingItemCount()
+        pageControl.numberOfPages = viewModel.getOnboardingItemCount
     }
     
     /// Localization
