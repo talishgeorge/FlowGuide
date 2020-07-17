@@ -108,6 +108,7 @@
 		839DAE0F24C14D8100361AF4 /* NetWorkLib in Frameworks */ = {isa = PBXBuildFile; productRef = 839DAE0E24C14D8100361AF4 /* NetWorkLib */; };
 		839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839DAE1324C1593700361AF4 /* ServiceConstant.swift */; };
 		839DAE1524C1593700361AF4 /* ServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839DAE1324C1593700361AF4 /* ServiceConstant.swift */; };
+		839DAE1824C15C4D00361AF4 /* NetWorkLib in Frameworks */ = {isa = PBXBuildFile; productRef = 839DAE1724C15C4D00361AF4 /* NetWorkLib */; };
 		83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4361524BF83E800F63D02 /* AppConstants.swift */; };
 		83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4361524BF83E800F63D02 /* AppConstants.swift */; };
 		83A4363E24C06EB600F63D02 /* NewsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4363D24C06EB600F63D02 /* NewsRequestModel.swift */; };
@@ -235,6 +236,7 @@
 				832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */,
 				839DAE0F24C14D8100361AF4 /* NetWorkLib in Frameworks */,
 				53472A3927FF2466F1264B37 /* Pods_FlowGuide.framework in Frameworks */,
+				839DAE1824C15C4D00361AF4 /* NetWorkLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +772,7 @@
 				8388D85924ACA4F700CAC649 /* ExtensionsLib */,
 				8388D86B24AD0E2C00CAC649 /* UtilitiesLib */,
 				839DAE0E24C14D8100361AF4 /* NetWorkLib */,
+				839DAE1724C15C4D00361AF4 /* NetWorkLib */,
 			);
 			productName = FlowGuide;
 			productReference = 83006B92246EE22B00B08094 /* FlowGuide.app */;
@@ -826,6 +829,7 @@
 			packageReferences = (
 				8388D85824ACA4F700CAC649 /* XCRemoteSwiftPackageReference "ExtensionsLib" */,
 				8388D86A24AD0E2C00CAC649 /* XCRemoteSwiftPackageReference "UtilitiesLib" */,
+				839DAE1624C15C4D00361AF4 /* XCRemoteSwiftPackageReference "NetWorkLib" */,
 			);
 			productRefGroup = 83006B93246EE22B00B08094 /* Products */;
 			projectDirPath = "";
@@ -1374,6 +1378,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		839DAE1624C15C4D00361AF4 /* XCRemoteSwiftPackageReference "NetWorkLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/talishgeorge/NetWorkLib.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1389,6 +1401,11 @@
 		};
 		839DAE0E24C14D8100361AF4 /* NetWorkLib */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = NetWorkLib;
+		};
+		839DAE1724C15C4D00361AF4 /* NetWorkLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 839DAE1624C15C4D00361AF4 /* XCRemoteSwiftPackageReference "NetWorkLib" */;
 			productName = NetWorkLib;
 		};
 /* End XCSwiftPackageProductDependency section */
