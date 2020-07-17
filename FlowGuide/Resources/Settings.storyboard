@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="Lux-Wi-rbR">
+            <objects>
+                <viewController id="LdJ-wI-ZfH" customClass="SettingsViewController" customModule="FlowGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mbl-1K-oVt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-hv-ICN">
+                                <rect key="frame" x="147.5" y="811" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0l-Vh-7hA">
+                                <rect key="frame" x="20" y="178" width="374" height="90"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjr-f1-JgM">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enbale Push Notification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-XL-v8k">
+                                        <rect key="frame" x="20" y="34.5" width="187" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83u-g0-k3L">
+                                        <rect key="frame" x="310" y="29.5" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="83u-g0-k3L" firstAttribute="centerY" secondItem="hLT-XL-v8k" secondAttribute="centerY" id="G2I-cT-1IX"/>
+                                    <constraint firstItem="hLT-XL-v8k" firstAttribute="leading" secondItem="W0l-Vh-7hA" secondAttribute="leading" constant="20" id="Gpq-Om-mTa"/>
+                                    <constraint firstAttribute="height" constant="90" id="Ry6-jp-Tex"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yjr-f1-JgM" secondAttribute="trailing" id="WQd-S3-QBA"/>
+                                    <constraint firstItem="hLT-XL-v8k" firstAttribute="centerY" secondItem="W0l-Vh-7hA" secondAttribute="centerY" id="htt-mh-Kqt"/>
+                                    <constraint firstItem="Yjr-f1-JgM" firstAttribute="top" secondItem="W0l-Vh-7hA" secondAttribute="top" id="ibn-gF-HJk"/>
+                                    <constraint firstItem="Yjr-f1-JgM" firstAttribute="leading" secondItem="W0l-Vh-7hA" secondAttribute="leading" id="l4w-u6-bLs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yjr-f1-JgM" secondAttribute="bottom" id="q9c-PH-Kdl"/>
+                                    <constraint firstAttribute="trailing" secondItem="83u-g0-k3L" secondAttribute="trailing" constant="15" id="sA8-RK-pML"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W0l-Vh-7hA" firstAttribute="leading" secondItem="T8X-ws-08c" secondAttribute="leading" constant="20" id="7r5-E4-uTT"/>
+                            <constraint firstItem="W0l-Vh-7hA" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="90" id="KPK-1f-F5E"/>
+                            <constraint firstItem="ZSM-hv-ICN" firstAttribute="centerX" secondItem="Mbl-1K-oVt" secondAttribute="centerX" id="PNR-Iq-nGJ"/>
+                            <constraint firstItem="T8X-ws-08c" firstAttribute="bottom" secondItem="ZSM-hv-ICN" secondAttribute="bottom" constant="30" id="Tv3-LL-IHQ"/>
+                            <constraint firstItem="T8X-ws-08c" firstAttribute="trailing" secondItem="W0l-Vh-7hA" secondAttribute="trailing" constant="20" id="UN9-CP-Zya"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T8X-ws-08c"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="f5o-gt-08X">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="0a6-J9-jjP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logoutAction:" destination="LdJ-wI-ZfH" id="tKV-KT-eO0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pushNotificationView" destination="W0l-Vh-7hA" id="8XZ-Bu-HbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELU-6A-qlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3293" y="455"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="1Jj-XW-f84">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController-WNv-nI-00Z" automaticallyAdjustsScrollViewInsets="NO" id="WNv-nI-00Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings" id="aQc-xR-Xcz">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C5s-ys-jrp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LdJ-wI-ZfH" kind="relationship" relationship="rootViewController" id="RG8-qf-Veb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ima-JV-cTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings" width="25" height="25"/>
+    </resources>
+</document>
