@@ -10,12 +10,6 @@ import UIKit
 import UtilitiesLib
 import OakLib
 
-/// Protocol
-protocol NewsViewControllerDelegate: class {
-    func loadData()
-    func showError(error: Error?)
-}
-
 /// News ViewController
 final class NewsViewController: BaseViewController {
     @IBOutlet private weak var userNameLabel: UILabel!

@@ -11,6 +11,5 @@ class BaseViewModel: NSObject {
     let webService = WebService()
     var isReachable: Bool {
         Reachability.isConnectedToNetwork()
-        
     }
 }

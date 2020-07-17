@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 
 /// Category List Model
+/// Protocol
+protocol CategoryListViewModelDelegate: class {
+    func serviceStartUpdating(_ viewModel: CategoryListViewModel)
+    func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?)
+}
 
 final class CategoryListViewModel {
-    weak var delegate: NewsViewControllerDelegate?
+    weak var delegate: CategoryListViewModelDelegate?
     private(set) var categories: [Category] = []
     private let newsService = BaseViewModel.shared.webService
 }
@@ -62,11 +67,11 @@ extension CategoryListViewModel {
                 categories.append(category)
                 closureSelf.categories = categories
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.loadData()
+                    closureSelf.delegate?.serviceStartUpdating(self)
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.showError(error: error)
+                    closureSelf.delegate?.service(self, didFinishWithError: error)
                 }
             }
         }
@@ -74,7 +79,7 @@ extension CategoryListViewModel {
     
     /// Show offline data
     func showOfflineData() {
-        self.delegate?.loadData()
+        self.delegate?.serviceStartUpdating(self)
     }
 }
 

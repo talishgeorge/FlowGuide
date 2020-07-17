@@ -9,26 +9,21 @@
 import Foundation
 import OakLib
 
-extension NewsViewController: NewsViewControllerDelegate {
+extension NewsViewController: CategoryListViewModelDelegate {
     
-    /// Show list of live news and details
-    /// - Parameter vm: Category List ViewModel
-    func loadData() {
-        
-        self.tableView.reloadData()
-        ActivityIndicator.dismiss()
-    }
-    
-    /// ShowError
-    /// - Parameter error: Error
-    func showError(error: Error?) {
+    func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?) {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-            self.presentAlertWithTitle(title: String.News.newsFecthError.localized, message: String.News.newsFetchErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
-                if value == 0 {
-                    self.categoryListVM.showOfflineData()
-                }
-            }
             return
         }
+        self.presentAlertWithTitle(title: String.News.newsFecthError.localized, message: String.News.newsFetchErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
+            if value == 0 {
+                self.categoryListVM.showOfflineData()
+            }
+        }
+    }
+    
+    func serviceStartUpdating(_ viewModel: CategoryListViewModel) {
+        self.tableView.reloadData()
+        ActivityIndicator.dismiss()
     }
 }
