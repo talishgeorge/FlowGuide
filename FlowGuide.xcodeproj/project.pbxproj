@@ -501,8 +501,8 @@
 		8335711B247BEB3B002E26A0 /* WebServiceManager */ = {
 			isa = PBXGroup;
 			children = (
-				839DAE1324C1593700361AF4 /* ServiceConstant.swift */,
 				83A4363C24C06E9500F63D02 /* RequestModel */,
+				839DAE1324C1593700361AF4 /* ServiceConstant.swift */,
 				831E96FD24AC5416006D39B7 /* WebService.swift */,
 			);
 			path = WebServiceManager;
