@@ -10,17 +10,11 @@ import UIKit
 import UtilitiesLib
 import OakLib
 
-/// Protocol
-protocol NewsViewControllerDelegate: class {
-    func loadData()
-    func showError(error: Error?)
-}
-
 /// News ViewController
 final class NewsViewController: BaseViewController {
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var categoryListVM = CategoryListViewModel()
+    var viewModel = CategoryListViewModel()
     
     // MARK: - View Life Cycle
     
@@ -33,7 +27,7 @@ final class NewsViewController: BaseViewController {
         if let email = auth.currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
-        categoryListVM.delegate = self
+        viewModel.delegate = self
         populateNews()
     }
     
@@ -51,7 +45,7 @@ final class NewsViewController: BaseViewController {
             guard let indexPath = tableView.indexPathForSelectedRow else {
                 fatalError("Unable to get the selected row")
             }
-            let articleVM = self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
+            let articleVM = self.viewModel.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
             newsDetailsVC?.newsDetailsVM = NewsDetailsViewModel(articleVM.article)
         }
     }
@@ -62,6 +56,6 @@ private extension NewsViewController {
     /// Fetch News by category
     func populateNews() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        categoryListVM.fetchNews(by: ApiConstants.newsCategory)
+        viewModel.fetchNews(by: ApiConstants.newsCategory)
     }
 }

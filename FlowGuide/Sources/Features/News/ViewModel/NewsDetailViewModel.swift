@@ -24,6 +24,7 @@ extension NewsDetailsViewModel {
 
 // MARK: - Internal Methods
 extension NewsDetailsViewModel {
+    
     /// Source name
     var sourceName: String {
          article.sourceName
