@@ -85,8 +85,14 @@ private extension OnBoardingViewController {
     /// - Parameter index: Int
     func showCaption(atIndex index: Int) {
         let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
-        titleLabel.text = (index == 1) ? String.OnBoarding.onboardingTitle1.localized:
-            (index == 2) ? String.OnBoarding.onboardingTitle2.localized: String.OnBoarding.onboardingTitle3.localized
+        switch index {
+        case 1:
+             titleLabel.text = String.OnBoarding.onboardingTitle1.localized
+        case 2:
+            titleLabel.text = String.OnBoarding.onboardingTitle2.localized
+        default:
+            titleLabel.text = String.OnBoarding.onboardingTitle3.localized
+        }
         descriptionLabel.text = onboardingItemInfo.description
     }
 }
