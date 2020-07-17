@@ -16,7 +16,7 @@ final class NewsDetailsViewController: BaseViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var webview: WKWebView!
-    var newsDetailsVM: NewsDetailsViewModel!
+    var viewModel: NewsDetailsViewModel!
     
     // MARK: - View Life Cycle
     
@@ -34,8 +34,8 @@ private extension NewsDetailsViewController {
     /// Initial UI Setup
     func setupUI() {
         self.navigationItem.largeTitleDisplayMode = .never
-        self.title = self.newsDetailsVM.sourceName
-        guard let url = self.newsDetailsVM.url,
+        self.title = self.viewModel.sourceName
+        guard let url = self.viewModel.url,
             let newsDetailURL = URL(string: url) else {
                 return
         }
