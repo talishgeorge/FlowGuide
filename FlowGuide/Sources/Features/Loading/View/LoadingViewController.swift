@@ -12,8 +12,8 @@ import UtilitiesLib
 final class LoadingViewController: BaseViewController {
     
     var timer: Timer?
-    @IBOutlet private weak var loadingLabel: UILabel!
     private let loginViewModel = LoginViewModel()
+    @IBOutlet private weak var loadingLabel: UILabel!
     
     // MARK: - View Life Cycle
     
@@ -33,7 +33,7 @@ final class LoadingViewController: BaseViewController {
     // MARK: - Private Methods
     
     /// Show Loading
-    func showLoading() {
+    private func showLoading() {
         timer = Timer.scheduledTimer(withTimeInterval: LoadingConstants.timerInterval, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {

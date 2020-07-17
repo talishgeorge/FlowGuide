@@ -17,14 +17,14 @@ protocol OnBoardingDelegate: class {
 
 /// OnBoarding View Controller
 final class OnBoardingViewController: BaseViewController {
-  
+    
+    let viewModel = OnBoardingViewModel()
     @IBOutlet private weak var getStartedView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var getStartedButton: UIButton!
-    let viewModel = OnBoardingViewModel()
     
     // MARK: - View Life Cycle
     

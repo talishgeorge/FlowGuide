@@ -12,9 +12,10 @@ import OakLib
 
 /// News ViewController
 final class NewsViewController: BaseViewController {
+    
+    var viewModel = CategoryListViewModel()
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var viewModel = CategoryListViewModel()
     
     // MARK: - View Life Cycle
     
