@@ -290,6 +290,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		52D378DF24C16B3700D28A0A /* JsonFIles */ = {
+			isa = PBXGroup;
+			children = (
+				830815452494B6720036B52D /* Article.json */,
+			);
+			path = JsonFIles;
+			sourceTree = "<group>";
+		};
 		7032875B5185FF55DEF801D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +429,7 @@
 		831523F6247101E000F48DDA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52D378DF24C16B3700D28A0A /* JsonFIles */,
 				83006BA1246EE22D00B08094 /* Assets.xcassets */,
 				831523F72471020500F48DDA /* Colors.xcassets */,
 				52DD884124ADD12100BCC2D0 /* Main.storyboard */,
@@ -542,7 +551,6 @@
 			children = (
 				83357153247E1EEB002E26A0 /* Category.swift */,
 				83357155247E1F8E002E26A0 /* Atricle.swift */,
-				830815452494B6720036B52D /* Article.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";

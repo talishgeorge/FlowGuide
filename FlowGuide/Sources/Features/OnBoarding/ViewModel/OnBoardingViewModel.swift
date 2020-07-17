@@ -16,11 +16,11 @@ struct OnboardingItemInfo {
 final class OnBoardingViewModel: AuthViewModel {
   
     /// Current Onboarding item
-    var currentSlide: OnBoardingItem? = OnBoardingItem()
+    var currentSlide: OnBoardingItem = OnBoardingItem()
     
     /// Onboarding item title
     var onboardingItemTitle: String? {
-        if let title = currentSlide?.title {
+        if let title = currentSlide.title {
             return title
         } else {
             return ""
@@ -29,7 +29,7 @@ final class OnBoardingViewModel: AuthViewModel {
     
     /// Onboarding Item Description
     var onboardingItemDescription: String? {
-        if let description = currentSlide?.description {
+        if let description = currentSlide.description {
             return description
         } else {
             return ""
@@ -38,7 +38,7 @@ final class OnBoardingViewModel: AuthViewModel {
     
     /// Onboarding Item Image name
     var onboardingItemImageName: String? {
-        if let imageName = currentSlide?.imageName {
+        if let imageName = currentSlide.imageName {
             return imageName
         } else {
             return ""
@@ -60,8 +60,8 @@ extension OnBoardingViewModel {
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
         currentSlide = OnBoardingItem.collection[index]
         var onboardingItemInfo = OnboardingItemInfo()
-        onboardingItemInfo.title = currentSlide?.title
-        onboardingItemInfo.description = currentSlide?.description
+        onboardingItemInfo.title = currentSlide.title
+        onboardingItemInfo.description = currentSlide.description
         return onboardingItemInfo
     }
     
