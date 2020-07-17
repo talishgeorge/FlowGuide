@@ -36,6 +36,7 @@ final class NewsViewController: BaseViewController {
         categoryListVM.delegate = self
         populateNews()
     }
+    
     func setupUI() {
         navigationController?.navigationBar.barTintColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemIndigo
         tableView.layer.borderWidth = CGFloat(NewsConstants.tableViewBorderWidth)

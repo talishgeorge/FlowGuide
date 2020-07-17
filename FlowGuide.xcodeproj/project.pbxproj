@@ -22,6 +22,8 @@
 		52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6124BF44040047C6DB /* Loading+Constants.swift */; };
 		52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
 		52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
+		52D378E224C1A12900D28A0A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D378E124C1A12900D28A0A /* UIFont+Extension.swift */; };
+		52D378E324C1A12900D28A0A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D378E124C1A12900D28A0A /* UIFont+Extension.swift */; };
 		52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884224ADD12100BCC2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DD884124ADD12100BCC2D0 /* Main.storyboard */; };
@@ -154,6 +156,7 @@
 		52546D5D24BF437B0047C6DB /* Constants+News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+News.swift"; sourceTree = "<group>"; };
 		52546D6124BF44040047C6DB /* Loading+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading+Constants.swift"; sourceTree = "<group>"; };
 		52546D6424BF44930047C6DB /* Settings+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Constants.swift"; sourceTree = "<group>"; };
+		52D378E124C1A12900D28A0A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		52DD884124ADD12100BCC2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		52DD884424ADD13700BCC2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -298,6 +301,14 @@
 			path = JsonFIles;
 			sourceTree = "<group>";
 		};
+		52D378E024C1A0FB00D28A0A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52D378E124C1A12900D28A0A /* UIFont+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		7032875B5185FF55DEF801D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +419,7 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				52D378E024C1A0FB00D28A0A /* Common */,
 				8324DEFE24BEFC5F0026B884 /* Constants */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,
 			);
@@ -989,6 +1001,7 @@
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
 				833570EB247AA2C1002E26A0 /* Styles.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
+				52D378E224C1A12900D28A0A /* UIFont+Extension.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
 				833570EF247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
@@ -1035,6 +1048,7 @@
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
+				52D378E324C1A12900D28A0A /* UIFont+Extension.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,

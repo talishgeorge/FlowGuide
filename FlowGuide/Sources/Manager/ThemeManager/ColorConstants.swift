@@ -17,6 +17,3 @@ enum ThemeColor: String {
 enum FontType: String {
     case avenirNextCondensed = "Avenir Next Condensed"
 }
-enum FontSize: Int {
-    case tabBarFontSize = 18
-}

@@ -19,7 +19,7 @@ final class ThemeManager {
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let appearance = UITabBarItem.appearance()
-        let attributes = [NSAttributedString.Key.font: UIFont(name: FontType.avenirNextCondensed.rawValue, size: 16)]
+        let attributes = [NSAttributedString.Key.font: UIFont.navigationAttributes]
         appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key: Any], for: .normal)
     }
 }
