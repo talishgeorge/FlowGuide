@@ -41,7 +41,7 @@ final class LoginViewController: BaseViewController {
     /// Current page type for login flow
     private var currentPageType: PageType = .login {
         didSet {
-            setupViewsFor()
+            setupViewForPageType()
         }
     }
     
@@ -56,8 +56,10 @@ final class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewsFor()
+        setupViewForPageType()
         setupUIForLocalization()
+        setupUI()
+        setupCardView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,7 +74,7 @@ extension LoginViewController {
     
     /// Initial View setup
     /// - Parameter pageType: Login or signUp type
-    private func setupViewsFor() {
+    private func setupViewForPageType() {
         errorMessage = nil
         confirmPswdView.isHidden = currentPageType == .login
         signUpButtonView.isHidden = currentPageType == .login
@@ -96,8 +98,10 @@ extension LoginViewController {
         passwordTextField.placeholder = String.Login.password.localized
         confirmPasswordTextField.placeholder = String.Login.confirmPassword.localized
         segmentedControll.setTitle(String.Login.login.localized, forSegmentAt: 0)
-        segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
-        cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
+               segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
+    }
+    private func setupUI() {
+//        View Border color
         emailView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         passwordView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         confirmPswdView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
@@ -106,6 +110,10 @@ extension LoginViewController {
         confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         configureButtonUI(customButton: loginButtonView, viewButton: loginButton)
         configureButtonUI(customButton: signUpButtonView, viewButton: sigunpButton)
+    }
+    private func setupCardView() {
+//        Carview setup
+         cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
     }
 }
 
