@@ -13,6 +13,9 @@ extension String {
         case onboardingTitle1
         case onboardingTitle2
         case onboardingTitle3
+        case onboardingDesc1
+        case onboardingDesc2
+        case onboardingDesc3
         var tableName: String {
              "OnBoarding"
         }

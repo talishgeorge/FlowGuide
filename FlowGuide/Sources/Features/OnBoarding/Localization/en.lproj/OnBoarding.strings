@@ -9,3 +9,6 @@
 "onboardingTitle1" = "Why Use MVVM";
 "onboardingTitle2" = "Benefits of MVVM";
 "onboardingTitle3" = "When to Use MVVM";
+"onboardingDesc1" = "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI";
+"onboardingDesc2" = "MVVM Allows Code reuse";
+"onboardingDesc3" = "By having a separation between the different parts of an app's code it brings a level of structure and uniformity to the code";

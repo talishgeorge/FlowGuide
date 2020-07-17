@@ -59,9 +59,7 @@ extension OnBoardingViewModel {
     /// - Parameter index: Int
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
         currentSlide = OnBoardingItem.collection[index]
-        var onboardingItemInfo = OnboardingItemInfo()
-        onboardingItemInfo.title = currentSlide.title
-        onboardingItemInfo.description = currentSlide.description
+        let onboardingItemInfo = OnboardingItemInfo(title: currentSlide.title, description: currentSlide.description)
         return onboardingItemInfo
     }
     
