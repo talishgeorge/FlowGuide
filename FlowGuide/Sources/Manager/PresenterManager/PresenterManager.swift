@@ -9,7 +9,7 @@
 import UIKit
 import UtilitiesLib
 
-class PresenterManager {
+final class PresenterManager {
    
     static let shared = PresenterManager()
     private init() {}

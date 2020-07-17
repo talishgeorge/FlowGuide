@@ -5,6 +5,6 @@
 
 import Foundation
 
-public struct AppConstants {
+struct AppConstants {
     static public let delaySeconds = 3
 }

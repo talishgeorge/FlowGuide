@@ -33,6 +33,7 @@ extension CategoryListViewModel {
 }
 
 // MARK: - Internal Methods
+
 extension CategoryListViewModel {
     
     /// Return Category ViewModel

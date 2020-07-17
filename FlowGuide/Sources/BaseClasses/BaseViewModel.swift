@@ -13,5 +13,4 @@ class BaseViewModel: NSObject {
         Reachability.isConnectedToNetwork()
         
     }
-    
 }

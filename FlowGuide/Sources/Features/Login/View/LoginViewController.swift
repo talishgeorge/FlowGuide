@@ -30,8 +30,8 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var errorView: UIView!
     @IBOutlet private weak var loginButtonView: UIView!
-    
     @IBOutlet private weak var signUpButtonView: UIView!
+    
     /// Page Types for login flow
     private enum PageType {
         case login
@@ -70,11 +70,11 @@ final class LoginViewController: BaseViewController {
 
 // MARK: - Privte Methods
 
-extension LoginViewController {
+private extension LoginViewController {
     
     /// Initial View setup
     /// - Parameter pageType: Login or signUp type
-    private func setupViewForPageType() {
+    func setupViewForPageType() {
         errorMessage = nil
         confirmPswdView.isHidden = currentPageType == .login
         signUpButtonView.isHidden = currentPageType == .login
@@ -84,13 +84,13 @@ extension LoginViewController {
     
     /// Error message
     /// - Parameter text: Error message String type
-    private func showErrorMessage(text: String?) {
+    func showErrorMessage(text: String?) {
         errorView.isHidden = text == nil
         errorLabel.text = text
     }
     
     /// Setup Localization
-    private func setupUIForLocalization() {
+    func setupUIForLocalization() {
         forgotPasswordButton.setTitle(String.Login.forgetPassword.localized, for: .normal)
         sigunpButton.setTitle(String.Login.signup.localized, for: .normal)
         loginButton.setTitle(String.Login.login.localized, for: .normal)
@@ -98,10 +98,10 @@ extension LoginViewController {
         passwordTextField.placeholder = String.Login.password.localized
         confirmPasswordTextField.placeholder = String.Login.confirmPassword.localized
         segmentedControll.setTitle(String.Login.login.localized, forSegmentAt: 0)
-               segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
+        segmentedControll.setTitle(String.Login.signup.localized, forSegmentAt: 1)
     }
-    private func setupUI() {
-//        View Border color
+    
+    func setupUI() {
         emailView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         passwordView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         confirmPswdView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
@@ -111,9 +111,10 @@ extension LoginViewController {
         configureButtonUI(customButton: loginButtonView, viewButton: loginButton)
         configureButtonUI(customButton: signUpButtonView, viewButton: sigunpButton)
     }
-    private func setupCardView() {
-//        Carview setup
-         cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
+    
+    func setupCardView() {
+        //        Carview setup
+        cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
     }
 }
 
@@ -123,7 +124,7 @@ private extension LoginViewController {
     
     /// Login Button with TextField Validations
     /// - Parameter sender: UIButton
-    @IBAction private func loginButtonTapped(_ sender: UIButton) {
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
             showErrorMessage(text: String.Login.invalidForm.localized)
@@ -152,7 +153,7 @@ private extension LoginViewController {
     
     /// Forgot Password Button
     /// - Parameter sender: UIButton
-    @IBAction private func forgotPasswordButtonTapped(_ sender: UIButton) {
+    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
         let alertController = UIAlertController(title: String.Login.forgetPassword.localized, message: String.Login.enterEmail.localized, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
         let cancelAction = UIAlertAction(title: String.Global.cancel.localized, style: .cancel, handler: nil)
@@ -184,7 +185,7 @@ private extension LoginViewController {
     
     /// SignUp Button with TextField Validations
     /// - Parameter sender: UIButton
-    @IBAction private func sigunpButtonTapped(_ sender: UIButton) {
+    @IBAction func sigunpButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
@@ -213,11 +214,13 @@ private extension LoginViewController {
     
     /// Segement Control
     /// - Parameter sender: UISegementedControl
-    @IBAction private func segmentedContollValueChanged(_ sender: UISegmentedControl) {
+    @IBAction func segmentedContollValueChanged(_ sender: UISegmentedControl) {
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
 }
-// MARK: - Delegate Methods
+
+// MARK: - Text Field Delegate Methods
+
 extension LoginViewController: UITextFieldDelegate {
     
     /// UITextField Delegate for set values to ViewModel
