@@ -28,6 +28,7 @@ final class NewsDetailsViewController: BaseViewController {
 }
 
 // MARK: - Internal Methods
+
 private extension NewsDetailsViewController {
     
     /// Initial UI Setup

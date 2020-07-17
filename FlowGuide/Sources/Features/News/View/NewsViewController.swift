@@ -37,6 +37,7 @@ final class NewsViewController: BaseViewController {
         tableView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
         self.title = Constants.NavigationTitle.home
     }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,6 +51,7 @@ final class NewsViewController: BaseViewController {
         }
     }
 }
+
 // MARK: - Internal Methods
 
 private extension NewsViewController {
