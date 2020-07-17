@@ -41,7 +41,7 @@ final class LoginViewController: BaseViewController {
     /// Current page type for login flow
     private var currentPageType: PageType = .login {
         didSet {
-            setupViewsFor(pageType: currentPageType)
+            setupViewsFor()
         }
     }
     
@@ -56,7 +56,7 @@ final class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewsFor(pageType: currentPageType)
+        setupViewsFor()
         setupUIForLocalization()
     }
     
@@ -72,12 +72,12 @@ extension LoginViewController {
     
     /// Initial View setup
     /// - Parameter pageType: Login or signUp type
-    private func setupViewsFor(pageType: PageType) {
+    private func setupViewsFor() {
         errorMessage = nil
-        confirmPswdView.isHidden = pageType == .login
-        signUpButtonView.isHidden = pageType == .login
-        forgotPasswordButton.isHidden = pageType == .signUp
-        loginButtonView.isHidden = pageType == .signUp
+        confirmPswdView.isHidden = currentPageType == .login
+        signUpButtonView.isHidden = currentPageType == .login
+        forgotPasswordButton.isHidden = currentPageType == .signUp
+        loginButtonView.isHidden = currentPageType == .signUp
     }
     
     /// Error message
@@ -124,18 +124,18 @@ private extension LoginViewController {
         
         ActivityIndicator.show(String.Global.pleaseWait.localized)
         loginViewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
-            guard let this = self else {
+            guard let self = self else {
                 return
             }
             ActivityIndicator.dismiss()
             switch result {
             case .success( _):
-                this.delegate?.showMainTabBarController()
+                self.delegate?.showMainTabBarController()
             case .failure(let error):
-                this.showErrorMessage(text: error.localizedDescription)
-                self?.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
+                self.showErrorMessage(text: error.localizedDescription)
+                self.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
                     if value == 0 {
-                        this.delegate?.showMainTabBarController()
+                        self.delegate?.showMainTabBarController()
                     }
                 }
             }
