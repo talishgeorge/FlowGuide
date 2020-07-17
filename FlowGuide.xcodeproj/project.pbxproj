@@ -321,7 +321,7 @@
 		52D378E024C1A0FB00D28A0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				52D378E124C1A12900D28A0A /* UIFont+Extension.swift */,
+				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -443,6 +443,7 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				839DAE3224C1C6B600361AF4 /* Extensions */,
 				52D378E024C1A0FB00D28A0A /* Common */,
 				8324DEFE24BEFC5F0026B884 /* Constants */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,
@@ -515,8 +516,6 @@
 			isa = PBXGroup;
 			children = (
 				833570E4247A8A33002E26A0 /* BaseViewController.swift */,
-				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
-				833570DE247A660D002E26A0 /* AuthViewModel.swift */,
 				5250851C24C0391700CF1BC8 /* BaseViewModel.swift */,
 			);
 			path = BaseClasses;
@@ -701,6 +700,7 @@
 			children = (
 				833570F7247ADA01002E26A0 /* LoginViewModel.swift */,
 				8335714D247D58AD002E26A0 /* SignUpViewModel.swift */,
+				833570DE247A660D002E26A0 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -733,6 +733,14 @@
 				831523F3246F800C00F48DDA /* Setttings */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		839DAE3224C1C6B600361AF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52D378E124C1A12900D28A0A /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		83A4361424BF82E000F63D02 /* Protocol */ = {

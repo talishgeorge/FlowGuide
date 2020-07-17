@@ -13,8 +13,8 @@ import Firebase
 /// Base ViewController for all ViewController
 class BaseViewController: UIViewController {
 
-    public var navBar = CustomNavigationView.loadNavigationBar()
-    public let auth = Auth.auth()
+    var navBar = CustomNavigationView.loadNavigationBar()
+    let auth = Auth.auth()
     
     // MARK: - View Life Cycle
     
@@ -25,7 +25,7 @@ class BaseViewController: UIViewController {
     }
 }
 
-// MARK: - Internal Methods
+// MARK: - Common Altert View
 
 extension BaseViewController {
     
@@ -55,6 +55,11 @@ extension BaseViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
+}
+
+// MARK: - Theme
+
+extension BaseViewController {
     
     /// Set Theme
     func setDarkTheme() {
@@ -69,11 +74,11 @@ extension BaseViewController {
     func setBackGroungColor(_ rgb: Int) -> UIColor {
          UIColor(hex: rgb)
     }
-    
-    /// Hide Keyboard
-    func hideKeyboard() {
-        view.endEditing(true)
-    }
+}
+
+// MARK: - Configure Common UI Elements
+
+extension BaseViewController {
     
     /// Setup initial UI
     func configureUI() {
@@ -120,3 +125,14 @@ extension BaseViewController {
         navBar.configureNavigationBar()
     }
 }
+
+// MARK: - Common Methods
+
+extension BaseViewController {
+    
+    /// Hide Keyboard
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
+}
+

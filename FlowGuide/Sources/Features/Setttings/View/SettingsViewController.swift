@@ -41,19 +41,14 @@ final class SettingsViewController: BaseViewController {
 
 // MARK: - Private Methods
 
-extension SettingsViewController {
+private extension SettingsViewController {
     
     /// Initial SetUp
-    private func setupViews() {
+    func setupViews() {
         self.title = SettingsLocalization.settings.localized
         pushNotificationView.layer.borderWidth = CGFloat(SettingsConstants.viewBorderWidth)
         pushNotificationView.layer.borderColor = UIColor(named: ThemeColor.viewBorderColour.rawValue)?.cgColor
     }
-}
-
-// MARK: - IBActions
-
-private extension SettingsViewController {
     
     /// Logout the current user
     func logout() {
