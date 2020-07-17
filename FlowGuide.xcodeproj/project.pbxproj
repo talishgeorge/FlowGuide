@@ -475,9 +475,9 @@
 				83006BA1246EE22D00B08094 /* Assets.xcassets */,
 				831523F72471020500F48DDA /* Colors.xcassets */,
 				52DD884124ADD12100BCC2D0 /* Main.storyboard */,
-				5222ED8024C1CAD400CC4817 /* Settings.storyboard */,
-				5222ED7E24C1CAB800CC4817 /* News.storyboard */,
 				5222ED7C24C1CA5F00CC4817 /* Login.storyboard */,
+				5222ED7E24C1CAB800CC4817 /* News.storyboard */,
+				5222ED8024C1CAD400CC4817 /* Settings.storyboard */,
 				52DD884424ADD13700BCC2D0 /* LaunchScreen.storyboard */,
 				83006B9E246EE22B00B08094 /* FlowGuide.xcdatamodeld */,
 			);

@@ -398,7 +398,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UINavigationController-CjD-Ut-IgD" id="Cyg-rt-fs0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfu-db-NMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="-196"/>
+            <point key="canvasLocation" x="2459" y="80"/>
         </scene>
         <!--UINavigationController-WNv-nI-00Z-->
         <scene sceneID="yg8-Vu-KbD">
@@ -406,7 +406,7 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UINavigationController-WNv-nI-00Z" id="RD2-gR-08E" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYA-ID-w0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="456"/>
+            <point key="canvasLocation" x="1745" y="509"/>
         </scene>
     </scenes>
     <resources>
