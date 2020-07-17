@@ -64,9 +64,11 @@ extension CategoryListViewModel {
                 DispatchQueue.main.async {
                     closureSelf.delegate?.loadData()
                 }
-            case Result.failure(let error):
-                DispatchQueue.main.async {
-                    closureSelf.delegate?.showError(error: error)
+            case Result.failure( _):
+                    categories = Category.loadLocalData()
+                    closureSelf.categories = categories
+                    DispatchQueue.main.async {
+                        closureSelf.delegate?.loadData()
                 }
             }
         }
