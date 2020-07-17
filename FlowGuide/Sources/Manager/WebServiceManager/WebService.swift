@@ -8,12 +8,10 @@
 
 import Foundation
 import UIKit
-
-typealias SuccessCompletionBlock = (_ resoponse: ([Category])) -> Void
-typealias FailureBlock = (_ error: Error?) -> Void
+import NetWorkLib
 
 /// Web Service Class
-class WebService {
+final class WebService {
     func getNews(category: String?, completion: @escaping(Swift.Result<NewsSourcesResponse, ErrorModel>) -> Void) {
         ServiceManager.shared.sendRequest(request: NewsRequestModel()) { (result) in
             completion(result)

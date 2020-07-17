@@ -4,9 +4,10 @@
 //  
 
 import Foundation
+import NetWorkLib
 
-class NewsRequestModel: RequestModel {
+final class NewsRequestModel: RequestModel {
     override var path: String {
-        return Constant.ServiceConstant.news
+        return ServiceConstant.news
     }
 }

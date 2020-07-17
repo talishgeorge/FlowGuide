@@ -4,6 +4,7 @@
 //  
 
 import Foundation
+import NetWorkLib
 
 class BaseViewModel: NSObject {
     static public let shared = BaseViewModel()

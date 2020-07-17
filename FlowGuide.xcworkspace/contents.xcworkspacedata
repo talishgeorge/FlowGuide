@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Launch Image Demp/NetWorkLib">
+   </FileRef>
+   <FileRef
       location = "group:FlowGuide.xcodeproj">
    </FileRef>
    <FileRef
