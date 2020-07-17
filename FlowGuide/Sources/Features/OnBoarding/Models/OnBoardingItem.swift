@@ -30,7 +30,7 @@ struct OnBoardingItem {
     // MARK: - Static Methods
     
     /// Onboarding items with static values
-    static var colllection: [OnBoardingItem] = [
+    static var collection: [OnBoardingItem] = [
         OnBoardingItem(imageName: "slide1",
                        title: "Why Use MVVM",
                        description: "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI"),

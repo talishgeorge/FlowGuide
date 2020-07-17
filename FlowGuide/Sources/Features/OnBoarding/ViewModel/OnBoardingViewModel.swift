@@ -50,25 +50,25 @@ final class OnBoardingViewModel: AuthViewModel {
 
 extension OnBoardingViewModel {
     
+    /// Get Onboard Item Count
+       var getOnboardingItemCount: Int {
+           OnBoardingItem.collection.count
+       }
+    
     /// Set Onboarding Item
     /// - Parameter index: Int
     func getCurrentOnboardingItemInfo(index: Int) -> OnboardingItemInfo {
-        currentSlide = OnBoardingItem.colllection[index]
+        currentSlide = OnBoardingItem.collection[index]
         var onboardingItemInfo = OnboardingItemInfo()
         onboardingItemInfo.title = currentSlide?.title
         onboardingItemInfo.description = currentSlide?.description
         return onboardingItemInfo
     }
     
-    /// Get Onboard Item Count
-    func getOnboardingItemCount() -> Int {
-         OnBoardingItem.colllection.count
-    }
-    
     /// Get Onboard Item Image
     /// - Parameter index: Int
     func getOnboardingItemImageName(index: Int) -> String? {
-        currentSlide = OnBoardingItem.colllection[index]
+        currentSlide = OnBoardingItem.collection[index]
         return onboardingItemImageName
     }
 }

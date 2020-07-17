@@ -33,7 +33,7 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     ///   - collectionView: Return OnBoarding Items Count
     ///   - section: Section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         viewModel.getOnboardingItemCount()
+         viewModel.getOnboardingItemCount
     }
     
     /// CollectonView delegate
