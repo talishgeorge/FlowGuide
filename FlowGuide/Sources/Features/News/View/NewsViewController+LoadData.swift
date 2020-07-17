@@ -17,7 +17,7 @@ extension NewsViewController: CategoryListViewModelDelegate {
         }
         self.presentAlertWithTitle(title: String.News.newsFecthError.localized, message: String.News.newsFetchErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
             if value == 0 {
-                self.categoryListVM.showOfflineData()
+                self.viewModel.showOfflineData()
             }
         }
     }
