@@ -399,7 +399,6 @@
 				8394EA2A2477F1E0002FA8EF /* View */,
 				8394EA2B2477F1FA002FA8EF /* ViewModel */,
 				8394EA2D2477F20A002FA8EF /* Localization */,
-				8394EA2C2477F203002FA8EF /* Models */,
 				52546D6024BF43F00047C6DB /* Constants */,
 			);
 			path = Loading;
@@ -430,9 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				8394EA262477F1BE002FA8EF /* View */,
-				8394EA272477F1C5002FA8EF /* ViewModel */,
 				8394EA292477F1D2002FA8EF /* Utilities */,
-				8394EA282477F1CC002FA8EF /* Models */,
 				52546D5624BF421F0047C6DB /* Constants */,
 			);
 			path = Setttings;
@@ -633,20 +630,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8394EA272477F1C5002FA8EF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		8394EA282477F1CC002FA8EF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		8394EA292477F1D2002FA8EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,13 +652,6 @@
 				833570FD247ADEFD002E26A0 /* LoadingViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		8394EA2C2477F203002FA8EF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8394EA2D2477F20A002FA8EF /* Localization */ = {
