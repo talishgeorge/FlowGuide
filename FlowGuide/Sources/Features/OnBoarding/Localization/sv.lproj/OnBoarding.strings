@@ -9,3 +9,6 @@
 "onboardingTitle1" = "Varför använda MVVM";
 "onboardingTitle2" = "Fördelarna med MVVM";
 "onboardingTitle3" = "När ska man använda MVVM";
+"onboardingDesc1" = "Denna app handlar om att lära sig MVVM-designmönstret. MVVM Låter avkoppla affärslogiken från användargränssnittet";
+"onboardingDesc2" = "MVVM Tillåter återanvändning av kod";
+"onboardingDesc3" = "Genom att ha en åtskillnad mellan de olika delarna av en apps kod ger det en nivå av struktur och enhetlighet i koden";

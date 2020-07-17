@@ -32,13 +32,13 @@ struct OnBoardingItem {
     /// Onboarding items with static values
     static var collection: [OnBoardingItem] = [
         OnBoardingItem(imageName: "slide1",
-                       title: "Why Use MVVM",
-                       description: "This app is all about to learn the MVVM design pattern. MVVM Allows to decouple the business  logic from the UI"),
+                       title: String.OnBoarding.onboardingTitle1.localized,
+                       description: String.OnBoarding.onboardingDesc1.localized),
         OnBoardingItem(imageName: "slide2",
-                       title: "Why Use MVVM - Tip 1",
-                       description: "MVVM Allows Code reuse"),
+                       title: String.OnBoarding.onboardingTitle2.localized,
+                       description: String.OnBoarding.onboardingDesc2.localized),
         OnBoardingItem(imageName: "slide3",
-                       title: "Why Use MVVM - Tip 2",
-                       description: "By having a separation between the different parts of an app's code it brings a level of structure and uniformity to the code")
+                       title: String.OnBoarding.onboardingTitle3.localized,
+                       description: String.OnBoarding.onboardingDesc3.localized)
     ]
 }

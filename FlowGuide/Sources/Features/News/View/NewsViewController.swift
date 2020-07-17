@@ -22,13 +22,8 @@ final class NewsViewController: BaseViewController {
         super.viewDidLoad()
         
         /// Loading Header from Bundle
-        navigationController?.navigationBar.barTintColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemIndigo
-        tableView.layer.borderWidth = CGFloat(NewsConstants.tableViewBorderWidth)
-        tableView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
-        let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
-        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
-        self.title = Constants.NavigationTitle.home
-        
+        setupUI()
+        registerCell()
         if let email = auth.currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
@@ -36,6 +31,12 @@ final class NewsViewController: BaseViewController {
         populateNews()
     }
     
+    func setupUI() {
+        navigationController?.navigationBar.barTintColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemIndigo
+        tableView.layer.borderWidth = CGFloat(NewsConstants.tableViewBorderWidth)
+        tableView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
+        self.title = Constants.NavigationTitle.home
+    }
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

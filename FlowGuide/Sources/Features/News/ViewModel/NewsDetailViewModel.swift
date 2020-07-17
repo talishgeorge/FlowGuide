@@ -27,11 +27,11 @@ extension NewsDetailsViewModel {
     
     /// Source name
     var sourceName: String {
-         self.article.sourceName
+         article.sourceName
     }
     
     /// Article URL
     var url: String? {
-         self.article.url
+         article.url
     }
 }
