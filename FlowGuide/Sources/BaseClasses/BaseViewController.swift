@@ -89,7 +89,7 @@ extension BaseViewController {
         gradient.frame = view.frame
     }
 
-    func configureButtonUI(customButton: UIView, viewButton: UIButton) {
+    func buttonGradient(customButton: UIView, viewButton: UIButton) {
         let newView = UIView(frame: CGRect(x: 0, y: 0, width: customButton.frame.width, height: customButton.frame.height))
         newView.clipsToBounds = true
         newView.layer.cornerRadius = customButton.frame.height/2
