@@ -4,5 +4,5 @@
 //  
 
 struct LoginConstants {
-    static public let textFieldBorderWidth = 1
+    static let textFieldBorderWidth = 1
 }

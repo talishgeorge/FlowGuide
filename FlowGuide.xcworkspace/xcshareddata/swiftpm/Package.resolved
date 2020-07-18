@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/talishgeorge/ExtensionsLib.git",
         "state": {
           "branch": null,
-          "revision": "782d2f2ec7be9bfb3ec07f4e5b05f68c0660e09a",
-          "version": "1.0.6"
+          "revision": "ccc1adbe7d216636c310a4e75d8ce456fc9dfafc",
+          "version": "1.0.8"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/talishgeorge/UtilitiesLib.git",
         "state": {
           "branch": null,
-          "revision": "834c6fdec31d4197c9d95f1e7af8f62b7054b358",
-          "version": "1.0.3"
+          "revision": "a6737721142f89938c95f0235b81b7f930a57f2c",
+          "version": "1.0.5"
         }
       }
     ]

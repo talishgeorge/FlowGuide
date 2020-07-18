@@ -4,5 +4,5 @@
 //  
 
 struct OnBoardingConstants {
-    static public let minimumLineSpacingForSection = 0
+    static let minimumLineSpacingForSection = 0
 }

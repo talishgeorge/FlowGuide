@@ -4,6 +4,6 @@
 //  
 
 struct LoadingConstants {
-    static public let timerInterval = 0.40
-    static public let delayInSeconds = 2.5
+    static let timerInterval = 0.40
+    static let delayInSeconds = 2.5
 }

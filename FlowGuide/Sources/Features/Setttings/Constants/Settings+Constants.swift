@@ -4,6 +4,6 @@
 //  
 
 struct SettingsConstants {
-    static public let delayInSeconds = 2.0
-    static public let viewBorderWidth = 1
+    static let delayInSeconds = 2.0
+    static let viewBorderWidth = 1
 }

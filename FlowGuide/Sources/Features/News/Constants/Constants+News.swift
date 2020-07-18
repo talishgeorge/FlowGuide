@@ -4,5 +4,5 @@
 //  
 
 struct NewsConstants {
-    static public let tableViewBorderWidth = 1.2
+    static let tableViewBorderWidth = 1.2
 }
