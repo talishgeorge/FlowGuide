@@ -11,6 +11,13 @@ import OakLib
 
 extension NewsViewController: CategoryListViewModelDelegate {
     
+    /// Refresh UI
+    func serviceStartRefreshingUI(_ viewModel: CategoryListViewModel) {
+        self.tableView.reloadData()
+        ActivityIndicator.dismiss()
+    }
+    
+    /// Show Error
     func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?) {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
             return
@@ -20,10 +27,5 @@ extension NewsViewController: CategoryListViewModelDelegate {
                 self.viewModel.showOfflineData()
             }
         }
-    }
-    
-    func serviceStartUpdating(_ viewModel: CategoryListViewModel) {
-        self.tableView.reloadData()
-        ActivityIndicator.dismiss()
     }
 }

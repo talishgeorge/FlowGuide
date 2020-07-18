@@ -11,7 +11,7 @@ import UIKit
 /// Category List Model
 /// Protocol
 protocol CategoryListViewModelDelegate: class {
-    func serviceStartUpdating(_ viewModel: CategoryListViewModel)
+    func serviceStartRefreshingUI(_ viewModel: CategoryListViewModel)
     func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?)
 }
 
@@ -67,7 +67,7 @@ extension CategoryListViewModel {
                 categories.append(category)
                 closureSelf.categories = categories
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.serviceStartUpdating(self)
+                    closureSelf.delegate?.serviceStartRefreshingUI(self)
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
@@ -80,7 +80,7 @@ extension CategoryListViewModel {
     /// Show offline data
     func showOfflineData() {
         categories = Category.loadLocalData()
-        self.delegate?.serviceStartUpdating(self)
+        self.delegate?.serviceStartRefreshingUI(self)
     }
 }
 

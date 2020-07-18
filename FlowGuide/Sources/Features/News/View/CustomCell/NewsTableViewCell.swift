@@ -32,8 +32,6 @@ final class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
         guard let news = vm as? ArticleViewModel else { return }
         titleLabel.text = news.title
         descriptionLabel.text = news.description
-        news.image { (img) in
-            self.headlineImageView.image = img
-        }
+        news.image { self.headlineImageView.image = $0 }
     }
 }

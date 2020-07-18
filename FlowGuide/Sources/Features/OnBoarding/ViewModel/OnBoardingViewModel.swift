@@ -19,7 +19,7 @@ final class OnBoardingViewModel: AuthViewModel {
     var currentSlide: OnBoardingItem = OnBoardingItem()
     
     /// Onboarding item title
-    var onboardingItemTitle: String? {
+    var onboardingItemTitle: String {
         if let title = currentSlide.title {
             return title
         } else {
@@ -28,7 +28,7 @@ final class OnBoardingViewModel: AuthViewModel {
     }
     
     /// Onboarding Item Description
-    var onboardingItemDescription: String? {
+    var onboardingItemDescription: String {
         if let description = currentSlide.description {
             return description
         } else {
@@ -37,7 +37,7 @@ final class OnBoardingViewModel: AuthViewModel {
     }
     
     /// Onboarding Item Image name
-    var onboardingItemImageName: String? {
+    var onboardingItemImageName: String {
         if let imageName = currentSlide.imageName {
             return imageName
         } else {

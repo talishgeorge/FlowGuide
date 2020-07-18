@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlowGuide/Sources/Features/Login/View/LoginViewController.swift"
@@ -53,7 +53,7 @@
             <Locations>
                <Location
                   uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1 - 1d68f63931e040c0"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; () in FlowGuide.LoginViewController.(loginButtonTapped in _A302A4DEB7CEB74BC15DFBFCAFAB6A7B)(__C.UIButton) -&gt; ()"
@@ -68,7 +68,7 @@
                </Location>
                <Location
                   uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1 - 32b737995f887249"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; () in FlowGuide.LoginViewController.(loginButtonTapped in _A302A4DEB7CEB74BC15DFBFCAFAB6A7B)(__C.UIButton) -&gt; ()"

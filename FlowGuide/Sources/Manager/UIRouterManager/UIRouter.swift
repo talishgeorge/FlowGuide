@@ -1,5 +1,5 @@
 //
-//  PresenterManager.swift
+//  UIRouter.swift
 //  FlowGuide
 //
 //  Created by TCS on 16/05/20.
@@ -9,11 +9,13 @@
 import UIKit
 import UtilitiesLib
 
-final class PresenterManager {
+/// Routter for UI
+final class UIRouter {
    
-    static let shared = PresenterManager()
+    static let shared = UIRouter()
     private init() {}
     
+    /// View mode
     enum ViewMode {
         case mainTabBarConttoller
         case onBoarding

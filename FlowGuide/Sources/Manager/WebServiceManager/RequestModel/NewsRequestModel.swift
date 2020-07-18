@@ -6,6 +6,7 @@
 import Foundation
 import NetWorkLib
 
+/// API Request Model 
 final class NewsRequestModel: RequestModel {
     override var path: String {
         return ServiceConstant.news

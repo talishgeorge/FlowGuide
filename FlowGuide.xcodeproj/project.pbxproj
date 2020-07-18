@@ -50,7 +50,7 @@
 		83081538248D25020036B52D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83081536248D25020036B52D /* ArticleViewModel.swift */; };
 		830815462494B6720036B52D /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 830815452494B6720036B52D /* Article.json */; };
 		8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308154724973D680036B52D /* NewsDetailViewModel.swift */; };
-		831523ED246F796900F48DDA /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
+		831523ED246F796900F48DDA /* UIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* UIRouter.swift */; };
 		831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523F4246F802300F48DDA /* SettingsViewController.swift */; };
 		831523F82471020500F48DDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
 		831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523FA2472151D00F48DDA /* OnBoardingViewController.swift */; };
@@ -133,7 +133,7 @@
 		839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006B97246EE22B00B08094 /* SceneDelegate.swift */; };
 		839DAE2A24C1C40C00361AF4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357151247D8278002E26A0 /* ThemeManager.swift */; };
 		839DAE2B24C1C41100361AF4 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F30CB7249CAB60008B2B53 /* SDKManager.swift */; };
-		839DAE2C24C1C41900361AF4 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* PresenterManager.swift */; };
+		839DAE2C24C1C41900361AF4 /* UIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831523EC246F796900F48DDA /* UIRouter.swift */; };
 		839DAE2D24C1C42000361AF4 /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 830815452494B6720036B52D /* Article.json */; };
 		839DAE2E24C1C42400361AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83006BA1246EE22D00B08094 /* Assets.xcassets */; };
 		839DAE2F24C1C42600361AF4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 831523F72471020500F48DDA /* Colors.xcassets */; };
@@ -207,7 +207,7 @@
 		83081536248D25020036B52D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		830815452494B6720036B52D /* Article.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Article.json; sourceTree = "<group>"; };
 		8308154724973D680036B52D /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
-		831523EC246F796900F48DDA /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		831523EC246F796900F48DDA /* UIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRouter.swift; sourceTree = "<group>"; };
 		831523F4246F802300F48DDA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		831523F72471020500F48DDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		831523FA2472151D00F48DDA /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 				83357150247D8244002E26A0 /* ThemeManager */,
 				83F30CBA249CF0D3008B2B53 /* SDKManager */,
 				8335711B247BEB3B002E26A0 /* WebServiceManager */,
-				8335714A247C29EF002E26A0 /* PresenterManager */,
+				8335714A247C29EF002E26A0 /* UIRouterManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -546,12 +546,12 @@
 			path = WebServiceManager;
 			sourceTree = "<group>";
 		};
-		8335714A247C29EF002E26A0 /* PresenterManager */ = {
+		8335714A247C29EF002E26A0 /* UIRouterManager */ = {
 			isa = PBXGroup;
 			children = (
-				831523EC246F796900F48DDA /* PresenterManager.swift */,
+				831523EC246F796900F48DDA /* UIRouter.swift */,
 			);
-			path = PresenterManager;
+			path = UIRouterManager;
 			sourceTree = "<group>";
 		};
 		83357150247D8244002E26A0 /* ThemeManager */ = {
@@ -1019,7 +1019,7 @@
 				839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */,
 				52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
-				831523ED246F796900F48DDA /* PresenterManager.swift in Sources */,
+				831523ED246F796900F48DDA /* UIRouter.swift in Sources */,
 				833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
@@ -1098,7 +1098,7 @@
 				83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
-				839DAE2C24C1C41900361AF4 /* PresenterManager.swift in Sources */,
+				839DAE2C24C1C41900361AF4 /* UIRouter.swift in Sources */,
 				839DAE3024C1C42E00361AF4 /* FlowGuide.xcdatamodeld in Sources */,
 				839DAE2224C1C3BE00361AF4 /* NewsHeaderView.swift in Sources */,
 				833570FC247ADB67002E26A0 /* Login.swift in Sources */,

@@ -11,11 +11,6 @@ import Foundation
 /// News Details Model
 struct NewsDetailsViewModel { 
     let article: Article
-}
-
-extension NewsDetailsViewModel {
-    
-    // MARK: - Initilization
     
     init(_ article: Article) {
         self.article = article
@@ -27,11 +22,11 @@ extension NewsDetailsViewModel {
     
     /// Source name
     var sourceName: String {
-         article.sourceName
+        article.sourceName
     }
     
     /// Article URL
     var url: String? {
-         article.url
+        article.url
     }
 }

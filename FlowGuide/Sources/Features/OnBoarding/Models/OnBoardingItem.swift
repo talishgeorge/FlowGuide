@@ -31,13 +31,13 @@ struct OnBoardingItem {
     
     /// Onboarding items with static values
     static var collection: [OnBoardingItem] = [
-        OnBoardingItem(imageName: "slide1",
+        OnBoardingItem(imageName: AppConstants.slide1,
                        title: String.OnBoarding.onboardingTitle1.localized,
                        description: String.OnBoarding.onboardingDesc1.localized),
-        OnBoardingItem(imageName: "slide2",
+        OnBoardingItem(imageName: AppConstants.slide2,
                        title: String.OnBoarding.onboardingTitle2.localized,
                        description: String.OnBoarding.onboardingDesc2.localized),
-        OnBoardingItem(imageName: "slide3",
+        OnBoardingItem(imageName: AppConstants.slide3,
                        title: String.OnBoarding.onboardingTitle3.localized,
                        description: String.OnBoarding.onboardingDesc3.localized)
     ]

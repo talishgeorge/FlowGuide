@@ -56,7 +56,7 @@ private extension SettingsViewController {
         let result = loginViewModel.logoutUser()
         switch result {
         case .success:
-            PresenterManager.shared.show(viewMode: .onBoarding)
+            UIRouter.shared.show(viewMode: .onBoarding)
         case .failure( _):
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
             view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)

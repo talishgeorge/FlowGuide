@@ -11,6 +11,7 @@ import Split
 import Firebase
 import UtilitiesLib
 
+/// Manage SDK 
 final class SDKManager {
  
     static public let shared = SDKManager()

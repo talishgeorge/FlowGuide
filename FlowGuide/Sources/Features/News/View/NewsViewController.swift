@@ -56,6 +56,7 @@ final class NewsViewController: BaseViewController {
 // MARK: - Internal Methods
 
 private extension NewsViewController {
+    
     /// Fetch News by category
     func populateNews() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)

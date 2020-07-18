@@ -105,7 +105,7 @@ extension OnBoardingViewController: OnBoardingDelegate {
     func showMainTabBarController() {
         if let presentedViewController = self.presentedViewController as? LoginViewController {
             presentedViewController.dismiss(animated: true) {
-                PresenterManager.shared.show(viewMode: .mainTabBarConttoller)
+                UIRouter.shared.show(viewMode: .mainTabBarConttoller)
             }
         }
     }
