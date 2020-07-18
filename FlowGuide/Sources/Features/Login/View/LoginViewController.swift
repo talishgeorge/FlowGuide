@@ -158,18 +158,18 @@ private extension LoginViewController {
         alertController.addTextField(configurationHandler: nil)
         let cancelAction = UIAlertAction(title: String.Global.cancel.localized, style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: String.Global.ok.localized, style: .default) { [weak self] (_) in
-            guard let this = self else {
+            guard let strongSelf = self else {
                 return
             }
             if let textField = alertController.textFields?.first,
                 let email = textField.text, !email.isEmpty {
-                this.loginViewModel.resetPassword(withEmail: email) { [weak self] (result) in
-                    guard let this = self else {
+                strongSelf.loginViewModel.resetPassword(withEmail: email) { [weak self] (result) in
+                    guard let strongSelf = self else {
                         return
                     }
                     switch result {
                     case .success:
-                        this.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
+                        strongSelf.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
                         self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
                         self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
@@ -199,15 +199,15 @@ private extension LoginViewController {
         }
         ActivityIndicator.show(String.Global.pleaseWait.localized)
         signUpviewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
-            guard let this = self else {
+            guard let strongSelf = self else {
                 return
             }
             ActivityIndicator.dismiss()
             switch result {
             case .success:
-                this.delegate?.showMainTabBarController()
+                strongSelf.delegate?.showMainTabBarController()
             case .failure(let error):
-                this.showErrorMessage(text: error.localizedDescription)
+                strongSelf.showErrorMessage(text: error.localizedDescription)
             }
         }
     }
