@@ -10,8 +10,7 @@ import UIKit
 import UtilitiesLib
 
 final class LoadingViewController: BaseViewController {
-    
-    var timer: Timer?
+
     private let loginViewModel = LoginViewModel()
     @IBOutlet private weak var loadingLabel: UILabel!
     
@@ -34,7 +33,7 @@ final class LoadingViewController: BaseViewController {
     
     /// Show Loading
     private func showLoading() {
-        timer = Timer.scheduledTimer(withTimeInterval: LoadingConstants.timerInterval, repeats: true) { _ in
+        let timer = Timer.scheduledTimer(withTimeInterval: LoadingConstants.timerInterval, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
                 case String.Loading.loading1.localized:

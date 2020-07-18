@@ -118,7 +118,7 @@ extension BaseViewController {
         NavBarConstants.rootNavigationController = self.navigationController
         NavBarConstants.barBGColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
-        NavBarConstants.rightNavButtonImage = UIImage(named: "logout")!
+        NavBarConstants.rightNavButtonImage = UIImage(named: "logout") ?? UIImage()
         NavBarConstants.titleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
         NavBarConstants.transparentTitleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
         NavBarConstants.titleFont = UIFont.navigationTitle

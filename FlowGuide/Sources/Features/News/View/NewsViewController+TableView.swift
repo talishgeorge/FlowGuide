@@ -17,7 +17,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     /// Return Number of Sections
     /// - Parameter tableView: UITTableView
     func numberOfSections(in tableView: UITableView) -> Int {
-         viewModel.numberOfSections
+        viewModel.numberOfSections
     }
     
     /// Return Number of Rows in Sections
@@ -25,7 +25,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     ///   - tableView: UITableView
     ///   - section: Int Value
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         viewModel.numberOfRowsInSection(section)
+        viewModel.numberOfRowsInSection(section)
     }
     
     /// Return Cell for Row
@@ -65,12 +65,12 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         guard tableView.indexPathForSelectedRow != nil else {
             fatalError("Unable to get the selected row")
         }
-        if let featureFlag = SDKManager.shared.featureFlag, featureFlag == true {
+        if SDKManager.shared.featureFlag {
             performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
-          view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
-           view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
-           view.popup.success(String.News.featureEnableInfo.localized)
+            view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
+            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            view.popup.success(String.News.featureEnableInfo.localized)
         }
     }
     
@@ -79,9 +79,10 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     ///   - tableView: UITableView
     ///   - indexPath: IndexPath
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         UITableView.automaticDimension
+        UITableView.automaticDimension
     }
     
+    /// Register cell
     func registerCell() {
         let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)

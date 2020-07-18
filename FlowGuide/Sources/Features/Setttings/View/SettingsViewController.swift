@@ -53,22 +53,16 @@ private extension SettingsViewController {
     /// Logout the current user
     func logout() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        delay(durationInSeconds: SettingsConstants.delayInSeconds) { [weak self] in
-            guard let this = self else {
-                return
-            }
-            let result = this.loginViewModel.logoutUser()
-            
-            switch result {
-            case .success:
-                PresenterManager.shared.show(viewMode: .onBoarding)
-            case .failure( _):
-                self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
-                self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
-                self?.view.popup.success(String.News.featureEnableInfo.localized)
-            }
-            ActivityIndicator.dismiss()
+        let result = loginViewModel.logoutUser()
+        switch result {
+        case .success:
+            PresenterManager.shared.show(viewMode: .onBoarding)
+        case .failure( _):
+            view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
+            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            view.popup.success(String.News.featureEnableInfo.localized)
         }
+        ActivityIndicator.dismiss()
     }
     
     /// Logout

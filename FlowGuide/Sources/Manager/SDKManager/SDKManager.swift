@@ -14,11 +14,11 @@ import UtilitiesLib
 final class SDKManager {
  
     static public let shared = SDKManager()
-    let apiKey: String = SplitAPI.apiKey
+    let apiKey = SplitAPI.apiKey
     let key: Key = Key(matchingKey: SplitAPI.customerID)
     let config = SplitClientConfig()
     let builder = DefaultSplitFactoryBuilder()
-    var featureFlag: Bool? = false
+    var featureFlag = false
     
     // MARK: - internal Methods
     
