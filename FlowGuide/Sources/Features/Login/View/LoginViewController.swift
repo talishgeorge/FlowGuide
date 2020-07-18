@@ -12,6 +12,9 @@ import OakLib
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
     
+    weak var delegate: OnBoardingDelegate?
+    private var loginViewModel = LoginViewModel()
+    private var viewModel = SignUpViewModel()
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -21,9 +24,6 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var passwordConfirmationTextFields: UITextField!
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var forgotPasswordButton: UIButton!
-    weak var delegate: OnBoardingDelegate?
-    private var loginViewModel = LoginViewModel()
-    private var viewModel = SignUpViewModel()
     @IBOutlet private weak var emailView: UIView!
     @IBOutlet private weak var passwordView: UIView!
     @IBOutlet private weak var confirmPswdView: UIView!
