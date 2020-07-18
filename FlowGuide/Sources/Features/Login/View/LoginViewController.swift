@@ -14,7 +14,7 @@ final class LoginViewController: BaseViewController {
     
     weak var delegate: OnBoardingDelegate?
     private var loginViewModel = LoginViewModel()
-    private var viewModel = SignUpViewModel()
+    private var signUpviewModel = SignUpViewModel()
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -189,7 +189,7 @@ private extension LoginViewController {
         view.endEditing(true)
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
-            let confirmationPassword = confirmPasswordTextField.text, viewModel.formIsValid else {
+            let confirmationPassword = confirmPasswordTextField.text, signUpviewModel.formIsValid else {
                 showErrorMessage(text: String.Login.invalidForm.localized)
                 return
         }
@@ -198,7 +198,7 @@ private extension LoginViewController {
             return
         }
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        viewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
+        signUpviewModel.signUpNewUser(withEmail: email, password: password) { [weak self] (result) in
             guard let this = self else {
                 return
             }
@@ -231,7 +231,7 @@ extension LoginViewController: UITextFieldDelegate {
         let confirmPassword = confirmPasswordTextField.text
         loginViewModel = LoginViewModel(email,
                                         password)
-        viewModel = SignUpViewModel(email,
+        signUpviewModel = SignUpViewModel(email,
                                           password,
                                           confirmPassword)
     }
