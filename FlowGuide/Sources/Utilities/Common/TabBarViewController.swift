@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ExtensionsLib
 
 final class TabBarViewController: UITabBarController {
     

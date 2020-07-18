@@ -73,7 +73,7 @@ private extension OnBoardingViewController {
     /// Localization
      func setupUIForLocalization() {
         getStartedButton.setTitle(String.OnBoarding.getStarted.localized, for: .normal)
-        buttonGradient(customButton: getStartedView, viewButton: getStartedButton)
+        UIView.gradientButton(customButton: getStartedView, viewButton: getStartedButton)
     }
 }
 

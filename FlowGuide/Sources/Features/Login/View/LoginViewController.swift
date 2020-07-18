@@ -108,8 +108,8 @@ private extension LoginViewController {
         emailView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         passwordView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
-        buttonGradient(customButton: loginButtonView, viewButton: loginButton)
-        buttonGradient(customButton: signUpButtonView, viewButton: sigunpButton)
+        UIView.gradientButton(customButton: loginButtonView, viewButton: loginButton)
+        UIView.gradientButton(customButton: signUpButtonView, viewButton: sigunpButton)
     }
     
     func setupCardView() {

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ExtensionsLib
 
 /// Theme Manger Class
 final class ThemeManager {
