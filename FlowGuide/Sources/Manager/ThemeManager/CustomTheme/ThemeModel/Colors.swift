@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Colors: Codable {
+struct Colors: Decodable {
     
     let themeBlueTop: String?
     let themeBottom: String?

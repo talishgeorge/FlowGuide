@@ -5,6 +5,7 @@
 
 import UIKit
 
+/// Theme properties
 protocol ThemeStyle {
     
     var viewGradientTopColor: UIColor { get }
@@ -13,4 +14,5 @@ protocol ThemeStyle {
     var borderColor: UIColor {get}
     var defaultFontColor: UIColor {get}
     func jsonForTheme()
+    
 }

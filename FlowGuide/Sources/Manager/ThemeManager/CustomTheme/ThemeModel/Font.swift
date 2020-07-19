@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Font: Codable {
+struct Font: Decodable {
     let avenirNextCondensed: String?
     
     enum CodingKeys: String, CodingKey {

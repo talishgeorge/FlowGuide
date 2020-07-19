@@ -58,25 +58,6 @@ extension BaseViewController {
     }
 }
 
-// MARK: - Theme
-
-extension BaseViewController {
-    
-    /// Set Theme
-    func setDarkTheme() {
-        Theme.darkTheme()
-    }
-    
-    /// Set Default Theme
-    func setDefaultTheme() {
-        Theme.defaultTheme()
-    }
-    
-    func setBackGroungColor(_ rgb: Int) -> UIColor {
-         UIColor(hex: rgb)
-    }
-}
-
 // MARK: - Configure Common UI Elements
 
 extension BaseViewController {

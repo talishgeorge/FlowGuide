@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct AppThemeModel: Codable {
+struct AppThemeModel: Decodable {
     
     let colors: Colors?
     let font: Font?
