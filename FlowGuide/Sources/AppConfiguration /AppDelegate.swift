@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDKManager.shared.initilizeFirebaseSDK()
         SDKManager.shared.initializeSplitIOSDK()
         //SDKManager.shared.initilizeThemeManager()
-        FBThemeManager.shared.setTheme(jsonName: "Red", path: .mainBundle)
+        ThemeManager.shared.setTheme(jsonName: "Red", path: .mainBundle)
         return true
     }
     

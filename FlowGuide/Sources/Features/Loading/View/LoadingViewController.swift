@@ -10,7 +10,7 @@ import UIKit
 import UtilitiesLib
 
 final class LoadingViewController: BaseViewController {
-
+    
     private let loginViewModel = LoginViewModel()
     @IBOutlet private weak var loadingLabel: UILabel!
     
@@ -19,14 +19,9 @@ final class LoadingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingLabel.text = String.Loading.loading1.localized
-        loadingLabel.textColor = FBThemeManager.shared.textColor()
-         NotificationCenter.default.addObserver(self, selector: #selector(updateNightSwitch), name: NSNotification.Name(rawValue: themeUpdateNotification), object: nil)
+        loadingLabel.textColor = ThemeManager.shared.textColor()
     }
-    
-    @objc fileprivate func updateNightSwitch() {
-        //nightSwitch.isOn = MyThemes.isNight()
-    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showLoading()
