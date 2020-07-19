@@ -12,8 +12,6 @@
 		5222ED7F24C1CAB800CC4817 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED7E24C1CAB800CC4817 /* News.storyboard */; };
 		5222ED8124C1CAD400CC4817 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED8024C1CAD400CC4817 /* Settings.storyboard */; };
 		5222ED8224C1CAD400CC4817 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED8024C1CAD400CC4817 /* Settings.storyboard */; };
-		524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
-		524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EEE7524B6D91900B5574F /* ColorConstants.swift */; };
 		5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
 		5250851E24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
 		52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D5724BF42380047C6DB /* Constants+Login.swift */; };
@@ -199,7 +197,6 @@
 		5222ED7C24C1CA5F00CC4817 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5222ED7E24C1CAB800CC4817 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		5222ED8024C1CAD400CC4817 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		524EEE7524B6D91900B5574F /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		5250851C24C0391700CF1BC8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		52546D5724BF42380047C6DB /* Constants+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Login.swift"; sourceTree = "<group>"; };
 		52546D5A24BF42F50047C6DB /* Constants+OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+OnBoarding.swift"; sourceTree = "<group>"; };
@@ -369,17 +366,6 @@
 				529B305424C448EA00DCB2FD /* AppThemeModel.swift */,
 			);
 			path = ThemeModel;
-			sourceTree = "<group>";
-		};
-		529B306124C47C1A00DCB2FD /* CustomTheme */ = {
-			isa = PBXGroup;
-			children = (
-				529B305124C448DD00DCB2FD /* ThemeModel */,
-				5269D7F924C48CB50091FB0D /* ThemeTypes */,
-				529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */,
-				529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */,
-			);
-			path = CustomTheme;
 			sourceTree = "<group>";
 		};
 		52D378E024C1A0FB00D28A0A /* Common */ = {
@@ -614,8 +600,10 @@
 		83357150247D8244002E26A0 /* ThemeManager */ = {
 			isa = PBXGroup;
 			children = (
-				524EEE7524B6D91900B5574F /* ColorConstants.swift */,
-				529B306124C47C1A00DCB2FD /* CustomTheme */,
+				529B305124C448DD00DCB2FD /* ThemeModel */,
+				5269D7F924C48CB50091FB0D /* ThemeTypes */,
+				529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */,
+				529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */,
 			);
 			path = ThemeManager;
 			sourceTree = "<group>";
@@ -1074,7 +1062,6 @@
 				83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 				831E96FE24AC5416006D39B7 /* WebService.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
-				524EEE7624B6D91900B5574F /* ColorConstants.swift in Sources */,
 				52546D5E24BF437B0047C6DB /* Constants+News.swift in Sources */,
 				5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */,
 				833570FB247ADB67002E26A0 /* Login.swift in Sources */,
@@ -1168,7 +1155,6 @@
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,
 				839DAE1A24C1C39100361AF4 /* LoginViewController.swift in Sources */,
-				524EEE7724B6D91900B5574F /* ColorConstants.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				839DAE2424C1C3C900361AF4 /* NewsDetailViewModel.swift in Sources */,
 				83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */,

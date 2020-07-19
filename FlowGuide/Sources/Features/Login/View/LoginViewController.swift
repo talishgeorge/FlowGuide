@@ -114,7 +114,7 @@ private extension LoginViewController {
     
     func setupCardView() {
         //        Carview setup
-        cardView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
+        cardView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
     }
 }
 

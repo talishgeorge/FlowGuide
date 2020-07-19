@@ -84,7 +84,7 @@ extension BaseViewController {
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.rootNavigationController = self.navigationController
-        NavBarConstants.barBGColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemBlue
+        NavBarConstants.barBGColor = CustomThemeManger.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.rightNavButtonImage = UIImage(named: "logout") ?? UIImage()
         NavBarConstants.titleColor = CustomThemeManger.shared.theme?.navigationBarTintColor ?? UIColor.white
