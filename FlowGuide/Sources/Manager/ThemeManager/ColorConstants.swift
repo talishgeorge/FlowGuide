@@ -14,7 +14,6 @@ enum ThemeColor: String {
     case viewBorderColour = "ViewBorderColour"
 }
 
-
 /// Font Type
 enum FontType: String {
     case avenirNextCondensed = "Avenir Next Condensed"

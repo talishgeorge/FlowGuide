@@ -18,6 +18,7 @@ disabled_rules:
   - empty_enum_arguments
   - function_parameter_count
   - line_length
+  - force_cast
   
 opt_in_rules:
   - private_action

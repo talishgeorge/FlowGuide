@@ -19,6 +19,12 @@ final class LoadingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingLabel.text = String.Loading.loading1.localized
+        loadingLabel.textColor = FBThemeManager.shared.textColor()
+         NotificationCenter.default.addObserver(self, selector: #selector(updateNightSwitch), name: NSNotification.Name(rawValue: themeUpdateNotification), object: nil)
+    }
+    
+    @objc fileprivate func updateNightSwitch() {
+        //nightSwitch.isOn = MyThemes.isNight()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -42,6 +42,6 @@ final class SDKManager {
     
     /// Initilize ThemeManager
     func initilizeThemeManager() {
-        ThemeManager.setup()
+        FBThemeManager.shared.setup()
     }    
 }

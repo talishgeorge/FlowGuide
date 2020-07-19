@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         SDKManager.shared.initilizeFirebaseSDK()
         SDKManager.shared.initializeSplitIOSDK()
-        SDKManager.shared.initilizeThemeManager()
+        //SDKManager.shared.initilizeThemeManager()
+        FBThemeManager.shared.setTheme(jsonName: "Red", path: .mainBundle)
         return true
     }
     
