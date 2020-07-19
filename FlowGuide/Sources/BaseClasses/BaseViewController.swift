@@ -84,10 +84,13 @@ extension BaseViewController {
     /// Setup initial UI
     func configureUI() {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor ?? UIColor.systemIndigo, UIColor(named: ThemeColor.themeBottom.rawValue)?.cgColor ?? UIColor.systemTeal]
+        gradient.colors = [CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor ?? UIColor.systemIndigo, CustomThemeManger.shared.theme?.viewGradientBottomColor.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor: CustomThemeManger.shared.theme?.defaultFontColor]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
     }
 }
 
@@ -103,8 +106,8 @@ extension BaseViewController {
         NavBarConstants.barBGColor = UIColor(named: ThemeColor.themeBlueTop.rawValue) ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.rightNavButtonImage = UIImage(named: "logout") ?? UIImage()
-        NavBarConstants.titleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
-        NavBarConstants.transparentTitleColor = UIColor.init(hexString: ThemeColor.navigationTintHex.rawValue, alpha: 1.0)
+        NavBarConstants.titleColor = CustomThemeManger.shared.theme?.navigationBarTintColor ?? UIColor.white
+        NavBarConstants.transparentTitleColor = CustomThemeManger.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.titleFont = UIFont.navigationTitle
         navBar.configureNavigationBar()
     }

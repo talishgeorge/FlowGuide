@@ -1,0 +1,12 @@
+{
+    "colors": {
+        "themeBlueTop": "#1B8BFF",
+        "themeBottom": "#2FCCFE",
+        "navigationTintHex": "#F3F3F3",
+        "viewBorderColour": "#C0C0C0",
+        "fontColorWhiteHex": "#FFFFFF",
+    },
+    "font": {
+        "avenirNextCondensed": "Avenir Next Condensed",
+    }
+}

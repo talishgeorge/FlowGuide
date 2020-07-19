@@ -102,9 +102,9 @@ private extension LoginViewController {
     }
     
     func setupUI() {
-        emailView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
-        passwordView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
-        confirmPswdView.layer.borderColor = UIColor(named: ThemeColor.themeBlueTop.rawValue)?.cgColor
+        emailView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
+        passwordView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
+        confirmPswdView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
         emailView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         passwordView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)

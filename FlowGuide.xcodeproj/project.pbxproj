@@ -26,6 +26,24 @@
 		52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6124BF44040047C6DB /* Loading+Constants.swift */; };
 		52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
 		52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
+		5269D7FB24C48CDF0091FB0D /* SecondaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269D7FA24C48CDF0091FB0D /* SecondaryTheme.swift */; };
+		5269D7FC24C48CDF0091FB0D /* SecondaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269D7FA24C48CDF0091FB0D /* SecondaryTheme.swift */; };
+		5269D7FE24C48D680091FB0D /* SecondaryTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* SecondaryTheme.json */; };
+		5269D7FF24C48D680091FB0D /* SecondaryTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* SecondaryTheme.json */; };
+		529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
+		529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
+		529B304F24C440A500DCB2FD /* PrimaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* PrimaryTheme.swift */; };
+		529B305024C440A500DCB2FD /* PrimaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* PrimaryTheme.swift */; };
+		529B305524C448EB00DCB2FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305224C448EA00DCB2FD /* Font.swift */; };
+		529B305624C448EB00DCB2FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305224C448EA00DCB2FD /* Font.swift */; };
+		529B305724C448EB00DCB2FD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305324C448EA00DCB2FD /* Colors.swift */; };
+		529B305824C448EB00DCB2FD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305324C448EA00DCB2FD /* Colors.swift */; };
+		529B305924C448EB00DCB2FD /* AppThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305424C448EA00DCB2FD /* AppThemeModel.swift */; };
+		529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305424C448EA00DCB2FD /* AppThemeModel.swift */; };
+		529B305C24C449B900DCB2FD /* PrimaryTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 529B305B24C449B800DCB2FD /* PrimaryTheme.json */; };
+		529B305D24C449B900DCB2FD /* PrimaryTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 529B305B24C449B800DCB2FD /* PrimaryTheme.json */; };
+		529B305F24C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */; };
+		529B306024C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */; };
 		52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884224ADD12100BCC2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DD884124ADD12100BCC2D0 /* Main.storyboard */; };
@@ -192,6 +210,15 @@
 		52546D5D24BF437B0047C6DB /* Constants+News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+News.swift"; sourceTree = "<group>"; };
 		52546D6124BF44040047C6DB /* Loading+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading+Constants.swift"; sourceTree = "<group>"; };
 		52546D6424BF44930047C6DB /* Settings+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Constants.swift"; sourceTree = "<group>"; };
+		5269D7FA24C48CDF0091FB0D /* SecondaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTheme.swift; sourceTree = "<group>"; };
+		5269D7FD24C48D680091FB0D /* SecondaryTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SecondaryTheme.json; sourceTree = "<group>"; };
+		529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeStyle+Protocol.swift"; sourceTree = "<group>"; };
+		529B304E24C440A500DCB2FD /* PrimaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTheme.swift; sourceTree = "<group>"; };
+		529B305224C448EA00DCB2FD /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		529B305324C448EA00DCB2FD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		529B305424C448EA00DCB2FD /* AppThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeModel.swift; sourceTree = "<group>"; };
+		529B305B24C449B800DCB2FD /* PrimaryTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimaryTheme.json; sourceTree = "<group>"; };
+		529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeManger.swift; sourceTree = "<group>"; };
 		52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		52DD884124ADD12100BCC2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		52DD884424ADD13700BCC2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -329,6 +356,36 @@
 				52546D6124BF44040047C6DB /* Loading+Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5269D7F924C48CB50091FB0D /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				529B304E24C440A500DCB2FD /* PrimaryTheme.swift */,
+				5269D7FA24C48CDF0091FB0D /* SecondaryTheme.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		529B305124C448DD00DCB2FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				529B305324C448EA00DCB2FD /* Colors.swift */,
+				529B305224C448EA00DCB2FD /* Font.swift */,
+				529B305424C448EA00DCB2FD /* AppThemeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		529B306124C47C1A00DCB2FD /* CustomTheme */ = {
+			isa = PBXGroup;
+			children = (
+				529B305124C448DD00DCB2FD /* Model */,
+				5269D7F924C48CB50091FB0D /* Types */,
+				529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */,
+				529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */,
+			);
+			path = CustomTheme;
 			sourceTree = "<group>";
 		};
 		52D378E024C1A0FB00D28A0A /* Common */ = {
@@ -566,6 +623,7 @@
 				835E9B9C24C38B1B009C53B3 /* ThemeManager.swift */,
 				833570EA247AA2C1002E26A0 /* Styles.swift */,
 				524EEE7524B6D91900B5574F /* ColorConstants.swift */,
+				529B306124C47C1A00DCB2FD /* CustomTheme */,
 			);
 			path = ThemeManager;
 			sourceTree = "<group>";
@@ -576,6 +634,8 @@
 				835E9B9F24C400E6009C53B3 /* Night.json */,
 				835E9BA124C400E6009C53B3 /* Red.json */,
 				835E9BA024C400E6009C53B3 /* Yellow.json */,
+				529B305B24C449B800DCB2FD /* PrimaryTheme.json */,
+				5269D7FD24C48D680091FB0D /* SecondaryTheme.json */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -890,6 +950,7 @@
 				52DD884524ADD13700BCC2D0 /* LaunchScreen.storyboard in Resources */,
 				830815462494B6720036B52D /* Article.json in Resources */,
 				835E9BA624C400E6009C53B3 /* Red.json in Resources */,
+				529B305C24C449B900DCB2FD /* PrimaryTheme.json in Resources */,
 				831523F82471020500F48DDA /* Colors.xcassets in Resources */,
 				838FB9FB24BEEB92008F7E24 /* Login.strings in Resources */,
 				835E9BA224C400E6009C53B3 /* Night.json in Resources */,
@@ -900,6 +961,7 @@
 				5222ED7F24C1CAB800CC4817 /* News.storyboard in Resources */,
 				8394EA682478C88D002FA8EF /* GoogleService-Info.plist in Resources */,
 				835E9BA424C400E6009C53B3 /* Yellow.json in Resources */,
+				5269D7FE24C48D680091FB0D /* SecondaryTheme.json in Resources */,
 				5222ED7D24C1CA5F00CC4817 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,9 +974,11 @@
 				838FBA0F24BEF780008F7E24 /* News.strings in Resources */,
 				839DAE2F24C1C42600361AF4 /* Colors.xcassets in Resources */,
 				835E9BA324C400E6009C53B3 /* Night.json in Resources */,
+				5269D7FF24C48D680091FB0D /* SecondaryTheme.json in Resources */,
 				52DD884624ADD13700BCC2D0 /* LaunchScreen.storyboard in Resources */,
 				835E9BA724C400E7009C53B3 /* Red.json in Resources */,
 				8335710C247BA086002E26A0 /* Localizable.strings in Resources */,
+				529B305D24C449B900DCB2FD /* PrimaryTheme.json in Resources */,
 				839DAE3124C1C43200361AF4 /* GoogleService-Info.plist in Resources */,
 				839DAE2E24C1C42400361AF4 /* Assets.xcassets in Resources */,
 				838FB9FC24BEEB92008F7E24 /* Login.strings in Resources */,
@@ -1029,18 +1093,21 @@
 				83081537248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
 				83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */,
+				529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				52DD885124ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */,
 				52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				831523ED246F796900F48DDA /* UIRouter.swift in Sources */,
 				833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
+				529B305F24C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */,
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
 				833570EB247AA2C1002E26A0 /* Styles.swift in Sources */,
+				529B304F24C440A500DCB2FD /* PrimaryTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
@@ -1050,18 +1117,22 @@
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
+				529B305724C448EB00DCB2FD /* Colors.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
 				52546D6224BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				83357111247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */,
 				8394EA002477BF1D002FA8EF /* NewsDetailsViewController.swift in Sources */,
+				529B305524C448EB00DCB2FD /* Font.swift in Sources */,
 				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
 				835E9B9D24C38B1B009C53B3 /* ThemeManager.swift in Sources */,
+				529B305924C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
+				5269D7FB24C48CDF0091FB0D /* SecondaryTheme.swift in Sources */,
 				8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */,
 				83A4363E24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
@@ -1073,14 +1144,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				839DAE1F24C1C3B500361AF4 /* NewsDetailsViewController.swift in Sources */,
+				529B305824C448EB00DCB2FD /* Colors.swift in Sources */,
 				833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */,
 				8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */,
 				839DAE2024C1C3B700361AF4 /* NewsViewController+TableView.swift in Sources */,
+				529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
+				529B306024C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */,
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				839DAE2624C1C3D000361AF4 /* Atricle.swift in Sources */,
 				833570EC247AA2C1002E26A0 /* Styles.swift in Sources */,
+				5269D7FC24C48CDF0091FB0D /* SecondaryTheme.swift in Sources */,
 				839DAE2324C1C3C400361AF4 /* NewsTableViewCell.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
@@ -1097,6 +1172,7 @@
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */,
+				529B305024C440A500DCB2FD /* PrimaryTheme.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				839DAE1924C1C38700361AF4 /* SignUpViewModel.swift in Sources */,
@@ -1111,6 +1187,7 @@
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				839DAE2C24C1C41900361AF4 /* UIRouter.swift in Sources */,
 				839DAE3024C1C42E00361AF4 /* FlowGuide.xcdatamodeld in Sources */,
+				529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				835E9B9E24C38B1B009C53B3 /* ThemeManager.swift in Sources */,
 				839DAE2224C1C3BE00361AF4 /* NewsHeaderView.swift in Sources */,
 				833570FC247ADB67002E26A0 /* Login.swift in Sources */,
@@ -1120,6 +1197,7 @@
 				833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				839DAE1D24C1C3A400361AF4 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
+				529B305624C448EB00DCB2FD /* Font.swift in Sources */,
 				833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				839DAE1B24C1C39E00361AF4 /* OnBoardingViewController.swift in Sources */,
 				839DAE2524C1C3CE00361AF4 /* Category.swift in Sources */,
