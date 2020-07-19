@@ -40,8 +40,8 @@
 		529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305424C448EA00DCB2FD /* AppThemeModel.swift */; };
 		529B305C24C449B900DCB2FD /* LightMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 529B305B24C449B800DCB2FD /* LightMode.json */; };
 		529B305D24C449B900DCB2FD /* LightMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 529B305B24C449B800DCB2FD /* LightMode.json */; };
-		529B305F24C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */; };
-		529B306024C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */; };
+		529B305F24C47A0A00DCB2FD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* ThemeManager.swift */; };
+		529B306024C47A0A00DCB2FD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305E24C47A0A00DCB2FD /* ThemeManager.swift */; };
 		52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */; };
 		52DD884224ADD12100BCC2D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DD884124ADD12100BCC2D0 /* Main.storyboard */; };
@@ -52,6 +52,8 @@
 		52DD884C24ADD1F900BCC2D0 /* NewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DD884A24ADD1F900BCC2D0 /* NewsHeaderView.xib */; };
 		52DD885124ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD885024ADD2C300BCC2D0 /* LoadingViewController.swift */; };
 		52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD885024ADD2C300BCC2D0 /* LoadingViewController.swift */; };
+		52EDF20D24C4B87200D21808 /* Constants+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDF20C24C4B87200D21808 /* Constants+Theme.swift */; };
+		52EDF20E24C4B87200D21808 /* Constants+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDF20C24C4B87200D21808 /* Constants+Theme.swift */; };
 		53472A3927FF2466F1264B37 /* Pods_FlowGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011782250B0ED920153CBE18 /* Pods_FlowGuide.framework */; };
 		83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006B95246EE22B00B08094 /* AppDelegate.swift */; };
 		83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83006B97246EE22B00B08094 /* SceneDelegate.swift */; };
@@ -211,12 +213,13 @@
 		529B305324C448EA00DCB2FD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		529B305424C448EA00DCB2FD /* AppThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeModel.swift; sourceTree = "<group>"; };
 		529B305B24C449B800DCB2FD /* LightMode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LightMode.json; sourceTree = "<group>"; };
-		529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeManger.swift; sourceTree = "<group>"; };
+		529B305E24C47A0A00DCB2FD /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		52DD884124ADD12100BCC2D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		52DD884424ADD13700BCC2D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DD884A24ADD1F900BCC2D0 /* NewsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsHeaderView.xib; sourceTree = "<group>"; };
 		52DD885024ADD2C300BCC2D0 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		52EDF20C24C4B87200D21808 /* Constants+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Theme.swift"; sourceTree = "<group>"; };
 		83006B92246EE22B00B08094 /* FlowGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83006B95246EE22B00B08094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83006B97246EE22B00B08094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -383,6 +386,14 @@
 				830815452494B6720036B52D /* Article.json */,
 			);
 			path = JsonData;
+			sourceTree = "<group>";
+		};
+		52EDF20B24C4B85300D21808 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52EDF20C24C4B87200D21808 /* Constants+Theme.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		7032875B5185FF55DEF801D3 /* Frameworks */ = {
@@ -600,10 +611,11 @@
 		83357150247D8244002E26A0 /* ThemeManager */ = {
 			isa = PBXGroup;
 			children = (
+				52EDF20B24C4B85300D21808 /* Constants */,
 				529B305124C448DD00DCB2FD /* ThemeModel */,
 				5269D7F924C48CB50091FB0D /* ThemeTypes */,
 				529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */,
-				529B305E24C47A0A00DCB2FD /* CustomThemeManger.swift */,
+				529B305E24C47A0A00DCB2FD /* ThemeManager.swift */,
 			);
 			path = ThemeManager;
 			sourceTree = "<group>";
@@ -1062,6 +1074,7 @@
 				83D6C00A24B6BC7600C25484 /* NewsViewController+LoadData.swift in Sources */,
 				831E96FE24AC5416006D39B7 /* WebService.swift in Sources */,
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
+				52EDF20D24C4B87200D21808 /* Constants+Theme.swift in Sources */,
 				52546D5E24BF437B0047C6DB /* Constants+News.swift in Sources */,
 				5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */,
 				833570FB247ADB67002E26A0 /* Login.swift in Sources */,
@@ -1079,7 +1092,7 @@
 				52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				831523ED246F796900F48DDA /* UIRouter.swift in Sources */,
 				833570FE247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
-				529B305F24C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */,
+				529B305F24C47A0A00DCB2FD /* ThemeManager.swift in Sources */,
 				831523FE24722BD500F48DDA /* OnBoardingCollectionViewCell.swift in Sources */,
 				833570F2247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
@@ -1127,7 +1140,7 @@
 				839DAE2024C1C3B700361AF4 /* NewsViewController+TableView.swift in Sources */,
 				529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
-				529B306024C47A0A00DCB2FD /* CustomThemeManger.swift in Sources */,
+				529B306024C47A0A00DCB2FD /* ThemeManager.swift in Sources */,
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				839DAE2624C1C3D000361AF4 /* Atricle.swift in Sources */,
@@ -1155,6 +1168,7 @@
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,
 				839DAE1A24C1C39100361AF4 /* LoginViewController.swift in Sources */,
+				52EDF20E24C4B87200D21808 /* Constants+Theme.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				839DAE2424C1C3C900361AF4 /* NewsDetailViewModel.swift in Sources */,
 				83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */,

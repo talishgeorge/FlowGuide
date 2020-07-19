@@ -65,12 +65,12 @@ extension BaseViewController {
     /// Setup initial UI
     func configureUI() {
         let gradient = CAGradientLayer()
-        gradient.colors = [CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor ?? UIColor.systemIndigo, CustomThemeManger.shared.theme?.viewGradientBottomColor.cgColor ?? UIColor.systemTeal]
+        gradient.colors = [ThemeManager.shared.theme?.viewGradientTopColor.cgColor ?? UIColor.systemIndigo, ThemeManager.shared.theme?.viewGradientBottomColor.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: CustomThemeManger.shared.theme?.defaultFontColor]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.defaultFontColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
     }
 }
@@ -84,11 +84,11 @@ extension BaseViewController {
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.rootNavigationController = self.navigationController
-        NavBarConstants.barBGColor = CustomThemeManger.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
+        NavBarConstants.barBGColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.rightNavButtonImage = UIImage(named: "logout") ?? UIImage()
-        NavBarConstants.titleColor = CustomThemeManger.shared.theme?.navigationBarTintColor ?? UIColor.white
-        NavBarConstants.transparentTitleColor = CustomThemeManger.shared.theme?.navigationBarTintColor ?? UIColor.white
+        NavBarConstants.titleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
+        NavBarConstants.transparentTitleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.titleFont = UIFont.navigationTitle
         navBar.configureNavigationBar()
     }

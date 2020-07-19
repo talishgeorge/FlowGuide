@@ -7,12 +7,6 @@ import Foundation
 
 struct Font: Decodable {
     let avenirNextCondensed: String?
-    
-    enum CodingKeys: String, CodingKey {
-        
-        case avenirNextCondensed
-    }
-    
     init() {
         avenirNextCondensed = ""
     }

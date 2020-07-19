@@ -102,9 +102,9 @@ private extension LoginViewController {
     }
     
     func setupUI() {
-        emailView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
-        passwordView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
-        confirmPswdView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
+        emailView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
+        passwordView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
+        confirmPswdView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
         emailView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         passwordView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
         confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
@@ -114,7 +114,7 @@ private extension LoginViewController {
     
     func setupCardView() {
         //        Carview setup
-        cardView.layer.borderColor = CustomThemeManger.shared.theme?.viewGradientTopColor.cgColor
+        cardView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
     }
 }
 

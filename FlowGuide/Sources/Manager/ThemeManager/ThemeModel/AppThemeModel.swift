@@ -9,11 +9,6 @@ struct AppThemeModel: Decodable {
     
     let colors: Colors?
     let font: Font?
-    
-    enum CodingKeys: String, CodingKey {
-        case colors
-        case font
-    }
     init() {
         font = Font()
         colors = Colors()

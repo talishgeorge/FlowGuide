@@ -42,6 +42,6 @@ final class SDKManager {
     
     /// Initilize ThemeManager
     func initilizeThemeManager() {
-        CustomThemeManger.shared.setTheme(theme: LightMode())
+        ThemeManager.shared.setTheme(theme: LightMode())
     }
 }

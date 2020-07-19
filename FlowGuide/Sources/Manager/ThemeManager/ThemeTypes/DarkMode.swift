@@ -12,33 +12,27 @@ final class DarkMode: ThemeStyle {
     var themeModel = AppThemeModel()
     
     var defaultFontColor: UIColor {
-        let hexString = themeModel.colors?.fontColorWhiteHex
-            ?? ""
-        return UIColor.init(hexString: hexString, alpha: 1.0)
-        
+        UIColor.init(hexString: themeModel.colors?.fontColorWhiteHex
+            ?? "", alpha: 1.0)
     }
     
     var viewGradientTopColor: UIColor {
-        let hexString = themeModel.colors?.themeBlueTop ?? ""
-        return UIColor.init(hexString: hexString, alpha: 1.0)
+        UIColor.init(hexString: themeModel.colors?.themeBlueTop ?? "", alpha: 1.0)
     }
     
     var viewGradientBottomColor: UIColor {
-        let hexString = themeModel.colors?.themeBottom
-            ?? ""
-        return UIColor.init(hexString: hexString, alpha: 1.0)
+        UIColor.init(hexString: themeModel.colors?.themeBottom
+            ?? "", alpha: 1.0)
     }
     
     var navigationBarTintColor: UIColor {
-        let hexString = themeModel.colors?.navigationTintHex
-            ?? ""
-        return UIColor.init(hexString: hexString, alpha: 1.0)
+        UIColor.init(hexString: themeModel.colors?.navigationTintHex
+            ?? "", alpha: 1.0)
     }
     
     var borderColor: UIColor {
-        let hexString = themeModel.colors?.viewBorderColour
-            ?? ""
-        return UIColor.init(hexString: hexString, alpha: 1.0)
+        UIColor.init(hexString: themeModel.colors?.viewBorderColour
+            ?? "", alpha: 1.0)
     }
     
     init() {
@@ -50,6 +44,6 @@ final class DarkMode: ThemeStyle {
 
 internal extension DarkMode {
     func jsonForTheme() {
-        themeModel = CustomThemeManger.shared.loadTheme(fileName: "DarkMode")
+        themeModel = ThemeManager.shared.loadTheme(fileName: ThemeConstants.darkMode)
     }
 }

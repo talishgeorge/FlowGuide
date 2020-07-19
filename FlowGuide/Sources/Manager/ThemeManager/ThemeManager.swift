@@ -7,11 +7,11 @@ import Foundation
 import UtilitiesLib
 import UIKit
 
-class CustomThemeManger {
+class ThemeManager {
     
     var theme: ThemeStyle?
     
-    static var shared = CustomThemeManger()
+    static var shared = ThemeManager()
     
     func setTheme(theme: ThemeStyle) {
         self.theme = theme
@@ -20,8 +20,10 @@ class CustomThemeManger {
 
 // MARK: - Public Method
 
-extension CustomThemeManger {
+extension ThemeManager {
     
+    /// Fetch Theme values from JSON file
+    /// - Parameter fileName: JSON file name
     func loadTheme(fileName: String) -> AppThemeModel {
         var themeModel = AppThemeModel()
         do {
