@@ -13,6 +13,6 @@ protocol ThemeStyle {
     var navigationBarTintColor: UIColor {get}
     var borderColor: UIColor {get}
     var defaultFontColor: UIColor {get}
-    func jsonForTheme()
+    func jsonForTheme(fileName: String)
     
 }

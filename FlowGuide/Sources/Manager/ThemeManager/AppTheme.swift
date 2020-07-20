@@ -1,13 +1,13 @@
 //
 //  Created by TCS.
 //  Copyright © 2020 TCS. All rights reserved.
-//
+//  
 
 import Foundation
 import UIKit
 import UtilitiesLib
 
-final class DarkMode: ThemeStyle {
+final class AppTheme: ThemeStyle {
     
     var themeModel = AppThemeModel()
     
@@ -35,15 +35,16 @@ final class DarkMode: ThemeStyle {
             ?? "", alpha: 1.0)
     }
     
-    init() {
-        self.jsonForTheme()
+    init(file: String) {
+        self.jsonForTheme(fileName: file)
     }
 }
 
 // MARK: - Internal Method
 
-internal extension DarkMode {
-    func jsonForTheme() {
-        themeModel = ThemeManager.shared.loadTheme(fileName: ThemeConstants.darkMode)
+internal extension AppTheme {
+    
+    func jsonForTheme(fileName: String) {
+        themeModel = ThemeManager.shared.loadTheme(fileName: fileName)
     }
 }

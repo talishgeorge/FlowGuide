@@ -24,14 +24,12 @@
 		52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6124BF44040047C6DB /* Loading+Constants.swift */; };
 		52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
 		52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
-		5269D7FB24C48CDF0091FB0D /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269D7FA24C48CDF0091FB0D /* DarkMode.swift */; };
-		5269D7FC24C48CDF0091FB0D /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269D7FA24C48CDF0091FB0D /* DarkMode.swift */; };
 		5269D7FE24C48D680091FB0D /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* DarkMode.json */; };
 		5269D7FF24C48D680091FB0D /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* DarkMode.json */; };
 		529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
 		529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
-		529B304F24C440A500DCB2FD /* LightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* LightMode.swift */; };
-		529B305024C440A500DCB2FD /* LightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* LightMode.swift */; };
+		529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* AppTheme.swift */; };
+		529B305024C440A500DCB2FD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* AppTheme.swift */; };
 		529B305524C448EB00DCB2FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305224C448EA00DCB2FD /* Font.swift */; };
 		529B305624C448EB00DCB2FD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305224C448EA00DCB2FD /* Font.swift */; };
 		529B305724C448EB00DCB2FD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B305324C448EA00DCB2FD /* Colors.swift */; };
@@ -205,10 +203,9 @@
 		52546D5D24BF437B0047C6DB /* Constants+News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+News.swift"; sourceTree = "<group>"; };
 		52546D6124BF44040047C6DB /* Loading+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading+Constants.swift"; sourceTree = "<group>"; };
 		52546D6424BF44930047C6DB /* Settings+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Constants.swift"; sourceTree = "<group>"; };
-		5269D7FA24C48CDF0091FB0D /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
 		5269D7FD24C48D680091FB0D /* DarkMode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DarkMode.json; sourceTree = "<group>"; };
 		529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeStyle+Protocol.swift"; sourceTree = "<group>"; };
-		529B304E24C440A500DCB2FD /* LightMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMode.swift; sourceTree = "<group>"; };
+		529B304E24C440A500DCB2FD /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		529B305224C448EA00DCB2FD /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		529B305324C448EA00DCB2FD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		529B305424C448EA00DCB2FD /* AppThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeModel.swift; sourceTree = "<group>"; };
@@ -350,15 +347,6 @@
 				52546D6124BF44040047C6DB /* Loading+Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		5269D7F924C48CB50091FB0D /* ThemeTypes */ = {
-			isa = PBXGroup;
-			children = (
-				529B304E24C440A500DCB2FD /* LightMode.swift */,
-				5269D7FA24C48CDF0091FB0D /* DarkMode.swift */,
-			);
-			path = ThemeTypes;
 			sourceTree = "<group>";
 		};
 		529B305124C448DD00DCB2FD /* ThemeModel */ = {
@@ -613,7 +601,7 @@
 			children = (
 				52EDF20B24C4B85300D21808 /* Constants */,
 				529B305124C448DD00DCB2FD /* ThemeModel */,
-				5269D7F924C48CB50091FB0D /* ThemeTypes */,
+				529B304E24C440A500DCB2FD /* AppTheme.swift */,
 				529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */,
 				529B305E24C47A0A00DCB2FD /* ThemeManager.swift */,
 			);
@@ -1098,7 +1086,7 @@
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
-				529B304F24C440A500DCB2FD /* LightMode.swift in Sources */,
+				529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
@@ -1122,7 +1110,6 @@
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */,
 				831523FB2472151D00F48DDA /* OnBoardingViewController.swift in Sources */,
-				5269D7FB24C48CDF0091FB0D /* DarkMode.swift in Sources */,
 				8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */,
 				83A4363E24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				831523F5246F802300F48DDA /* SettingsViewController.swift in Sources */,
@@ -1144,7 +1131,6 @@
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				839DAE2624C1C3D000361AF4 /* Atricle.swift in Sources */,
-				5269D7FC24C48CDF0091FB0D /* DarkMode.swift in Sources */,
 				839DAE2324C1C3C400361AF4 /* NewsTableViewCell.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
@@ -1161,7 +1147,7 @@
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */,
-				529B305024C440A500DCB2FD /* LightMode.swift in Sources */,
+				529B305024C440A500DCB2FD /* AppTheme.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				839DAE1924C1C38700361AF4 /* SignUpViewModel.swift in Sources */,
