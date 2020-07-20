@@ -42,7 +42,9 @@ final class SettingsViewController: BaseViewController {
     @IBAction private func enableDardMode(_ sender: UISwitch) {
         let themeMode  = sender.isOn ? ThemeConstants.darkMode : ThemeConstants.lightMode
         ThemeManager.shared.setTheme(theme: AppTheme(file: themeMode))
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ThemeConstants.themeableNotificationName), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ThemeConstants.themeableNotificationName),
+                                        object: nil,
+                                        userInfo: nil)
     }
 }
 
