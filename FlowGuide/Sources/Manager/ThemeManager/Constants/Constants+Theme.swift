@@ -6,4 +6,5 @@
 struct ThemeConstants {
     static let darkMode = "DarkMode"
     static let lightMode = "LightMode"
+    static let themeableNotificationName = "ThemeableNotification"
 }

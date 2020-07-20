@@ -25,6 +25,7 @@ final class SettingsViewController: BaseViewController {
         navBar.onRightButtonAction = { success in
             self.logout()
         }
+        listenTheme()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +37,12 @@ final class SettingsViewController: BaseViewController {
         delay(durationInSeconds: 2.0, completion: {
             self.navBar.hideProgressBar()
         })
+    }
+    
+    @IBAction private func enableDardMode(_ sender: UISwitch) {
+        let themeMode  = sender.isOn ? ThemeConstants.darkMode : ThemeConstants.lightMode
+        ThemeManager.shared.setTheme(theme: AppTheme(file: themeMode))
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ThemeConstants.themeableNotificationName), object: nil, userInfo: nil)
     }
 }
 
@@ -69,5 +76,12 @@ private extension SettingsViewController {
     /// - Parameter sender: UIBarButtonItem Type
     @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
         logout()
+    }
+}
+
+extension SettingsViewController: Themeable {
+    func didThemeChange() {
+        configureCustomNavigaionView()
+        setupViews()
     }
 }

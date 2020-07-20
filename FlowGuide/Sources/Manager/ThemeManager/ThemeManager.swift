@@ -10,9 +10,8 @@ import UIKit
 class ThemeManager {
     
     var theme: ThemeStyle?
-    
     static var shared = ThemeManager()
-    
+        
     func setTheme(theme: ThemeStyle) {
         self.theme = theme
     }
