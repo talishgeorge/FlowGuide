@@ -40,7 +40,6 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" name="Header"/>
                     <constraints>
                         <constraint firstItem="DGv-qZ-xiI" firstAttribute="centerY" secondItem="faF-gR-weq" secondAttribute="centerY" id="3Rj-ec-ieo"/>
                         <constraint firstItem="QCy-PS-dA2" firstAttribute="leading" secondItem="Ula-6W-AeT" secondAttribute="leading" id="B2Q-6U-IxU"/>
@@ -68,9 +67,6 @@
     </objects>
     <resources>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
-        <namedColor name="Header">
-            <color red="0.11263123899999999" green="0.56563240290000005" blue="0.9996131063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="bg2">
             <color red="0.44357216358184814" green="0.8015400767326355" blue="0.96078652143478394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

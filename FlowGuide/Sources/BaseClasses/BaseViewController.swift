@@ -10,12 +10,14 @@ import UIKit
 import OakLib
 import Firebase
 import ExtensionsLib
+import Combine
 
 /// Base ViewController for all ViewController
-class BaseViewController: UIViewController {
-
+class BaseViewController: UIViewController, Subscriber {
+    
     var navBar = CustomNavigationView.loadNavigationBar()
     let auth = Auth.auth()
+    typealias Input = Bool
     
     // MARK: - View Life Cycle
     
@@ -24,8 +26,29 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .appBackground
         configureUI()
     }
+    
+    func receive(subscription: Subscription) {
+        subscription.request(.unlimited)
+    }
+    
+    func receive(_ input: Bool) -> Subscribers.Demand {
+        setTheme(isEnable: input)
+        return .none
+    }
+    
+    func receive(completion: Subscribers.Completion<Never>) {
+        print(completion)
+    }
+    
+    func setTheme(isEnable: Bool) {
+        if isEnable {
+            ThemeManager.shared.setTheme(theme: AppTheme(file: ThemeConstants.darkMode))
+        } else {
+            ThemeManager.shared.setTheme(theme: AppTheme(file: ThemeConstants.lightMode))
+            
+        }
+    }
 }
-
 // MARK: - Common Altert View
 
 extension BaseViewController {
@@ -72,6 +95,11 @@ extension BaseViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.defaultFontColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
+    }
+    
+    func removeGradient(gradientView: UIView) {
+        if let layer = gradientView.layer.sublayers?.first { layer.removeFromSuperlayer()
+        }
     }
 }
 

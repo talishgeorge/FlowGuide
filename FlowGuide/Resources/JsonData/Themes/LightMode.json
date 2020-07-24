@@ -4,9 +4,15 @@
         "themeBottom": "#2FCCFE",
         "navigationTintHex": "#F3F3F3",
         "viewBorderColour": "#C0C0C0",
-        "fontColorWhiteHex": "#FFFFFF",
+        "fontColor": "#000000",
+        "headerCellBgColor": "#1B8BFF",
+        "cellBgColor": "#FFFFFF",
+        "tabBarBgColor": "#1B8BFF",
+        "cellSeperatorBgColor": "#1B8BFF",
+        "fontWhiteColor": "#FFFFFF",
     },
     "font": {
         "avenirNextCondensed": "Avenir Next Condensed",
     }
 }
+
