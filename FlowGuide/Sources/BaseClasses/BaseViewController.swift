@@ -93,7 +93,7 @@ extension BaseViewController {
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.defaultFontColor]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.fontWhiteColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
     }
     
