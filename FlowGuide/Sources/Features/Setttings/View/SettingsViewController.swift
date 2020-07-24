@@ -10,17 +10,20 @@ import UIKit
 import OakLib
 import UtilitiesLib
 import SwiftUI
+import Combine
+
 /// Settings ViewController
 final class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
     private let loginViewModel = LoginViewModel()
+    @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
     
     @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
-       
+        
     }
     
     // MARK: - View Life Cycle
@@ -32,8 +35,8 @@ final class SettingsViewController: BaseViewController {
         navBar.onRightButtonAction = { success in
             self.logout()
         }
-        listenTheme()
-        viewModel.fetchWeatherForecast(by: "Kochi")
+        $isDarkModeEnabled.receive(subscriber: BaseViewController())
+        $isDarkModeEnabled.receive(subscriber: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,12 +50,24 @@ final class SettingsViewController: BaseViewController {
         })
     }
     
+    override func receive(_ input: Bool) -> Subscribers.Demand {
+        delay(durationInSeconds: 0.3, completion: {
+            self.applyTheme()
+        })
+        return .none
+    }
+    
+     func applyTheme() {
+        removeGradient(gradientView: view)
+        self.configureUI()
+        self.configureCustomNavigaionView()
+        self.tabBarController?.tabBar.backgroundColor = ThemeManager.shared.theme?.tabBarBgColor
+        
+    }
+    
     @IBAction private func enableDardMode(_ sender: UISwitch) {
-        let themeMode  = sender.isOn ? ThemeConstants.darkMode : ThemeConstants.lightMode
-        ThemeManager.shared.setTheme(theme: AppTheme(file: themeMode))
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ThemeConstants.themeableNotificationName),
-                                        object: nil,
-                                        userInfo: nil)
+        
+        isDarkModeEnabled = sender.isOn ? true : false
     }
 }
 
@@ -86,13 +101,6 @@ private extension SettingsViewController {
     /// - Parameter sender: UIBarButtonItem Type
     @IBAction private func logoutAction(_ sender: UIBarButtonItem) {
         logout()
-    }
-}
-
-extension SettingsViewController: Themeable {
-    func didThemeChange() {
-        configureCustomNavigaionView()
-        setupViews()
     }
 }
 

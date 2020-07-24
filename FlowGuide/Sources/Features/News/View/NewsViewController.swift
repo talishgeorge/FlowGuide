@@ -23,13 +23,20 @@ final class NewsViewController: BaseViewController {
         super.viewDidLoad()
         
         /// Loading Header from Bundle
-        setupUI()
         registerCell()
         if let email = auth.currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
         viewModel.delegate = self
         populateNews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setupUI()
+        removeGradient(gradientView: view)
+        configureUI()
+        tableView.reloadData()
     }
     
     func setupUI() {

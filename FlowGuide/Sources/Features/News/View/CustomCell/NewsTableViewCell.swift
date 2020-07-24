@@ -11,7 +11,8 @@ import UtilitiesLib
 
 /// News TableView Cell
 final class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
-  
+    
+    @IBOutlet private weak var seperatorView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var headlineImageView: UIImageView!
@@ -29,6 +30,10 @@ final class NewsTableViewCell: UITableViewCell, TableViewCellProtocol {
     /// Update Cell UI Elements
     /// - Parameter vm: Generic Type
     func updateUI<T>(value vm: T) {
+        contentView.backgroundColor = ThemeManager.shared.theme?.cellBgColor
+        seperatorView.backgroundColor = ThemeManager.shared.theme?.cellSeperatorBgColor
+        titleLabel.textColor = ThemeManager.shared.theme?.defaultFontColor
+        descriptionLabel.textColor = ThemeManager.shared.theme?.defaultFontColor
         guard let news = vm as? ArticleViewModel else { return }
         titleLabel.text = news.title
         descriptionLabel.text = news.description

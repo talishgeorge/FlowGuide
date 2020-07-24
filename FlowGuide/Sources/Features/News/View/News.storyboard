@@ -60,7 +60,6 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="F2n-o3-WAN" firstAttribute="centerY" secondItem="Ilv-xz-Vqg" secondAttribute="centerY" id="6cU-xy-GNQ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="LSy-Dt-lp0" secondAttribute="bottom" id="9Hh-80-oC7"/>
@@ -77,6 +76,7 @@
                                         <connections>
                                             <outlet property="descriptionLabel" destination="hkX-9Y-nOm" id="iaG-49-oa5"/>
                                             <outlet property="headlineImageView" destination="F2n-o3-WAN" id="Tkj-9z-KjY"/>
+                                            <outlet property="seperatorView" destination="35o-6z-kmo" id="fMz-9d-EgO"/>
                                             <outlet property="titleLabel" destination="ug4-yI-5c9" id="yMG-rv-FPZ"/>
                                         </connections>
                                     </tableViewCell>

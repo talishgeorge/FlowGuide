@@ -17,6 +17,7 @@ final class NewsHeaderView: UITableViewHeaderFooterView, TableViewCellProtocol {
     /// UpdateUI
     /// - Parameter value: Generic Type
     func updateUI<T>(value: T) {
+        contentView.backgroundColor = ThemeManager.shared.theme?.headerCellBgColor
         guard let title = value as? String else { return }
         titleLabel.text = title
     }

@@ -11,14 +11,23 @@ struct Colors: Decodable {
     let themeBottom: String?
     let navigationTintHex: String?
     let viewBorderColour: String?
-    let fontColorWhiteHex: String?
-    
+    let fontColor: String?
+    let headerCellBgColor: String?
+    let cellBgColor: String?
+    let tabBarBgColor: String?
+    let cellSeperatorBgColor: String?
+    let fontWhiteColor: String?
+
     init() {
         themeBlueTop = ""
         themeBottom = ""
         navigationTintHex = ""
         viewBorderColour = ""
-        fontColorWhiteHex = ""
+        fontColor = ""
+        headerCellBgColor = ""
+        cellBgColor = ""
+        tabBarBgColor = ""
+        cellSeperatorBgColor = ""
+        fontWhiteColor = ""
     }
-    
 }

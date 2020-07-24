@@ -2,12 +2,19 @@
 {
     "colors": {
         "themeBlueTop": "#ffa500",
-        "themeBottom": "##000000",
+        "themeBottom": "#000000",
         "navigationTintHex": "#F3F3F3",
         "viewBorderColour": "#C0C0C0",
-        "fontColorWhiteHex": "#FFFFFF",
+        "fontColor": "#FFFFFF",
+        "headerCellBgColor": "#000000",
+        "cellBgColor": "#000000",
+        "tabBarBgColor": "#000000",
+        "cellSeperatorBgColor": "#ffa500",
+        "fontWhiteColor": "#FFFFFF",
+
     },
     "font": {
         "avenirNextCondensed": "Avenir Next Condensed",
     }
 }
+
