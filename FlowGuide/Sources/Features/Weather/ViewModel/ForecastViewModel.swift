@@ -6,16 +6,10 @@
 import Foundation
 
 class ForecastViewModel: ObservableObject {
-    //var weatherService: Services
-    var cityName: String = "Boston"
+    var cityName: String = "Kochi"
     @Published var isValid: Bool = false
     @Published var weatherForCast = ForecastWeatherResponse()
     private let service = BaseViewModel.shared.webService
-    
-//    init() {
-//        self.weatherService = Services()
-//    }
-    
     var currentCity: String {
         if let city = weatherForCast.name {
             return city
@@ -100,22 +94,6 @@ class ForecastViewModel: ObservableObject {
             fetchWeatherForecast(by: city)
         }
     }
-    
-//    func fetchWeatherForecast(by city: String) {
-//        self.weatherService.getWeatherData(city: cityName, success: { forecast in
-//            if let forecast = forecast {
-//                DispatchQueue.main.async {
-//                    self.weatherForCast = forecast
-//                }
-//            }
-//        }, failure: { error in
-//            guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
-//                return
-//            }
-//
-//            self.isValid = true
-//        })
-//    }
     
     /// Fetch News
     /// - Parameter category: String

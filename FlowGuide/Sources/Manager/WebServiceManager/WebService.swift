@@ -1,10 +1,7 @@
 //
-//  WebService.swift
-//  WeatherForecast
-//
-//  Created by TCS on 07/06/20.
+//  Created by TCS.
 //  Copyright © 2020 TCS. All rights reserved.
-//
+//  
 
 import Foundation
 import UIKit
