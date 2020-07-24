@@ -9,7 +9,6 @@
 import SwiftUI
 
 let UIWidth = UIScreen.main.bounds.width
-//let UiHeight = UIScreen.main.bounds.height
 
 struct TopView: View {
     @State var showField: Bool = false
@@ -24,25 +23,24 @@ struct TopView: View {
                 TextField("Enter City Name", text: self.$forcastViewModel.cityName) {
                     self.forcastViewModel.searchCity()
                 }.padding(.all, 10)
-                    .frame(width: 250, height: 50)
+                    .frame(width: UIWidth - 50, height: 50)
                     .background(Color("lightBlue"))
                     .cornerRadius(30)
                     .foregroundColor(.white)
-                   // .offset(x: self.showField ? 0 : (-UIWidth / 2 - 190))
+                    .offset(x: self.showField ? 0 : (-UIWidth / 2 - 190), y: 10)
                     .animation(.spring())
-//                Image(systemName: "magnifyingglass.circle.fill")
-//                    .resizable()
-//                    .frame(width: 40, height: 40)
-//                    .foregroundColor(.white)
-//                    .offset(x: self.showField ? (UIWidth - 90) : -20 )
-//                    .animation(.spring())
-//                    .onTapGesture {
-//                        self.showField.toggle()
-//                }
+                Image(systemName: "magnifyingglass.circle.fill")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.white)
+                    .offset(x: self.showField ? (UIWidth - 90) : -20, y: 10)
+                    .animation(.spring())
+                    .onTapGesture {
+                        self.showField.toggle()
+                }
             }.onAppear(perform: fetch)
         }
     }
-    
     
     private func fetch() {
         forcastViewModel.searchCity()

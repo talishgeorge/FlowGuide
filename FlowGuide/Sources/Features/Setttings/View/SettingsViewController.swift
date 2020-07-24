@@ -23,7 +23,6 @@ final class SettingsViewController: BaseViewController {
     @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
-        
     }
     
     // MARK: - View Life Cycle

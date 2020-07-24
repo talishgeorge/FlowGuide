@@ -16,7 +16,6 @@ struct ContentView: View {
     @State var showView = false
     init(forcastViewModel: ForecastViewModel) {
         self.forcastViewModel = forcastViewModel
-        forcastViewModel.fetchWeatherForecast(by: "Kochi")
     }
     var body: some View {
         ZStack {
