@@ -8,8 +8,15 @@ import NetWorkLib
 
 /// API Request Model
 final class WeatherReqestModel: RequestModel {
+   
+    var cityName: String
+    
+    init(city: String) {
+        self.cityName = city
+    }
+    
     override var path: String {
-        ServiceManager.shared.baseURL = "https://api.openweathermap.org/data/2.5/"
-        return ServiceConstant().getWeatherURL(cityName: "Delhi")
+        ServiceManager.shared.baseURL = APIEndPoints.weatherBaseURL
+        return APIEndPoints().getWeatherURL(cityName: cityName)
     }
 }

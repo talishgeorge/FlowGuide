@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct BottomScrollForeCast: View {
-    @ObservedObject var forecastViewModel: ForecastViewModel
     
+    @ObservedObject var forecastViewModel: ForecastViewModel
     var body: some View {
         ZStack {
             ZStack(alignment: .topLeading) {

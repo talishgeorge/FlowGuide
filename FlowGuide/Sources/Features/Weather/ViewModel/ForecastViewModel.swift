@@ -119,18 +119,16 @@ class ForecastViewModel: ObservableObject {
     
     /// Fetch News
     /// - Parameter category: String
-    func fetchWeatherForecast(by category: String) {
+    func fetchWeatherForecast(by cityName: String) {
         let closureSelf = self
-        service.getWeather(cityName: "Delhi") { forecast in
+        service.getWeather(cityName: cityName) { forecast in
             switch forecast {
             case Result.success(let response):
-                //let category = Category(title: "General", articles: response.articles)
-                //categories.append(category)
-                //closureSelf.categories = categories
-                closureSelf.weatherForCast = response
+                
                 DispatchQueue.main.async {
                     //closureSelf.delegate?.serviceStartRefreshingUI(self)
                     print("Success\(response)")
+                    closureSelf.weatherForCast = response
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {

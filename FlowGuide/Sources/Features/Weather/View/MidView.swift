@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MidView: View {
+    
     @ObservedObject var forcastViewModel: ForecastViewModel
     var body: some View {
         VStack {
@@ -24,7 +25,7 @@ struct MidView: View {
             }
             Spacer()
         }.padding(.trailing, 200)
-            .frame(width:400)
+            .frame(width: 400)
     }
 }
 

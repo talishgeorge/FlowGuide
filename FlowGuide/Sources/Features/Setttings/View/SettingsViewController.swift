@@ -33,7 +33,7 @@ final class SettingsViewController: BaseViewController {
             self.logout()
         }
         listenTheme()
-        viewModel.fetchWeatherForecast(by: "Delhi")
+        viewModel.fetchWeatherForecast(by: "Kochi")
     }
     
     override func viewWillAppear(_ animated: Bool) {

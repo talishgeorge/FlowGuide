@@ -24,7 +24,7 @@ struct CurrentTempView: View {
             }
             
             HStack(spacing: 6) {
-                VStack{
+                VStack {
                     Text(forecastViewModel.windSpeed)
                         .bold()
                         .foregroundColor(Color("secondary"))
@@ -32,7 +32,7 @@ struct CurrentTempView: View {
                         .foregroundColor(Color("secondary"))
                 }
                 
-                VStack{
+                VStack {
                     Text(String((forecastViewModel.humidity)))
                         .bold()
                         .foregroundColor(Color("secondary"))
@@ -40,7 +40,7 @@ struct CurrentTempView: View {
                         .foregroundColor(Color("secondary"))
                 }
                 
-                VStack{
+                VStack {
                     Text(String(forecastViewModel.tempMax))
                         .bold()
                         .foregroundColor(Color("secondary"))

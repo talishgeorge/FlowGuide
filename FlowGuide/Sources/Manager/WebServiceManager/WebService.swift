@@ -19,7 +19,7 @@ final class WebService {
     }
     
     func getWeather(cityName: String?, completion: @escaping(Swift.Result<ForecastWeatherResponse, ErrorModel>) -> Void) {
-          ServiceManager.shared.sendWeatherRequest(request: WeatherReqestModel()) { (result) in
+        ServiceManager.shared.sendWeatherRequest(request: WeatherReqestModel(city: cityName ?? "")) { (result) in
               completion(result)
           }
       }
