@@ -383,6 +383,7 @@
 		52D378E024C1A0FB00D28A0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8345991424CAAB6B00765C4C /* Helper.swift */,
 				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
 			);
 			path = Common;
@@ -514,7 +515,6 @@
 		831523EE246F7A8600F48DDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8345991424CAAB6B00765C4C /* Helper.swift */,
 				52D378E024C1A0FB00D28A0A /* Common */,
 				8324DEFE24BEFC5F0026B884 /* Constants */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,

@@ -25,10 +25,7 @@ struct Helper {
         return dateFormatter.string(from: date)
     }
     
-    func showWeatherIcon(item: String) -> String {
-        
-        //let main = item.main
-        
+    func showWeatherIcon(item: String) -> String {        
         switch item {
         case "Ash":
             return "cloud.hail"

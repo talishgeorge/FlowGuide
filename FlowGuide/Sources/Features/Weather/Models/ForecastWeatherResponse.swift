@@ -4,6 +4,7 @@
 //  
 
 import Foundation
+import NetWorkLib
 
 // MARK: - ForecastWeatherResponse
 struct ForecastWeatherResponse: Codable {
@@ -20,6 +21,12 @@ struct ForecastWeatherResponse: Codable {
     var id: Int?
     var name: String?
     var cod: Int?
+    
+    static func by(cityName: String) -> Resource<ForecastWeatherResponse> {
+        return Resource<ForecastWeatherResponse>(url: URL.urlForWeather(for: cityName)) { data in
+            return try? JSONDecoder().decode(ForecastWeatherResponse.self, from: data)
+        }
+    }
 }
 
 // MARK: - Clouds
