@@ -1,18 +1,15 @@
 //
 //  Created by TCS.
 //  Copyright © 2020 TCS. All rights reserved.
-//  
+//
 
-import SwiftUI
+import Foundation
+import NetWorkLib
 
-struct WeatherReqestModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct WeatherReqestModel_Previews: PreviewProvider {
-    static var previews: some View {
-        WeatherReqestModel()
+/// API Request Model
+final class WeatherReqestModel: RequestModel {
+    override var path: String {
+        ServiceManager.shared.baseURL = "https://api.openweathermap.org/data/2.5/"
+        return ServiceConstant().getWeatherURL(cityName: "Delhi")
     }
 }

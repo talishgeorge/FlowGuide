@@ -9,12 +9,18 @@
 import UIKit
 import OakLib
 import UtilitiesLib
-
+import SwiftUI
 /// Settings ViewController
 final class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
     private let loginViewModel = LoginViewModel()
+    
+    @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
+        let contentView = ContentView()
+        return UIHostingController(coder: coder, rootView: contentView)
+       
+    }
     
     // MARK: - View Life Cycle
     
@@ -26,6 +32,9 @@ final class SettingsViewController: BaseViewController {
             self.logout()
         }
         listenTheme()
+        
+        var viewModel = ForecastViewModel()
+        viewModel.fetchNews(by: "Delhi")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,5 +94,11 @@ extension SettingsViewController: Themeable {
     func didThemeChange() {
         configureCustomNavigaionView()
         setupViews()
+    }
+}
+
+struct SettingsViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
