@@ -13,8 +13,9 @@ struct ContentView: View {
     @ObservedObject var forcastViewModel: ForecastViewModel
     @State var showAlert = false
     @State var showView = false
-    init() {
-        self.forcastViewModel = ForecastViewModel()
+    init(forcastViewModel: ForecastViewModel) {
+        self.forcastViewModel = forcastViewModel
+        forcastViewModel.fetchWeatherForecast(by: "Delhi")
     }
     var body: some View {
         ZStack {
@@ -45,8 +46,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(forcastViewModel: forcastViewModel)
+//    }
+//}

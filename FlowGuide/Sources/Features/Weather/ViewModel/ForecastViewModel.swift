@@ -53,12 +53,11 @@ class ForecastViewModel: ObservableObject {
     var weatherDescription: String {
         if let desc = weatherForCast.weather?.first?.description {
             print(desc)
-            return desc.capitalized(with:.current)
+            return desc.capitalized(with: .current)
         } else {
             return ""
         }
     }
-    
     
     var windSpeed: String {
         if let wind = weatherForCast.wind?.speed {
@@ -68,7 +67,6 @@ class ForecastViewModel: ObservableObject {
             return ""
         }
     }
-    
     
     var tempMax: String {
         if let temp = weatherForCast.main?.temp_max {
@@ -99,7 +97,7 @@ class ForecastViewModel: ObservableObject {
     func searchCity() {
         if let city = self.cityName
             .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
-            //fetchWeatherForecast(by: city)
+            fetchWeatherForecast(by: city)
         }
     }
     
@@ -121,15 +119,15 @@ class ForecastViewModel: ObservableObject {
     
     /// Fetch News
     /// - Parameter category: String
-    func fetchNews(by category: String) {
+    func fetchWeatherForecast(by category: String) {
         let closureSelf = self
-        service.getWeather(cityName: "Delhi") { result in
-            //var categories = [Category]()
-            switch result {
+        service.getWeather(cityName: "Delhi") { forecast in
+            switch forecast {
             case Result.success(let response):
                 //let category = Category(title: "General", articles: response.articles)
                 //categories.append(category)
                 //closureSelf.categories = categories
+                closureSelf.weatherForCast = response
                 DispatchQueue.main.async {
                     //closureSelf.delegate?.serviceStartRefreshingUI(self)
                     print("Success\(response)")

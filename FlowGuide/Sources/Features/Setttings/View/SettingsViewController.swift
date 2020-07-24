@@ -18,9 +18,10 @@ final class SettingsViewController: BaseViewController {
     @IBOutlet private weak var pushNotificationView: UIView!
     private let loginViewModel = LoginViewModel()
     @Published var isDarkModeEnabled = Bool()
+    var viewModel = ForecastViewModel()
     
     @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
-        let contentView = ContentView()
+        let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
         
     }
@@ -38,7 +39,7 @@ final class SettingsViewController: BaseViewController {
         $isDarkModeEnabled.receive(subscriber: self)
         
         let viewModel = ForecastViewModel()
-        viewModel.fetchNews(by: "Delhi")
+        viewModel.fetchWeatherForecast(by: "Delhi")
     }
     
     override func viewWillAppear(_ animated: Bool) {
