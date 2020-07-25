@@ -146,6 +146,8 @@
 		8345992724CAACA700765C4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345992224CAACA600765C4C /* ContentView.swift */; };
 		8345992824CAACA700765C4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345992224CAACA600765C4C /* ContentView.swift */; };
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
+		8378DA6124CCCDDC00A3E77F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378DA6024CCCDDC00A3E77F /* BaseCoordinator.swift */; };
+		8378DA6224CCCDDC00A3E77F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378DA6024CCCDDC00A3E77F /* BaseCoordinator.swift */; };
 		8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85924ACA4F700CAC649 /* ExtensionsLib */; };
 		8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
 		8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
@@ -311,6 +313,7 @@
 		8345992124CAACA500765C4C /* CurrentTempView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTempView.swift; sourceTree = "<group>"; };
 		8345992224CAACA600765C4C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		834FEB9B2474D9E800D66A37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8378DA6024CCCDDC00A3E77F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		8388D86124ACAA0100CAC649 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		838FB9FD24BEEB92008F7E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		838FB9FF24BEEB96008F7E24 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Login.strings; sourceTree = "<group>"; };
@@ -674,6 +677,7 @@
 			children = (
 				831523EC246F796900F48DDA /* UIRouter.swift */,
 				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
+				8378DA6024CCCDDC00A3E77F /* BaseCoordinator.swift */,
 				83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */,
 				83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */,
 				52764C3324CCA9A300B0DFDD /* LoginCoordinator.swift */,
@@ -1249,6 +1253,7 @@
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
 				83351DAE24CBEAF900BFA0C1 /* Coordinator.swift in Sources */,
 				8345992724CAACA700765C4C /* ContentView.swift in Sources */,
+				8378DA6124CCCDDC00A3E77F /* BaseCoordinator.swift in Sources */,
 				833570EF247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
@@ -1305,6 +1310,7 @@
 				529B306024C47A0A00DCB2FD /* ThemeManager.swift in Sources */,
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */,
+				8378DA6224CCCDDC00A3E77F /* BaseCoordinator.swift in Sources */,
 				839DAE2624C1C3D000361AF4 /* Atricle.swift in Sources */,
 				52384DEC24CC35930046BE07 /* BaseView+Constants.swift in Sources */,
 				839DAE2324C1C3C400361AF4 /* NewsTableViewCell.swift in Sources */,
