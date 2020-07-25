@@ -25,7 +25,7 @@ final class NewsViewController: BaseViewController {
         /// Loading Header from Bundle
         setupUI()
         registerCell()
-        if let email = auth.currentUser?.email {
+        if let email = viewModel.authService.auth.currentUser?.email {
             userNameLabel.text = Constants.CoreApp.loggedIn + email
         }
         viewModel.delegate = self
@@ -47,7 +47,7 @@ final class NewsViewController: BaseViewController {
             guard let indexPath = tableView.indexPathForSelectedRow else {
                 fatalError("Unable to get the selected row")
             }
-            let articleVM = self.viewModel.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
+            let articleVM = viewModel.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
             newsDetailsVC?.viewModel = NewsDetailsViewModel(articleVM.article)
         }
     }

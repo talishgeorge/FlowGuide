@@ -15,7 +15,6 @@ import ExtensionsLib
 class BaseViewController: UIViewController {
 
     var navBar = CustomNavigationView.loadNavigationBar()
-    let auth = Auth.auth()
     
     // MARK: - View Life Cycle
     

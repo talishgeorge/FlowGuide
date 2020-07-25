@@ -103,6 +103,12 @@
 		8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335714D247D58AD002E26A0 /* SignUpViewModel.swift */; };
 		83357154247E1EEB002E26A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357153247E1EEB002E26A0 /* Category.swift */; };
 		83357156247E1F8E002E26A0 /* Atricle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357155247E1F8E002E26A0 /* Atricle.swift */; };
+		83440D4824CBCEC10054D4FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4724CBCEC10054D4FE /* AuthService.swift */; };
+		83440D4924CBCEC10054D4FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4724CBCEC10054D4FE /* AuthService.swift */; };
+		83440D4B24CBCED30054D4FE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4A24CBCED30054D4FE /* DataService.swift */; };
+		83440D4C24CBCED30054D4FE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4A24CBCED30054D4FE /* DataService.swift */; };
+		83440D4F24CBD2450054D4FE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4E24CBD2450054D4FE /* SettingsViewModel.swift */; };
+		83440D5024CBD2450054D4FE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D4E24CBD2450054D4FE /* SettingsViewModel.swift */; };
 		834FEB9C2474D9E800D66A37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FEB9B2474D9E800D66A37 /* LoginViewController.swift */; };
 		8388D85A24ACA4F700CAC649 /* ExtensionsLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8388D85924ACA4F700CAC649 /* ExtensionsLib */; };
 		8388D86224ACAA0200CAC649 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388D86124ACAA0100CAC649 /* Localizable.swift */; };
@@ -249,6 +255,9 @@
 		8335714D247D58AD002E26A0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		83357155247E1F8E002E26A0 /* Atricle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atricle.swift; sourceTree = "<group>"; };
+		83440D4724CBCEC10054D4FE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		83440D4A24CBCED30054D4FE /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		83440D4E24CBD2450054D4FE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		834FEB9B2474D9E800D66A37 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8388D86124ACAA0100CAC649 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		838FB9FD24BEEB92008F7E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
@@ -354,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
+				83440D4724CBCEC10054D4FE /* AuthService.swift */,
+				83440D4A24CBCED30054D4FE /* DataService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -494,6 +505,7 @@
 		831523F3246F800C00F48DDA /* Setttings */ = {
 			isa = PBXGroup;
 			children = (
+				83440D4D24CBD2210054D4FE /* ViewModel */,
 				8394EA262477F1BE002FA8EF /* View */,
 				8394EA292477F1D2002FA8EF /* Utilities */,
 				52546D5624BF421F0047C6DB /* Constants */,
@@ -597,6 +609,14 @@
 				529B305E24C47A0A00DCB2FD /* ThemeManager.swift */,
 			);
 			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		83440D4D24CBD2210054D4FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83440D4E24CBD2450054D4FE /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		835E9BAB24C42081009C53B3 /* Themes */ = {
@@ -1054,6 +1074,7 @@
 				83357154247E1EEB002E26A0 /* Category.swift in Sources */,
 				52EDF20D24C4B87200D21808 /* Constants+Theme.swift in Sources */,
 				52546D5E24BF437B0047C6DB /* Constants+News.swift in Sources */,
+				83440D4F24CBD2450054D4FE /* SettingsViewModel.swift in Sources */,
 				5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */,
 				833570FB247ADB67002E26A0 /* Login.swift in Sources */,
 				83081534248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
@@ -1064,6 +1085,7 @@
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
 				83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */,
 				529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
+				83440D4B24CBCED30054D4FE /* DataService.swift in Sources */,
 				52DD885124ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */,
 				52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */,
@@ -1076,6 +1098,7 @@
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
+				83440D4824CBCEC10054D4FE /* AuthService.swift in Sources */,
 				529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
@@ -1116,6 +1139,7 @@
 				8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */,
 				839DAE2024C1C3B700361AF4 /* NewsViewController+TableView.swift in Sources */,
 				529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
+				83440D4C24CBCED30054D4FE /* DataService.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				529B306024C47A0A00DCB2FD /* ThemeManager.swift in Sources */,
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
@@ -1154,6 +1178,7 @@
 				839DAE3024C1C42E00361AF4 /* FlowGuide.xcdatamodeld in Sources */,
 				529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				839DAE2224C1C3BE00361AF4 /* NewsHeaderView.swift in Sources */,
+				83440D5024CBD2450054D4FE /* SettingsViewModel.swift in Sources */,
 				833570FC247ADB67002E26A0 /* Login.swift in Sources */,
 				839DAE1C24C1C3A100361AF4 /* OnBoardingCollectionViewCell.swift in Sources */,
 				83006BB0246EE22D00B08094 /* FlowGuideTests.swift in Sources */,
@@ -1165,6 +1190,7 @@
 				833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				839DAE1B24C1C39E00361AF4 /* OnBoardingViewController.swift in Sources */,
 				839DAE2524C1C3CE00361AF4 /* Category.swift in Sources */,
+				83440D4924CBCEC10054D4FE /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

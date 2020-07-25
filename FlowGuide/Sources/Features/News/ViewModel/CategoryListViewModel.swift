@@ -11,14 +11,13 @@ import UIKit
 /// Category List Model
 /// Protocol
 protocol CategoryListViewModelDelegate: class {
-    func serviceStartRefreshingUI(_ viewModel: CategoryListViewModel)
-    func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?)
+    func categoryListViewModelDidStartRefresh(_ viewModel: CategoryListViewModel)
+    func categoryListViewModel(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?)
 }
 
-final class CategoryListViewModel {
+final class CategoryListViewModel: BaseViewModel {
     weak var delegate: CategoryListViewModelDelegate?
     private(set) var categories: [Category] = []
-    private let newsService = BaseViewModel.shared.webService
 }
 
 // MARK: - Internal Methods for TableView
@@ -59,7 +58,7 @@ extension CategoryListViewModel {
     /// - Parameter category: String
     func fetchNews(by category: String) {
         let closureSelf = self
-        newsService.getNews(category: category) { result in
+        webService.getNews(category: category) { result in
             var categories = [Category]()
             switch result {
             case Result.success(let response):
@@ -67,11 +66,11 @@ extension CategoryListViewModel {
                 categories.append(category)
                 closureSelf.categories = categories
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.serviceStartRefreshingUI(self)
+                    closureSelf.delegate?.categoryListViewModelDidStartRefresh(self)
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.service(self, didFinishWithError: error)
+                    closureSelf.delegate?.categoryListViewModel(self, didFinishWithError: error)
                 }
             }
         }
@@ -80,7 +79,7 @@ extension CategoryListViewModel {
     /// Show offline data
     func showOfflineData() {
         categories = Category.loadLocalData()
-        self.delegate?.serviceStartRefreshingUI(self)
+        self.delegate?.categoryListViewModelDidStartRefresh(self)
     }
 }
 

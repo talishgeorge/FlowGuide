@@ -34,8 +34,8 @@ private extension NewsDetailsViewController {
     /// Initial UI Setup
     func setupUI() {
         self.navigationItem.largeTitleDisplayMode = .never
-        self.title = self.viewModel.sourceName
-        guard let url = self.viewModel.url,
+        self.title = viewModel.sourceName
+        guard let url = viewModel.url,
             let newsDetailURL = URL(string: url) else {
                 return
         }
@@ -49,17 +49,6 @@ private extension NewsDetailsViewController {
 
 extension NewsDetailsViewController: WKNavigationDelegate {
     
-    /// WebView Delegate
-    /// - Parameters:
-    ///   - webView: Start Loading
-    ///   - navigation:
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-    }
-    
-    /// WebView Delegate
-    /// - Parameters:
-    ///   - webView: Finish Loading
-    ///   - navigation: 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         ActivityIndicator.dismiss()
     }

@@ -11,7 +11,7 @@ import UtilitiesLib
 
 /// Login ViewModel
 final class LoginViewModel: AuthViewModel {
- 
+    
     var formIsValid: Bool {
         guard let email = email, !email.isEmpty,
             let password = password, !password.isEmpty else {
@@ -56,25 +56,5 @@ extension LoginViewModel {
                 completion(.success(()))
             }
         }
-    }
-    
-    /// Logout User from Firebase with return type success and failure
-    func logoutUser() -> Result<Void, Error> {
-        do {
-            try auth.signOut()
-            return .success(())
-        } catch let error {
-            return .failure(error)
-        }
-    }
-}
-
-// MARK: - Static Methds
-
-extension LoginViewModel {
-    
-    /// Return isUser Loggedin as Bool
-    static func isUserLoggedIn() -> Bool {
-         Auth.auth().currentUser != nil
     }
 }

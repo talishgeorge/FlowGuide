@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class LoadingViewModel: AuthViewModel {
+final class LoadingViewModel: BaseViewModel {
     
     /// Return Current User
-    static func isUserLoggedIn() -> Bool {
-         LoginViewModel.isUserLoggedIn()
+    func isUserLoggedIn() -> Bool {
+        authService.isUserLoggedIn()
     }
 }
