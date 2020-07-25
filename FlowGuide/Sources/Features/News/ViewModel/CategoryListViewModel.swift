@@ -7,16 +7,11 @@
 //
 import Foundation
 import UIKit
-
-/// Category List Model
-/// Protocol
-protocol CategoryListViewModelDelegate: class {
-    func categoryListViewModelDidStartRefresh(_ viewModel: CategoryListViewModel)
-    func categoryListViewModel(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?)
-}
+import Combine
 
 final class CategoryListViewModel: BaseViewModel {
-    weak var delegate: CategoryListViewModelDelegate?
+    var refreshUIPublisher = PassthroughSubject<CategoryListViewModel, Never>()
+    var servicePublisher = PassthroughSubject<(CategoryListViewModel, Error), Never>()
     private(set) var categories: [Category] = []
 }
 
@@ -66,11 +61,11 @@ extension CategoryListViewModel {
                 categories.append(category)
                 closureSelf.categories = categories
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.categoryListViewModelDidStartRefresh(self)
+                    closureSelf.refreshUIPublisher.send(self)
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
-                    closureSelf.delegate?.categoryListViewModel(self, didFinishWithError: error)
+                    closureSelf.servicePublisher.send((self, error))
                 }
             }
         }
@@ -79,7 +74,8 @@ extension CategoryListViewModel {
     /// Show offline data
     func showOfflineData() {
         categories = Category.loadLocalData()
-        self.delegate?.categoryListViewModelDidStartRefresh(self)
+        //self.delegate?.serviceStartRefreshingUI(self)
+        self.refreshUIPublisher.send(self)
     }
 }
 

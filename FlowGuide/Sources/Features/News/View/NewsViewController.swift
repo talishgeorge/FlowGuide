@@ -9,6 +9,7 @@
 import UIKit
 import UtilitiesLib
 import OakLib
+import Combine
 
 /// News ViewController
 final class NewsViewController: BaseViewController {
@@ -16,6 +17,8 @@ final class NewsViewController: BaseViewController {
     var viewModel = CategoryListViewModel()
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    private var refreshCancellables = Set<AnyCancellable>()
+    private var serviceCancellables = Set<AnyCancellable>()
     
     // MARK: - View Life Cycle
     
@@ -27,7 +30,17 @@ final class NewsViewController: BaseViewController {
         if let email = viewModel.authService.auth.currentUser?.email {
             userNameLabel.text = AppConstants.loggedIn + email
         }
-        viewModel.delegate = self
+        //Subscribe to model chagnes
+        viewModel.refreshUIPublisher.sink { categoryListViewModel in
+            self.serviceStartRefreshingUI(categoryListViewModel)
+        }
+        .store(in: &refreshCancellables)
+        
+        viewModel.servicePublisher.sink { (categoryListViewModel, error) in
+            self.service(categoryListViewModel, didFinishWithError: error)
+        }
+        .store(in: &serviceCancellables)
+        
         populateNews()
     }
     
@@ -68,5 +81,24 @@ private extension NewsViewController {
     func populateNews() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
         viewModel.fetchNews(by: ApiConstants.newsCategory)
+    }
+}
+
+extension NewsViewController {
+    /// Refresh UI
+    func serviceStartRefreshingUI(_ viewModel: CategoryListViewModel) {
+        self.tableView.reloadData()
+        ActivityIndicator.dismiss()
+    }
+    
+    func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?) {
+        guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
+            return
+        }
+        self.presentAlertWithTitle(title: String.News.newsFecthError.localized, message: String.News.newsFetchErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
+            if value == 0 {
+                self.viewModel.showOfflineData()
+            }
+        }
     }
 }
