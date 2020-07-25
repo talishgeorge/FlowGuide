@@ -16,7 +16,7 @@ import Combine
 final class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
-    private let loginViewModel = LoginViewModel()
+
     @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
     
@@ -24,6 +24,8 @@ final class SettingsViewController: BaseViewController {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
     }
+
+    private let settingsViewModel = SettingsViewModel()
     
     // MARK: - View Life Cycle
     
@@ -84,7 +86,7 @@ private extension SettingsViewController {
     /// Logout the current user
     func logout() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        let result = loginViewModel.logoutUser()
+        let result = settingsViewModel.authService.logoutUser()
         switch result {
         case .success:
             UIRouter.shared.show(viewMode: .onBoarding)

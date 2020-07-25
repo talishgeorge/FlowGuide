@@ -5,11 +5,10 @@
 
 import Foundation
 
-class ForecastViewModel: ObservableObject {
+class ForecastViewModel: BaseViewModel, ObservableObject{
     var cityName: String = "Kochi"
     @Published var isValid: Bool = false
     @Published var weatherForCast = ForecastWeatherResponse()
-    private let service = BaseViewModel.shared.webService
     var currentCity: String {
         if let city = weatherForCast.name {
             return city
@@ -99,7 +98,7 @@ class ForecastViewModel: ObservableObject {
     /// - Parameter category: String
     func fetchWeatherForecast(by cityName: String) {
         let closureSelf = self
-        service.getWeather(by: cityName) { forecast in
+        webService.getWeather(by: cityName) { forecast in
             switch forecast {
             case Result.success(let response):
                 DispatchQueue.main.async {

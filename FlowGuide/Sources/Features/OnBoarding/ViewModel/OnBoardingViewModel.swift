@@ -13,36 +13,24 @@ struct OnboardingItemInfo {
 }
 
 /// OnBoarding View Model
-final class OnBoardingViewModel: AuthViewModel {
+final class OnBoardingViewModel: BaseViewModel {
   
     /// Current Onboarding item
-    var currentSlide: OnBoardingItem = OnBoardingItem()
+    var currentSlide = OnBoardingItem()
     
     /// Onboarding item title
     var onboardingItemTitle: String {
-        if let title = currentSlide.title {
-            return title
-        } else {
-            return ""
-        }
+        currentSlide.title ?? ""
     }
     
     /// Onboarding Item Description
     var onboardingItemDescription: String {
-        if let description = currentSlide.description {
-            return description
-        } else {
-            return ""
-        }
+        currentSlide.description ?? ""
     }
     
     /// Onboarding Item Image name
     var onboardingItemImageName: String {
-        if let imageName = currentSlide.imageName {
-            return imageName
-        } else {
-            return ""
-        }
+        currentSlide.imageName ?? ""
     }
 }
 

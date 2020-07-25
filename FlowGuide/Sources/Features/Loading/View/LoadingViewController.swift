@@ -11,7 +11,7 @@ import UtilitiesLib
 
 final class LoadingViewController: BaseViewController {
     
-    private let loginViewModel = LoginViewModel()
+    private let viewModel = LoadingViewModel()
     @IBOutlet private weak var loadingLabel: UILabel!
     
     // MARK: - View Life Cycle
@@ -52,7 +52,7 @@ final class LoadingViewController: BaseViewController {
     }
     /// Show Initial View
     private func showInitialView() {
-        if LoadingViewModel.isUserLoggedIn() {
+        if viewModel.isUserLoggedIn() {
             UIRouter.shared.show(viewMode: .mainTabBarConttoller)
         } else {
             performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)

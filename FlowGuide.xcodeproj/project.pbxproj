@@ -103,6 +103,10 @@
 		8335714E247D58AD002E26A0 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335714D247D58AD002E26A0 /* SignUpViewModel.swift */; };
 		83357154247E1EEB002E26A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357153247E1EEB002E26A0 /* Category.swift */; };
 		83357156247E1F8E002E26A0 /* Atricle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357155247E1F8E002E26A0 /* Atricle.swift */; };
+		83440D5224CBDDA30054D4FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D5124CBDDA30054D4FE /* AuthService.swift */; };
+		83440D5324CBDDA30054D4FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D5124CBDDA30054D4FE /* AuthService.swift */; };
+		83440D5624CBDE290054D4FE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D5524CBDE290054D4FE /* SettingsViewModel.swift */; };
+		83440D5724CBDE290054D4FE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83440D5524CBDE290054D4FE /* SettingsViewModel.swift */; };
 		8345990C24C9AC3D00765C4C /* WeatherReqestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345990B24C9AC3D00765C4C /* WeatherReqestModel.swift */; };
 		8345990D24C9AC3D00765C4C /* WeatherReqestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345990B24C9AC3D00765C4C /* WeatherReqestModel.swift */; };
 		8345990F24C9AF8E00765C4C /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345990E24C9AF8E00765C4C /* ForecastViewModel.swift */; };
@@ -269,6 +273,8 @@
 		8335714D247D58AD002E26A0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		83357153247E1EEB002E26A0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		83357155247E1F8E002E26A0 /* Atricle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atricle.swift; sourceTree = "<group>"; };
+		83440D5124CBDDA30054D4FE /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		83440D5524CBDE290054D4FE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8345990B24C9AC3D00765C4C /* WeatherReqestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReqestModel.swift; sourceTree = "<group>"; };
 		8345990E24C9AF8E00765C4C /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		8345991124C9B15500765C4C /* ForecastWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherResponse.swift; sourceTree = "<group>"; };
@@ -383,6 +389,7 @@
 		52D378E024C1A0FB00D28A0A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83440D5124CBDDA30054D4FE /* AuthService.swift */,
 				8345991424CAAB6B00765C4C /* Helper.swift */,
 				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
 			);
@@ -526,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				8394EA262477F1BE002FA8EF /* View */,
+				83440D5424CBDDE50054D4FE /* ViewModel */,
 				8394EA292477F1D2002FA8EF /* Utilities */,
 				52546D5624BF421F0047C6DB /* Constants */,
 			);
@@ -628,6 +636,14 @@
 				529B305E24C47A0A00DCB2FD /* ThemeManager.swift */,
 			);
 			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		83440D5424CBDDE50054D4FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83440D5524CBDE290054D4FE /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8345990524C9AB7800765C4C /* Weather */ = {
@@ -1169,6 +1185,7 @@
 				8345991524CAAB6B00765C4C /* Helper.swift in Sources */,
 				529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
+				83440D5224CBDDA30054D4FE /* AuthService.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
 				8345992724CAACA700765C4C /* ContentView.swift in Sources */,
@@ -1177,6 +1194,7 @@
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
+				83440D5624CBDE290054D4FE /* SettingsViewModel.swift in Sources */,
 				8345990C24C9AC3D00765C4C /* WeatherReqestModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				529B305724C448EB00DCB2FD /* Colors.swift in Sources */,
@@ -1216,6 +1234,7 @@
 				8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */,
 				839DAE2024C1C3B700361AF4 /* NewsViewController+TableView.swift in Sources */,
 				529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
+				83440D5724CBDE290054D4FE /* SettingsViewModel.swift in Sources */,
 				83357106247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				529B306024C47A0A00DCB2FD /* ThemeManager.swift in Sources */,
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
@@ -1235,6 +1254,7 @@
 				839DAE2124C1C3B900361AF4 /* NewsViewController+LoadData.swift in Sources */,
 				839DAE1E24C1C3B300361AF4 /* NewsViewController.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
+				83440D5324CBDDA30054D4FE /* AuthService.swift in Sources */,
 				83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */,
 				529B305024C440A500DCB2FD /* AppTheme.swift in Sources */,

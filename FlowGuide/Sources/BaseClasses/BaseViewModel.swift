@@ -7,9 +7,6 @@ import Foundation
 import NetWorkLib
 
 class BaseViewModel: NSObject {
-    static public let shared = BaseViewModel()
     let webService = WebService()
-    var isReachable: Bool {
-        Reachability.isConnectedToNetwork()
-    }
+    let authService = Authservice()
 }

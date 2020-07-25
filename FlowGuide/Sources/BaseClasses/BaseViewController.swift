@@ -16,9 +16,8 @@ import Combine
 class BaseViewController: UIViewController, Subscriber {
     
     var navBar = CustomNavigationView.loadNavigationBar()
-    let auth = Auth.auth()
     typealias Input = Bool
-    
+
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {

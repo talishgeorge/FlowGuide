@@ -12,13 +12,13 @@ import OakLib
 extension NewsViewController: CategoryListViewModelDelegate {
     
     /// Refresh UI
-    func serviceStartRefreshingUI(_ viewModel: CategoryListViewModel) {
+    func categoryListViewModelDidStartRefresh(_ viewModel: CategoryListViewModel) {
         self.tableView.reloadData()
         ActivityIndicator.dismiss()
     }
     
     /// Show Error
-    func service(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?) {
+    func categoryListViewModel(_ viewModel: CategoryListViewModel, didFinishWithError error: Error?) {
         guard let errorDescription = error?.localizedDescription, !errorDescription.isEmpty else {
             return
         }
