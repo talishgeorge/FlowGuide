@@ -4,6 +4,7 @@
 //  
 
 import Foundation
+import OakLib
 
 class ForecastViewModel: BaseViewModel, ObservableObject {
     var cityName: String = "Kochi"
@@ -98,11 +99,13 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
     /// - Parameter category: String
     func fetchWeatherForecast(by cityName: String) {
         let closureSelf = self
+        ActivityIndicator.show()
         webService.getWeather(by: cityName) { forecast in
             switch forecast {
             case Result.success(let response):
                 DispatchQueue.main.async {
                     closureSelf.weatherForCast = response!
+                    ActivityIndicator.dismiss()
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
