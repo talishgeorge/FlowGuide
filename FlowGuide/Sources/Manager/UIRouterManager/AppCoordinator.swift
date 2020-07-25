@@ -5,6 +5,7 @@
 
 import UIKit
 import UtilitiesLib
+import Combine
 
 final public class AppCoordinator: Coordinator {
     func showMainTabBarController() {
@@ -15,6 +16,7 @@ final public class AppCoordinator: Coordinator {
     private let navController: UINavigationController
     private let window: UIWindow
     private var childCoordinators: [Coordinator] = []
+    var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Initializer
     init(navController: UINavigationController, window: UIWindow) {
@@ -37,6 +39,14 @@ final public class AppCoordinator: Coordinator {
         loadingViewController.delegate = self
         navController.setViewControllers([loadingViewController], animated: true)
         childCoordinators.removeAll { $0 is OnBoardingCoordinator }
+        
+        loadingViewController.publisher
+        .handleEvents(receiveOutput: { [unowned self] newItem in
+            self.showOnboarding()
+        })
+        .sink { _ in }
+        .store(in: &subscriptions)
+
     }
     
     private func showOnboarding() {

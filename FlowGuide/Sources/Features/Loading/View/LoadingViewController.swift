@@ -8,6 +8,7 @@
 
 import UIKit
 import UtilitiesLib
+import Combine
 
 protocol LoadingViewControllerDelegate: AnyObject {
     func navigateToNextPage()
@@ -18,6 +19,7 @@ final class LoadingViewController: BaseViewController {
     private let viewModel = LoadingViewModel()
     @IBOutlet private weak var loadingLabel: UILabel!
     weak var delegate: LoadingViewControllerDelegate?
+    let publisher = PassthroughSubject<String, Never>()
     
     // MARK: - View Life Cycle
     
@@ -41,7 +43,7 @@ final class LoadingViewController: BaseViewController {
     /// Show Loading
     private func showLoading() {
         _ = Timer.scheduledTimer(withTimeInterval: AppConstants.LoadingConstants.timerInterval,
-                                         repeats: true) { _ in
+                                 repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
                 case String.Loading.loading1.localized:
@@ -63,7 +65,8 @@ final class LoadingViewController: BaseViewController {
             UIRouter.shared.show(viewMode: .mainTabBarConttoller)
         } else {
             //performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
-            delegate?.navigateToNextPage()
+            //delegate?.navigateToNextPage()
+            publisher.send("From Loading View")
         }
     }
 }
