@@ -17,9 +17,8 @@ extension UIStoryboard {
     }
     
     // MARK: - View Controllers
-    static func instantiateLoadingViewController(delegate: LoadingViewControllerDelegate) -> LoadingViewController {
+    static func instantiateLoadingViewController() -> LoadingViewController {
         let loadingVC = main.instantiateViewController(withIdentifier: "LoadingViewController") as! LoadingViewController
-        loadingVC.delegate = delegate
         return loadingVC
     }
     
@@ -28,7 +27,7 @@ extension UIStoryboard {
         return onBoardingVC
     }
     
-    static func instantiateLoginViewController( ) -> LoginViewController {
+    static func instantiateLoginViewController() -> LoginViewController {
         let loginVC = login.instantiateViewController(withIdentifier: "LoginViewControllerID") as! LoginViewController
         return loginVC
     }

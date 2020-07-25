@@ -104,13 +104,18 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
             switch forecast {
             case Result.success(let response):
                 DispatchQueue.main.async {
-                    closureSelf.weatherForCast = response!
+                    guard let response = response else {
+                        ActivityIndicator.dismiss()
+                        return
+                    }
+                    closureSelf.weatherForCast = response
                     ActivityIndicator.dismiss()
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
                     //closureSelf.delegate?.service(self, didFinishWithError: error)
                     print("Failure \(error)")
+                    ActivityIndicator.dismiss()
                 }
             }
         }

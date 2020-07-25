@@ -12,27 +12,28 @@ protocol OnBoardingCoordinatorDelegate: AnyObject {
 
 final class OnBoardingCoordinator: Coordinator {
     private let navController: UINavigationController
-    weak var delegate: OnBoardingCoordinatorDelegate?
+    var subscriptions = Set<AnyCancellable>()
+    private var childCoordinators: [Coordinator] = []
     
-    init(navController: UINavigationController, delegate: OnBoardingCoordinatorDelegate) {
+    init(navController: UINavigationController) {
         self.navController = navController
-        self.delegate = delegate
     }
     
     func start() {
         let onBoardingVC = UIStoryboard.instantiateOnBoardingViewController()
         navController.setViewControllers([onBoardingVC], animated: true)
+        
+        onBoardingVC.publisher
+                      .handleEvents(receiveOutput: { [unowned self] newItem in
+                          self.showLogin()
+                      })
+                      .sink { _ in }
+                      .store(in: &subscriptions)
     }
-    
-    func startWithReturn() -> PassthroughSubject<String, Never> {
-        let onBoardingVC = UIStoryboard.instantiateOnBoardingViewController()
-        navController.setViewControllers([onBoardingVC], animated: true)
-       return onBoardingVC.publisher
-    }
-}
 
-extension OnBoardingCoordinator: OnBoardingDelegate {
-    func showMainTabBarController() {
-        //todo
+    private func showLogin() {
+        let loginCoordinator = LoginCoordinator(navController: navController)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
 }

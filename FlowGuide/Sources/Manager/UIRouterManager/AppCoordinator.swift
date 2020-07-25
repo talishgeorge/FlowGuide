@@ -8,10 +8,7 @@ import UtilitiesLib
 import Combine
 
 final public class AppCoordinator: Coordinator {
-    func showMainTabBarController() {
-        //todo
-    }
-    
+
     // MARK: - Properties
     private let navController: UINavigationController
     private let window: UIWindow
@@ -35,8 +32,7 @@ final public class AppCoordinator: Coordinator {
     
     // MARK: - Navigation
     func showLoading() {
-        let loadingViewController = UIStoryboard.instantiateLoadingViewController(delegate: self)
-        loadingViewController.delegate = self
+        let loadingViewController = UIStoryboard.instantiateLoadingViewController()
         navController.setViewControllers([loadingViewController], animated: true)
         childCoordinators.removeAll { $0 is OnBoardingCoordinator }
         
@@ -50,38 +46,8 @@ final public class AppCoordinator: Coordinator {
     }
     
     private func showOnboarding() {
-        let onBoardingCoordinator = OnBoardingCoordinator(navController: navController, delegate: self)
+        let onBoardingCoordinator = OnBoardingCoordinator(navController: navController)
         childCoordinators.append(onBoardingCoordinator)
-//        onBoardingCoordinator.start()
-        
-        // startWithReturn to be added in the protocol Coordinator with PassthroughSubject<String, Never> as return type
-        
-       let publish = onBoardingCoordinator.startWithReturn()
-        publish.handleEvents(receiveOutput: { [unowned self] _ in
-            self.showLogin()
-        })
-        .sink { _ in }
-        .store(in: &subscriptions)
-
-    }
-    
-    private func showLogin() {
-        let loginCoordinator = LoginCoordinator(navController: navController)
-        childCoordinators.append(loginCoordinator)
-        loginCoordinator.start()
-    }
-}
-
-// MARK: - LoadingViewControllerDelegate
-extension AppCoordinator: LoadingViewControllerDelegate {
-    func navigateToNextPage() {
-        showOnboarding()
-    }
-}
-
-// MARK: - OnBoardingCoordinatorDelegate
-extension AppCoordinator: OnBoardingCoordinatorDelegate {
-    func didAuthenticate() {
-        //to do
+        onBoardingCoordinator.start()
     }
 }

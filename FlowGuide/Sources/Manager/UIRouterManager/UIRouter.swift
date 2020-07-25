@@ -18,7 +18,7 @@ final class UIRouter {
     /// View mode
     enum ViewMode {
         case mainTabBarConttoller
-        case onBoarding
+        //case onBoarding
     }
     
     // MARK: - Internal Methods
@@ -32,9 +32,9 @@ final class UIRouter {
         case .mainTabBarConttoller:
             viewController = UIStoryboard(name: AppConstants.StoryBoardID.main,
                                           bundle: nil).instantiateViewController(withIdentifier: AppConstants.StoryBoardID.mainTabBarController)
-        case .onBoarding:
-            viewController = UIStoryboard(name: AppConstants.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: AppConstants.StoryBoardID.onBoardingViewController)
+//        case .onBoarding:
+//            viewController = UIStoryboard(name: AppConstants.StoryBoardID.main,
+//                                          bundle: nil).instantiateViewController(withIdentifier: AppConstants.StoryBoardID.onBoardingViewController)
         }
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
             let window = sceneDelegate.window {

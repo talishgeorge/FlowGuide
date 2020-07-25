@@ -55,7 +55,7 @@ final class OnBoardingViewController: BaseViewController {
     
     @IBAction private func userTappedOnBoarding(_ sender: UIButton) {
 //        performSegue(withIdentifier: AppConstants.Segue.showLoginSignup, sender: nil)
-        publisher.send("")
+        publisher.send("From Onboarding")
     }
 }
 

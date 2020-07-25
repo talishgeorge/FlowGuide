@@ -19,7 +19,7 @@ final class SettingsViewController: BaseViewController {
 
     @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
-    
+    let publisher = PassthroughSubject<String, Never>()
     @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
@@ -89,7 +89,10 @@ private extension SettingsViewController {
         let result = settingsViewModel.authService.logoutUser()
         switch result {
         case .success:
-            UIRouter.shared.show(viewMode: .onBoarding)
+            //TODO
+            print("Need to load onboarding")
+            publisher.send("Do logout")
+            //UIRouter.shared.show(viewMode: .onBoarding)
         case .failure( _):
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
             view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
