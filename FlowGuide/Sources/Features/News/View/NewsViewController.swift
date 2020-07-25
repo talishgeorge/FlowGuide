@@ -25,7 +25,7 @@ final class NewsViewController: BaseViewController {
         /// Loading Header from Bundle
         registerCell()
         if let email = viewModel.authService.auth.currentUser?.email {
-            userNameLabel.text = Constants.CoreApp.loggedIn + email
+            userNameLabel.text = AppConstants.loggedIn + email
         }
         viewModel.delegate = self
         populateNews()
@@ -41,9 +41,9 @@ final class NewsViewController: BaseViewController {
     
     func setupUI() {
         navigationController?.navigationBar.barTintColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemIndigo
-        tableView.layer.borderWidth = CGFloat(NewsConstants.tableViewBorderWidth)
+        tableView.layer.borderWidth = AppConstants.NewsConstants.tableViewBorderWidth
         tableView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
-        self.title = Constants.NavigationTitle.home
+        self.title = AppConstants.NavigationTitle.home
     }
     
     // MARK: - Navigation

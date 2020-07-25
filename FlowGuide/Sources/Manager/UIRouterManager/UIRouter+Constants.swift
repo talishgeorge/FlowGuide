@@ -4,7 +4,3 @@
 //  
 
 import Foundation
-
-final class SettingsViewModel: BaseViewModel {
-    
-}

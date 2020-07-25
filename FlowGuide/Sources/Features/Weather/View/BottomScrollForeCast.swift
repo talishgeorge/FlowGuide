@@ -65,6 +65,3 @@ struct BottomScrollForeCast: View {
 //        BottomScrollForeCast()
 //    }
 //}
-
-
-

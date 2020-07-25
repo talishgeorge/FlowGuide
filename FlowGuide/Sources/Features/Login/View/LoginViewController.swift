@@ -105,9 +105,9 @@ private extension LoginViewController {
         emailView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
         passwordView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
         confirmPswdView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
-        emailView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
-        passwordView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
-        confirmPswdView.layer.borderWidth = CGFloat(LoginConstants.textFieldBorderWidth)
+        emailView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
+        passwordView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
+        confirmPswdView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
         UIView.gradientButton(customButton: loginButtonView, viewButton: loginButton)
         UIView.gradientButton(customButton: signUpButtonView, viewButton: sigunpButton)
     }

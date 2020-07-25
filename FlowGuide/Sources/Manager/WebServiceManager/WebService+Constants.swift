@@ -2,10 +2,13 @@
 //  Created by TCS.
 //  Copyright © 2020 TCS. All rights reserved.
 //  
+
+import Foundation
 import UIKit
 
 extension AppConstants {
-    struct LoginConstants {
-        static let textFieldBorderWidth: CGFloat = 1
+    /// Authentication error type
+    public enum AuthError: Error {
+        case unknownError
     }
 }
