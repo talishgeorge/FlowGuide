@@ -8,6 +8,7 @@
 
 import UIKit
 import OakLib
+import Combine
 
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
@@ -31,6 +32,7 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var errorView: UIView!
     @IBOutlet private weak var loginButtonView: UIView!
     @IBOutlet private weak var signUpButtonView: UIView!
+    var showTabBarControllerPublisher = PassthroughSubject<Void, Never>()
     
     /// Page Types for login flow
     private enum PageType {
@@ -124,6 +126,33 @@ private extension LoginViewController {
     
     /// Login Button with TextField Validations
     /// - Parameter sender: UIButton
+    //    @IBAction func loginButtonTapped(_ sender: UIButton) {
+    //        view.endEditing(true)
+    //        guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
+    //            showErrorMessage(text: String.Login.invalidForm.localized)
+    //            return
+    //        }
+    //
+    //        ActivityIndicator.show(String.Global.pleaseWait.localized)
+    //        loginViewModel.loginUser(withEmail: email, password: password) { [weak self] (result) in
+    //            guard let self = self else {
+    //                return
+    //            }
+    //            ActivityIndicator.dismiss()
+    //            switch result {
+    //            case .success( _):
+    //                self.delegate?.showMainTabBarController()
+    //            case .failure(let error):
+    //                self.showErrorMessage(text: error.localizedDescription)
+    //                self.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
+    //                    if value == 0 {
+    //                        self.delegate?.showMainTabBarController()
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
+    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, loginViewModel.formIsValid else {
@@ -139,12 +168,14 @@ private extension LoginViewController {
             ActivityIndicator.dismiss()
             switch result {
             case .success( _):
-                self.delegate?.showMainTabBarController()
+                //self.delegate?.showMainTabBarController()
+                self.showTabBarControllerPublisher.send()
             case .failure(let error):
                 self.showErrorMessage(text: error.localizedDescription)
                 self.presentAlertWithTitle(title: String.Login.loginError.localized, message: String.Login.loginErrorMessage.localized, options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
                     if value == 0 {
-                        self.delegate?.showMainTabBarController()
+                        //self.delegate?.showMainTabBarController()
+                        self.showTabBarControllerPublisher.send()
                     }
                 }
             }

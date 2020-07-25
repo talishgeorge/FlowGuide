@@ -9,6 +9,7 @@
 //import Foundation
 import UIKit
 import UtilitiesLib
+import Combine
 
 /// Protocol
 protocol OnBoardingDelegate: class {
@@ -26,7 +27,7 @@ final class OnBoardingViewController: BaseViewController {
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var getStartedButton: UIButton!
     weak var delegate: OnBoardingDelegate?
-    
+    private var cancellables = Set<AnyCancellable>()
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -38,9 +39,12 @@ final class OnBoardingViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == AppConstants.Segue.showLoginSignup {
+        if segue.identifier == Constants.Segue.showLoginSignup {
             if let destination = segue.destination as? LoginViewController {
-                destination.delegate = self
+                destination.showTabBarControllerPublisher.sink {
+                    self.showMainTabBarController()
+                }
+                .store(in: &cancellables)
             }
         }
     }
@@ -60,7 +64,7 @@ private extension OnBoardingViewController {
     func setupCollectionView() {
         let layout =  UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        collectionView.backgroundColor = .clear//.systemGroupedBackground
+        collectionView.backgroundColor = .clear
         collectionView.collectionViewLayout = layout
         collectionView.isPagingEnabled = true
         collectionView.showsVerticalScrollIndicator = true
@@ -119,7 +123,6 @@ extension OnBoardingViewController: OnBoardingDelegate {
         pageControl.currentPage = index
     }
 }
-
 extension OnBoardingViewController: OnBoardingCoordinatorDelegate {
     func navigateToNextPage() {
         //to do

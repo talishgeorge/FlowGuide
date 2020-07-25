@@ -6,7 +6,7 @@
 import UIKit
 import UtilitiesLib
 
-final public class AppCoordinator: Coordinator, OnBoardingDelegate {
+final public class AppCoordinator: Coordinator {
     func showMainTabBarController() {
         //todo
     }
