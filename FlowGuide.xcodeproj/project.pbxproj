@@ -76,6 +76,14 @@
 		832C7F3224AA571C0032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3324AA57200032EC52 /* OakLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; };
 		832C7F3424AA57200032EC52 /* OakLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 832C7F3024AA571B0032EC52 /* OakLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83351DAE24CBEAF900BFA0C1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */; };
+		83351DAF24CBEAF900BFA0C1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */; };
+		83351DB124CBEB4900BFA0C1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */; };
+		83351DB224CBEB4900BFA0C1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */; };
+		83351DB424CBECCF00BFA0C1 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */; };
+		83351DB524CBECCF00BFA0C1 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */; };
+		83351DB724CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */; };
+		83351DB824CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */; };
 		833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */; };
 		833570DC247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */; };
 		833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833570DE247A660D002E26A0 /* AuthViewModel.swift */; };
@@ -256,6 +264,10 @@
 		831E96FD24AC5416006D39B7 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8324DF0924BF3A540026B884 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		832C7F3024AA571B0032EC52 /* OakLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OakLib.framework; sourceTree = "<group>"; };
+		83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+Extension.swift"; sourceTree = "<group>"; };
 		833570DA247A65AF002E26A0 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		833570DE247A660D002E26A0 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		833570E4247A8A33002E26A0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -622,6 +634,10 @@
 			isa = PBXGroup;
 			children = (
 				831523EC246F796900F48DDA /* UIRouter.swift */,
+				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
+				83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */,
+				83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */,
+				83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */,
 			);
 			path = UIRouterManager;
 			sourceTree = "<group>";
@@ -1167,9 +1183,11 @@
 				833570E5247A8A33002E26A0 /* BaseViewController.swift in Sources */,
 				83081537248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				83006BA0246EE22B00B08094 /* FlowGuide.xcdatamodeld in Sources */,
+				83351DB724CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift in Sources */,
 				83F30CB8249CAB60008B2B53 /* SDKManager.swift in Sources */,
 				529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				52DD885124ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
+				83351DB424CBECCF00BFA0C1 /* OnBoardingCoordinator.swift in Sources */,
 				839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */,
 				52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
@@ -1188,6 +1206,7 @@
 				83440D5224CBDDA30054D4FE /* AuthService.swift in Sources */,
 				83006B96246EE22B00B08094 /* AppDelegate.swift in Sources */,
 				8394E9FC2477BF1D002FA8EF /* NewsHeaderView.swift in Sources */,
+				83351DAE24CBEAF900BFA0C1 /* Coordinator.swift in Sources */,
 				8345992724CAACA700765C4C /* ContentView.swift in Sources */,
 				833570EF247ACBFA002E26A0 /* OnBoardingViewController+CollectionView.swift in Sources */,
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
@@ -1196,6 +1215,7 @@
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				83440D5624CBDE290054D4FE /* SettingsViewModel.swift in Sources */,
 				8345990C24C9AC3D00765C4C /* WeatherReqestModel.swift in Sources */,
+				83351DB124CBEB4900BFA0C1 /* AppCoordinator.swift in Sources */,
 				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				529B305724C448EB00DCB2FD /* Colors.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
@@ -1253,8 +1273,10 @@
 				8324DF0B24BF3A540026B884 /* Global.swift in Sources */,
 				839DAE2124C1C3B900361AF4 /* NewsViewController+LoadData.swift in Sources */,
 				839DAE1E24C1C3B300361AF4 /* NewsViewController.swift in Sources */,
+				83351DB524CBECCF00BFA0C1 /* OnBoardingCoordinator.swift in Sources */,
 				83B0176D24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83440D5324CBDDA30054D4FE /* AuthService.swift in Sources */,
+				83351DB824CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift in Sources */,
 				83A4363F24C06EB600F63D02 /* NewsRequestModel.swift in Sources */,
 				839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */,
 				529B305024C440A500DCB2FD /* AppTheme.swift in Sources */,
@@ -1270,10 +1292,12 @@
 				52EDF20E24C4B87200D21808 /* Constants+Theme.swift in Sources */,
 				83081535248D24DB0036B52D /* CategoryListViewModel.swift in Sources */,
 				839DAE2424C1C3C900361AF4 /* NewsDetailViewModel.swift in Sources */,
+				83351DAF24CBEAF900BFA0C1 /* Coordinator.swift in Sources */,
 				83A4361724BF83E800F63D02 /* AppConstants.swift in Sources */,
 				83357119247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83357112247BB13F002E26A0 /* LoadingLocalization.swift in Sources */,
 				839DAE2C24C1C41900361AF4 /* UIRouter.swift in Sources */,
+				83351DB224CBEB4900BFA0C1 /* AppCoordinator.swift in Sources */,
 				839DAE3024C1C42E00361AF4 /* FlowGuide.xcdatamodeld in Sources */,
 				529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				839DAE2224C1C3BE00361AF4 /* NewsHeaderView.swift in Sources */,

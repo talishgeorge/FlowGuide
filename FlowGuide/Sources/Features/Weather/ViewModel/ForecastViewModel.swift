@@ -5,7 +5,7 @@
 
 import Foundation
 
-class ForecastViewModel: BaseViewModel, ObservableObject{
+class ForecastViewModel: BaseViewModel, ObservableObject {
     var cityName: String = "Kochi"
     @Published var isValid: Bool = false
     @Published var weatherForCast = ForecastWeatherResponse()

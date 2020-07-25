@@ -42,5 +42,4 @@ final class UIRouter {
             UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
         }
     }
-    
 }

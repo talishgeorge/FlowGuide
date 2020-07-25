@@ -9,10 +9,15 @@
 import UIKit
 import UtilitiesLib
 
+protocol LoadingViewControllerDelegate: AnyObject {
+    func navigateToNextPage()
+}
+
 final class LoadingViewController: BaseViewController {
     
     private let viewModel = LoadingViewModel()
     @IBOutlet private weak var loadingLabel: UILabel!
+    weak var delegate: LoadingViewControllerDelegate?
     
     // MARK: - View Life Cycle
     
@@ -21,9 +26,10 @@ final class LoadingViewController: BaseViewController {
         loadingLabel.text = String.Loading.loading1.localized
         loadingLabel.textColor = ThemeManager.shared.theme?.fontWhiteColor
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         showLoading()
         delay(durationInSeconds: LoadingConstants.delayInSeconds, completion: {
             self.showInitialView()
@@ -55,7 +61,8 @@ final class LoadingViewController: BaseViewController {
         if viewModel.isUserLoggedIn() {
             UIRouter.shared.show(viewMode: .mainTabBarConttoller)
         } else {
-            performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
+            //performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
+            delegate?.navigateToNextPage()
         }
     }
 }

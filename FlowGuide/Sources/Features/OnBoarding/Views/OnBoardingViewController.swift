@@ -25,6 +25,7 @@ final class OnBoardingViewController: BaseViewController {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var getStartedButton: UIButton!
+    weak var delegate: OnBoardingDelegate?
     
     // MARK: - View Life Cycle
     
@@ -56,7 +57,7 @@ final class OnBoardingViewController: BaseViewController {
 private extension OnBoardingViewController {
     
     /// Collection View Setup
-     func setupCollectionView() {
+    func setupCollectionView() {
         let layout =  UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         collectionView.backgroundColor = .clear//.systemGroupedBackground
@@ -66,12 +67,12 @@ private extension OnBoardingViewController {
     }
     
     /// Set Page
-     func setupPageControl() {
+    func setupPageControl() {
         pageControl.numberOfPages = viewModel.getOnboardingItemCount
     }
     
     /// Localization
-     func setupUIForLocalization() {
+    func setupUIForLocalization() {
         getStartedButton.setTitle(String.OnBoarding.getStarted.localized, for: .normal)
         UIView.gradientButton(customButton: getStartedView, viewButton: getStartedButton)
     }
@@ -87,7 +88,7 @@ private extension OnBoardingViewController {
         let onboardingItemInfo = viewModel.getCurrentOnboardingItemInfo(index: index)
         switch index {
         case 1:
-             titleLabel.text = String.OnBoarding.onboardingTitle1.localized
+            titleLabel.text = String.OnBoarding.onboardingTitle1.localized
         case 2:
             titleLabel.text = String.OnBoarding.onboardingTitle2.localized
         default:
@@ -116,5 +117,11 @@ extension OnBoardingViewController: OnBoardingDelegate {
         let index = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
         showCaption(atIndex: index)
         pageControl.currentPage = index
+    }
+}
+
+extension OnBoardingViewController: OnBoardingCoordinatorDelegate {
+    func navigateToNextPage() {
+        //to do
     }
 }
