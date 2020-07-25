@@ -12,6 +12,14 @@
 		5222ED7F24C1CAB800CC4817 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED7E24C1CAB800CC4817 /* News.storyboard */; };
 		5222ED8124C1CAD400CC4817 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED8024C1CAD400CC4817 /* Settings.storyboard */; };
 		5222ED8224C1CAD400CC4817 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5222ED8024C1CAD400CC4817 /* Settings.storyboard */; };
+		52384DE524CC2F8B0046BE07 /* UIRouter+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DE424CC2F8B0046BE07 /* UIRouter+Constants.swift */; };
+		52384DE624CC2F8B0046BE07 /* UIRouter+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DE424CC2F8B0046BE07 /* UIRouter+Constants.swift */; };
+		52384DE824CC30940046BE07 /* WebService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DE724CC30940046BE07 /* WebService+Constants.swift */; };
+		52384DE924CC30940046BE07 /* WebService+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DE724CC30940046BE07 /* WebService+Constants.swift */; };
+		52384DEB24CC35930046BE07 /* BaseView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DEA24CC35930046BE07 /* BaseView+Constants.swift */; };
+		52384DEC24CC35930046BE07 /* BaseView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DEA24CC35930046BE07 /* BaseView+Constants.swift */; };
+		52384DEF24CC36610046BE07 /* BaseView+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DEE24CC36610046BE07 /* BaseView+Localization.swift */; };
+		52384DF024CC36610046BE07 /* BaseView+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52384DEE24CC36610046BE07 /* BaseView+Localization.swift */; };
 		5250851D24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
 		5250851E24C0391700CF1BC8 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250851C24C0391700CF1BC8 /* BaseViewModel.swift */; };
 		52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D5724BF42380047C6DB /* Constants+Login.swift */; };
@@ -197,6 +205,10 @@
 		5222ED7C24C1CA5F00CC4817 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5222ED7E24C1CAB800CC4817 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		5222ED8024C1CAD400CC4817 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		52384DE424CC2F8B0046BE07 /* UIRouter+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRouter+Constants.swift"; sourceTree = "<group>"; };
+		52384DE724CC30940046BE07 /* WebService+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebService+Constants.swift"; sourceTree = "<group>"; };
+		52384DEA24CC35930046BE07 /* BaseView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseView+Constants.swift"; sourceTree = "<group>"; };
+		52384DEE24CC36610046BE07 /* BaseView+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseView+Localization.swift"; sourceTree = "<group>"; };
 		5250851C24C0391700CF1BC8 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		52546D5724BF42380047C6DB /* Constants+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Login.swift"; sourceTree = "<group>"; };
 		52546D5A24BF42F50047C6DB /* Constants+OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+OnBoarding.swift"; sourceTree = "<group>"; };
@@ -309,6 +321,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52384DED24CC36200046BE07 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				52384DEE24CC36610046BE07 /* BaseView+Localization.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		52384DF124CC36E00046BE07 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52384DEA24CC35930046BE07 /* BaseView+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		52384DF224CC37340046BE07 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52384DE424CC2F8B0046BE07 /* UIRouter+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		52546D5224BF41FD0047C6DB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +605,8 @@
 			children = (
 				833570E4247A8A33002E26A0 /* BaseViewController.swift */,
 				5250851C24C0391700CF1BC8 /* BaseViewModel.swift */,
+				52384DED24CC36200046BE07 /* Utilities */,
+				52384DF124CC36E00046BE07 /* Constants */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -587,6 +625,7 @@
 				83A4363C24C06E9500F63D02 /* RequestModel */,
 				839DAE1324C1593700361AF4 /* ServiceConstant.swift */,
 				831E96FD24AC5416006D39B7 /* WebService.swift */,
+				52384DE724CC30940046BE07 /* WebService+Constants.swift */,
 			);
 			path = WebServiceManager;
 			sourceTree = "<group>";
@@ -595,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				831523EC246F796900F48DDA /* UIRouter.swift */,
+				52384DF224CC37340046BE07 /* Constants */,
 			);
 			path = UIRouterManager;
 			sourceTree = "<group>";
@@ -1087,6 +1127,7 @@
 				529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */,
 				83440D4B24CBCED30054D4FE /* DataService.swift in Sources */,
 				52DD885124ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
+				52384DEB24CC35930046BE07 /* BaseView+Constants.swift in Sources */,
 				839DAE1424C1593700361AF4 /* ServiceConstant.swift in Sources */,
 				52546D5824BF42380047C6DB /* Constants+Login.swift in Sources */,
 				52546D5B24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
@@ -1107,8 +1148,10 @@
 				83006B98246EE22B00B08094 /* SceneDelegate.swift in Sources */,
 				833570F8247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
 				833570DB247A65AF002E26A0 /* OnBoardingViewModel.swift in Sources */,
+				52384DE824CC30940046BE07 /* WebService+Constants.swift in Sources */,
 				8308154824973D680036B52D /* NewsDetailViewModel.swift in Sources */,
 				833570DF247A660D002E26A0 /* AuthViewModel.swift in Sources */,
+				52384DEF24CC36610046BE07 /* BaseView+Localization.swift in Sources */,
 				529B305724C448EB00DCB2FD /* Colors.swift in Sources */,
 				8394EA012477BF1D002FA8EF /* NewsViewController.swift in Sources */,
 				52546D6224BF44040047C6DB /* Loading+Constants.swift in Sources */,
@@ -1119,6 +1162,7 @@
 				83357102247B741D002E26A0 /* NewsViewController+TableView.swift in Sources */,
 				52DD883F24ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
 				83357156247E1F8E002E26A0 /* Atricle.swift in Sources */,
+				52384DE524CC2F8B0046BE07 /* UIRouter+Constants.swift in Sources */,
 				529B305924C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
 				83B0176C24A603D300A1D88D /* SettingsLocalization.swift in Sources */,
 				83A4361624BF83E800F63D02 /* AppConstants.swift in Sources */,
@@ -1136,7 +1180,11 @@
 				839DAE1F24C1C3B500361AF4 /* NewsDetailsViewController.swift in Sources */,
 				529B305824C448EB00DCB2FD /* Colors.swift in Sources */,
 				833570E6247A8A33002E26A0 /* BaseViewController.swift in Sources */,
+				52384DF024CC36610046BE07 /* BaseView+Localization.swift in Sources */,
+				8345991D24CAAC9800765C4C /* BackSplash.swift in Sources */,
+				8345992624CAACA700765C4C /* CurrentTempView.swift in Sources */,
 				8388D86324ACAA0200CAC649 /* Localizable.swift in Sources */,
+				52384DE924CC30940046BE07 /* WebService+Constants.swift in Sources */,
 				839DAE2024C1C3B700361AF4 /* NewsViewController+TableView.swift in Sources */,
 				529B305A24C448EB00DCB2FD /* AppThemeModel.swift in Sources */,
 				83440D4C24CBCED30054D4FE /* DataService.swift in Sources */,
@@ -1145,6 +1193,7 @@
 				52546D5C24BF42F50047C6DB /* Constants+OnBoarding.swift in Sources */,
 				52546D6324BF44040047C6DB /* Loading+Constants.swift in Sources */,
 				839DAE2624C1C3D000361AF4 /* Atricle.swift in Sources */,
+				52384DEC24CC35930046BE07 /* BaseView+Constants.swift in Sources */,
 				839DAE2324C1C3C400361AF4 /* NewsTableViewCell.swift in Sources */,
 				833570FF247ADEFD002E26A0 /* LoadingViewModel.swift in Sources */,
 				833570F9247ADA01002E26A0 /* LoginViewModel.swift in Sources */,
@@ -1163,6 +1212,7 @@
 				839DAE2924C1C3F600361AF4 /* SceneDelegate.swift in Sources */,
 				529B305024C440A500DCB2FD /* AppTheme.swift in Sources */,
 				52DD884024ADD0EA00BCC2D0 /* TabBarViewController.swift in Sources */,
+				52384DE624CC2F8B0046BE07 /* UIRouter+Constants.swift in Sources */,
 				83081538248D25020036B52D /* ArticleViewModel.swift in Sources */,
 				839DAE1924C1C38700361AF4 /* SignUpViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,

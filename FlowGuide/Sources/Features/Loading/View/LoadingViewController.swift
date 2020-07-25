@@ -25,7 +25,7 @@ final class LoadingViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showLoading()
-        delay(durationInSeconds: LoadingConstants.delayInSeconds, completion: {
+        delay(durationInSeconds: AppConstants.LoadingConstants.delayInSeconds, completion: {
             self.showInitialView()
         })
     }
@@ -34,7 +34,7 @@ final class LoadingViewController: BaseViewController {
     
     /// Show Loading
     private func showLoading() {
-        let timer = Timer.scheduledTimer(withTimeInterval: LoadingConstants.timerInterval, repeats: true) { _ in
+        let timer = Timer.scheduledTimer(withTimeInterval: AppConstants.LoadingConstants.timerInterval, repeats: true) { _ in
             var string: String {
                 switch self.loadingLabel.text {
                 case String.Loading.loading1.localized:
@@ -55,7 +55,7 @@ final class LoadingViewController: BaseViewController {
         if viewModel.isUserLoggedIn() {
             UIRouter.shared.show(viewMode: .mainTabBarConttoller)
         } else {
-            performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
+            performSegue(withIdentifier: AppConstants.Segue.showOnBoarding, sender: nil)
         }
     }
 }

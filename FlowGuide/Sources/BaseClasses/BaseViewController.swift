@@ -51,7 +51,7 @@ extension BaseViewController {
     ///   - message: String Type
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: BaseViewLocalization.alertOk.localized, style: .default)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
@@ -85,7 +85,7 @@ extension BaseViewController {
         NavBarConstants.rootNavigationController = self.navigationController
         NavBarConstants.barBGColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
-        NavBarConstants.rightNavButtonImage = UIImage(named: "logout") ?? UIImage()
+        NavBarConstants.rightNavButtonImage = UIImage(named: AppConstants.logoutImage) ?? UIImage()
         NavBarConstants.titleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.transparentTitleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.titleFont = UIFont.navigationTitle
