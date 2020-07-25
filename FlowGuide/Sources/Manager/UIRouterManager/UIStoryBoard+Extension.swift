@@ -12,6 +12,10 @@ extension UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
+    private static var login: UIStoryboard {
+        return UIStoryboard(name: "Login", bundle: nil)
+    }
+    
     // MARK: - View Controllers
     static func instantiateLoadingViewController(delegate: LoadingViewControllerDelegate) -> LoadingViewController {
         let loadingVC = main.instantiateViewController(withIdentifier: "LoadingViewController") as! LoadingViewController
@@ -19,9 +23,13 @@ extension UIStoryboard {
         return loadingVC
     }
     
-    static func instantiateOnBoardingViewController(delegate: OnBoardingDelegate) -> OnBoardingViewController {
+    static func instantiateOnBoardingViewController() -> OnBoardingViewController {
         let onBoardingVC = main.instantiateViewController(withIdentifier: "OnBoardingViewController") as! OnBoardingViewController
-        onBoardingVC.delegate = delegate
         return onBoardingVC
+    }
+    
+    static func instantiateLoginViewController( ) -> LoginViewController {
+        let loginVC = login.instantiateViewController(withIdentifier: "LoginViewControllerID") as! LoginViewController
+        return loginVC
     }
 }

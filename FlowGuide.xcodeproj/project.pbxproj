@@ -34,6 +34,8 @@
 		52546D6624BF44930047C6DB /* Settings+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52546D6424BF44930047C6DB /* Settings+Constants.swift */; };
 		5269D7FE24C48D680091FB0D /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* DarkMode.json */; };
 		5269D7FF24C48D680091FB0D /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = 5269D7FD24C48D680091FB0D /* DarkMode.json */; };
+		52764C3424CCA9A300B0DFDD /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52764C3324CCA9A300B0DFDD /* LoginCoordinator.swift */; };
+		52764C3524CCA9A300B0DFDD /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52764C3324CCA9A300B0DFDD /* LoginCoordinator.swift */; };
 		529B304C24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
 		529B304D24C43FF900DCB2FD /* ThemeStyle+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */; };
 		529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B304E24C440A500DCB2FD /* AppTheme.swift */; };
@@ -240,6 +242,7 @@
 		52546D6124BF44040047C6DB /* Loading+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading+Constants.swift"; sourceTree = "<group>"; };
 		52546D6424BF44930047C6DB /* Settings+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+Constants.swift"; sourceTree = "<group>"; };
 		5269D7FD24C48D680091FB0D /* DarkMode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DarkMode.json; sourceTree = "<group>"; };
+		52764C3324CCA9A300B0DFDD /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		529B304B24C43FF900DCB2FD /* ThemeStyle+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemeStyle+Protocol.swift"; sourceTree = "<group>"; };
 		529B304E24C440A500DCB2FD /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		529B305224C448EA00DCB2FD /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -673,6 +676,7 @@
 				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
 				83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */,
 				83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */,
+				52764C3324CCA9A300B0DFDD /* LoginCoordinator.swift */,
 				83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */,
 				52384DF224CC37340046BE07 /* Constants */,
 			);
@@ -1237,6 +1241,7 @@
 				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
 				8345991524CAAB6B00765C4C /* Helper.swift in Sources */,
+				52764C3424CCA9A300B0DFDD /* LoginCoordinator.swift in Sources */,
 				529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83440D5224CBDDA30054D4FE /* AuthService.swift in Sources */,
@@ -1327,6 +1332,7 @@
 				839DAE1924C1C38700361AF4 /* SignUpViewModel.swift in Sources */,
 				833570F3247AD948002E26A0 /* OnBoardingLocalization.swift in Sources */,
 				52546D5F24BF437B0047C6DB /* Constants+News.swift in Sources */,
+				52764C3524CCA9A300B0DFDD /* LoginCoordinator.swift in Sources */,
 				8345991F24CAAC9800765C4C /* TopView.swift in Sources */,
 				8345992824CAACA700765C4C /* ContentView.swift in Sources */,
 				839DAE1A24C1C39100361AF4 /* LoginViewController.swift in Sources */,

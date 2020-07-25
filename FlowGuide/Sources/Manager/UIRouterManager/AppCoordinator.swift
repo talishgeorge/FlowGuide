@@ -52,7 +52,23 @@ final public class AppCoordinator: Coordinator {
     private func showOnboarding() {
         let onBoardingCoordinator = OnBoardingCoordinator(navController: navController, delegate: self)
         childCoordinators.append(onBoardingCoordinator)
-        onBoardingCoordinator.start()
+//        onBoardingCoordinator.start()
+        
+        // startWithReturn to be added in the protocol Coordinator with PassthroughSubject<String, Never> as return type
+        
+       let publish = onBoardingCoordinator.startWithReturn()
+        publish.handleEvents(receiveOutput: { [unowned self] _ in
+            self.showLogin()
+        })
+        .sink { _ in }
+        .store(in: &subscriptions)
+
+    }
+    
+    private func showLogin() {
+        let loginCoordinator = LoginCoordinator(navController: navController)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
 }
 
