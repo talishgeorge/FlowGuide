@@ -27,6 +27,12 @@ final class LoadingViewController: BaseViewController {
         super.viewDidLoad()
         loadingLabel.text = String.Loading.loading1.localized
         loadingLabel.textColor = ThemeManager.shared.theme?.fontWhiteColor
+        baseSubject
+            .handleEvents(receiveOutput: { [unowned self] newItem in
+                Authservice().logoutUser()
+            })
+            .sink { _ in }
+            .store(in: &baseSubscriptions)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,19 +50,19 @@ final class LoadingViewController: BaseViewController {
     private func showLoading() {
         _ = Timer.scheduledTimer(withTimeInterval: AppConstants.LoadingConstants.timerInterval,
                                  repeats: true) { _ in
-            var string: String {
-                switch self.loadingLabel.text {
-                case String.Loading.loading1.localized:
-                    return String.Loading.loading2.localized
-                case String.Loading.loading2.localized:
-                    return String.Loading.loading3.localized
-                case String.Loading.loading3.localized:
-                    return String.Loading.loading1.localized
-                default:
-                    return String.Loading.loading.localized
-                }
-            }
-            self.loadingLabel.text = string
+                                    var string: String {
+                                        switch self.loadingLabel.text {
+                                        case String.Loading.loading1.localized:
+                                            return String.Loading.loading2.localized
+                                        case String.Loading.loading2.localized:
+                                            return String.Loading.loading3.localized
+                                        case String.Loading.loading3.localized:
+                                            return String.Loading.loading1.localized
+                                        default:
+                                            return String.Loading.loading.localized
+                                        }
+                                    }
+                                    self.loadingLabel.text = string
         }
     }
     /// Show Initial View
@@ -67,6 +73,7 @@ final class LoadingViewController: BaseViewController {
             //performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
             //delegate?.navigateToNextPage()
             publisher.send("From Loading View")
+            
         }
     }
 }

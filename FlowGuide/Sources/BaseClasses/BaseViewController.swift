@@ -17,13 +17,20 @@ class BaseViewController: UIViewController, Subscriber {
     
     var navBar = CustomNavigationView.loadNavigationBar()
     typealias Input = Bool
-
+    let baseSubject = PassthroughSubject<String, Never>()
+    var baseSubscriptions = Set<AnyCancellable>()
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .appBackground
         configureUI()
+        baseSubject
+            .handleEvents(receiveOutput: { [unowned self] newItem in
+                Authservice().logoutUser()
+            })
+            .sink { _ in }
+            .store(in: &baseSubscriptions)
     }
     
     func receive(subscription: Subscription) {

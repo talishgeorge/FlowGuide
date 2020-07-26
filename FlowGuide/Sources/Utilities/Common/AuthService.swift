@@ -19,6 +19,11 @@ final class Authservice {
     func logoutUser() -> Result<Void, Error> {
         do {
             try Auth.auth().signOut()
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                let window = sceneDelegate.window {
+                window.rootViewController = UIStoryboard.instantiateOnBoardingViewController()
+                UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
             return .success(())
         } catch let error {
             return .failure(error)

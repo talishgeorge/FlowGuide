@@ -24,7 +24,7 @@ final class SettingsViewController: BaseViewController {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)
     }
-
+    
     private let settingsViewModel = SettingsViewModel()
     
     // MARK: - View Life Cycle
@@ -89,10 +89,10 @@ private extension SettingsViewController {
         let result = settingsViewModel.authService.logoutUser()
         switch result {
         case .success:
-            //TODO
             print("Need to load onboarding")
-            publisher.send("Do logout")
+            //publisher.send("Do logout")
             //UIRouter.shared.show(viewMode: .onBoarding)
+                baseSubject.send("Event1")
         case .failure( _):
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
             view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
