@@ -8,7 +8,7 @@ import UtilitiesLib
 import Combine
 
 final class AppCoordinator: BaseCoordinator, Coordinator {
-    
+
     func start() {
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
             let window = sceneDelegate.window {
@@ -24,11 +24,11 @@ final class AppCoordinator: BaseCoordinator, Coordinator {
         navController.setViewControllers([loadingViewController], animated: true)
         childCoordinators.removeAll { $0 is OnBoardingCoordinator }
         loadingViewController.publisher
-            .handleEvents(receiveOutput: { [unowned self] newItem in
-                self.showOnboarding()
-            })
-            .sink { _ in }
-            .store(in: &subscriptions)
+        .handleEvents(receiveOutput: { [unowned self] _ in
+            self.showOnboarding()
+        })
+        .sink { _ in }
+        .store(in: &subscriptions)
     }
     
     private func showOnboarding() {

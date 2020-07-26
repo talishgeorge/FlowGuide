@@ -89,10 +89,7 @@ private extension SettingsViewController {
         let result = settingsViewModel.authService.logoutUser()
         switch result {
         case .success:
-            print("Need to load onboarding")
-            //publisher.send("Do logout")
-            //UIRouter.shared.show(viewMode: .onBoarding)
-                baseSubject.send("Event1")
+            baseSubject.send("Do Logout")
         case .failure( _):
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
             view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)

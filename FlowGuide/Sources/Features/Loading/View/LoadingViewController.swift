@@ -67,13 +67,14 @@ final class LoadingViewController: BaseViewController {
     }
     /// Show Initial View
     private func showInitialView() {
-        if viewModel.isUserLoggedIn() {
-            UIRouter.shared.show(viewMode: .mainTabBarConttoller)
+        if viewModel.isUserLoggedIn() {//TODO
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                let window = sceneDelegate.window {
+                window.rootViewController = UIStoryboard.instantiateTabBarController()
+                UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+            }
         } else {
-            //performSegue(withIdentifier: Constants.Segue.showOnBoarding, sender: nil)
-            //delegate?.navigateToNextPage()
             publisher.send("From Loading View")
-            
         }
     }
 }
