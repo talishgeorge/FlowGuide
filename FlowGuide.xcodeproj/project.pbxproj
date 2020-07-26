@@ -658,8 +658,8 @@
 		8335714A247C29EF002E26A0 /* NavigationManager */ = {
 			isa = PBXGroup;
 			children = (
-				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
 				8378DA6024CCCDDC00A3E77F /* BaseCoordinator.swift */,
+				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
 				83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */,
 				83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */,
 				83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */,
