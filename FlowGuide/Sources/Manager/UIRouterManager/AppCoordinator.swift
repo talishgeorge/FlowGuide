@@ -24,7 +24,7 @@ final class AppCoordinator: BaseCoordinator, Coordinator {
         navController.setViewControllers([loadingViewController], animated: true)
         childCoordinators.removeAll { $0 is OnBoardingCoordinator }
         loadingViewController.publisher
-        .handleEvents(receiveOutput: { [unowned self] newItem in
+        .handleEvents(receiveOutput: { [unowned self] _ in
             self.showOnboarding()
         })
         .sink { _ in }
