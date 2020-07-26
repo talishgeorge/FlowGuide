@@ -28,7 +28,6 @@ final class OnBoardingViewController: BaseViewController {
     @IBOutlet private weak var getStartedButton: UIButton!
     weak var delegate: OnBoardingDelegate?
     private var cancellables = Set<AnyCancellable>()
-    let publisher = PassthroughSubject<String, Never>()
 
     // MARK: - View Life Cycle
     
@@ -54,8 +53,8 @@ final class OnBoardingViewController: BaseViewController {
     // MARK: - IBActions
     
     @IBAction private func userTappedOnBoarding(_ sender: UIButton) {
-//        performSegue(withIdentifier: AppConstants.Segue.showLoginSignup, sender: nil)
-        publisher.send("From Onboarding")
+        performSegue(withIdentifier: AppConstants.Segue.showLoginSignup, sender: nil)
+//        publisher.send("From Onboarding")
     }
 }
 

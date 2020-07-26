@@ -26,9 +26,4 @@ extension UIStoryboard {
         let onBoardingVC = main.instantiateViewController(withIdentifier: "OnBoardingViewController") as! OnBoardingViewController
         return onBoardingVC
     }
-    
-    static func instantiateLoginViewController() -> LoginViewController {
-        let loginVC = login.instantiateViewController(withIdentifier: "LoginViewControllerID") as! LoginViewController
-        return loginVC
-    }
 }

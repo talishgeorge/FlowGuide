@@ -19,21 +19,18 @@ final class OnBoardingCoordinator: Coordinator {
         self.navController = navController
     }
     
+//    func start() {
+//        let onBoardingVC = UIStoryboard.instantiateOnBoardingViewController()
+//        navController.setViewControllers([onBoardingVC], animated: true)
+//        onBoardingVC.publisher
+//            .handleEvents(receiveOutput: { [unowned self] newItem in
+//            self.showLogin()
+//        })
+//        .sink { _ in }
+//        .store(in: &subscriptions)
+//    }
     func start() {
         let onBoardingVC = UIStoryboard.instantiateOnBoardingViewController()
         navController.setViewControllers([onBoardingVC], animated: true)
-        
-        onBoardingVC.publisher
-                      .handleEvents(receiveOutput: { [unowned self] newItem in
-                          self.showLogin()
-                      })
-                      .sink { _ in }
-                      .store(in: &subscriptions)
-    }
-
-    private func showLogin() {
-        let loginCoordinator = LoginCoordinator(navController: navController)
-        childCoordinators.append(loginCoordinator)
-        loginCoordinator.start()
     }
 }
