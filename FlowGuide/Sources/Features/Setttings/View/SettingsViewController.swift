@@ -16,7 +16,8 @@ import Combine
 final class SettingsViewController: BaseViewController {
     
     @IBOutlet private weak var pushNotificationView: UIView!
-
+    @IBOutlet weak var weatherView: UIView!
+    
     @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
     
@@ -81,6 +82,8 @@ private extension SettingsViewController {
         self.title = SettingsLocalization.settings.localized
         pushNotificationView.layer.borderWidth = SettingsConstants.viewBorderWidth
         pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
+        weatherView.layer.borderWidth = SettingsConstants.viewBorderWidth
+        weatherView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
     }
     
     /// Logout the current user
