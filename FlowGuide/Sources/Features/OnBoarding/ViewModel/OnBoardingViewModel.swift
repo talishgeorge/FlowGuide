@@ -39,7 +39,7 @@ final class OnBoardingViewModel: BaseViewModel {
 extension OnBoardingViewModel {
     
     /// Get Onboard Item Count
-       var getOnboardingItemCount: Int {
+       var onboardingItemCount: Int {
            OnBoardingItem.collection.count
        }
     
