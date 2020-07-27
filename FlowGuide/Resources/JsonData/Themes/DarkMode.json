@@ -1,7 +1,7 @@
 
 {
     "colors": {
-        "themeBlueTop": "#ffa500",
+        "themeBlueTop": "#C0C0C0",
         "themeBottom": "#000000",
         "navigationTintHex": "#F3F3F3",
         "viewBorderColour": "#C0C0C0",
@@ -9,7 +9,7 @@
         "headerCellBgColor": "#000000",
         "cellBgColor": "#000000",
         "tabBarBgColor": "#000000",
-        "cellSeperatorBgColor": "#ffa500",
+        "cellSeperatorBgColor": "#C0C0C0",
         "fontWhiteColor": "#FFFFFF",
 
     },

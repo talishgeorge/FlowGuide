@@ -19,7 +19,7 @@ final class SettingsViewController: BaseViewController {
 
     @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
-    let publisher = PassthroughSubject<String, Never>()
+    
     @IBSegueAction func showWeather(_ coder: NSCoder) -> UIViewController? {
         let contentView = ContentView(forcastViewModel: viewModel)
         return UIHostingController(coder: coder, rootView: contentView)

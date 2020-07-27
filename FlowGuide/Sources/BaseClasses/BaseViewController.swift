@@ -101,6 +101,9 @@ extension BaseViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.fontWhiteColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ThemeManager.shared.theme?.fontWhiteColor]
+
     }
     
     func removeGradient(gradientView: UIView) {
