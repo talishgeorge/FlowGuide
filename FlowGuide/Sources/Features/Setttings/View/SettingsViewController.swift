@@ -51,7 +51,7 @@ final class SettingsViewController: BaseViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         configureCustomNavigaionView()
         navBar.startHorizontalProgressbar()
-        delay(durationInSeconds: 2.0, completion: {
+        delay(durationInSeconds: 3.2, completion: {
             self.navBar.hideProgressBar()
         })
     }
