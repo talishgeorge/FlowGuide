@@ -17,6 +17,8 @@ struct Colors: Decodable {
     let tabBarBgColor: String?
     let cellSeperatorBgColor: String?
     let fontWhiteColor: String?
+    let viewDarkColor: String?
+    let switchOnTint: String?
 
     init() {
         themeBlueTop = ""
@@ -29,5 +31,7 @@ struct Colors: Decodable {
         tabBarBgColor = ""
         cellSeperatorBgColor = ""
         fontWhiteColor = ""
+        viewDarkColor = ""
+        switchOnTint = ""
     }
 }

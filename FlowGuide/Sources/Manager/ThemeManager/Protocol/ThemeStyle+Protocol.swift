@@ -18,6 +18,8 @@ protocol ThemeStyle {
     var tabBarBgColor: UIColor {get}
     var headerCellBgColor: UIColor {get}
     var fontWhiteColor: UIColor {get}
+    var viewDarkColor: UIColor {get}
+    var switchOnTint: UIColor {get}    
     func jsonForTheme(fileName: String)
     
 }

@@ -60,6 +60,16 @@ final class AppTheme: ThemeStyle {
          ?? "", alpha: 1.0)
     }
     
+    var viewDarkColor: UIColor {
+        UIColor.init(hexString: themeModel.colors?.viewDarkColor
+            ?? "", alpha: 1.0)
+       }
+    
+    var switchOnTint: UIColor {
+           UIColor.init(hexString: themeModel.colors?.switchOnTint
+               ?? "", alpha: 1.0)
+          }
+    
     init(file: String) {
         self.jsonForTheme(fileName: file)
     }

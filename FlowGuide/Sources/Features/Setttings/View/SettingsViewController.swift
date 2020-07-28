@@ -15,8 +15,12 @@ import Combine
 /// Settings ViewController
 final class SettingsViewController: BaseViewController {
     
+    @IBOutlet private weak var switchOutlet: UISwitch!
     @IBOutlet private weak var pushNotificationView: UIView!
-    @IBOutlet weak var weatherView: UIView!
+    @IBOutlet private weak var weatherView: UIView!
+    
+    @IBOutlet private weak var weatherInnerView: UIView!
+    @IBOutlet private weak var darkModeInnerView: UIView!
     
     @Published var isDarkModeEnabled = Bool()
     var viewModel = ForecastViewModel()
@@ -61,8 +65,9 @@ final class SettingsViewController: BaseViewController {
     
      func applyTheme() {
         removeGradient(gradientView: view)
-        self.configureUI()
-        self.configureCustomNavigaionView()
+        configureUI()
+        configureCustomNavigaionView()
+        setupViews()
         self.tabBarController?.tabBar.backgroundColor = ThemeManager.shared.theme?.tabBarBgColor
         
     }
@@ -84,6 +89,10 @@ private extension SettingsViewController {
         pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
         weatherView.layer.borderWidth = SettingsConstants.viewBorderWidth
         weatherView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
+        switchOutlet.onTintColor = ThemeManager.shared.theme?.switchOnTint
+        darkModeInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
+        weatherInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
+        
     }
     
     /// Logout the current user

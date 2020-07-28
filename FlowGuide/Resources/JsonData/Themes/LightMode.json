@@ -10,6 +10,9 @@
         "tabBarBgColor": "#1B8BFF",
         "cellSeperatorBgColor": "#1B8BFF",
         "fontWhiteColor": "#FFFFFF",
+        "viewDarkColor": "#1663be",
+        "switchOnTint": "#1B8BFF",
+
     },
     "font": {
         "avenirNextCondensed": "Avenir Next Condensed",
