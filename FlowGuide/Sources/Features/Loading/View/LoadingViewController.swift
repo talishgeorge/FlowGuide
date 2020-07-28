@@ -33,7 +33,7 @@ final class LoadingViewController: BaseViewController {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         showLoading()
-        delay(durationInSeconds: AppConstants.LoadingConstants.delayInSeconds, completion: {
+        Helper().delay(durationInSeconds: AppConstants.LoadingConstants.delayInSeconds, completion: {
             self.showInitialView()
         })
     }
@@ -61,7 +61,7 @@ final class LoadingViewController: BaseViewController {
     }
     /// Show Initial View
     private func showInitialView() {
-        if viewModel.isUserLoggedIn() {//TODO
+        if viewModel.isUserLoggedIn() {
             UIApplication.instantiateTabBarController()
         } else {
             publisher.send("From Loading View")

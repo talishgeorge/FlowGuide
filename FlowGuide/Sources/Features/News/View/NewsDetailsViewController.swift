@@ -12,7 +12,7 @@ import OakLib
 
 /// News Details ViewController
 final class NewsDetailsViewController: BaseViewController {
- 
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var webview: WKWebView!

@@ -13,7 +13,7 @@ import UtilitiesLib
 
 /// Manage SDK 
 final class SDKManager {
- 
+    
     static public let shared = SDKManager()
     let apiKey = SplitAPI.apiKey
     let key: Key = Key(matchingKey: SplitAPI.customerID)

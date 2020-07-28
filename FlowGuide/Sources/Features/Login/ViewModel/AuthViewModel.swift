@@ -15,7 +15,7 @@ class AuthViewModel: BaseViewModel {
     var password: String?
     var email: String?
     var confirmPassword: String?
-
+    
     /// Init
     /// - Parameters:
     ///   - email: Email for signup and login

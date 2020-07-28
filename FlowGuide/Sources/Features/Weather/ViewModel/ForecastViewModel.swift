@@ -5,8 +5,10 @@
 
 import Foundation
 import OakLib
+import UtilitiesLib
 
 class ForecastViewModel: BaseViewModel, ObservableObject {
+    
     var cityName: String = "Kochi"
     @Published var isValid: Bool = false
     @Published var weatherForCast = ForecastWeatherResponse()

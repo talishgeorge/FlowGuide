@@ -126,8 +126,6 @@
 		8345991024C9AF8E00765C4C /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345990E24C9AF8E00765C4C /* ForecastViewModel.swift */; };
 		8345991224C9B15500765C4C /* ForecastWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991124C9B15500765C4C /* ForecastWeatherResponse.swift */; };
 		8345991324C9B15500765C4C /* ForecastWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991124C9B15500765C4C /* ForecastWeatherResponse.swift */; };
-		8345991524CAAB6B00765C4C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991424CAAB6B00765C4C /* Helper.swift */; };
-		8345991624CAAB6B00765C4C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991424CAAB6B00765C4C /* Helper.swift */; };
 		8345991A24CAAC9800765C4C /* MidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991724CAAC9700765C4C /* MidView.swift */; };
 		8345991B24CAAC9800765C4C /* MidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991724CAAC9700765C4C /* MidView.swift */; };
 		8345991C24CAAC9800765C4C /* BackSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8345991824CAAC9700765C4C /* BackSplash.swift */; };
@@ -298,7 +296,6 @@
 		8345990B24C9AC3D00765C4C /* WeatherReqestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReqestModel.swift; sourceTree = "<group>"; };
 		8345990E24C9AF8E00765C4C /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		8345991124C9B15500765C4C /* ForecastWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherResponse.swift; sourceTree = "<group>"; };
-		8345991424CAAB6B00765C4C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8345991724CAAC9700765C4C /* MidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidView.swift; sourceTree = "<group>"; };
 		8345991824CAAC9700765C4C /* BackSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackSplash.swift; sourceTree = "<group>"; };
 		8345991924CAAC9700765C4C /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
@@ -423,16 +420,6 @@
 			path = ThemeModel;
 			sourceTree = "<group>";
 		};
-		52D378E024C1A0FB00D28A0A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				83440D5124CBDDA30054D4FE /* AuthService.swift */,
-				8345991424CAAB6B00765C4C /* Helper.swift */,
-				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		52D378E524C1B35B00D28A0A /* JsonData */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,7 +504,7 @@
 				8394EA362477F2B2002FA8EF /* Features */,
 				8394EA322477F23A002FA8EF /* AppConfiguration  */,
 				833570DD247A65FA002E26A0 /* BaseClasses */,
-				831523EE246F7A8600F48DDA /* Utilities */,
+				831523EE246F7A8600F48DDA /* Common */,
 				831523EB246F794400F48DDA /* Manager */,
 			);
 			path = Sources;
@@ -556,14 +543,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		831523EE246F7A8600F48DDA /* Utilities */ = {
+		831523EE246F7A8600F48DDA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				52D378E024C1A0FB00D28A0A /* Common */,
 				8324DEFE24BEFC5F0026B884 /* Constants */,
 				838FBA1B24BEF9C8008F7E24 /* Localization */,
+				839D4A7F24D08A1700FCDC77 /* Services */,
+				839D4A7E24D08A0200FCDC77 /* Extensions */,
 			);
-			path = Utilities;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		831523F3246F800C00F48DDA /* Setttings */ = {
@@ -633,6 +621,7 @@
 			children = (
 				833570E4247A8A33002E26A0 /* BaseViewController.swift */,
 				5250851C24C0391700CF1BC8 /* BaseViewModel.swift */,
+				52DD883E24ADD0EA00BCC2D0 /* TabBarViewController.swift */,
 				52384DED24CC36200046BE07 /* Utilities */,
 				52384DF124CC36E00046BE07 /* Constants */,
 			);
@@ -665,8 +654,6 @@
 				83351DAD24CBEAF900BFA0C1 /* Coordinator.swift */,
 				83351DB024CBEB4900BFA0C1 /* AppCoordinator.swift */,
 				83351DB324CBECCF00BFA0C1 /* OnBoardingCoordinator.swift */,
-				83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */,
-				839D4A7B24D07EEF00FCDC77 /* UIApplication+Extension.swift */,
 			);
 			path = NavigationManager;
 			sourceTree = "<group>";
@@ -934,14 +921,31 @@
 		8394EA362477F2B2002FA8EF /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8345990524C9AB7800765C4C /* Weather */,
 				83006BBB246EE26500B08094 /* Login */,
 				831523F9247214FB00F48DDA /* OnBoarding */,
 				8394E9F52477BF0C002FA8EF /* News */,
 				83006BBC246EE26F00B08094 /* Loading */,
 				831523F3246F800C00F48DDA /* Setttings */,
+				8345990524C9AB7800765C4C /* Weather */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		839D4A7E24D08A0200FCDC77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83351DB624CC1CD800BFA0C1 /* UIStoryBoard+Extension.swift */,
+				839D4A7B24D07EEF00FCDC77 /* UIApplication+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		839D4A7F24D08A1700FCDC77 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				83440D5124CBDDA30054D4FE /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		83A4361424BF82E000F63D02 /* Protocol */ = {
@@ -1227,7 +1231,6 @@
 				83357105247B7473002E26A0 /* NewsLocalizaion.swift in Sources */,
 				8324DF0A24BF3A540026B884 /* Global.swift in Sources */,
 				52546D6524BF44930047C6DB /* Settings+Constants.swift in Sources */,
-				8345991524CAAB6B00765C4C /* Helper.swift in Sources */,
 				529B304F24C440A500DCB2FD /* AppTheme.swift in Sources */,
 				83357118247BDEA8002E26A0 /* OnBoardingItem.swift in Sources */,
 				83440D5224CBDDA30054D4FE /* AuthService.swift in Sources */,
@@ -1347,7 +1350,6 @@
 				52DD885224ADD2C300BCC2D0 /* LoadingViewController.swift in Sources */,
 				529B305624C448EB00DCB2FD /* Font.swift in Sources */,
 				8345991324C9B15500765C4C /* ForecastWeatherResponse.swift in Sources */,
-				8345991624CAAB6B00765C4C /* Helper.swift in Sources */,
 				833570E0247A660D002E26A0 /* AuthViewModel.swift in Sources */,
 				839DAE1B24C1C39E00361AF4 /* OnBoardingViewController.swift in Sources */,
 				839DAE2524C1C3CE00361AF4 /* Category.swift in Sources */,

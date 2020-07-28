@@ -8,7 +8,7 @@ import NetWorkLib
 
 /// API Request Model
 final class WeatherReqestModel: RequestModel {
-   
+    
     var cityName: String
     
     init(city: String) {

@@ -19,7 +19,7 @@ struct Colors: Decodable {
     let fontWhiteColor: String?
     let viewDarkColor: String?
     let switchOnTint: String?
-
+    
     init() {
         themeBlueTop = ""
         themeBottom = ""

@@ -8,6 +8,6 @@ import Foundation
 enum BaseViewLocalization: String, Localizable {
     case alertOk = "Ok"
     var tableName: String {
-            "Localizable"
-       }
+        "Localizable"
+    }
 }

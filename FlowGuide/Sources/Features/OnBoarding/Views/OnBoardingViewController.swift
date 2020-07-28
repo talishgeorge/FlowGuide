@@ -125,8 +125,3 @@ extension OnBoardingViewController: OnBoardingDelegate {
         pageControl.currentPage = index
     }
 }
-extension OnBoardingViewController: OnBoardingCoordinatorDelegate {
-    func navigateToNextPage() {
-        //to do
-    }
-}

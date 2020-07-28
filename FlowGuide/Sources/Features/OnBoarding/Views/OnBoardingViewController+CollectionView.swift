@@ -11,9 +11,9 @@ import UtilitiesLib
 
 // MARK: - Internal Delegate Methods
 extension OnBoardingViewController: UICollectionViewDelegate,
-                                    UICollectionViewDataSource,
-                                    UICollectionViewDelegateFlowLayout {
-
+    UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstants.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
             return UICollectionViewCell()
@@ -25,11 +25,11 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         viewModel.getOnboardingItemCount
+        viewModel.getOnboardingItemCount
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         collectionView.frame.size
+        collectionView.frame.size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

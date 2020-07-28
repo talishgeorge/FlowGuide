@@ -15,7 +15,7 @@ final class WebService {
             completion(result)
         }
     }
-
+    
     func getWeather(by cityName: String, completion: @escaping(Swift.Result<ForecastWeatherResponse?, ErrorModel>) -> Void) {
         ServiceManager.shared.load(ForecastWeatherResponse.by(cityName: cityName)) { weather in
             DispatchQueue.main.async {

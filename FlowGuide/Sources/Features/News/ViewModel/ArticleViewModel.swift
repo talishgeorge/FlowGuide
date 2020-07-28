@@ -16,7 +16,7 @@ struct ArticleViewModel {
 
 // MARK: - Internal Methods
 extension ArticleViewModel {
-        
+    
     init(_ article: Article) {
         self.article = article
     }
@@ -25,15 +25,15 @@ extension ArticleViewModel {
 // MARK: - Internal Methods for Article Model
 
 extension ArticleViewModel {
- 
+    
     /// Title
     var title: String {
-         self.article.title ?? ""
+        self.article.title ?? ""
     }
     
     /// Description
     var description: String? {
-         self.article.description
+        self.article.description
     }
     
     /// Set Image from URL

@@ -29,14 +29,14 @@ final class SignUpViewModel: AuthViewModel {
     func signUpNewUser(withEmail email: String,
                        password: String,
                        completion: @escaping (Result<User, Error>) -> Void) {
-          auth.createUser(withEmail: email, password: password) { (result, error) in
-              if let error = error {
-                  completion(.failure(error))
-              } else if let user = result?.user {
-                  completion(.success(user))
-              } else {
+        auth.createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else if let user = result?.user {
+                completion(.success(user))
+            } else {
                 completion(.failure(AppConstants.AuthError.unknownError))
-              }
-          }
-      }
+            }
+        }
+    }
 }

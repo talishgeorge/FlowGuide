@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
             endingLineNumber = "147"
-            landmarkName = "loginButtonTapped(_:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "21">
             <Locations>
                <Location
                   uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1 - 1d68f63931e040c0"
@@ -160,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "jsonForTheme(fileName:)"
-            landmarkType = "7">
+            landmarkName = "tabBarBgColor"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,8 +208,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "init(file:)"
-            landmarkType = "7">
+            landmarkName = "cellBgColor"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -256,8 +256,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "BackSplash"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

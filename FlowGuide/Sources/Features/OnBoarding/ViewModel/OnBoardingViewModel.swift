@@ -14,7 +14,7 @@ struct OnboardingItemInfo {
 
 /// OnBoarding View Model
 final class OnBoardingViewModel: BaseViewModel {
-  
+    
     /// Current Onboarding item
     var currentSlide = OnBoardingItem()
     
@@ -39,9 +39,9 @@ final class OnBoardingViewModel: BaseViewModel {
 extension OnBoardingViewModel {
     
     /// Get Onboard Item Count
-       var getOnboardingItemCount: Int {
-           OnBoardingItem.collection.count
-       }
+    var getOnboardingItemCount: Int {
+        OnBoardingItem.collection.count
+    }
     
     /// Set Onboarding Item
     /// - Parameter index: Int

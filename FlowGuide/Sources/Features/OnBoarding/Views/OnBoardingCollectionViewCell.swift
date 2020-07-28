@@ -10,7 +10,7 @@ import UIKit
 
 /// OnBoarding Collection View Cell
 final class OnBoardingCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet private weak var slideImageView: UIImageView!
     
     /// Set CollectionView Cell

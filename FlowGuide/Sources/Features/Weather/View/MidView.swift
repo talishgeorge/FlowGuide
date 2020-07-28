@@ -18,7 +18,7 @@ struct MidView: View {
                 Text(forcastViewModel.weatherDay)
                     .foregroundColor(.white)
                     .font(.system(size:15))
-                .bold()
+                    .bold()
             }
             Spacer()
         }.padding(.trailing, 200)

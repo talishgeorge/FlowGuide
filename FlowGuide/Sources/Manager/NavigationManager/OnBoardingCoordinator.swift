@@ -11,8 +11,9 @@ protocol OnBoardingCoordinatorDelegate: AnyObject {
 }
 
 final class OnBoardingCoordinator: Coordinator {
-    private let navController: UINavigationController
+    
     var subscriptions = Set<AnyCancellable>()
+    private let navController: UINavigationController
     private var childCoordinators: [Coordinator] = []
     
     init(navController: UINavigationController) {
