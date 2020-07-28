@@ -1,10 +1,7 @@
 //
-//  BackSplash.swift
-//  WeatherForecast
-//
-//  Created by 1276121 on 13/12/2019.
-//  Copyright © 2019 1276121. All rights reserved.
-//
+//  Created by TCS.
+//  Copyright © 2020 TCS. All rights reserved.
+//  
 
 import SwiftUI
 
@@ -21,4 +18,3 @@ struct BackSplash_Previews: PreviewProvider {
         BackSplash()
     }
 }
-

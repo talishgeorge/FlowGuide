@@ -1,9 +1,6 @@
 //
-//  CurrentTempView.swift
-//  CombinePOC
-//
-//  Created by Talish George on 22/07/20.
-//  Copyright © 2020 1276121. All rights reserved.
+//  Created by TCS.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import SwiftUI
@@ -52,9 +49,3 @@ struct CurrentTempView: View {
         }
     }
 }
-
-//struct CurrentTempView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CurrentTempView(forecastViewModel: <#ForecastViewModel#>)
-//    }
-//}

@@ -1,9 +1,6 @@
 //
-//  MidView.swift
-//  WeatherForecast
-//
-//  Created by Talish George on 22/07/20.
-//  Copyright © 2020 1276121. All rights reserved.
+//  Created by TCS.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import SwiftUI
@@ -26,11 +23,5 @@ struct MidView: View {
             Spacer()
         }.padding(.trailing, 200)
             .frame(width: 400)
-    }
-}
-
-struct MidView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

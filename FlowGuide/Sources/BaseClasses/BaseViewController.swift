@@ -19,15 +19,14 @@ class BaseViewController: UIViewController, Subscriber {
     typealias Input = Bool
     let baseSubject = PassthroughSubject<String, Never>()
     var baseSubscriptions = Set<AnyCancellable>()
-    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .appBackground
         configureUI()
         baseSubject
-            .handleEvents(receiveOutput: { [unowned self] newItem in
-                Authservice().logoutUser()
+            .handleEvents(receiveOutput: { [unowned self] _ in
+                self.logout()
             })
             .sink { _ in }
             .store(in: &baseSubscriptions)
@@ -103,7 +102,7 @@ extension BaseViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
         navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.fontWhiteColor ?? UIColor.white]
-
+        
     }
     
     func removeGradient(gradientView: UIView) {
@@ -138,5 +137,26 @@ extension BaseViewController {
     /// Hide Keyboard
     func hideKeyboard() {
         view.endEditing(true)
+    }
+}
+
+// MARK: - Private Methods
+private extension BaseViewController {
+    func logout() {
+        let result = Authservice().logoutUser()
+        switch result {
+        case .success:
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                let window = sceneDelegate.window {
+                window.rootViewController = UIStoryboard.instantiateOnBoardingViewController()
+                UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+                ActivityIndicator.dismiss()
+            }
+        case .failure( _):
+            self.view.popup.topAnchor = self.view.safeAreaLayoutGuide.topAnchor
+            self.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            self.view.popup.success(String.News.featureEnableInfo.localized)
+            ActivityIndicator.dismiss()
+        }
     }
 }

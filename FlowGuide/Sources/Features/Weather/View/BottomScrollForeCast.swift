@@ -1,9 +1,6 @@
 //
-//  BottomScrollForeCast.swift
-//  CombinePOC
-//
-//  Created by Talish George on 22/07/20.
-//  Copyright © 2020 1276121. All rights reserved.
+//  Created by TCS.
+//  Copyright © 2020 TCS. All rights reserved.
 //
 
 import SwiftUI
@@ -59,9 +56,3 @@ struct BottomScrollForeCast: View {
             .padding(.leading, 15)
     }
 }
-//
-//struct BottomScrollForeCast_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BottomScrollForeCast()
-//    }
-//}

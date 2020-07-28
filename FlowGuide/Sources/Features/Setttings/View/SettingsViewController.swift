@@ -63,7 +63,7 @@ final class SettingsViewController: BaseViewController {
         return .none
     }
     
-     func applyTheme() {
+    func applyTheme() {
         removeGradient(gradientView: view)
         configureUI()
         configureCustomNavigaionView()
@@ -98,16 +98,11 @@ private extension SettingsViewController {
     /// Logout the current user
     func logout() {
         ActivityIndicator.show(String.Global.pleaseWait.localized)
-        let result = settingsViewModel.authService.logoutUser()
-        switch result {
-        case .success:
-            baseSubject.send("Do Logout")
-        case .failure( _):
-            view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
-            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
-            view.popup.success(String.News.featureEnableInfo.localized)
+        self.presentAlertWithTitle(title: "Log out", message: "Are you sure you want  to log out?", options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
+            if value == 0 {
+                self.baseSubject.send("Do Logout")
+            }
         }
-        ActivityIndicator.dismiss()
     }
     
     /// Logout

@@ -27,12 +27,6 @@ final class LoadingViewController: BaseViewController {
         super.viewDidLoad()
         loadingLabel.text = String.Loading.loading1.localized
         loadingLabel.textColor = ThemeManager.shared.theme?.fontWhiteColor
-        baseSubject
-            .handleEvents(receiveOutput: { [unowned self] newItem in
-                Authservice().logoutUser()
-            })
-            .sink { _ in }
-            .store(in: &baseSubscriptions)
     }
     
     override func viewDidAppear(_ animated: Bool) {
