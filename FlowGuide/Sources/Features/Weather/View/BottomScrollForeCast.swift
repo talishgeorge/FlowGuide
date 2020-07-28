@@ -24,7 +24,7 @@ struct BottomScrollForeCast: View {
                     .foregroundColor(Color("secondary"))
                     .background(RoundedRectangle(cornerRadius: 60)
                         .frame(width: 90, height: 80)
-                        .foregroundColor(Color("gradient2")))
+                        .foregroundColor(Color(ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue)))
                     .padding(.all, 20)
                     .offset(x: -20)
                 VStack(alignment: .leading, spacing: 5) {

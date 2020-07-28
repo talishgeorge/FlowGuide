@@ -24,7 +24,7 @@ struct TopView: View {
                     self.forcastViewModel.searchCity()
                 }.padding(.all, 10)
                     .frame(width: UIWidth - 50, height: 50)
-                    .background(Color("lightBlue"))
+                    .background(Color(ThemeManager.shared.theme?.viewDarkColor ?? UIColor.systemBlue))
                     .cornerRadius(30)
                     .foregroundColor(.white)
                     .offset(x: self.showField ? 0 : (-UIWidth / 2 - 190), y: 10)
