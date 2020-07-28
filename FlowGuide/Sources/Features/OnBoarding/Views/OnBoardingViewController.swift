@@ -111,12 +111,8 @@ extension OnBoardingViewController: OnBoardingDelegate {
     /// Show TabBar Controller
     func showMainTabBarController() {
         if let presentedViewController = self.presentedViewController as? LoginViewController {
-            presentedViewController.dismiss(animated: true) {//TODO
-                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                    let window = sceneDelegate.window {
-                    window.rootViewController = UIStoryboard.instantiateTabBarController()
-                    UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                }
+            presentedViewController.dismiss(animated: true) {
+                UIApplication.instantiateTabBarController()
             }
         }
     }

@@ -113,8 +113,6 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
                 }
             case Result.failure(let error):
                 DispatchQueue.main.async {
-                    //TODO
-                    print("Failure \(error)")
                     ActivityIndicator.dismiss()
                 }
             }

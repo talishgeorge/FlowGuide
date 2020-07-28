@@ -62,11 +62,7 @@ final class LoadingViewController: BaseViewController {
     /// Show Initial View
     private func showInitialView() {
         if viewModel.isUserLoggedIn() {//TODO
-            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                let window = sceneDelegate.window {
-                window.rootViewController = UIStoryboard.instantiateTabBarController()
-                UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-            }
+            UIApplication.instantiateTabBarController()
         } else {
             publisher.send("From Loading View")
         }
