@@ -13,6 +13,7 @@ import Combine
 /// Login ViewController Class
 final class LoginViewController: BaseViewController {
     
+    @Published var emailPublisher: String = ""
     @Published var passwordPublisher: String = ""
     @Published var confirmPasswordPublisher: String = ""
     var validatePasswordSubscriber: AnyCancellable?
@@ -37,9 +38,9 @@ final class LoginViewController: BaseViewController {
     @IBOutlet private weak var signUpButtonView: UIView!
     var showTabBarControllerPublisher = PassthroughSubject<Void, Never>()
     var passwordIsValid: Bool = false
-    var email = ""
-    var password = ""
-    var confirmPassword = ""
+//    var email = ""
+//    var password = ""
+//    var confirmPassword = ""
     
     /// Page Types for login flow
     private enum PageType {
@@ -135,8 +136,8 @@ private extension LoginViewController {
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
-        loginViewModel = LoginViewModel(email,
-                                        password)
+        loginViewModel = LoginViewModel(emailPublisher,
+                                        passwordPublisher)
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             loginViewModel.formIsValid else {
@@ -210,8 +211,8 @@ private extension LoginViewController {
                 return
         }
         signUpviewModel = SignUpViewModel(email,
-                                          password,
-                                          confirmPassword)
+                                          passwordPublisher,
+                                          confirmPasswordPublisher)
         guard passwordIsValid else {
             self.showErrorMessage(text: String.Login.passwordIncorrect.localized)
             return
@@ -242,12 +243,8 @@ private extension LoginViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
-    /// UITextField Delegate for set values to ViewModel
-    /// - Parameter textField: UITextField Type
     func textFieldDidEndEditing(_ textField: UITextField) {
-        email = emailTextField.text!
-        password = passwordTextField.text!
-        confirmPassword = confirmPasswordTextField.text!
+        emailPublisher = emailTextField.text!
         passwordPublisher = passwordTextField.text!
         confirmPasswordPublisher = confirmPasswordTextField.text!
     }
