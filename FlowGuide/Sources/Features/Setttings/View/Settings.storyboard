@@ -15,6 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ox1-uV-BiM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XjV-Sr-gu4"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-hv-ICN">
                                 <rect key="frame" x="147.5" y="811" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,6 +50,11 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="83u-g0-k3L">
                                         <rect key="frame" x="310" y="29.5" width="51" height="31"/>
                                         <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="enableDardMode:" destination="LdJ-wI-ZfH" eventType="valueChanged" id="Dqj-La-ZtS"/>
                                         </connections>
@@ -130,12 +142,15 @@
                         <constraints>
                             <constraint firstItem="W0l-Vh-7hA" firstAttribute="leading" secondItem="T8X-ws-08c" secondAttribute="leading" constant="20" id="7r5-E4-uTT"/>
                             <constraint firstItem="k24-m0-8aD" firstAttribute="height" secondItem="W0l-Vh-7hA" secondAttribute="height" id="Drt-kW-QOQ"/>
+                            <constraint firstItem="ox1-uV-BiM" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" id="H2b-qs-g4a"/>
                             <constraint firstItem="W0l-Vh-7hA" firstAttribute="top" secondItem="T8X-ws-08c" secondAttribute="top" constant="90" id="KPK-1f-F5E"/>
                             <constraint firstItem="ZSM-hv-ICN" firstAttribute="centerX" secondItem="Mbl-1K-oVt" secondAttribute="centerX" id="PNR-Iq-nGJ"/>
                             <constraint firstItem="T8X-ws-08c" firstAttribute="bottom" secondItem="ZSM-hv-ICN" secondAttribute="bottom" constant="30" id="Tv3-LL-IHQ"/>
                             <constraint firstItem="T8X-ws-08c" firstAttribute="trailing" secondItem="W0l-Vh-7hA" secondAttribute="trailing" constant="20" id="UN9-CP-Zya"/>
                             <constraint firstItem="k24-m0-8aD" firstAttribute="width" secondItem="W0l-Vh-7hA" secondAttribute="width" id="WAV-3r-5Zw"/>
+                            <constraint firstItem="ox1-uV-BiM" firstAttribute="leading" secondItem="T8X-ws-08c" secondAttribute="leading" id="mXT-BU-wTW"/>
                             <constraint firstItem="k24-m0-8aD" firstAttribute="top" secondItem="W0l-Vh-7hA" secondAttribute="bottom" constant="20" id="qaC-Ah-HJ4"/>
+                            <constraint firstItem="T8X-ws-08c" firstAttribute="trailing" secondItem="ox1-uV-BiM" secondAttribute="trailing" id="vu1-Fr-vcu"/>
                             <constraint firstItem="k24-m0-8aD" firstAttribute="centerX" secondItem="Mbl-1K-oVt" secondAttribute="centerX" id="xre-6S-6LF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T8X-ws-08c"/>
