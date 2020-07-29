@@ -69,7 +69,6 @@ final class SettingsViewController: BaseViewController {
         configureCustomNavigaionView()
         setupViews()
         self.tabBarController?.tabBar.backgroundColor = ThemeManager.shared.theme?.tabBarBgColor
-        
     }
     
     @IBAction private func enableDardMode(_ sender: UISwitch) {

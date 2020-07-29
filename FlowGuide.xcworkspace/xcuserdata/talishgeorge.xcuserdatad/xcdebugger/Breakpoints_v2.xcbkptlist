@@ -39,54 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlowGuide/Sources/Features/Login/View/LoginViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "LoginViewController"
-            landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1 - 1d68f63931e040c0"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; () in FlowGuide.LoginViewController.(loginButtonTapped in _A302A4DEB7CEB74BC15DFBFCAFAB6A7B)(__C.UIButton) -&gt; ()"
-                  moduleName = "FlowGuide"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Features/Login/View/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "945">
-               </Location>
-               <Location
-                  uuid = "2E8AF1DE-DE49-4A48-A8A7-08A45409B4C1 - 32b737995f887249"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int) -&gt; () in closure #1 (Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; () in FlowGuide.LoginViewController.(loginButtonTapped in _A302A4DEB7CEB74BC15DFBFCAFAB6A7B)(__C.UIButton) -&gt; ()"
-                  moduleName = "FlowGuide"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Features/Login/View/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "87">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CEE6D447-FDD6-4080-BCF4-B8F36AFC9E8E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -385,6 +337,86 @@
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "showLoading()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51E3F294-3F1F-46E3-B769-C9EBF7C3C31F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Sources/Features/OnBoarding/Views/OnBoardingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "showMainTabBarController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82267202-D751-435A-839B-D1F7D59F3C20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Sources/Features/OnBoarding/Views/OnBoardingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "82267202-D751-435A-839B-D1F7D59F3C20 - eda0269dd1d85772"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlowGuide.OnBoardingViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/Views/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "693">
+               </Location>
+               <Location
+                  uuid = "82267202-D751-435A-839B-D1F7D59F3C20 - 73ebe94ec0b7a57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in FlowGuide.OnBoardingViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "FlowGuide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talishgeorge/Desktop/Sweedbank/Source%20Code%20&amp;%20Technical%20Doc/POC/FlowGuide/FlowGuide/Sources/Features/OnBoarding/Views/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "725E496A-E5EB-4935-BA62-646D786B766C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlowGuide/Sources/Features/Login/View/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "loginButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -53,6 +53,7 @@ class BaseViewController: UIViewController, Subscriber {
         }
     }
 }
+
 // MARK: - Common Altert View
 
 extension BaseViewController {

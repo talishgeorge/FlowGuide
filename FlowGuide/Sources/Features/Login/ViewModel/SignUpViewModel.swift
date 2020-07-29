@@ -8,17 +8,13 @@
 
 import FirebaseAuth
 import UtilitiesLib
+import Combine
 
 /// SignUp View Model
 final class SignUpViewModel: AuthViewModel {
-    /// Validate Email and Password from form.
-    var formIsValid: Bool {
-        guard let email = email, !email.isEmpty,
-            let password = password, !password.isEmpty,
-            let confirmPassword = confirmPassword, !confirmPassword.isEmpty else {
-                return false
-        }
-        return true
+    
+    func isValidPassword(_ password: String, _ confirmPassword: String) -> Bool {
+        (password == confirmPassword) && password.count >= 6
     }
     
     /// SignUp New User
