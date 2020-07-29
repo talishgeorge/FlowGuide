@@ -7,10 +7,10 @@
         "fontColor": "#000000",
         "headerCellBgColor": "#1B8BFF",
         "cellBgColor": "#FFFFFF",
-        "tabBarBgColor": "#1679DF",
+        "tabBarBgColor": "#0584ff",
         "cellSeperatorBgColor": "#1B8BFF",
         "fontWhiteColor": "#FFFFFF",
-        "viewDarkColor": "#1663be",
+        "viewDarkColor": "#11518F",
         "switchOnTint": "#1B8BFF",
 
     },

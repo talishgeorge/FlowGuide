@@ -41,7 +41,12 @@ class BaseViewController: UIViewController, Subscriber {
     }
     
     func receive(completion: Subscribers.Completion<Never>) {
-        print(completion)
+        switch completion {
+        case .finished:
+            print("Finished")
+        case .failure(let error):
+            print(error)
+        }
     }
     
     func setTheme(isEnable: Bool) {

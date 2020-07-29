@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-MU-R3b">
-                                <rect key="frame" x="0.0" y="179" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -110,8 +110,8 @@
                             <constraint firstItem="vaE-MD-kj2" firstAttribute="top" secondItem="TxS-tl-dnO" secondAttribute="top" constant="10" id="I0u-cX-qDv"/>
                             <constraint firstItem="vaE-MD-kj2" firstAttribute="centerX" secondItem="JgY-lN-GnB" secondAttribute="centerX" id="Pcb-rC-6zP"/>
                             <constraint firstItem="TxS-tl-dnO" firstAttribute="trailing" secondItem="GjB-MU-R3b" secondAttribute="trailing" id="S2Y-tO-dZy"/>
+                            <constraint firstItem="GjB-MU-R3b" firstAttribute="top" secondItem="vaE-MD-kj2" secondAttribute="bottom" id="TFw-Ze-dK0"/>
                             <constraint firstAttribute="bottom" secondItem="GjB-MU-R3b" secondAttribute="bottom" id="nQ2-YC-ett"/>
-                            <constraint firstItem="GjB-MU-R3b" firstAttribute="height" secondItem="JgY-lN-GnB" secondAttribute="height" multiplier="0.8" id="qEc-NF-er0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TxS-tl-dnO"/>
                     </view>
@@ -231,7 +231,7 @@
     <resources>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="home" width="25" height="23"/>
-        <image name="placeholder" width="105" height="106"/>
+        <image name="placeholder" width="512" height="512"/>
         <namedColor name="ThemeBlueTop">
             <color red="0.10588235294117647" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

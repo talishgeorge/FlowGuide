@@ -91,6 +91,8 @@ private extension SettingsViewController {
         switchOutlet.onTintColor = ThemeManager.shared.theme?.switchOnTint
         darkModeInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
         weatherInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
+        switchOutlet.layer.borderWidth = 1
+        switchOutlet.layer.borderColor = UIColor.white.cgColor
         
     }
     
