@@ -9,9 +9,8 @@ import UtilitiesLib
 
 class ForecastViewModel: BaseViewModel, ObservableObject {
     
-    var cityName: String = "Kochi"
-    @Published var isValid: Bool = false
     @Published var weatherForCast = ForecastWeatherResponse()
+    var cityName: String = "Kochi"
     var currentCity: String {
         if let city = weatherForCast.name {
             return city
@@ -39,7 +38,7 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
     
     var temperature: String {
         if let temp = weatherForCast.main?.temp {
-            let formattedString = String(format: "%.0f", temp)
+            let formattedString = String(format: "%.0f", temp/9.5)
             return formattedString + "°"
         } else {
             return ""
@@ -66,7 +65,7 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
     
     var tempMax: String {
         if let temp = weatherForCast.main?.temp_max {
-            let formattedString = String(format: "%.0f", temp)
+            let formattedString = String(format: "%.0f", temp/8.5)
             return formattedString + "°"
         } else {
             return ""
@@ -113,7 +112,7 @@ class ForecastViewModel: BaseViewModel, ObservableObject {
                     closureSelf.weatherForCast = response
                     ActivityIndicator.dismiss()
                 }
-            case Result.failure(let error):
+            case Result.failure( _):
                 DispatchQueue.main.async {
                     ActivityIndicator.dismiss()
                 }

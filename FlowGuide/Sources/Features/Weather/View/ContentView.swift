@@ -10,7 +10,6 @@ import UtilitiesLib
 struct ContentView: View {
     
     @ObservedObject var forcastViewModel: ForecastViewModel
-    @State var showAlert = false
     @State var showView = false
     init(forcastViewModel: ForecastViewModel) {
         self.forcastViewModel = forcastViewModel

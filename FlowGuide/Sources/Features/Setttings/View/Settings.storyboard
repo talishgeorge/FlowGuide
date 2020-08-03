@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -175,11 +175,11 @@
             </objects>
             <point key="canvasLocation" x="3292.753623188406" y="454.6875"/>
         </scene>
-        <!--Hosting Controller-->
+        <!--Weather-->
         <scene sceneID="3KW-BQ-IjW">
             <objects>
                 <hostingController id="VHi-bb-pZm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YLe-vt-j41"/>
+                    <navigationItem key="navigationItem" title="Weather" id="YLe-vt-j41"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P72-UV-KGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

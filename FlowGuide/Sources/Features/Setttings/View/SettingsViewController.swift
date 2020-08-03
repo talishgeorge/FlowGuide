@@ -98,9 +98,9 @@ private extension SettingsViewController {
     
     /// Logout the current user
     func logout() {
-        ActivityIndicator.show(String.Global.pleaseWait.localized)
         self.presentAlertWithTitle(title: "Log out", message: "Are you sure you want  to log out?", options: String.Global.ok.localized, String.Global.cancel.localized) { (value) in
             if value == 0 {
+                ActivityIndicator.show(String.Global.pleaseWait.localized)
                 self.baseSubject.send("Do Logout")
             }
         }
