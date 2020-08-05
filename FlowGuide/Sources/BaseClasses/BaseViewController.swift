@@ -127,7 +127,7 @@ extension BaseViewController {
         NavBarConstants.rootNavigationController = self.navigationController
         NavBarConstants.barBGColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
-        NavBarConstants.rightNavButtonImage = UIImage(named: AppConstants.logoutImage) ?? UIImage()
+        NavBarConstants.rightNavButtonImage = UIImage(named: Constants.logoutImage) ?? UIImage()
         NavBarConstants.titleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.transparentTitleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.titleFont = UIFont.navigationTitle
@@ -159,7 +159,7 @@ private extension BaseViewController {
             }
         case .failure( _):
             self.view.popup.topAnchor = self.view.safeAreaLayoutGuide.topAnchor
-            self.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            self.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(Constants.delaySeconds)
             self.view.popup.success(String.News.featureEnableInfo.localized)
             ActivityIndicator.dismiss()
         }

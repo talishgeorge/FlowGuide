@@ -4,7 +4,9 @@
 //  
 import UIKit
 
-struct SettingsConstants {
-    static let delayInSeconds = 2.0
-    static let viewBorderWidth: CGFloat = 1
+extension Constants {
+    struct Settings {
+        static let delayInSeconds = 2.0
+        static let viewBorderWidth: CGFloat = 1
+    }
 }

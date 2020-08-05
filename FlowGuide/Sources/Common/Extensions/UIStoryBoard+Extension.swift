@@ -9,21 +9,21 @@ extension UIStoryboard {
     
     // MARK: - Storyboards
     private static var main: UIStoryboard {
-        return UIStoryboard(name: AppConstants.StoryBoardID.main, bundle: nil)
+        return UIStoryboard(name: Constants.StoryBoardID.main, bundle: nil)
     }
     
     // MARK: - View Controllers
     static func instantiateLoadingViewController() -> LoadingViewController {
-        let loadingVC = main.instantiateViewController(withIdentifier: AppConstants.StoryBoardID.loadingViewController) as! LoadingViewController
+        let loadingVC = main.instantiateViewController(withIdentifier: Constants.StoryBoardID.loadingViewController) as! LoadingViewController
         return loadingVC
     }
     
     static func instantiateOnBoardingViewController() -> OnBoardingViewController {
-        let onBoardingVC = main.instantiateViewController(withIdentifier: AppConstants.StoryBoardID.onBoardingViewController) as! OnBoardingViewController
+        let onBoardingVC = main.instantiateViewController(withIdentifier: Constants.StoryBoardID.onBoardingViewController) as! OnBoardingViewController
         return onBoardingVC
     }
     
     static func instantiateTabBarController() -> UIViewController {
-        main.instantiateViewController(withIdentifier: AppConstants.StoryBoardID.mainTabBarController)
+        main.instantiateViewController(withIdentifier: Constants.StoryBoardID.mainTabBarController)
     }
 }

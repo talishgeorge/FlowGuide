@@ -39,7 +39,7 @@ extension LoginViewModel {
             } else if let user = result?.user {
                 completion(.success(user))
             } else {
-                completion(.failure(AppConstants.AuthError.unknownError))
+                completion(.failure(Constants.AuthError.unknownError))
             }
         }
     }

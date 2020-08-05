@@ -84,9 +84,9 @@ private extension SettingsViewController {
     /// Initial SetUp
     func setupViews() {
         self.title = SettingsLocalization.settings.localized
-        pushNotificationView.layer.borderWidth = SettingsConstants.viewBorderWidth
+        pushNotificationView.layer.borderWidth = Constants.Settings.viewBorderWidth
         pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
-        weatherView.layer.borderWidth = SettingsConstants.viewBorderWidth
+        weatherView.layer.borderWidth = Constants.Settings.viewBorderWidth
         weatherView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
         switchOutlet.onTintColor = ThemeManager.shared.theme?.switchOnTint
         darkModeInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor

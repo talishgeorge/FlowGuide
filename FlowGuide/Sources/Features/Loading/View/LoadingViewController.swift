@@ -33,7 +33,7 @@ final class LoadingViewController: BaseViewController {
         super.viewDidAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         showLoading()
-        Helper().delay(durationInSeconds: AppConstants.LoadingConstants.delayInSeconds, completion: {
+        Helper().delay(durationInSeconds: Constants.Loading.delayInSeconds, completion: {
             self.showInitialView()
         })
     }
@@ -42,7 +42,7 @@ final class LoadingViewController: BaseViewController {
     
     /// Show Loading
     private func showLoading() {
-        _ = Timer.scheduledTimer(withTimeInterval: AppConstants.LoadingConstants.timerInterval,
+        _ = Timer.scheduledTimer(withTimeInterval: Constants.Loading.timerInterval,
                                  repeats: true) { _ in
                                     var string: String {
                                         switch self.loadingLabel.text {

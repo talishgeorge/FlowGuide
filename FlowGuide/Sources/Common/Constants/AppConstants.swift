@@ -6,13 +6,13 @@
 import Foundation
 import UIKit
 
-struct AppConstants {
+struct Constants {
     static let loggedIn = "Logged in -"
     static let delaySeconds = 3
     static let UIWidth = UIScreen.main.bounds.width
 }
 
-extension AppConstants {
+extension Constants {
     /// StoryBoard Id
     struct StoryBoardID {
         static let main  = "Main"

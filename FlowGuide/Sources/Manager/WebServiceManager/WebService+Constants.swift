@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-extension AppConstants {
+extension Constants {
     /// Authentication error type
     public enum AuthError: Error {
         case unknownError

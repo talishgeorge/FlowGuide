@@ -4,9 +4,9 @@
 //  
 import UIKit
 
-extension AppConstants {
+extension Constants {
     
-    struct NewsConstants {
+    struct News {
         static let tableViewBorderWidth: CGFloat = 1.2
     }
     /// Cell Identifiers
