@@ -68,7 +68,7 @@ final class SettingsViewController: BaseViewController {
         configureUI()
         configureCustomNavigaionView()
         setupViews()
-        self.tabBarController?.tabBar.backgroundColor = ThemeManager.shared.theme?.tabBarBgColor
+        self.tabBarController?.tabBar.backgroundColor = themeManager.theme?.tabBarBgColor
     }
     
     @IBAction private func enableDardMode(_ sender: UISwitch) {
@@ -85,12 +85,12 @@ private extension SettingsViewController {
     func setupViews() {
         self.title = SettingsLocalization.settings.localized
         pushNotificationView.layer.borderWidth = Constants.Settings.viewBorderWidth
-        pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
+        pushNotificationView.layer.borderColor = themeManager.theme?.borderColor.cgColor
         weatherView.layer.borderWidth = Constants.Settings.viewBorderWidth
-        weatherView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
-        switchOutlet.onTintColor = ThemeManager.shared.theme?.switchOnTint
-        darkModeInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
-        weatherInnerView.backgroundColor = ThemeManager.shared.theme?.viewDarkColor
+        weatherView.layer.borderColor = themeManager.theme?.borderColor.cgColor
+        switchOutlet.onTintColor = themeManager.theme?.switchOnTint
+        darkModeInnerView.backgroundColor = themeManager.theme?.viewDarkColor
+        weatherInnerView.backgroundColor = themeManager.theme?.viewDarkColor
         switchOutlet.layer.borderWidth = 1
         switchOutlet.layer.borderColor = UIColor.white.cgColor
         

@@ -18,6 +18,7 @@ class BaseViewController: UIViewController, Subscriber {
     typealias Input = Bool
     let baseSubject = PassthroughSubject<String, Never>()
     var baseSubscriptions = Set<AnyCancellable>()
+    var themeManager = ThemeManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,9 @@ class BaseViewController: UIViewController, Subscriber {
     
     func setTheme(isEnable: Bool) {
         if isEnable {
-            ThemeManager.shared.setTheme(theme: AppTheme(file: ThemeConstants.darkMode))
+           themeManager.setTheme(theme: AppTheme(file: ThemeConstants.darkMode))
         } else {
-            ThemeManager.shared.setTheme(theme: AppTheme(file: ThemeConstants.lightMode))
+            themeManager.setTheme(theme: AppTheme(file: ThemeConstants.lightMode))
             
         }
     }
@@ -98,15 +99,15 @@ extension BaseViewController {
     /// Setup initial UI
     func configureUI() {
         let gradient = CAGradientLayer()
-        gradient.colors = [ThemeManager.shared.theme?.viewGradientTopColor.cgColor ?? UIColor.systemIndigo, ThemeManager.shared.theme?.viewGradientBottomColor.cgColor ?? UIColor.systemTeal]
+        gradient.colors = [themeManager.theme?.viewGradientTopColor.cgColor ?? UIColor.systemIndigo, themeManager.theme?.viewGradientBottomColor.cgColor ?? UIColor.systemTeal]
         gradient.locations = [0, 1]
         view.layer.insertSublayer(gradient, at: 0)
         gradient.frame = view.frame
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.fontWhiteColor]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: themeManager.theme?.fontWhiteColor]
         navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeManager.shared.theme?.fontWhiteColor ?? UIColor.white]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: themeManager.theme?.fontWhiteColor ?? UIColor.white]
         
     }
     
@@ -125,11 +126,11 @@ extension BaseViewController {
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeArea(guide: safeGuide)
         NavBarConstants.rootNavigationController = self.navigationController
-        NavBarConstants.barBGColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemBlue
+        NavBarConstants.barBGColor = themeManager.theme?.viewGradientTopColor ?? UIColor.systemBlue
         NavBarConstants.transparentBGColor = UIColor.black.withAlphaComponent(0.5)
         NavBarConstants.rightNavButtonImage = UIImage(named: Constants.logoutImage) ?? UIImage()
-        NavBarConstants.titleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
-        NavBarConstants.transparentTitleColor = ThemeManager.shared.theme?.navigationBarTintColor ?? UIColor.white
+        NavBarConstants.titleColor = themeManager.theme?.navigationBarTintColor ?? UIColor.white
+        NavBarConstants.transparentTitleColor = themeManager.theme?.navigationBarTintColor ?? UIColor.white
         NavBarConstants.titleFont = UIFont.navigationTitle
         navBar.configureNavigationBar()
     }

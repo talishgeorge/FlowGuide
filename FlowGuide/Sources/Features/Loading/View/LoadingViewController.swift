@@ -26,7 +26,7 @@ final class LoadingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingLabel.text = String.Loading.loading1.localized
-        loadingLabel.textColor = ThemeManager.shared.theme?.fontWhiteColor
+        loadingLabel.textColor = themeManager.theme?.fontWhiteColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
