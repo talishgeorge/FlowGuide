@@ -9,8 +9,6 @@ extension Constants {
     /// StoryBoard Id
     public struct StoryBoardID {
         static public let main  = "Main"
-        static public let mainTabBarController  = "MainTabBarController"
-        static public let onBoardingViewController  = "OnBoardingViewController"
     }
     /// Segue Constants
     public struct Segue {

@@ -11,7 +11,7 @@ import UtilitiesLib
 
 /// Routter for UI
 final class UIRouter {
-   
+    
     static let shared = UIRouter()
     private init() {}
     
@@ -19,6 +19,15 @@ final class UIRouter {
     enum ViewMode {
         case mainTabBarConttoller
         case onBoarding
+        var storyboardName: String {
+            switch self {
+            case .mainTabBarConttoller:
+                return "MainTabBarController"
+            case .onBoarding:
+                return "OnBoardingViewController"
+            }
+        }
+        
     }
     
     // MARK: - Internal Methods
@@ -31,10 +40,10 @@ final class UIRouter {
         switch viewMode {
         case .mainTabBarConttoller:
             viewController = UIStoryboard(name: Constants.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.mainTabBarController)
+                                          bundle: nil).instantiateViewController(withIdentifier: viewMode.storyboardName)
         case .onBoarding:
             viewController = UIStoryboard(name: Constants.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.onBoardingViewController)
+                                          bundle: nil).instantiateViewController(withIdentifier: viewMode.storyboardName)
         }
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
             let window = sceneDelegate.window {
