@@ -12,6 +12,6 @@ import Foundation
 enum SettingsLocalization: String, Localizable {
     case settings = "Settings"
     var tableName: String {
-            "Localizable"
-       }
+        "Localizable"
+    }
 }
