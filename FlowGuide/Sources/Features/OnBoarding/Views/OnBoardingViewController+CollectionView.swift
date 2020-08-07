@@ -15,7 +15,7 @@ extension OnBoardingViewController: UICollectionViewDelegate,
                                     UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppConstants.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.ReUseIdentifier.onBoardingColletionViewCell, for: indexPath) as? OnBoardingCollectionViewCell else {
             return UICollectionViewCell()
         }
         let imageName = viewModel.getOnboardingItemImageName(index: indexPath.row) ?? ""
@@ -33,6 +33,6 @@ extension OnBoardingViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        AppConstants.OnBoardingConstants.minimumLineSpacingForSection
+        Constants.OnBoarding.minimumLineSpacingForSection
     }
 }

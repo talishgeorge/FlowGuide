@@ -3,6 +3,6 @@
 //  Copyright © 2020 TCS. All rights reserved.
 //  
 
-extension AppConstants {
+extension Constants {
     static public let logoutImage = "logout"
 }

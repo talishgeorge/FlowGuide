@@ -30,11 +30,11 @@ final class UIRouter {
         
         switch viewMode {
         case .mainTabBarConttoller:
-            viewController = UIStoryboard(name: AppConstants.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: AppConstants.StoryBoardID.mainTabBarController)
+            viewController = UIStoryboard(name: Constants.StoryBoardID.main,
+                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.mainTabBarController)
         case .onBoarding:
-            viewController = UIStoryboard(name: AppConstants.StoryBoardID.main,
-                                          bundle: nil).instantiateViewController(withIdentifier: AppConstants.StoryBoardID.onBoardingViewController)
+            viewController = UIStoryboard(name: Constants.StoryBoardID.main,
+                                          bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardID.onBoardingViewController)
         }
         if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
             let window = sceneDelegate.window {

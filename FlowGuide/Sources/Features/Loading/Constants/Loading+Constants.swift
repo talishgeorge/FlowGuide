@@ -4,8 +4,8 @@
 //  
 import UIKit
 
-extension AppConstants {
-    struct LoadingConstants {
+extension Constants {
+    struct Loading {
         static let timerInterval = 0.40
         static let delayInSeconds = 2.5
     }

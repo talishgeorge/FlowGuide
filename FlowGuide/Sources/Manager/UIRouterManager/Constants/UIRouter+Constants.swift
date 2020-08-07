@@ -5,7 +5,7 @@
 
 import UIKit
 
-extension AppConstants {
+extension Constants {
     /// StoryBoard Id
     public struct StoryBoardID {
         static public let main  = "Main"

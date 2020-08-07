@@ -4,8 +4,8 @@
 //  
 import UIKit
 
-extension AppConstants {
-    struct LoginConstants {
+extension Constants {
+    struct Login {
         static let textFieldBorderWidth: CGFloat = 1
     }
 }

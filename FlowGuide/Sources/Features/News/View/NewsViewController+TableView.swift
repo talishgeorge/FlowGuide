@@ -23,7 +23,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.CellIdentifiers.newsCell, for: indexPath) as? NewsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.newsCell, for: indexPath) as? NewsTableViewCell else {
             return UITableViewCell()
         }
         let newsData = viewModel.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
@@ -34,7 +34,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableView Delege Protocol
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: AppConstants.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
+        guard let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.CellIdentifiers.newsHeaderCell) as? NewsHeaderView
             else {
                 return UITableViewHeaderFooterView()
         }
@@ -48,10 +48,10 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             fatalError("Unable to get the selected row")
         }
         if SDKManager.shared.featureFlag {
-            performSegue(withIdentifier: AppConstants.Segue.showNewsDetail, sender: self)
+            performSegue(withIdentifier: Constants.Segue.showNewsDetail, sender: self)
         } else {
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
-            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(Constants.delaySeconds)
             view.popup.success(String.News.featureEnableInfo.localized)
         }
     }
@@ -62,7 +62,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Register cell
     func registerCell() {
-        let headerNib = UINib.init(nibName: AppConstants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
-        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: AppConstants.CellIdentifiers.newsHeaderCell)
+        let headerNib = UINib.init(nibName: Constants.CellIdentifiers.newsHeaderCell, bundle: Bundle.main)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: Constants.CellIdentifiers.newsHeaderCell)
     }
 }

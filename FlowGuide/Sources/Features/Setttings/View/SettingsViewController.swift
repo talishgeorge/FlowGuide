@@ -55,7 +55,7 @@ private extension SettingsViewController {
     /// Initial SetUp
     func setupViews() {
         self.title = SettingsLocalization.settings.localized
-        pushNotificationView.layer.borderWidth = SettingsConstants.viewBorderWidth
+        pushNotificationView.layer.borderWidth = Constants.Settings.viewBorderWidth
         pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
     }
     
@@ -68,7 +68,7 @@ private extension SettingsViewController {
             UIRouter.shared.show(viewMode: .onBoarding)
         case .failure( _):
             view.popup.topAnchor = view.safeAreaLayoutGuide.topAnchor
-            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+            view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(Constants.delaySeconds)
             view.popup.success(String.News.featureEnableInfo.localized)
         }
         ActivityIndicator.dismiss()

@@ -105,9 +105,9 @@ private extension LoginViewController {
         emailView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
         passwordView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
         confirmPswdView.layer.borderColor = ThemeManager.shared.theme?.viewGradientTopColor.cgColor
-        emailView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
-        passwordView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
-        confirmPswdView.layer.borderWidth = AppConstants.LoginConstants.textFieldBorderWidth
+        emailView.layer.borderWidth = Constants.Login.textFieldBorderWidth
+        passwordView.layer.borderWidth = Constants.Login.textFieldBorderWidth
+        confirmPswdView.layer.borderWidth = Constants.Login.textFieldBorderWidth
         UIView.gradientButton(customButton: loginButtonView, viewButton: loginButton)
         UIView.gradientButton(customButton: signUpButtonView, viewButton: sigunpButton)
     }
@@ -172,7 +172,7 @@ private extension LoginViewController {
                         strongSelf.showAlert(title: String.Login.passwordReset.localized, message: String.Login.checkEmail.localized)
                     case .failure(let error):
                         self?.view.popup.topAnchor = self?.view.safeAreaLayoutGuide.topAnchor
-                        self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(AppConstants.delaySeconds)
+                        self?.view.popup.style.bar.hideAfterDelaySeconds = TimeInterval(Constants.delaySeconds)
                         self?.view.popup.success(error.localizedDescription)
                     }
                 }

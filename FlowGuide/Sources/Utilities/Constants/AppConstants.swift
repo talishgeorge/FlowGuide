@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-struct AppConstants {
+struct Constants {
     static public let loggedIn = "Logged in -"
     static public let delaySeconds = 3
     static public let UIWidth = UIScreen.main.bounds.width

@@ -4,9 +4,9 @@
 //  
 import UIKit
 
-extension AppConstants {
+extension Constants {
     
-    struct OnBoardingConstants {
+    struct OnBoarding {
         static let minimumLineSpacingForSection: CGFloat = 0
         static let slide1 = "slide1"
         static let slide2 = "slide2"
@@ -17,4 +17,3 @@ extension AppConstants {
         static public let onBoardingColletionViewCell = "cellId"
     }
 }
-
