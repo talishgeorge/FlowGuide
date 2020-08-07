@@ -56,7 +56,7 @@ private extension SettingsViewController {
     func setupViews() {
         self.title = SettingsLocalization.settings.localized
         pushNotificationView.layer.borderWidth = Constants.Settings.viewBorderWidth
-        pushNotificationView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
+        pushNotificationView.layer.borderColor = themeManager.theme?.borderColor.cgColor
     }
     
     /// Logout the current user

@@ -33,10 +33,10 @@ final class NewsViewController: BaseViewController {
     }
     
     func setupUI() {
-        navigationController?.navigationBar.barTintColor = ThemeManager.shared.theme?.viewGradientTopColor ?? UIColor.systemIndigo
+        navigationController?.navigationBar.barTintColor = themeManager.theme?.viewGradientTopColor ?? UIColor.systemIndigo
         tableView.layer.borderWidth = Constants.News.tableViewBorderWidth
-        tableView.layer.borderColor = ThemeManager.shared.theme?.borderColor.cgColor
-        self.title = Constants.NavigationTitle.home
+        tableView.layer.borderColor = themeManager.theme?.borderColor.cgColor
+        title = Constants.NavigationTitle.home
     }
     
     // MARK: - Navigation
